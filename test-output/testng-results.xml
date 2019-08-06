@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="102456" started-at="2019-07-30T05:33:42Z" finished-at="2019-07-30T05:35:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="102456" started-at="2019-07-30T05:33:42Z" finished-at="2019-07-30T05:35:24Z">
+      <class name="com.TestNGScript.file.LoginSKDataProvider">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="22033" started-at="2019-07-30T05:33:43Z" finished-at="2019-07-30T05:34:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="13256" started-at="2019-07-30T05:34:05Z" data-provider="getlogindata" finished-at="2019-07-30T05:34:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[obsckorg@yopmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSK -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="1249" started-at="2019-07-30T05:34:18Z" finished-at="2019-07-30T05:34:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="21231" started-at="2019-07-30T05:34:19Z" finished-at="2019-07-30T05:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="6434" started-at="2019-07-30T05:34:41Z" data-provider="getlogindata" finished-at="2019-07-30T05:34:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[observergzb@yopmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSK -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="1321" started-at="2019-07-30T05:34:47Z" finished-at="2019-07-30T05:34:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="14438" started-at="2019-07-30T05:34:48Z" finished-at="2019-07-30T05:35:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="4286" started-at="2019-07-30T05:35:03Z" data-provider="getlogindata" finished-at="2019-07-30T05:35:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[observernoida@yopmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSK -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="792" started-at="2019-07-30T05:35:07Z" finished-at="2019-07-30T05:35:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="10655" started-at="2019-07-30T05:35:08Z" finished-at="2019-07-30T05:35:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="4405" started-at="2019-07-30T05:35:19Z" data-provider="getlogindata" finished-at="2019-07-30T05:35:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[obsorgint@yopmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSK -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="1210" started-at="2019-07-30T05:35:23Z" finished-at="2019-07-30T05:35:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.TestNGScript.file.LoginSKDataProvider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
