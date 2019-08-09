@@ -2,108 +2,66 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="102456" started-at="2019-07-30T05:33:42Z" finished-at="2019-07-30T05:35:24Z">
+  <suite name="Suite" duration-ms="148948" started-at="2019-08-09T13:30:43Z" finished-at="2019-08-09T13:33:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="102456" started-at="2019-07-30T05:33:42Z" finished-at="2019-07-30T05:35:24Z">
-      <class name="com.TestNGScript.file.LoginSKDataProvider">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="22033" started-at="2019-07-30T05:33:43Z" finished-at="2019-07-30T05:34:05Z">
+    <test name="Test" duration-ms="148948" started-at="2019-08-09T13:30:43Z" finished-at="2019-08-09T13:33:12Z">
+      <class name="com.TestNGScript.file.SafetyKuvrrHomePageMenu">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrHomePageMenu@382db087]" name="launchApp" is-config="true" duration-ms="26117" started-at="2019-08-09T13:31:08Z" finished-at="2019-08-09T13:31:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="TestHambugerMenuClick()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrHomePageMenu@382db087]" name="TestHambugerMenuClick" duration-ms="17546" started-at="2019-08-09T13:31:34Z" finished-at="2019-08-09T13:31:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestHambugerMenuClick -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrHomePageMenu@382db087]" name="closeBrowser" is-config="true" duration-ms="760" started-at="2019-08-09T13:31:52Z" finished-at="2019-08-09T13:31:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SafetyKuvrrHomePageMenu -->
+      <class name="com.TestNGScript.file.SafetyKuvrrBroadcast">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrBroadcast@b9afc07]" name="launchSKApp" is-config="true" duration-ms="14968" started-at="2019-08-09T13:32:45Z" finished-at="2019-08-09T13:33:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="13256" started-at="2019-07-30T05:34:05Z" data-provider="getlogindata" finished-at="2019-07-30T05:34:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[obsckorg@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="launchSafetyApp()[pri:1, instance:com.TestNGScript.file.SafetyKuvrrBroadcast@b9afc07]" name="launchSafetyApp" duration-ms="11038" started-at="2019-08-09T13:33:00Z" finished-at="2019-08-09T13:33:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginSK -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="1249" started-at="2019-07-30T05:34:18Z" finished-at="2019-07-30T05:34:19Z">
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrBroadcast@b9afc07]" name="closeBrowser" is-config="true" duration-ms="751" started-at="2019-08-09T13:33:11Z" finished-at="2019-08-09T13:33:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="21231" started-at="2019-07-30T05:34:19Z" finished-at="2019-07-30T05:34:41Z">
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SafetyKuvrrBroadcast -->
+      <class name="com.TestNGScript.file.SafetyKuvrrOpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrOpenIncident@73d4cc9e]" name="launchSKApp" is-config="true" duration-ms="17788" started-at="2019-08-09T13:31:52Z" finished-at="2019-08-09T13:32:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="6434" started-at="2019-07-30T05:34:41Z" data-provider="getlogindata" finished-at="2019-07-30T05:34:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[observergzb@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrOpenIncident@73d4cc9e]" name="launchSafetyApp" duration-ms="33895" started-at="2019-08-09T13:32:10Z" finished-at="2019-08-09T13:32:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginSK -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="1321" started-at="2019-07-30T05:34:47Z" finished-at="2019-07-30T05:34:48Z">
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SafetyKuvrrOpenIncident@73d4cc9e]" name="closeBrowser" is-config="true" duration-ms="746" started-at="2019-08-09T13:32:44Z" finished-at="2019-08-09T13:32:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="14438" started-at="2019-07-30T05:34:48Z" finished-at="2019-07-30T05:35:03Z">
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SafetyKuvrrOpenIncident -->
+      <class name="com.TestNGScript.file.LoginSafetyKuvrr">
+        <test-method status="PASS" signature="launchSK()[pri:0, instance:com.TestNGScript.file.LoginSafetyKuvrr@6483f5ae]" name="launchSK" is-config="true" duration-ms="21021" started-at="2019-08-09T13:30:43Z" finished-at="2019-08-09T13:31:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="4286" started-at="2019-07-30T05:35:03Z" data-provider="getlogindata" finished-at="2019-07-30T05:35:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[observernoida@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchSK -->
+        <test-method status="PASS" signature="loginSafetyKuvrr()[pri:0, instance:com.TestNGScript.file.LoginSafetyKuvrr@6483f5ae]" name="loginSafetyKuvrr" duration-ms="3445" started-at="2019-08-09T13:31:04Z" finished-at="2019-08-09T13:31:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginSK -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="792" started-at="2019-07-30T05:35:07Z" finished-at="2019-07-30T05:35:08Z">
+        </test-method> <!-- loginSafetyKuvrr -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.LoginSafetyKuvrr@6483f5ae]" name="closeBrowser" is-config="true" duration-ms="832" started-at="2019-08-09T13:31:07Z" finished-at="2019-08-09T13:31:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="launchSKApp" is-config="true" duration-ms="10655" started-at="2019-07-30T05:35:08Z" finished-at="2019-07-30T05:35:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="loginSK(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="loginSK" duration-ms="4405" started-at="2019-07-30T05:35:19Z" data-provider="getlogindata" finished-at="2019-07-30T05:35:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[obsorgint@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginSK -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.TestNGScript.file.LoginSKDataProvider@7ba18f1b]" name="closeApp" is-config="true" duration-ms="1210" started-at="2019-07-30T05:35:23Z" finished-at="2019-07-30T05:35:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- com.TestNGScript.file.LoginSKDataProvider -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.LoginSafetyKuvrr -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

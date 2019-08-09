@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="1">
+<suite
+    name="Suite"
+    verbose="1" >
 
-<listeners>
-        <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
+    <listeners>
+    <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
 
-
-  <test name="Test" parallel="false" thread-count="1">
+    <test name="LoginSafetyKuvrr" >
     <classes>
-      
-    
-      <class name="com.TestNGScript.file.LoginSafetyKuvrr"/>
-      <class name="com.TestNGScript.file.SafetyKuvrrBroadcast"/>
-      <class name="com.TestNGScript.file.SafetyKuvrrHomePageMenu"/>
-      <class name="com.TestNGScript.file.SafetyKuvrrOpenIncident"/>
-      <!--     <class name="com.TestNGScript.file.LoginAmazon"/>
-      <class name="com.TestNGScript.file.HomeAmazon"/>
-       -->
-      
+    <class name="com.TestNGScript.file.LoginSafetyKuvrr" />
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+    </test>
+    
+  
+    <test name="SafetyKuvrrBroadcast" >
+    <classes>
+    <class name="com.TestNGScript.file.SafetyKuvrrBroadcast" />
+    </classes>
+   </test>
+   
+    
+    <test name="SafetyKuvrrHomePageMenu" >
+    <classes>
+    <class name="com.TestNGScript.file.SafetyKuvrrHomePageMenu" />
+    </classes>
+    </test>
+    
+    
+     <test name="SafetyKuvrrOpenIncident" >
+     <classes>
+     <class name="com.TestNGScript.file.SafetyKuvrrOpenIncident" />
+     </classes>
+     </test>         
+
+          
+        
+   
+
+</suite> 
