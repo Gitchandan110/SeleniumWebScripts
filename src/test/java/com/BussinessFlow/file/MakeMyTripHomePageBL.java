@@ -178,8 +178,9 @@ public class MakeMyTripHomePageBL extends MakeMyTripHomePagePL {
 
 	public void Traveller$Class() {
 		
-		WebDriverWait wait=new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(BtnTravellerClass()));
+	    //Explicit Wait example		
+		WebDriverWait explicitwait=new WebDriverWait(driver, 10);
+		explicitwait.until(ExpectedConditions.visibilityOf(BtnTravellerClass()));
 		Actions action=new Actions(driver);
 		action.moveToElement(BtnTravellerClass());
 		Base.highLightElement(driver, BtnTravellerClass());

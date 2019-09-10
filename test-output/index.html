@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -107,12 +107,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SafetyKuvrrOpenIncident" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SafetyKuvrrBroadcast" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SafetyKuvrrBroadcast" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SafetyKuvrrOpenIncident" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -135,36 +135,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.TestNGScript.file.LoginSafetyKuvrr</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginSafetyKuvrr">
-                  </a> <!-- loginSafetyKuvrr -->
-                  <span class="method-name">loginSafetyKuvrr</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.TestNGScript.file.SafetyKuvrrBroadcast</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="launchSafetyApp">
-                  </a> <!-- launchSafetyApp -->
-                  <span class="method-name">launchSafetyApp</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">com.TestNGScript.file.SafetyKuvrrOpenIncident</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -173,6 +143,21 @@
                   <a name="launchSafetyApp">
                   </a> <!-- launchSafetyApp -->
                   <span class="method-name">launchSafetyApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.TestNGScript.file.LoginSafetyKuvrr</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginSafetyKuvrr">
+                  </a> <!-- loginSafetyKuvrr -->
+                  <span class="method-name">loginSafetyKuvrr</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,6 +177,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.TestNGScript.file.SafetyKuvrrBroadcast</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="launchSafetyApp">
+                  </a> <!-- launchSafetyApp -->
+                  <span class="method-name">launchSafetyApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -205,14 +205,26 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.ExtentReportListner.ExtentReporterNG&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;LoginSafetyKuvrr&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.TestNGScript.file.LoginSafetyKuvrr&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- LoginSafetyKuvrr --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;SafetyKuvrrBroadcast&quot;&gt;
+    &lt;classes&gt;
       &lt;class name=&quot;com.TestNGScript.file.SafetyKuvrrBroadcast&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SafetyKuvrrBroadcast --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;SafetyKuvrrHomePageMenu&quot;&gt;
+    &lt;classes&gt;
       &lt;class name=&quot;com.TestNGScript.file.SafetyKuvrrHomePageMenu&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SafetyKuvrrHomePageMenu --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;SafetyKuvrrOpenIncident&quot;&gt;
+    &lt;classes&gt;
       &lt;class name=&quot;com.TestNGScript.file.SafetyKuvrrOpenIncident&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- SafetyKuvrrOpenIncident --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -224,7 +236,16 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (4 classes)</span>
+                <span class="test-name">LoginSafetyKuvrr (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SafetyKuvrrBroadcast (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SafetyKuvrrHomePageMenu (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SafetyKuvrrOpenIncident (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -254,19 +275,19 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'launchSafetyApp')
 data.setCell(0, 2, 'com.TestNGScript.file.SafetyKuvrrOpenIncident')
-data.setCell(0, 3, 33895);
+data.setCell(0, 3, 31297);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TestHambugerMenuClick')
 data.setCell(1, 2, 'com.TestNGScript.file.SafetyKuvrrHomePageMenu')
-data.setCell(1, 3, 17546);
+data.setCell(1, 3, 17964);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'launchSafetyApp')
 data.setCell(2, 2, 'com.TestNGScript.file.SafetyKuvrrBroadcast')
-data.setCell(2, 3, 11038);
+data.setCell(2, 3, 12918);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginSafetyKuvrr')
 data.setCell(3, 2, 'com.TestNGScript.file.LoginSafetyKuvrr')
-data.setCell(3, 3, 3445);
+data.setCell(3, 3, 5549);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -304,56 +325,56 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginSafetyKuvrr</span>
-                <span class="method-start">21021 ms</span>
+                <span class="method-start">23405 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">24468 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.TestNGScript.file.SafetyKuvrrHomePageMenu</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApp</span>
-                <span class="method-start">25301 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">TestHambugerMenuClick</span>
-                <span class="method-start">51418 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">68965 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.TestNGScript.file.SafetyKuvrrOpenIncident</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchSKApp</span>
-                <span class="method-start">69727 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">87515 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">121412 ms</span>
+                <span class="method-start">28958 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SafetyKuvrrBroadcast</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">122158 ms</span>
+                <span class="method-start">30258 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">137126 ms</span>
+                <span class="method-start">47114 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">148168 ms</span>
+                <span class="method-start">60035 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TestNGScript.file.SafetyKuvrrHomePageMenu</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">61100 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestHambugerMenuClick</span>
+                <span class="method-start">77443 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">95409 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TestNGScript.file.SafetyKuvrrOpenIncident</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchSKApp</span>
+                <span class="method-start">96500 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">launchSafetyApp</span>
+                <span class="method-start">112916 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">144228 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
