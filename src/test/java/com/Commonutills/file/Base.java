@@ -33,6 +33,7 @@ public class Base {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\chromedriver.exe");
 	    driver=new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 	    driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	    String url="https://safety-test.kuvrr.com/observer/";
 		driver.get(url);
