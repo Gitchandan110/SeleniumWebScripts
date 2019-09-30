@@ -79,7 +79,7 @@ public class MakeMyTripHomePagePL extends Base {
 
 	public WebElement DayPicker() {
 
-		By dayPicker = By.xpath("//div[@class='DayPicker-Day'][@aria-label='Sun Sep 29 2019']");
+		By dayPicker = By.xpath("//div[@class='DayPicker-Day'][@aria-label='Wed May 27 2020']");
 		return driver.findElement(dayPicker);
 
 	}
@@ -141,28 +141,28 @@ public class MakeMyTripHomePagePL extends Base {
 	
 	public WebElement AdultTraveller() {
 		
-		By adultTC=By.xpath("//ul[@class='guestCounter font12 darkText'][1]");
+		By adultTC=By.xpath("//div[@class='appendBottom20']//ul//li[3]");
 		return driver.findElement(adultTC);
 		
 	}
 	
 	public WebElement ChildTraveller() {
 		
-		By childTC=By.xpath("//ul[@class='guestCounter font12 darkText'][2]");
+		By childTC=By.xpath("//div[@class='makeFlex appendBottom25']//ul//li[3]");
 		return driver.findElement(childTC);
 
 }
 	
 	public WebElement InfantsTraveller() {
 		
-		By infantsTC=By.xpath("//ul[@class='guestCounter font12 darkText'][3]");
+		By infantsTC=By.xpath("//div[@class='makeFlex column pushRight']//ul//li[3]");
 		return driver.findElement(infantsTC);
 	
 }
 	
 	public WebElement TravellerClass() {
 		
-		By travellerClass=By.xpath("//ul[@class='guestCounter classSelect font12 darkText'][1]");
+		By travellerClass=By.xpath("//ul[@class='guestCounter classSelect font12 darkText']//li[3]");
 		return driver.findElement(travellerClass);
 
 }

@@ -22,7 +22,7 @@ public class SafetyKuvrrHomePageMenu extends Base {
 
 	public void launchApp() throws IOException, InterruptedException {
 
-		opendriver();
+		chromeDriver();
 		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
 		driver.get(url);
 		Thread.sleep(5000);

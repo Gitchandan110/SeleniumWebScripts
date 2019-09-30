@@ -27,7 +27,7 @@ public class SafetyKuvrrOpenIncident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		opendriver();
+		chromeDriver();
 		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
 		driver.get(url);
 		Thread.sleep(5000);

@@ -19,7 +19,7 @@ public class HomeAmazon extends Base {
 	
 	public void launchAmazon() {
 		
-		opendriver();
+		chromeDriver();
 		String url = "https://www.amazon.in/";
 		driver.get(url);
 		

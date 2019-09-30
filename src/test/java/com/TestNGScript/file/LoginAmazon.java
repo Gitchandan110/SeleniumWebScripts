@@ -21,7 +21,7 @@ public class LoginAmazon extends Base{
 	
 	public void launchAmazon() throws InterruptedException {
 		
-		opendriver();
+		chromeDriver();
 		String url = "https://www.amazon.in/";
 		driver.get(url);
 		Thread.sleep(5000);

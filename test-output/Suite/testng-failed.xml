@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)" parallel="classes">
+  <test thread-count="5" name="MakeMyTripHomePage(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SafetyKuvrrHomePageMenu">
+      <class name="com.TestNGScript.file.MakeMyTripHomePage">
         <methods>
-          <include name="TestHambugerMenuClick"/>
-          <include name="closeBrowser"/>
-          <include name="launchApp"/>
+          <include name="openMMT"/>
+          <include name="CloseApp"/>
+          <include name="BookTicket"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SafetyKuvrrHomePageMenu -->
+      </class> <!-- com.TestNGScript.file.MakeMyTripHomePage -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- MakeMyTripHomePage(failed) -->
 </suite> <!-- Failed suite [Suite] -->

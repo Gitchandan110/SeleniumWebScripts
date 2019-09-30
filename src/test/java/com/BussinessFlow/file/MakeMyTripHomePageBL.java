@@ -118,7 +118,8 @@ public class MakeMyTripHomePageBL extends MakeMyTripHomePagePL {
 			} 
 			
 		}
-		
+		Thread.sleep(3000);
+		System.out.println("City got selected");
 	}
 	
 	
@@ -126,7 +127,7 @@ public class MakeMyTripHomePageBL extends MakeMyTripHomePagePL {
 	public void Month_Departure() throws InterruptedException {
 		
 		
-		String ExpectedMonth = "September 2019";
+		String ExpectedMonth = "May 2020";
 		
 /*		String currentMonth ="";
 			while (!currentMonth.equals(ExpectedMonth)) {
@@ -154,6 +155,7 @@ public class MakeMyTripHomePageBL extends MakeMyTripHomePagePL {
 			}
 		}
 
+	@SuppressWarnings("unlikely-arg-type")
 	public void Date_Departure() {
 
 		try {
@@ -161,6 +163,7 @@ public class MakeMyTripHomePageBL extends MakeMyTripHomePagePL {
 			List<WebElement> departureDates = CalendarDate().findElements(By.tagName("div"));
 			for (WebElement date: departureDates) {
 			if	(date.getText().equals(DayPicker())) {
+				Base.highLightElement(driver, date);
 				date.click();
 				System.out.println("Departure Date Selected");	
 				

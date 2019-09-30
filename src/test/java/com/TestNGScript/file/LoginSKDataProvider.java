@@ -21,7 +21,7 @@ public class LoginSKDataProvider extends Base {
 	@BeforeMethod
 	public void launchSKApp() throws IOException {
 
-		opendriver();
+		chromeDriver();
 		String url = ExcelUtils.ReadExcel("Login", 1, 0);
 		driver.get(url);
 

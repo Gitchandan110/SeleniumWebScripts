@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.LoginSafetyKuvrr">
+      <class name="com.TestNGScript.file.MakeMyTripHomePage">
         <methods>
-          <include name="launchSK"/>
-          <include name="closeBrowser"/>
-          <include name="loginSafetyKuvrr"/>
+          <include name="openMMT"/>
+          <include name="CloseApp"/>
+          <include name="BookTicket"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.LoginSafetyKuvrr -->
+      </class> <!-- com.TestNGScript.file.MakeMyTripHomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

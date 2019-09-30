@@ -20,8 +20,8 @@ public class MakeMyTripHomePage extends Base {
 	
 	public void openMMT() throws InterruptedException {
 		
-		opendriver();
-	//	chromeDriver();
+	//	opendriver();
+		chromeDriver();
 		String url="https://www.makemytrip.com/flights/";
 		driver.get(url);
        
