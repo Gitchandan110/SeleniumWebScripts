@@ -60,8 +60,8 @@ public class MakeMyTripHomePage extends Base {
 	
 	public void CloseApp() {
 		
-		/*driver.close();
-		driver.quit();*/
+		driver.close();
+		driver.quit();
 		
 		
 		
