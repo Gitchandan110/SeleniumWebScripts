@@ -154,6 +154,7 @@
 			<artifactId>eyes-selenium-java3</artifactId>
 			<version>RELEASE</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
