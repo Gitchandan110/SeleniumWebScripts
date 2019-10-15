@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="MakeMyTripHomePage(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.MakeMyTripHomePage">
+      <class name="com.TestNGScript.file.JDBC_UpdateData">
         <methods>
-          <include name="openMMT"/>
-          <include name="CloseApp"/>
-          <include name="BookTicket"/>
+          <include name="testPostgresDB"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.MakeMyTripHomePage -->
+      </class> <!-- com.TestNGScript.file.JDBC_UpdateData -->
     </classes>
-  </test> <!-- MakeMyTripHomePage(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
