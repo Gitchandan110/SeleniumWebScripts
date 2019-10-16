@@ -1,13 +1,18 @@
 package com.TestNGScript.file;
 
+import static org.testng.Assert.assertEquals;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import org.testng.annotations.Test;
 
-public class JDBC_InsertData {
+public class JDBC_VerifyEmailData {
+	
+	int columnNumber;
 
 	@Test
 
@@ -24,15 +29,20 @@ public class JDBC_InsertData {
 
 		Statement stmnt = dbconnection.createStatement();
 
-		String query="insert into users values (8, 'Vivo','kuvrr','Vivo@yopmail.com', 8154678903, 12345678, 'sk')";
-		stmnt.executeUpdate(query);
-
-		System.out.println("Insert Data done successfull verify DB");
-
-		// Close DB Connection
-		dbconnection.close();
-		System.out.println("DataBase Connection closed");
-
+		ResultSet rs = stmnt.executeQuery("select email from users where id = 7");
+		ResultSetMetaData rsmd=rs.getMetaData();
+		columnNumber=rsmd.getColumnCount();
+		System.out.println("columnNumber is : "+ columnNumber);
+		
+		while(rs.next())
+			
+		{
+		
+		String email=rs.getString("email").trim();
+		assertEquals(email, "Mi@yopmail.com");
+		System.out.println("Email is :" + email);
+	
+		}
 	}
 
 }

@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 import org.testng.annotations.Test;
 
-public class JDBC_SelectData {
+public class JDBC_SelectAllTableData {
 	
 	
 @Test

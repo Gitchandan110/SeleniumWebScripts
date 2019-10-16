@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="299" started-at="2019-10-15T07:04:57Z" finished-at="2019-10-15T07:04:58Z">
+  <suite name="Default suite" duration-ms="402" started-at="2019-10-16T09:06:17Z" finished-at="2019-10-16T09:06:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="299" started-at="2019-10-15T07:04:57Z" finished-at="2019-10-15T07:04:58Z">
-      <class name="com.TestNGScript.file.JDBC_InsertData">
-        <test-method status="PASS" signature="testPostgresDB()[pri:0, instance:com.TestNGScript.file.JDBC_InsertData@5cdd8682]" name="testPostgresDB" duration-ms="271" started-at="2019-10-15T07:04:57Z" finished-at="2019-10-15T07:04:58Z">
+    <test name="Default test" duration-ms="402" started-at="2019-10-16T09:06:17Z" finished-at="2019-10-16T09:06:17Z">
+      <class name="com.TestNGScript.file.JDBC_SelectSingleRowData">
+        <test-method status="PASS" signature="testPostgresDB()[pri:0, instance:com.TestNGScript.file.JDBC_SelectSingleRowData@5cdd8682]" name="testPostgresDB" duration-ms="373" started-at="2019-10-16T09:06:17Z" finished-at="2019-10-16T09:06:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostgresDB -->
-      </class> <!-- com.TestNGScript.file.JDBC_InsertData -->
+      </class> <!-- com.TestNGScript.file.JDBC_SelectSingleRowData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

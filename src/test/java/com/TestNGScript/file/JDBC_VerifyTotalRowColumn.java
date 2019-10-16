@@ -2,14 +2,11 @@ package com.TestNGScript.file;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.testng.annotations.Test;
-
-public class JDBC_InsertData {
-
-	@Test
+public class JDBC_VerifyTotalRowColumn {
 
 	public void testPostgresDB() throws ClassNotFoundException, SQLException {
 
@@ -24,15 +21,12 @@ public class JDBC_InsertData {
 
 		Statement stmnt = dbconnection.createStatement();
 
-		String query="insert into users values (8, 'Vivo','kuvrr','Vivo@yopmail.com', 8154678903, 12345678, 'sk')";
-		stmnt.executeUpdate(query);
+		ResultSet rs = stmnt.executeQuery("select * from users");
 
-		System.out.println("Insert Data done successfull verify DB");
+		while (rs.next())
 
-		// Close DB Connection
-		dbconnection.close();
-		System.out.println("DataBase Connection closed");
+		{
 
+		}
 	}
-
 }
