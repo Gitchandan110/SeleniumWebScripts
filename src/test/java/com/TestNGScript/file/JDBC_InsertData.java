@@ -24,7 +24,7 @@ public class JDBC_InsertData {
 
 		Statement stmnt = dbconnection.createStatement();
 
-		String query="insert into users values (8, 'Vivo','kuvrr','Vivo@yopmail.com', 8154678903, 12345678, 'sk')";
+		String query="insert into users values (9, 'Pixel','','Pixel@yopmail.com', 8154678903, 12345678, '')";
 		stmnt.executeUpdate(query);
 
 		System.out.println("Insert Data done successfull verify DB");

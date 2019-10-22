@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="402" started-at="2019-10-16T09:06:17Z" finished-at="2019-10-16T09:06:17Z">
+  <suite name="Default suite" duration-ms="8955" started-at="2019-10-22T12:53:16Z" finished-at="2019-10-22T12:53:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="402" started-at="2019-10-16T09:06:17Z" finished-at="2019-10-16T09:06:17Z">
-      <class name="com.TestNGScript.file.JDBC_SelectSingleRowData">
-        <test-method status="PASS" signature="testPostgresDB()[pri:0, instance:com.TestNGScript.file.JDBC_SelectSingleRowData@5cdd8682]" name="testPostgresDB" duration-ms="373" started-at="2019-10-16T09:06:17Z" finished-at="2019-10-16T09:06:17Z">
+    <test name="Default test" duration-ms="8955" started-at="2019-10-22T12:53:16Z" finished-at="2019-10-22T12:53:25Z">
+      <class name="com.TestNGScript.file.JDBC_ExportDB_ExcelSheet">
+        <test-method status="PASS" signature="ExportDBtoExcel()[pri:0, instance:com.TestNGScript.file.JDBC_ExportDB_ExcelSheet@5cdd8682]" name="ExportDBtoExcel" duration-ms="8919" started-at="2019-10-22T12:53:16Z" finished-at="2019-10-22T12:53:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostgresDB -->
-      </class> <!-- com.TestNGScript.file.JDBC_SelectSingleRowData -->
+        </test-method> <!-- ExportDBtoExcel -->
+      </class> <!-- com.TestNGScript.file.JDBC_ExportDB_ExcelSheet -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

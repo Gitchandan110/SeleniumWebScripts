@@ -33,8 +33,6 @@ public class Base {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 	    driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-	    String url="https://safety-test.kuvrr.com/observer/";
-		driver.get(url);
 		return driver;
 	
 	

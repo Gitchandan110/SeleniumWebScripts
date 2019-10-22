@@ -21,6 +21,7 @@ public class ExcelUtils {
 		Row row = sheet.getRow(rownum);
 		Cell cell = row.getCell(cellnum);
 		//System.out.println("Row data:" + sheet.getRow(rownum).getCell(cellnum));
+		fis.close();
 		return sheet.getRow(rownum).getCell(cellnum).toString();
 
 	}
