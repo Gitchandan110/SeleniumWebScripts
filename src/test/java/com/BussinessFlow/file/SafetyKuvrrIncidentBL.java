@@ -43,8 +43,10 @@ public class SafetyKuvrrIncidentBL extends SafetyKuvrrOpenIncidentPL {
 				Thread.sleep(2000);
 				OpenIncident().click();
 				System.out.println("Open Incident was clicked");
-				Thread.sleep(15000);
-			
+				Thread.sleep(5000);
+            // 	Base.scrolltoElement(driver, logoKuvrr());
+             	Base.scrolltoElement(driver, videoContainer());
+             	Thread.sleep(15000);
 
 			} else {
 

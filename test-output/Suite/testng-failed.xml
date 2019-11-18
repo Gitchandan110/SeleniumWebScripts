@@ -4,6 +4,74 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
+  <test thread-count="5" name="LoginSafetyKuvrr(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.LoginSafetyKuvrr">
+        <methods>
+          <include name="launchSK"/>
+          <include name="closeBrowser"/>
+          <include name="loginSafetyKuvrr"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.LoginSafetyKuvrr -->
+    </classes>
+  </test> <!-- LoginSafetyKuvrr(failed) -->
+  <test thread-count="5" name="SafetyKuvrrBroadcast(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SafetyKuvrrBroadcast">
+        <methods>
+          <include name="launchSafetyApp"/>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SafetyKuvrrBroadcast -->
+    </classes>
+  </test> <!-- SafetyKuvrrBroadcast(failed) -->
+  <test thread-count="5" name="SafetyKuvrrHomePageMenu(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SafetyKuvrrHomePageMenu">
+        <methods>
+          <include name="TestHambugerMenuClick"/>
+          <include name="closeBrowser"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SafetyKuvrrHomePageMenu -->
+    </classes>
+  </test> <!-- SafetyKuvrrHomePageMenu(failed) -->
+  <test thread-count="5" name="SafetyKuvrrOpenIncident(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SafetyKuvrrOpenIncident">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SafetyKuvrrOpenIncident -->
+    </classes>
+  </test> <!-- SafetyKuvrrOpenIncident(failed) -->
+  <test thread-count="5" name="HomeAmazon(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.HomeAmazon">
+        <methods>
+          <include name="TestAmazonSell"/>
+          <include name="TestAmazonLogo"/>
+          <include name="launchAmazon"/>
+          <include name="TestHomePageTitle"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.HomeAmazon -->
+    </classes>
+  </test> <!-- HomeAmazon(failed) -->
+  <test thread-count="5" name="LoginAmazon(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.LoginAmazon">
+        <methods>
+          <include name="TestLoginAmazon"/>
+          <include name="killApp"/>
+          <include name="launchAmazon"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.LoginAmazon -->
+    </classes>
+  </test> <!-- LoginAmazon(failed) -->
   <test thread-count="5" name="MakeMyTripHomePage(failed)">
     <classes>
       <class name="com.TestNGScript.file.MakeMyTripHomePage">

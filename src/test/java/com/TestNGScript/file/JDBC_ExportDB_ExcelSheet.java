@@ -30,49 +30,54 @@ public class JDBC_ExportDB_ExcelSheet {
 
 		ResultSet rs = stmnt.executeQuery("select * from users order by id asc");
 
-		int cc = rs.getMetaData().getColumnCount();
+		int cellcount = rs.getMetaData().getColumnCount();
 
-		System.out.println("Column Count is : " + cc);
+		System.out.println("Column Count is : " + cellcount);
 
-		for (int i = 1; i <= cc; i++) {
+		for (int headrcount = 1; headrcount <= cellcount; headrcount++) {
 
-			String headerVal = rs.getMetaData().getColumnName(i).trim();
-			ExcelWrite.writeExcel(DBDataSheet, 0, i - 1, headerVal);
+			String headerVal = rs.getMetaData().getColumnName(headrcount).trim();
+			ExcelWrite.writeDBDataExcel(DBDataSheet, 0, headrcount - 1, headerVal);
 			System.out.println("Column Name is :" + headerVal);
 		}
 
-		String rowData;
+		String cellData;
 		List<String> rowList = new ArrayList<>();
 		List<List<String>> allRowList = new ArrayList<>();
-		
+
 		while (rs.next()) {
 			rowList = new ArrayList<>();
-			for (int j = 1; j <= cc; j++) {
-				rowData = rs.getString(j).trim();
-				System.out.println("Row Data at index "+ j + " is :" + rowData);
-				rowList.add(rowData);				
+			for (int cell = 1; cell <= cellcount; cell++) {
+				cellData = rs.getString(cell).trim();
+				System.out.println("Cell Data at index " + cell + " is :" + cellData);
+				rowList.add(cellData);
 			}
 			allRowList.add(rowList);
 
 		}
-		
-		
-		int rn=1;
-		for (int row = 0; row < allRowList.size(); row++) {
-			List<String> rowValue = new ArrayList<>();
-			rowValue=allRowList.get(row);
-			System.out.println("rowValue at index "+ row + " is " + rowValue);
-			for (int column = 0; column < rowValue.size(); column++) {
-				System.out.println("Column data is :"+ rowValue.get(column).trim());						
-				ExcelWrite.writeExcel(DBDataSheet, rn, column , rowValue.get(column).trim());				
+
+		/*
+		 * int rn=1; for (int row = 0; row < allRowList.size(); row++) { List<String>
+		 * rowValue = new ArrayList<>(); rowValue=allRowList.get(row);
+		 * System.out.println("rowValue at index "+ row + " is " + rowValue); for (int
+		 * column = 0; column < rowValue.size(); column++) {
+		 * System.out.println("Column data is :"+ rowValue.get(column).trim());
+		 * ExcelWrite.writeDBDataExcel(DBDataSheet, rn, column ,
+		 * rowValue.get(column).trim()); } rn++; }
+		 */
+
+		// Now Enter allRowList array data in Excel Sheet
+
+		Integer sheetRow = 1, sheetColumn;
+		for (List<String> rowData : allRowList) {
+			sheetColumn = 0;
+			for (String columndata : rowData) {
+				ExcelWrite.writeDBDataExcel(DBDataSheet, sheetRow, sheetColumn, columndata.trim());
+				sheetColumn++;
 			}
-			rn++;
+			sheetRow++;
 		}
 
-		
-		
-		
-		
 	}
 
 }

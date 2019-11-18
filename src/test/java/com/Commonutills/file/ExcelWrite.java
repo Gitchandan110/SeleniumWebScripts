@@ -15,12 +15,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelWrite {
 
-	static File Path = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\TestData.xlsx");
+	static File PathAppData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\AppData.xlsx");
+	static File PathDBData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\DBData.xlsx");
 
-	public static void writeExcel(String sheetname, int rownum, int cellnum,  String celldata)
+	public static void writeAppDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
 			throws IOException {
 		try {
-			FileInputStream fis = new FileInputStream(Path);
+			FileInputStream fis = new FileInputStream(PathAppData);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet(sheetname);
 			Row row = sheet.getRow(rownum);
@@ -29,13 +30,35 @@ public class ExcelWrite {
 			}
 			Cell cell = row.createCell(cellnum);
 			cell.setCellValue(celldata);
-			FileOutputStream fos = new FileOutputStream(Path);
+			FileOutputStream fos = new FileOutputStream(PathAppData);
 			workbook.write(fos);
 			workbook.close();
-			System.out.println("END OF WRITING DATA IN EXCEL");
+		
 		} catch (Exception ex) {
 			System.out.println("Exception caught in Write Excel is: "+ ex);
 
 		}
 	}
+	
+	public static void writeDBDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
+			throws IOException {
+		try {
+			FileInputStream fis = new FileInputStream(PathDBData);
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			XSSFSheet sheet = workbook.getSheet(sheetname);
+			Row row = sheet.getRow(rownum);
+			if(row==null) {
+			row = sheet.createRow(rownum);
+			}
+			Cell cell = row.createCell(cellnum);
+			cell.setCellValue(celldata);
+			FileOutputStream fos = new FileOutputStream(PathDBData);
+			workbook.write(fos);
+			workbook.close();
+		} catch (Exception ex) {
+			System.out.println("Exception caught in Write Excel is: "+ ex);
+
+		}
+	}
+	
 }

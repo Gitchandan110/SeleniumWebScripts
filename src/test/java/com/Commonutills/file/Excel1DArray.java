@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Excel1DArray {
 
-	static File Path = new File("C:\\Users\\Chandan\\git\\repository\\ArtifactMaven\\Test Data\\TestData.xlsx");
+	static File Path = new File("C:\\Users\\Chandan\\git\\repository\\ArtifactMaven\\Test Data\\AppData.xlsx");
 
 	public static void main(String[] args) throws IOException {
 

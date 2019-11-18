@@ -15,8 +15,8 @@ public void fillEmail() {
 	try {
 			if (Email().isDisplayed()) {
 				System.out.println("Email Found");
-				Email().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 1));
-				System.out.println("Email is:"+ ExcelUtils.ReadExcel(LoginDataSheet, 1, 1));
+				Email().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
+				System.out.println("Email is:"+ ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
 				System.out.println("Email entered");
 			}
 
@@ -37,7 +37,7 @@ public void fillEmail() {
 		try {
 
 			if (Password().isDisplayed()) {
-				Password().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 2));
+				Password().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 4));
 				System.out.println("Password entered");
 
 			}

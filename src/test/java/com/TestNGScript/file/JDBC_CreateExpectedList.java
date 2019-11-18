@@ -60,7 +60,7 @@ public class JDBC_CreateExpectedList {
 		
 		for (int rowNum=0; rowNum< ExpectedList.size(); rowNum++) {
 			System.out.println("List val at row : "+ rowNum +" is "+ ExpectedList.get(rowNum));
-			ExcelWrite.writeExcel(DBDataSheet, rowNum, 0 , ExpectedList.get(rowNum));
+			ExcelWrite.writeDBDataExcel(DBDataSheet, rowNum, 0 , ExpectedList.get(rowNum));
 		}
 
 		// Close DB Connection

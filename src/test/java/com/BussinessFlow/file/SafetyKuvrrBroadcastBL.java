@@ -59,7 +59,8 @@ public class SafetyKuvrrBroadcastBL extends SafetyKuvrrBroadcastPL {
 
 			if (BtnSubmit().isDisplayed() == true) {
 
-				BtnSubmit().click();
+				//BtnSubmit().click();
+				BtnCancel().click();
 
 			} else {
 

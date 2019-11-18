@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Excel2DArray {
 	
 
-	static File Path = new File("C:\\Users\\Chandan\\git\\repository\\ArtifactMaven\\Test Data\\TestData.xlsx");
+	static File Path = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\AppData.xlsx");
 		
 	public static Object[][] getExcelData(String sheetName) throws FileNotFoundException {
 
