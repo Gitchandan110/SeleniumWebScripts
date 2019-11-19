@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="HomeAmazon(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.HomeAmazon">
+      <class name="com.TestNGScript.file.SK_OpenIncident">
         <methods>
-          <include name="TestAmazonSell"/>
-          <include name="launchAmazon"/>
-          <include name="tearDown"/>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+          <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.HomeAmazon -->
+      </class> <!-- com.TestNGScript.file.SK_OpenIncident -->
     </classes>
-  </test> <!-- HomeAmazon(failed) -->
-  <test thread-count="5" name="MakeMyTripHomePage(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.MakeMyTripHomePage">
-        <methods>
-          <include name="openMMT"/>
-          <include name="CloseApp"/>
-          <include name="BookTicket"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.MakeMyTripHomePage -->
-    </classes>
-  </test> <!-- MakeMyTripHomePage(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

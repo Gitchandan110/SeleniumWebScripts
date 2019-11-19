@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SafetyKuvrrCloseOpenIncident">
+      <class name="com.TestNGScript.file.SK_OpenIncident">
         <methods>
+          <include name="closeBrowser"/>
           <include name="launchSafetyApp"/>
           <include name="launchSKApp"/>
-          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SafetyKuvrrCloseOpenIncident -->
+      </class> <!-- com.TestNGScript.file.SK_OpenIncident -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
