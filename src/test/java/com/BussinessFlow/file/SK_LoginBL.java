@@ -1,23 +1,20 @@
 package com.BussinessFlow.file;
 
-
 import java.io.IOException;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.PageObjectRepository.file.SK_LoginPL;
 
 public class SK_LoginBL extends SK_LoginPL {
-	
-	String LoginDataSheet="Login";
-	
-public void fillEmail() {
 
-	try {
+	String LoginDataSheet = "Login";
+
+	public void fillEmail() {
+
+		try {
 			if (Email().isDisplayed()) {
-				System.out.println("Email Found");
 				Email().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
-				System.out.println("Email is:"+ ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
-				System.out.println("Email entered");
+				System.out.println("User is:" + ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
 			}
 
 			else {
@@ -52,16 +49,14 @@ public void fillEmail() {
 		}
 
 	}
-	
+
 	public void clickContinue() {
-		
-		if (BtnContinue().isDisplayed()){
-			
+
+		if (BtnContinue().isDisplayed()) {
+
 			BtnContinue().click();
 		}
-		
-		
+
 	}
-	
 
 }

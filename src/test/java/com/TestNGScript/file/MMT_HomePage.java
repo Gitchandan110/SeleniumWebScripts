@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.BussinessFlow.file.MMT_HomePageBL;
 import com.Commonutills.file.Base;
 
-public class MakeMyTripHomePage extends Base {
+public class MMT_HomePage extends Base {
 
 	MMT_HomePageBL MMTHomePagebl=PageFactory.initElements(driver, MMT_HomePageBL.class);
 	

@@ -42,12 +42,13 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Base.highLightElement(driver, OpenIncident());
 				Thread.sleep(2000);
 				OpenIncident().click();
-				System.out.println("Open Incident was clicked");
+				System.out.println("Open Incident found and selected");
 				Thread.sleep(5000);
             // 	Base.scrolltoElement(driver, logoKuvrr());
              	Base.scrolltoElement(driver, videoContainer());
+             	System.out.println("Please wait for 15 seconds");
              	Thread.sleep(15000);
-             	System.out.println("15 seconds wait is over");
+             	
 
 			} else {
 
@@ -57,6 +58,32 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 		}
 	}
+	
+	public void clickSmartResponse() {
+		
+		Base.scrolltoElement(driver, btnSmartResponse());
+		if (btnSmartResponse().isDisplayed()) {
+		//	btnSmartResponse().click();
+		//	chatSmartResponse().click();
+		//	System.out.println("Samrt Response Chat is selected");
+			txtSmartResponse().click();
+			txtSmartResponse().sendKeys("Where are You?");
+			System.out.println("SmartResponse: Where are You?");
+			btnSendSmartResponse().click();
+			System.out.println("SmartResponse chat is performed");
+			
+		}
+	}
+
+	public void enterEventNotes() {
+		
+		if (txtEventNotes().isDisplayed()) {
+			txtEventNotes().click();
+			txtEventNotes().sendKeys("Event Notes");
+			btnSaveEventNotes().click();
+			System.out.println("Event Notes sent");
+		}
+	}	
 	
 public void clickIconShareIncident() {
 		
@@ -81,6 +108,7 @@ public void clickIconShareIncident() {
 			shareIncidentEmailfield().click();
 			shareIncidentEmailfield().sendKeys("ck@yopmail.com;chandan@yopmail.com;test@yopmail.com");
 			btnSubmitShareIncident().click();
+			System.out.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
 	}
 		
 }
@@ -91,6 +119,7 @@ public void clickIconShareIncident() {
 		if (dropdownIncidentAction().isDisplayed()) {
 			dropdownIncidentAction().click();
 			incidentActionClose().click();
+			System.out.println("Event action closed");
 		}
 		
 		
@@ -103,6 +132,7 @@ public void clickIncidentResolutionFalseAlarm() {
 		if (dropdownIncidentResolution().isDisplayed()) {
 			dropdownIncidentResolution().click();
 			incidentResolutionFalseAlarm().click();
+			System.out.println("Incident Resolution: False Alarm selected");
 		}
 }
 	
@@ -114,6 +144,9 @@ public void enterIncidentActionResponse() {
 		btnSaveIncidentResponse().click();
 	}
 }	
+
+
+
 	
 	
 }	

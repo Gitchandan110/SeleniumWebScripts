@@ -42,6 +42,13 @@ public class SK_OpenIncident extends Base {
 		loginSafetyKuvrrBL.fillPassword();
 		loginSafetyKuvrrBL.clickContinue();
 		incidentbl.clickOpenIncident();
+		incidentbl.clickSmartResponse();
+		incidentbl.enterEventNotes();
+		incidentbl.clickIncidentActionsClose();
+		incidentbl.clickIncidentResolutionFalseAlarm();
+		incidentbl.enterIncidentActionResponse();
+		incidentbl.clickIconShareIncident();
+		incidentbl.submitShareIncident();
 		
 	}
 
@@ -49,7 +56,8 @@ public class SK_OpenIncident extends Base {
 
 	public void closeBrowser() {
 
-	//	driver.quit();
+//	driver.quit();
+	
 	}
 
 }

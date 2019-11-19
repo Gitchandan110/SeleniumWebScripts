@@ -10,7 +10,7 @@ import com.Commonutills.file.Base;
 
 //TEst
 
-public class LoginAmazon extends Base{
+public class Amazon_Login extends Base{
 	
 	Amazon_LoginBL loginAmz=PageFactory.initElements(driver, Amazon_LoginBL.class);
 
