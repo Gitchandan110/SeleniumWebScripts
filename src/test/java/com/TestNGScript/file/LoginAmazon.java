@@ -5,14 +5,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.BussinessFlow.file.LoginAmazonBL;
+import com.BussinessFlow.file.Amazon_LoginBL;
 import com.Commonutills.file.Base;
 
 //TEst
 
 public class LoginAmazon extends Base{
 	
-	LoginAmazonBL loginAmz=PageFactory.initElements(driver, LoginAmazonBL.class);
+	Amazon_LoginBL loginAmz=PageFactory.initElements(driver, Amazon_LoginBL.class);
 
 	
 	

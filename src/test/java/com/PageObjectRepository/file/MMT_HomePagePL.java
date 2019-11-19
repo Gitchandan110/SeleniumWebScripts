@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class MakeMyTripHomePagePL extends Base {
+public class MMT_HomePagePL extends Base {
 
 	public WebElement BtnFromCity() {
 

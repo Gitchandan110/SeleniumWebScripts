@@ -9,37 +9,54 @@
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
 
-    <test name="LoginSafetyKuvrr" >
+    <test name="SK_Login" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.LoginSafetyKuvrr" />
+            <class name="com.TestNGScript.file.SK_Login" />
         </classes>
     </test>
 
-    <test name="SafetyKuvrrBroadcast" >
+    <test name="SK_Broadcast" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SafetyKuvrrBroadcast" />
+            <class name="com.TestNGScript.file.SK_Broadcast" />
         </classes>
     </test>
 
-    <test name="SafetyKuvrrHomePageMenu" >
+    <test name="SK_HomePage" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SafetyKuvrrHomePageMenu" />
+            <class name="com.TestNGScript.file.SK_HomePage" />
         </classes>
     </test>
 
-    <test name="SafetyKuvrrOpenIncident" >
+    <test name="SK_OpenIncident" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SafetyKuvrrOpenIncident" />
+            <class name="com.TestNGScript.file.SK_OpenIncident" />
         </classes>
     </test>
+    
+     <test name="SK_EventAction" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_EventAction" />
+        </classes>
+    </test>
+    
+      <test name="SK_ShareIncident" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_ShareIncident" />
+        </classes>
+    </test>
+    
 
     <test name="HomeAmazon" >
 

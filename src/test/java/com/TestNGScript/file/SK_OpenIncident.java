@@ -11,15 +11,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.BussinessFlow.file.LoginSafetyKuvrrBL;
-import com.BussinessFlow.file.SafetyKuvrrIncidentBL;
+import com.BussinessFlow.file.SK_LoginBL;
+import com.BussinessFlow.file.SK_OpenIncidentBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SafetyKuvrrOpenIncident extends Base {
+public class SK_OpenIncident extends Base {
 
-	SafetyKuvrrIncidentBL incidentbl = PageFactory.initElements(driver, SafetyKuvrrIncidentBL.class);
-	LoginSafetyKuvrrBL loginSafetyKuvrrBL = PageFactory.initElements(driver, LoginSafetyKuvrrBL.class);
+	SK_OpenIncidentBL incidentbl = PageFactory.initElements(driver, SK_OpenIncidentBL.class);
+	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);
 
 	String LoginDataSheet = "Login";
 

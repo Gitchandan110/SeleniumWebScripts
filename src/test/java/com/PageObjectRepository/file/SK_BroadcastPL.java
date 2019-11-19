@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SafetyKuvrrBroadcastPL extends Base {
+public class SK_BroadcastPL extends Base {
 
 	public WebElement BtnBroadcast() {
 

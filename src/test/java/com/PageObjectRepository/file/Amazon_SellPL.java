@@ -1,5 +1,5 @@
 package com.PageObjectRepository.file;
 
-public class SellAmazonPL {
+public class Amazon_SellPL {
 
 }

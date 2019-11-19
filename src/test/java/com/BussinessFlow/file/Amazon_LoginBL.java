@@ -1,9 +1,9 @@
 package com.BussinessFlow.file;
 
 import com.Commonutills.file.Utils;
-import com.PageObjectRepository.file.LoginAmazonPL;
+import com.PageObjectRepository.file.Amazon_LoginPL;
 
-public class LoginAmazonBL extends LoginAmazonPL {
+public class Amazon_LoginBL extends Amazon_LoginPL {
 
 
 
@@ -29,8 +29,8 @@ public class LoginAmazonBL extends LoginAmazonPL {
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in LoginAmazonBL :" + ex.getLocalizedMessage());
-			System.out.println("Exception in LoginAmazonBL :" + ex.getStackTrace());
+			System.out.println("Exception in Amazon_LoginBL :" + ex.getLocalizedMessage());
+			System.out.println("Exception in Amazon_LoginBL :" + ex.getStackTrace());
 		}
 
 	}

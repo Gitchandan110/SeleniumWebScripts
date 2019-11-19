@@ -1,9 +1,9 @@
 package com.BussinessFlow.file;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SafetyKuvrrHomePageMenuPL;
+import com.PageObjectRepository.file.SK_HomePagePL;
 
-public class SafetyKuvrrHomePageMenuBL extends SafetyKuvrrHomePageMenuPL {
+public class SK_HomePageBL extends SK_HomePagePL {
 
 	public void verifyHamburgerMenu() {
 

@@ -7,14 +7,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.BussinessFlow.file.LoginSafetyKuvrrBL;
-import com.BussinessFlow.file.SafetyKuvrrBroadcastBL;
+import com.BussinessFlow.file.SK_LoginBL;
+import com.BussinessFlow.file.SK_BroadcastBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SafetyKuvrrBroadcast extends Base{
-	SafetyKuvrrBroadcastBL broadcastbl=PageFactory.initElements(driver, SafetyKuvrrBroadcastBL.class);
-	LoginSafetyKuvrrBL loginSafetyKuvrrBL=PageFactory.initElements(driver, LoginSafetyKuvrrBL.class);
+public class SK_Broadcast extends Base{
+	SK_BroadcastBL broadcastbl=PageFactory.initElements(driver, SK_BroadcastBL.class);
+	SK_LoginBL loginSafetyKuvrrBL=PageFactory.initElements(driver, SK_LoginBL.class);
 	
 	String LoginDataSheet = "Login";
 	

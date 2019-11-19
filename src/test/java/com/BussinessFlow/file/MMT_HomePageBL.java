@@ -21,9 +21,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.base.Predicate;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.MakeMyTripHomePagePL;
+import com.PageObjectRepository.file.MMT_HomePagePL;
 
-public class MakeMyTripHomePageBL extends MakeMyTripHomePagePL {
+public class MMT_HomePageBL extends MMT_HomePagePL {
 
 	public String validateHomePageTitle() {
 		return driver.getTitle();

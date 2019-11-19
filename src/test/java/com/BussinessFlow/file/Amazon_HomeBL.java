@@ -1,11 +1,11 @@
 package com.BussinessFlow.file;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.HomeAmazonPL;
-import com.PageObjectRepository.file.SellAmazonPL;
+import com.PageObjectRepository.file.Amazon_HomePL;
+import com.PageObjectRepository.file.Amazon_SellPL;
 import com.PageObjectRepository.file.TodaysDealsPL;
 
-public class HomeAmazonBL extends HomeAmazonPL{
+public class Amazon_HomeBL extends Amazon_HomePL{
 	
 	
 	

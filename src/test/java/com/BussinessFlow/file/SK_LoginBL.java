@@ -4,9 +4,9 @@ package com.BussinessFlow.file;
 import java.io.IOException;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
-import com.PageObjectRepository.file.LoginSafetyKuvrrPL;
+import com.PageObjectRepository.file.SK_LoginPL;
 
-public class LoginSafetyKuvrrBL extends LoginSafetyKuvrrPL {
+public class SK_LoginBL extends SK_LoginPL {
 	
 	String LoginDataSheet="Login";
 	

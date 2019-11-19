@@ -9,14 +9,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.BussinessFlow.file.LoginSKDataProviderBL;
+import com.BussinessFlow.file.SK_DataProviderBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.Excel2DArray;
 import com.Commonutills.file.ExcelUtils;
 
-public class LoginSKDataProvider extends Base {
+public class SK_DataProvider extends Base {
 
-	LoginSKDataProviderBL dataproviderbl = PageFactory.initElements(driver, LoginSKDataProviderBL.class);
+	SK_DataProviderBL dataproviderbl = PageFactory.initElements(driver, SK_DataProviderBL.class);
 
 	@BeforeMethod
 	public void launchSKApp() throws IOException {

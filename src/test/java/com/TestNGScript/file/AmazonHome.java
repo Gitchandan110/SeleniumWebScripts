@@ -6,13 +6,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.BussinessFlow.file.HomeAmazonBL;
+import com.BussinessFlow.file.Amazon_HomeBL;
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SellAmazonPL;
+import com.PageObjectRepository.file.Amazon_SellPL;
 
-public class HomeAmazon extends Base {
+public class AmazonHome extends Base {
 	
-	HomeAmazonBL homeAmazonbl=PageFactory.initElements(driver, HomeAmazonBL.class);
+	Amazon_HomeBL homeAmazonbl=PageFactory.initElements(driver, Amazon_HomeBL.class);
 
 	
 	@BeforeMethod

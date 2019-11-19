@@ -7,12 +7,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.BussinessFlow.file.MakeMyTripHomePageBL;
+import com.BussinessFlow.file.MMT_HomePageBL;
 import com.Commonutills.file.Base;
 
 public class MakeMyTripHomePage extends Base {
 
-	MakeMyTripHomePageBL MMTHomePagebl=PageFactory.initElements(driver, MakeMyTripHomePageBL.class);
+	MMT_HomePageBL MMTHomePagebl=PageFactory.initElements(driver, MMT_HomePageBL.class);
 	
 	
 	

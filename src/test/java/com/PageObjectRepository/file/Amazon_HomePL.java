@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import com.Commonutills.file.Base;
 
-public class HomeAmazonPL extends Base {
+public class Amazon_HomePL extends Base {
 
 
 	public WebElement BtnSell() {

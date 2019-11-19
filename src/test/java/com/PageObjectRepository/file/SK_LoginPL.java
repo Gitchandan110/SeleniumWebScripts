@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class LoginSafetyKuvrrPL extends Base{
+public class SK_LoginPL extends Base{
 	
 	
 	public WebElement Email() {

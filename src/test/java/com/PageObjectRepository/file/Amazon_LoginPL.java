@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import com.Commonutills.file.Base;
 
-public class LoginAmazonPL extends Base {
+public class Amazon_LoginPL extends Base {
 
 
 	public WebElement BtnSignIn() {

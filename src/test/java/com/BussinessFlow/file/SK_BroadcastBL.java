@@ -1,11 +1,11 @@
 package com.BussinessFlow.file;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SafetyKuvrrBroadcastPL;
+import com.PageObjectRepository.file.SK_BroadcastPL;
 
-public class SafetyKuvrrBroadcastBL extends SafetyKuvrrBroadcastPL {
+public class SK_BroadcastBL extends SK_BroadcastPL {
 
-	SafetyKuvrrBroadcastPL BroadcastPL;
+	SK_BroadcastPL BroadcastPL;
 
 	public void verifyBroadcastBtn() {
 
