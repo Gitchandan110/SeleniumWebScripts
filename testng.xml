@@ -58,27 +58,27 @@
     </test>
     
 
-    <test name="HomeAmazon" >
+    <test name="Amazon_Home" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.HomeAmazon" />
+            <class name="com.TestNGScript.file.Amazon_Home" />
         </classes>
     </test>
 
-    <test name="LoginAmazon" >
+    <test name="Amazon_Login" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.LoginAmazon" />
+            <class name="com.TestNGScript.file.Amazon_Login" />
         </classes>
     </test>
 
-    <test name="MakeMyTripHomePage" >
+    <test name="MMT_HomePage" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.MakeMyTripHomePage" />
+            <class name="com.TestNGScript.file.MMT_HomePage" />
         </classes>
     </test>
 

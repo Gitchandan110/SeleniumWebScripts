@@ -15,13 +15,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelWrite {
 
-	static File PathAppData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\AppData.xlsx");
-	static File PathDBData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\DBData.xlsx");
-
-	public static void writeAppDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
+	static File PathInputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\InputData.xlsx");
+	static File PathOutputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\OutputData.xlsx");
+	static File PathSanitySheet = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\SanitySheet.xlsx");
+	
+	public static void writeInputDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
 			throws IOException {
 		try {
-			FileInputStream fis = new FileInputStream(PathAppData);
+			FileInputStream fis = new FileInputStream(PathInputData);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet(sheetname);
 			Row row = sheet.getRow(rownum);
@@ -30,7 +31,7 @@ public class ExcelWrite {
 			}
 			Cell cell = row.createCell(cellnum);
 			cell.setCellValue(celldata);
-			FileOutputStream fos = new FileOutputStream(PathAppData);
+			FileOutputStream fos = new FileOutputStream(PathInputData);
 			workbook.write(fos);
 			workbook.close();
 		
@@ -40,10 +41,10 @@ public class ExcelWrite {
 		}
 	}
 	
-	public static void writeDBDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
+	public static void writeOutputDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
 			throws IOException {
 		try {
-			FileInputStream fis = new FileInputStream(PathDBData);
+			FileInputStream fis = new FileInputStream(PathOutputData);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet(sheetname);
 			Row row = sheet.getRow(rownum);
@@ -52,7 +53,7 @@ public class ExcelWrite {
 			}
 			Cell cell = row.createCell(cellnum);
 			cell.setCellValue(celldata);
-			FileOutputStream fos = new FileOutputStream(PathDBData);
+			FileOutputStream fos = new FileOutputStream(PathOutputData);
 			workbook.write(fos);
 			workbook.close();
 		} catch (Exception ex) {
@@ -60,5 +61,28 @@ public class ExcelWrite {
 
 		}
 	}
+	
+	
+	public static void writeSanitySheet(String sheetname, int rownum, int cellnum,  String celldata)
+			throws IOException {
+		try {
+			FileInputStream fis = new FileInputStream(PathSanitySheet);
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			XSSFSheet sheet = workbook.getSheet(sheetname);
+			Row row = sheet.getRow(rownum);
+			if(row==null) {
+			row = sheet.createRow(rownum);
+			}
+			Cell cell = row.createCell(cellnum);
+			cell.setCellValue(celldata);
+			FileOutputStream fos = new FileOutputStream(PathSanitySheet);
+			workbook.write(fos);
+			workbook.close();
+		} catch (Exception ex) {
+			System.out.println("Exception caught in Write Excel is: "+ ex);
+
+		}
+	}
+	
 	
 }

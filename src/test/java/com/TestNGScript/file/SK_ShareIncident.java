@@ -29,7 +29,7 @@ public class SK_ShareIncident extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		chromeDriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(url);
 		Thread.sleep(5000);
 
@@ -39,9 +39,7 @@ public class SK_ShareIncident extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-		loginSafetyKuvrrBL.fillEmail();
-		loginSafetyKuvrrBL.fillPassword();
-		loginSafetyKuvrrBL.clickContinue();
+		loginSafetyKuvrrBL.loginProdObserver();
 		incidentbl.clickOpenIncident();
 		incidentbl.clickIconShareIncident();
 		incidentbl.submitShareIncident();

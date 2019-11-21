@@ -33,4 +33,13 @@ public class SK_LoginPL extends Base{
     	 return driver.findElement(btnContinue);
     	 
      }
+     
+     
+     public WebElement errorLoginFail() {
+    	 
+    	 By loginFail=By.xpath("//div[@class='alert alert-error']");
+    	 return driver.findElement(loginFail);
+    	 
+    	 
+     }
 }

@@ -7,13 +7,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_OrganizationBL;
+import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_OrganizationPage extends Base {
+public class SK_SA_Prod_OrganizationPage extends Base {
 
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
+	SK_LoginBL prodSALoginbl=PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_OrganizationBL organizationBL=PageFactory.initElements(driver, SK_OrganizationBL.class);
 	String LoginDataSheet = "Login";
@@ -24,7 +26,7 @@ public class SK_OrganizationPage extends Base {
 
 		chromeDriver();
 	//	opendriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(url);
 		Thread.sleep(5000);
 
@@ -34,9 +36,7 @@ public class SK_OrganizationPage extends Base {
 
 	public void TestOrganizationPage() throws InterruptedException, IOException {
 
-		loginSafetyKuvrrBL.fillEmail();
-		loginSafetyKuvrrBL.fillPassword();
-		loginSafetyKuvrrBL.clickContinue();
+		prodSALoginbl.loginProdSA();
 		homePageMenuBL.verifyHamburgerMenu();
 		homePageMenuBL.VerifyOrganizationlink();
 		organizationBL.getOrgPageRowCount();
@@ -55,7 +55,7 @@ public class SK_OrganizationPage extends Base {
 
 	public void closeBrowser() {
 
-		//driver.quit();
+		driver.quit();
 	}
 }
 

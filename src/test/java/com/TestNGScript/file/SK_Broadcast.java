@@ -23,7 +23,7 @@ public class SK_Broadcast extends Base{
 	public void launchSKApp() throws InterruptedException, IOException {
 		
 		chromeDriver();
-		String url=ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
+		String url=ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(url);
 		Thread.sleep(5000);
 	
@@ -36,9 +36,7 @@ public class SK_Broadcast extends Base{
 	
 	public void launchSafetyApp() throws IOException {
 		
-		loginSafetyKuvrrBL.fillEmail();
-		loginSafetyKuvrrBL.fillPassword();
-		loginSafetyKuvrrBL.clickContinue();
+		loginSafetyKuvrrBL.loginProdObserver();
 		broadcastbl.verifyBroadcastBtn();
 		broadcastbl.verifyBroadcastMessage();
 		broadcastbl.verifyBtnSubmit();

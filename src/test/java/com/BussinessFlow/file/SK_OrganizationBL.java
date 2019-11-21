@@ -18,7 +18,7 @@ import com.PageObjectRepository.file.SK_OrganizationPL;
 public class SK_OrganizationBL extends SK_OrganizationPL {
 
 	SK_OrganizationPL organizationpl;
-	String OrganizationSheet = "Organization";
+	String OrganizationSheet = "Web_Organization";
 
 	public void getOrgPageRowCount() {
 
@@ -43,8 +43,8 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 						.getText();
 				System.out.println("Column Header are :" + ColumnHeader);
 
-				ExcelWrite.writeAppDataExcel(OrganizationSheet, 0, i - 1, ColumnHeader);
-
+			//	ExcelWrite.writeInputDataExcel(OrganizationSheet, 0, i - 1, ColumnHeader);
+				ExcelWrite.writeOutputDataExcel(OrganizationSheet, 0, i-1, ColumnHeader);
 			}
 
 		} catch (Exception ex) {
@@ -69,7 +69,8 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 					.findElement(By.xpath("//*[@id='content']//div//div[3]//table//tbody//tr[" + j + "]//td[3]"))
 					.getText();
 			System.out.println("OrgName are :" + OrgName);
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, j, 2, OrgName);
+		//	ExcelWrite.writeInputDataExcel(OrganizationSheet, j, 2, OrgName);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, j, 2, OrgName);
 			j++;
 
 		}
@@ -86,8 +87,8 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 					.getText();
 			System.out.println("orgAddress are :" + orgAddress);
 
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, i, 3, orgAddress);
-
+		//	ExcelWrite.writeInputDataExcel(OrganizationSheet, i, 3, orgAddress);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, i, 3, orgAddress);
 		}
 
 	}
@@ -102,8 +103,8 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 
 			System.out.println("orgCity are :" + orgCity);
 
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, i, 4, orgCity);
-
+		//	ExcelWrite.writeInputDataExcel(OrganizationSheet, i, 4, orgCity);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, i, 4, orgCity);
 		}
 
 	}
@@ -119,8 +120,8 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 
 			System.out.println("orgState are :" + orgState);
 
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, i, 5, orgState);
-
+		//	ExcelWrite.writeInputDataExcel(OrganizationSheet, i, 5, orgState);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, i, 5, orgState);
 		}
 
 	}
@@ -136,7 +137,7 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 
 			System.out.println("orgPostalCode are :" + orgPostalCode);
 
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, i, 6, orgPostalCode);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, i, 6, orgPostalCode);
 
 		}
 
@@ -153,7 +154,7 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 
 			System.out.println("orgCountry are :" + orgCountry);
 
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, i, 7, orgCountry);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, i, 7, orgCountry);
 
 		}
 
@@ -170,7 +171,7 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 
 			System.out.println("orgStatus are :" + orgStatus);
 
-			ExcelWrite.writeAppDataExcel(OrganizationSheet, i, 8, orgStatus);
+			ExcelWrite.writeOutputDataExcel(OrganizationSheet, i, 8, orgStatus);
 
 		}
 

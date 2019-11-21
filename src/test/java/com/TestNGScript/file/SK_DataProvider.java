@@ -22,7 +22,7 @@ public class SK_DataProvider extends Base {
 	public void launchSKApp() throws IOException {
 
 		chromeDriver();
-		String url = ExcelUtils.ReadExcel("Login", 1, 0);
+		String url = ExcelUtils.ReadExcel("Login", 1, 1);
 		driver.get(url);
 
 	}

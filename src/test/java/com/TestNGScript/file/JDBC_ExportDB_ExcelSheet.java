@@ -15,7 +15,7 @@ import com.Commonutills.file.ExcelWrite;
 
 public class JDBC_ExportDB_ExcelSheet {
 
-	String DBDataSheet = "DBData";
+	String OutputDataSheet = "OutputData";
 
 	@Test
 
@@ -37,7 +37,7 @@ public class JDBC_ExportDB_ExcelSheet {
 		for (int headrcount = 1; headrcount <= cellcount; headrcount++) {
 
 			String headerVal = rs.getMetaData().getColumnName(headrcount).trim();
-			ExcelWrite.writeDBDataExcel(DBDataSheet, 0, headrcount - 1, headerVal);
+			ExcelWrite.writeOutputDataExcel(OutputDataSheet, 0, headrcount - 1, headerVal);
 			System.out.println("Column Name is :" + headerVal);
 		}
 
@@ -72,7 +72,7 @@ public class JDBC_ExportDB_ExcelSheet {
 		for (List<String> rowData : allRowList) {
 			sheetColumn = 0;
 			for (String columndata : rowData) {
-				ExcelWrite.writeDBDataExcel(DBDataSheet, sheetRow, sheetColumn, columndata.trim());
+				ExcelWrite.writeOutputDataExcel(OutputDataSheet, sheetRow, sheetColumn, columndata.trim());
 				sheetColumn++;
 			}
 			sheetRow++;

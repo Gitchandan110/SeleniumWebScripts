@@ -15,7 +15,7 @@ import com.Commonutills.file.ExcelWrite;
 
 public class JDBC_CreateExpectedList {
 	
-	String DBDataSheet="DBData";
+	String OutputDataSheet="OutputData";
 
 	@Test
 
@@ -60,7 +60,7 @@ public class JDBC_CreateExpectedList {
 		
 		for (int rowNum=0; rowNum< ExpectedList.size(); rowNum++) {
 			System.out.println("List val at row : "+ rowNum +" is "+ ExpectedList.get(rowNum));
-			ExcelWrite.writeDBDataExcel(DBDataSheet, rowNum, 0 , ExpectedList.get(rowNum));
+			ExcelWrite.writeOutputDataExcel(OutputDataSheet, rowNum, 0 , ExpectedList.get(rowNum));
 		}
 
 		// Close DB Connection

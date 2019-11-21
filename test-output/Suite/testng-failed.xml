@@ -4,26 +4,26 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="HomeAmazon(failed)">
+  <test thread-count="5" name="Amazon_Home(failed)">
     <classes>
-      <class name="com.TestNGScript.file.HomeAmazon">
+      <class name="com.TestNGScript.file.Amazon_Home">
         <methods>
-          <include name="TestAmazonSell"/>
           <include name="launchAmazon"/>
           <include name="tearDown"/>
+          <include name="TestAmazonSell"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.HomeAmazon -->
+      </class> <!-- com.TestNGScript.file.Amazon_Home -->
     </classes>
-  </test> <!-- HomeAmazon(failed) -->
-  <test thread-count="5" name="MakeMyTripHomePage(failed)">
+  </test> <!-- Amazon_Home(failed) -->
+  <test thread-count="5" name="MMT_HomePage(failed)">
     <classes>
-      <class name="com.TestNGScript.file.MakeMyTripHomePage">
+      <class name="com.TestNGScript.file.MMT_HomePage">
         <methods>
-          <include name="openMMT"/>
           <include name="CloseApp"/>
           <include name="BookTicket"/>
+          <include name="openMMT"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.MakeMyTripHomePage -->
+      </class> <!-- com.TestNGScript.file.MMT_HomePage -->
     </classes>
-  </test> <!-- MakeMyTripHomePage(failed) -->
+  </test> <!-- MMT_HomePage(failed) -->
 </suite> <!-- Failed suite [Suite] -->

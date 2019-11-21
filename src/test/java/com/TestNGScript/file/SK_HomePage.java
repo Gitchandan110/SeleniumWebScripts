@@ -23,7 +23,7 @@ public class SK_HomePage extends Base {
 	public void launchApp() throws IOException, InterruptedException {
 
 		chromeDriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(url);
 		Thread.sleep(5000);
 
@@ -31,11 +31,9 @@ public class SK_HomePage extends Base {
 
 	@Test()
 
-	public void TestHambugerMenuClick() throws InterruptedException {
+	public void TestHambugerMenuClick() throws InterruptedException, IOException {
 
-		loginSafetyKuvrrBL.fillEmail();
-		loginSafetyKuvrrBL.fillPassword();
-		loginSafetyKuvrrBL.clickContinue();
+		loginSafetyKuvrrBL.loginProdSA();
 		homePageMenuBL.verifyHamburgerMenu();
 		homePageMenuBL.VerifyOrganizationlink();
 

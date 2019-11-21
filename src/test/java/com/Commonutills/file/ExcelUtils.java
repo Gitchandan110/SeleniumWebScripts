@@ -11,7 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	static File Path = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\AppData.xlsx");
+	static File Path = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\InputData.xlsx");
 		
 	public static String ReadExcel(String sheetName, int rownum, int cellnum) throws IOException {
 
@@ -26,7 +26,7 @@ public class ExcelUtils {
 
 	}
 
-	public static String WriteExcel(String sheetName, int rownum, int cellnum) throws IOException {
+/*	public static String WriteExcel(String sheetName, int rownum, int cellnum) throws IOException {
 
 	
 		FileInputStream fis = new FileInputStream(Path);
@@ -38,6 +38,6 @@ public class ExcelUtils {
 		fos.close();
 		return sheetName;
 
-	}
+	}*/
 
 }

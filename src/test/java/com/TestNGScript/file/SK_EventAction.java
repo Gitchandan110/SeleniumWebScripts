@@ -28,7 +28,7 @@ public class SK_EventAction extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		chromeDriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(url);
 		Thread.sleep(5000);
 
@@ -38,9 +38,7 @@ public class SK_EventAction extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-		loginSafetyKuvrrBL.fillEmail();
-		loginSafetyKuvrrBL.fillPassword();
-		loginSafetyKuvrrBL.clickContinue();
+		loginSafetyKuvrrBL.loginProdLA();
 		incidentbl.clickOpenIncident();
 		incidentbl.clickIncidentActionsClose();
 		incidentbl.clickIncidentResolutionFalseAlarm();

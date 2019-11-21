@@ -23,7 +23,7 @@ public class SK_Login extends Base {
 
 	
 		chromeDriver();
-	    String url=ExcelUtils.ReadExcel(LoginDataSheet, 1, 0);
+	    String url=ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(url);		
 		
 	}
@@ -33,9 +33,8 @@ public class SK_Login extends Base {
 	public void loginSafetyKuvrr() throws IOException {
 		
 		
-		loginSKbl.fillEmail();
-		loginSKbl.fillPassword();
-		loginSKbl.clickContinue();
+		loginSKbl.loginProdSA();
+	
 	}
 
 	@AfterMethod
