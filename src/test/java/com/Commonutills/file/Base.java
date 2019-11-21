@@ -1,8 +1,14 @@
 package com.Commonutills.file;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -72,6 +78,24 @@ public class Base {
 		System.out.println(e.getMessage());
 	}
 	
+	}
+	
+	
+	public static void takeScreenShot() throws IOException {
+		
+		//TakeScreenShot is a interface in java so its Object can not be created. 
+		//So We need to type cast takescreen shot by writing it under small bracket like this (TakeScreenshot).
+		
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		
+		File capturedImage=ts.getScreenshotAs(OutputType.FILE);
+		
+		String newFileName = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots"+ ".jpg";
+		
+	//	FileUtils.copyFile(capturedImage, new File(""));
+		FileUtils.copyFileToDirectory(capturedImage, new File(newFileName));
+		System.out.println("Screenshot captured");
+		
 	}
 
 

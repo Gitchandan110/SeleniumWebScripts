@@ -39,6 +39,7 @@ public class SK_BroadcastBL extends SK_BroadcastPL {
 				Base.highLightElement(driver, TextboxBroadcast());
 				TextboxBroadcast().sendKeys("Hello All from Selenium");
 				System.out.println("Message typed under Broadcast field");
+				Base.takeScreenShot();
 
 			} else {
 
@@ -58,9 +59,9 @@ public class SK_BroadcastBL extends SK_BroadcastPL {
 		try {
 
 			if (BtnSubmit().isDisplayed() == true) {
-
-				//BtnSubmit().click();
-				BtnCancel().click();
+				Base.highLightElement(driver, BtnSubmit());
+			    BtnSubmit().click();
+		
 
 			} else {
 

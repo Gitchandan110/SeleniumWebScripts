@@ -49,7 +49,7 @@ public class SK_EventAction extends Base {
 
 	public void closeBrowser() {
 
-	//	driver.quit();
+		driver.quit();
 	}
 
 }
