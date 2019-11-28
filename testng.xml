@@ -33,11 +33,27 @@
         </classes>
     </test>
 
-    <test name="SK_OpenIncident" >
+    <test name="SK_LA_OpenIncident" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_OpenIncident" />
+            <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
+        </classes>
+    </test>
+    
+     <test name="SK_SA_OpenIncident" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_SA_OpenIncident" />
+        </classes>
+    </test>
+    
+      <test name="SK_Observer_OpenIncident" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_Observer_OpenIncident" />
         </classes>
     </test>
     
@@ -58,7 +74,7 @@
     </test>
     
 
-    <test name="Amazon_Home" >
+   <!--  <test name="Amazon_Home" >
 
         <classes>
 
@@ -81,5 +97,5 @@
             <class name="com.TestNGScript.file.MMT_HomePage" />
         </classes>
     </test>
-
+ -->
 </suite>

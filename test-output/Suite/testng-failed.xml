@@ -4,26 +4,15 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Amazon_Home(failed)">
+  <test thread-count="5" name="SK_LA_OpenIncident(failed)">
     <classes>
-      <class name="com.TestNGScript.file.Amazon_Home">
+      <class name="com.TestNGScript.file.SK_LA_OpenIncident">
         <methods>
-          <include name="launchAmazon"/>
-          <include name="tearDown"/>
-          <include name="TestAmazonSell"/>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.Amazon_Home -->
+      </class> <!-- com.TestNGScript.file.SK_LA_OpenIncident -->
     </classes>
-  </test> <!-- Amazon_Home(failed) -->
-  <test thread-count="5" name="MMT_HomePage(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.MMT_HomePage">
-        <methods>
-          <include name="CloseApp"/>
-          <include name="BookTicket"/>
-          <include name="openMMT"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.MMT_HomePage -->
-    </classes>
-  </test> <!-- MMT_HomePage(failed) -->
+  </test> <!-- SK_LA_OpenIncident(failed) -->
 </suite> <!-- Failed suite [Suite] -->

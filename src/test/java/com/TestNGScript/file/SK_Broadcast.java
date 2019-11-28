@@ -14,7 +14,7 @@ import com.Commonutills.file.ExcelUtils;
 
 public class SK_Broadcast extends Base{
 	SK_BroadcastBL broadcastbl=PageFactory.initElements(driver, SK_BroadcastBL.class);
-	SK_LoginBL loginSafetyKuvrrBL=PageFactory.initElements(driver, SK_LoginBL.class);
+	SK_LoginBL loginSKbl=PageFactory.initElements(driver, SK_LoginBL.class);
 	
 	String LoginDataSheet = "Login";
 	
@@ -36,7 +36,9 @@ public class SK_Broadcast extends Base{
 	
 	public void launchSafetyApp() throws IOException {
 		
-		loginSafetyKuvrrBL.loginProdObserver();
+    	//loginSKbl.loginProdSA();
+    	//loginSKbl.loginProdLA();
+    	loginSKbl.loginProdObserver();
 		broadcastbl.verifyBroadcastBtn();
 		broadcastbl.verifyBroadcastMessage();
 		broadcastbl.verifyBtnSubmit();

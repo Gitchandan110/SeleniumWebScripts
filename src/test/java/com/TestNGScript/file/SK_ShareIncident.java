@@ -19,7 +19,7 @@ import com.Commonutills.file.ExcelUtils;
 public class SK_ShareIncident extends Base {
 
 	SK_OpenIncidentBL incidentbl = PageFactory.initElements(driver, SK_OpenIncidentBL.class);
-	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);
+	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 
 
 	String LoginDataSheet = "Login";
@@ -39,7 +39,9 @@ public class SK_ShareIncident extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-		loginSafetyKuvrrBL.loginProdObserver();
+		//loginSKbl.loginProdSA();
+		//loginSKbl.loginProdLA();
+		loginSKbl.loginProdObserver();
 		incidentbl.clickOpenIncident();
 		incidentbl.clickIconShareIncident();
 		incidentbl.submitShareIncident();

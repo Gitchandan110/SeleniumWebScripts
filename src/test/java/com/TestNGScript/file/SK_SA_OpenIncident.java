@@ -16,10 +16,10 @@ import com.BussinessFlow.file.SK_OpenIncidentBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_OpenIncident extends Base {
+public class SK_SA_OpenIncident extends Base {
 
 	SK_OpenIncidentBL incidentbl = PageFactory.initElements(driver, SK_OpenIncidentBL.class);
-	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);
+	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -38,7 +38,7 @@ public class SK_OpenIncident extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-		loginSafetyKuvrrBL.loginProdLA();
+	    loginSKbl.loginProdSA();
 		incidentbl.clickOpenIncident();
 		incidentbl.clickSmartResponse();
 		incidentbl.enterEventNotes();
@@ -54,7 +54,7 @@ public class SK_OpenIncident extends Base {
 
 	public void closeBrowser() {
 
-//	driver.quit();
+	driver.quit();
 	
 	}
 

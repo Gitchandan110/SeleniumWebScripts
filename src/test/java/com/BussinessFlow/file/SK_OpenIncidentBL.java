@@ -125,6 +125,7 @@ public void clickIconShareIncident() throws InterruptedException {
 			Thread.sleep(2000);
 			System.out.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
 			ExcelWrite.writeSanitySheet(SanitySheet, 62, 2, "Pass");
+			Thread.sleep(10000);
 	      }
 		
 }

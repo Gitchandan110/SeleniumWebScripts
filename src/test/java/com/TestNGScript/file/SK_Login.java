@@ -28,14 +28,39 @@ public class SK_Login extends Base {
 		
 	}
 
-	@Test
+	@Test(priority=1)
 
-	public void loginSafetyKuvrr() throws IOException {
+	public void loginLASafetyKuvrr() throws IOException {
+		
+		
+		loginSKbl.loginProdLA();
+
+		
+	
+	}
+	
+	@Test(priority=2)
+
+	public void loginSASafetyKuvrr() throws IOException {
 		
 		
 		loginSKbl.loginProdSA();
+		//	loginSKbl.loginProdObserver();
+		
 	
 	}
+	
+	@Test(priority=3)
+
+	public void loginObsSafetyKuvrr() throws IOException {
+		
+		
+	
+		loginSKbl.loginProdObserver();
+		
+	
+	}
+
 
 	@AfterMethod
 

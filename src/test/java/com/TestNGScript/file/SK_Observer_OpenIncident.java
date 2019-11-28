@@ -16,7 +16,7 @@ import com.BussinessFlow.file.SK_OpenIncidentBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_EventAction extends Base {
+public class SK_Observer_OpenIncident extends Base {
 
 	SK_OpenIncidentBL incidentbl = PageFactory.initElements(driver, SK_OpenIncidentBL.class);
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
@@ -38,20 +38,25 @@ public class SK_EventAction extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-		//loginSKbl.loginProdSA();
-    	//loginSKbl.loginProdLA();
-    	loginSKbl.loginProdObserver();
+	
+		loginSKbl.loginProdObserver();
 		incidentbl.clickOpenIncident();
+		incidentbl.clickSmartResponse();
+		incidentbl.enterEventNotes();
 		incidentbl.clickIncidentActionsClose();
 		incidentbl.clickIncidentResolutionFalseAlarm();
 		incidentbl.enterIncidentActionResponse();
+		incidentbl.clickIconShareIncident();
+		incidentbl.submitShareIncident();
+		
 	}
 
 	@AfterMethod
 
 	public void closeBrowser() {
 
-		driver.quit();
+ 	driver.quit();
+	
 	}
 
 }
