@@ -19,6 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Base {
 
 	public static WebDriver driver;
+	static String LoginDataSheet = "Login";
 
 	public static WebDriver opendriver() {
 
@@ -44,8 +45,32 @@ public class Base {
 	
 	}
 	
+       public static void openProdSKApp() throws InterruptedException, IOException {
+		
+		chromeDriver();
+		String urlProd=ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
+		driver.get(urlProd);
+		Thread.sleep(5000);
 	
+	}
+       
+       public static void openTestSKApp() throws InterruptedException, IOException {
+   		
+   		chromeDriver();
+   		String urlTest=ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
+   		driver.get(urlTest);
+   		Thread.sleep(5000);
+   	
+   	}
 	
+       
+       public static void openIntSKApp() throws InterruptedException, IOException {
+   		chromeDriver();
+   		String urlInt=ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
+   		driver.get(urlInt);
+   		Thread.sleep(5000);
+   	
+   	}   
 	
 	public static void highLightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

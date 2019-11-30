@@ -27,10 +27,9 @@ public class SK_SA_OpenIncident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		chromeDriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
-		driver.get(url);
-		Thread.sleep(5000);
+		openProdSKApp();
+		//	openTestSKApp();
+		//	openIntSKApp();
 
 	}
 
@@ -38,7 +37,7 @@ public class SK_SA_OpenIncident extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-	    loginSKbl.loginProdSA();
+	    loginSKbl.loginSA();
 		incidentbl.clickOpenIncident();
 		incidentbl.clickSmartResponse();
 		incidentbl.enterEventNotes();

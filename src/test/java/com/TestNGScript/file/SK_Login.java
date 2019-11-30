@@ -19,13 +19,12 @@ public class SK_Login extends Base {
 
 	@BeforeMethod
 
-	public void launchSK() throws IOException {
+	public void launchSKApp() throws InterruptedException, IOException {
 
-	
-		chromeDriver();
-	    String url=ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
-		driver.get(url);		
-		
+		openProdSKApp();
+		//	openTestSKApp();
+		//	openIntSKApp();
+
 	}
 
 	@Test(priority=1)
@@ -33,7 +32,7 @@ public class SK_Login extends Base {
 	public void loginLASafetyKuvrr() throws IOException {
 		
 		
-		loginSKbl.loginProdLA();
+		loginSKbl.loginLA();
 
 		
 	
@@ -44,8 +43,8 @@ public class SK_Login extends Base {
 	public void loginSASafetyKuvrr() throws IOException {
 		
 		
-		loginSKbl.loginProdSA();
-		//	loginSKbl.loginProdObserver();
+		loginSKbl.loginSA();
+		
 		
 	
 	}
@@ -56,7 +55,7 @@ public class SK_Login extends Base {
 		
 		
 	
-		loginSKbl.loginProdObserver();
+		loginSKbl.loginObserver();
 		
 	
 	}

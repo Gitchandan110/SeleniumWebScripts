@@ -15,6 +15,7 @@ import com.Commonutills.file.Excel2DArray;
 import com.Commonutills.file.ExcelUtils;
 
 public class SK_DataProvider extends Base {
+	String LoginDataSheet = "Login";
 
 	SK_DataProviderBL dataproviderbl = PageFactory.initElements(driver, SK_DataProviderBL.class);
 
@@ -22,8 +23,10 @@ public class SK_DataProvider extends Base {
 	public void launchSKApp() throws IOException {
 
 		chromeDriver();
-		String url = ExcelUtils.ReadExcel("Login", 1, 1);
-		driver.get(url);
+		String urlProd=ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
+		String urlTest=ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
+		String urlInt=ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
+		driver.get(urlTest);
 
 	}
 

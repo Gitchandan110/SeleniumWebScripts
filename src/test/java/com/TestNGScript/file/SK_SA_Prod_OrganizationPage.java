@@ -22,13 +22,11 @@ public class SK_SA_Prod_OrganizationPage extends Base {
 
 	@BeforeMethod
 
-	public void launchApp() throws IOException, InterruptedException {
+	public void launchSKApp() throws InterruptedException, IOException {
 
-		chromeDriver();
-	//	opendriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
-		driver.get(url);
-		Thread.sleep(5000);
+		openProdSKApp();
+		//	openTestSKApp();
+		//	openIntSKApp();
 
 	}
 
@@ -36,7 +34,7 @@ public class SK_SA_Prod_OrganizationPage extends Base {
 
 	public void TestOrganizationPage() throws InterruptedException, IOException {
 
-		prodSALoginbl.loginProdSA();
+		prodSALoginbl.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();
 		homePageMenuBL.VerifyOrganizationlink();
 		organizationBL.getOrgPageRowCount();

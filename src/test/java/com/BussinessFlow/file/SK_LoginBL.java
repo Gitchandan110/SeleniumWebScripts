@@ -16,7 +16,7 @@ public class SK_LoginBL extends SK_LoginPL {
 	String LoginDataSheet = "Login";
 	String SanitySheet = "Sanity_SK";
 
-	public void loginProdSA() throws IOException {
+	public void loginSA() throws IOException {
 
 		try {
 			if (Email().isDisplayed()) {
@@ -65,7 +65,7 @@ public class SK_LoginBL extends SK_LoginPL {
 
 	}
 
-	public void loginProdLA() throws IOException {
+	public void loginLA() throws IOException {
 
 		try {
 			if (Email().isDisplayed()) {
@@ -115,7 +115,7 @@ public class SK_LoginBL extends SK_LoginPL {
 
 	}
 
-	public void loginProdObserver() throws IOException {
+	public void loginObserver() throws IOException {
 
 		try {
 			if (Email().isDisplayed()) {

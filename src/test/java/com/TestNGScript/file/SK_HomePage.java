@@ -20,12 +20,11 @@ public class SK_HomePage extends Base {
 
 	@BeforeMethod
 
-	public void launchApp() throws IOException, InterruptedException {
+	public void launchSKApp() throws InterruptedException, IOException {
 
-		chromeDriver();
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
-		driver.get(url);
-		Thread.sleep(5000);
+		openProdSKApp();
+		//	openTestSKApp();
+		//	openIntSKApp();
 
 	}
 
@@ -33,7 +32,7 @@ public class SK_HomePage extends Base {
 
 	public void TestHambugerMenuClick() throws InterruptedException, IOException {
 
-		loginSafetyKuvrrBL.loginProdSA();
+		loginSafetyKuvrrBL.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();
 		homePageMenuBL.VerifyOrganizationlink();
 
