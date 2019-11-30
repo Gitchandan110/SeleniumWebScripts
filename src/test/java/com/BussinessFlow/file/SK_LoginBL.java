@@ -30,6 +30,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (Password().isDisplayed()) {
 				Password().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
 				System.out.println("Password entered");
+				Base.takeScreenShot();
 
 			}
 
@@ -47,12 +48,14 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (driver.getTitle().contains("Active Events")) {
 
 				System.out.println("Page Title verified. Login successfull");
+				Base.takeScreenShot();
 				ExcelWrite.writeSanitySheet(SanitySheet, 20, 2, "Pass");
 
 			}
 
 			if (errorLoginFail().isDisplayed()) {
 				System.out.println("Unable to Login due to incorrect user credential");
+				Base.takeScreenShot();
 				ExcelWrite.writeSanitySheet(SanitySheet, 20, 2, "Fail");
 			}
 

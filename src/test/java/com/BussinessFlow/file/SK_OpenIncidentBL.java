@@ -21,6 +21,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Thread.sleep(3000);
 				Base.highLightElement(driver, IncomingIncident());
 				Thread.sleep(2000);
+				Base.takeScreenShot();
 				IncomingIncident().click();
 				System.out.println("Incoming Incident was clicked");
 				
@@ -48,6 +49,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Base.scrolltoElement(driver, OpenIncident());
 				Thread.sleep(3000);
 				Base.highLightElement(driver, OpenIncident());
+				Base.takeScreenShot();
 				Thread.sleep(2000);
 				OpenIncident().click();
 				System.out.println("Open Incident found and selected");
@@ -56,6 +58,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Thread.sleep(5000);
             // 	Base.scrolltoElement(driver, logoKuvrr());
              	Base.scrolltoElement(driver, videoContainer());
+             	Base.takeScreenShot();
              	System.out.println("Please wait for 15 seconds");
              	ExcelWrite.writeSanitySheet(SanitySheet, 30, 2, "Pass");
              	Thread.sleep(15000);
@@ -122,6 +125,7 @@ public void clickIconShareIncident() throws InterruptedException {
 			shareIncidentEmailfield().click();
 			shareIncidentEmailfield().sendKeys("ck@yopmail.com;chandan@yopmail.com;test@yopmail.com");
 			btnSubmitShareIncident().click();
+			Base.takeScreenShot();
 			Thread.sleep(2000);
 			System.out.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
 			ExcelWrite.writeSanitySheet(SanitySheet, 62, 2, "Pass");
