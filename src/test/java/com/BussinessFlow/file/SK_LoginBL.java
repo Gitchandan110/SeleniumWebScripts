@@ -150,7 +150,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (driver.getTitle().contains("Active Events")) {
 
 				System.out.println("Page Title verified. Login successfull");
-				ExcelWrite.writeSanitySheet(SanitySheet, 22, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 3, 1, "Pass");
 
 			}
 

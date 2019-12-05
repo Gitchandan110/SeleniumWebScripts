@@ -14,7 +14,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 		try {
 
 			if (HamburgerMenu().isDisplayed() == true) {
-				ExcelWrite.writeSanitySheet(SanitySheet, 23, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 7, 1, "Pass");
 				Base.highLightElement(driver, HamburgerMenu());
 				HamburgerMenu().click();
 				Base.takeScreenShot();

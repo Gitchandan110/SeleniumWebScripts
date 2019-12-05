@@ -12,60 +12,48 @@ import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
 public class SK_Login extends Base {
-	SK_LoginBL loginSKbl=PageFactory.initElements(driver, SK_LoginBL.class);
+	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	String LoginDataSheet = "Login";
-	
-
 
 	@BeforeMethod
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		openProdSKApp();
-		//	openTestSKApp();
-		//	openIntSKApp();
+		// openTestSKApp();
+		// openIntSKApp();
 
 	}
 
-	@Test(priority=1)
-
-	public void loginLASafetyKuvrr() throws IOException {
-		
-		
-		loginSKbl.loginLA();
-
-		
-	
-	}
-	
-	@Test(priority=2)
+	@Test(priority = 1)
 
 	public void loginSASafetyKuvrr() throws IOException {
-		
-		
+
 		loginSKbl.loginSA();
-		
-		
-	
+
 	}
-	
-	@Test(priority=3)
+
+	@Test(priority = 2)
+
+	public void loginLASafetyKuvrr() throws IOException {
+
+		loginSKbl.loginLA();
+
+	}
+
+	@Test(priority = 3)
 
 	public void loginObsSafetyKuvrr() throws IOException {
-		
-		
-	
-		loginSKbl.loginObserver();
-		
-	
-	}
 
+		loginSKbl.loginObserver();
+
+	}
 
 	@AfterMethod
 
 	public void closeBrowser() {
 
-   	driver.quit();
+		driver.quit();
 	}
 
 }

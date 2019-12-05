@@ -11,12 +11,13 @@ import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_BroadcastBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
+import com.Commonutills.file.ExcelWrite;
 
 public class SK_Broadcast extends Base{
 	SK_BroadcastBL broadcastbl=PageFactory.initElements(driver, SK_BroadcastBL.class);
 	SK_LoginBL loginSKbl=PageFactory.initElements(driver, SK_LoginBL.class);
 	
-	String LoginDataSheet = "Login";
+	String SanitySheet="Sanity_SK";
 	
 	@BeforeMethod
 	
@@ -29,18 +30,31 @@ public class SK_Broadcast extends Base{
 			
 	}
 	
-	
-    @Test(priority=1)
-	
-	public void launchSafetyApp() throws IOException {
+	 @Test(priority=1)
 		
-    	//loginSKbl.loginSA();
-    	//loginSKbl.loginLA();
+		public void testBroadcastLA() throws IOException {
+			
+	     	loginSKbl.loginLA();
+	    	broadcastbl.verifyBroadcastBtn();
+			broadcastbl.verifyBroadcastMessage();
+			Base.takeScreenShot();
+			broadcastbl.verifyBtnSubmit();
+			ExcelWrite.writeSanitySheet(SanitySheet, 5, 1, "Pass");
+			
+	    }
+	
+	
+    @Test(priority=2)
+	
+	public void testBroadcastObserver() throws IOException {
+		
+    
     	loginSKbl.loginObserver();
 		broadcastbl.verifyBroadcastBtn();
 		broadcastbl.verifyBroadcastMessage();
+		Base.takeScreenShot();
 		broadcastbl.verifyBtnSubmit();
-	//	broadcastbl.verifyBtnCancel();
+		ExcelWrite.writeSanitySheet(SanitySheet, 4, 1, "Pass");
 		
     }
 		

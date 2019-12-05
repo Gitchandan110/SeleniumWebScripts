@@ -48,11 +48,12 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Base.scrolltoElement(driver, OpenIncident());
 				Thread.sleep(3000);
 				Base.highLightElement(driver, OpenIncident());
+				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
 				Base.takeScreenShot();
 				Thread.sleep(2000);
 				OpenIncident().click();
 				System.out.println("Open Incident found and selected");
-				ExcelWrite.writeSanitySheet(SanitySheet, 29, 1, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
             // 	Base.scrolltoElement(driver, logoKuvrr());
              	Base.scrolltoElement(driver, videoContainer());
