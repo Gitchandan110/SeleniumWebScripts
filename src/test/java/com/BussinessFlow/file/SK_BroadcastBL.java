@@ -1,12 +1,13 @@
 package com.BussinessFlow.file;
 
 import com.Commonutills.file.Base;
+import com.Commonutills.file.ExcelWrite;
 import com.PageObjectRepository.file.SK_BroadcastPL;
 
 public class SK_BroadcastBL extends SK_BroadcastPL {
 
 	SK_BroadcastPL BroadcastPL;
-
+	String SanitySheet="Sanity_SK";
 	public void verifyBroadcastBtn() {
 
 		try {
@@ -40,6 +41,8 @@ public class SK_BroadcastBL extends SK_BroadcastPL {
 				TextboxBroadcast().sendKeys("Hello All from Selenium");
 				System.out.println("Message typed under Broadcast field");
 				Base.takeScreenShot();
+				ExcelWrite.writeSanitySheet(SanitySheet, 4, 1, "Pass");
+
 
 			} else {
 

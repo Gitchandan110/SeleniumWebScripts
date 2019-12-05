@@ -17,7 +17,7 @@ public class ExcelWrite {
 
 	static File PathInputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\InputData.xlsx");
 	static File PathOutputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\OutputData.xlsx");
-	static File PathSanitySheet = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\SanitySheet.xlsx");
+	static File PathSanitySheet = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\SanityWebSheet.xlsx");
 	
 	public static void writeInputDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
 			throws IOException {

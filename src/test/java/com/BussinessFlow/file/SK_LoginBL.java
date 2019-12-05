@@ -49,14 +49,14 @@ public class SK_LoginBL extends SK_LoginPL {
 
 				System.out.println("Page Title verified. Login successfull");
 				Base.takeScreenShot();
-				ExcelWrite.writeSanitySheet(SanitySheet, 20, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Pass");
 
 			}
 
 			if (errorLoginFail().isDisplayed()) {
 				System.out.println("Unable to Login due to incorrect user credential");
 				Base.takeScreenShot();
-				ExcelWrite.writeSanitySheet(SanitySheet, 20, 2, "Fail");
+				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Fail");
 			}
 
 		} catch (Exception ex) {
@@ -100,7 +100,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (driver.getTitle().contains("Active Events")) {
 
 				System.out.println("Page Title verified. Login successfull");
-				ExcelWrite.writeSanitySheet(SanitySheet, 21, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 2, 1, "Pass");
 
 			}
 
@@ -156,7 +156,7 @@ public class SK_LoginBL extends SK_LoginPL {
 
 			if (errorLoginFail().isDisplayed()) {
 				System.out.println("Unable to Login due to incorrect user credential");
-				ExcelWrite.writeSanitySheet(SanitySheet, 22, 2, "Fail");
+				ExcelWrite.writeSanitySheet(SanitySheet, 3, 1, "Fail");
 			}
 
 		} catch (Exception ex) {

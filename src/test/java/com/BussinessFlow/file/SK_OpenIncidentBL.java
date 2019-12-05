@@ -44,8 +44,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 		try {
 
 			if (OpenIncident().isDisplayed() == true) {
-				ExcelWrite.writeSanitySheet(SanitySheet, 25, 2, "Pass");
-				ExcelWrite.writeSanitySheet(SanitySheet, 37, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, OpenIncident());
 				Thread.sleep(3000);
 				Base.highLightElement(driver, OpenIncident());
@@ -53,15 +52,13 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Thread.sleep(2000);
 				OpenIncident().click();
 				System.out.println("Open Incident found and selected");
-				ExcelWrite.writeSanitySheet(SanitySheet, 70, 2, "Pass");
-				ExcelWrite.writeSanitySheet(SanitySheet, 71, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 29, 1, "Pass");
 				Thread.sleep(5000);
             // 	Base.scrolltoElement(driver, logoKuvrr());
              	Base.scrolltoElement(driver, videoContainer());
              	Base.takeScreenShot();
              	System.out.println("Please wait for 15 seconds");
-             	ExcelWrite.writeSanitySheet(SanitySheet, 30, 2, "Pass");
-             	Thread.sleep(15000);
+               	Thread.sleep(15000);
              	
 
 			} else {
@@ -86,12 +83,12 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			btnSendSmartResponse().click();
 			Thread.sleep(2000);
 			System.out.println("SmartResponse chat is performed");
-			ExcelWrite.writeSanitySheet(SanitySheet, 29, 2, "Pass");
+			ExcelWrite.writeSanitySheet(SanitySheet, 14, 1, "Pass");
 			
 		}
 	}
 
-	public void enterEventNotes() throws InterruptedException {
+	public void enterEventNotes() throws InterruptedException, IOException {
 		
 		if (txtEventNotes().isDisplayed()) {
 			txtEventNotes().click();
@@ -99,6 +96,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			btnSaveEventNotes().click();
 			Thread.sleep(2000);
 			System.out.println("Event Notes sent");
+			ExcelWrite.writeSanitySheet(SanitySheet, 15, 1, "Pass");
 		}
 	}	
 	
@@ -128,7 +126,7 @@ public void clickIconShareIncident() throws InterruptedException {
 			Base.takeScreenShot();
 			Thread.sleep(2000);
 			System.out.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
-			ExcelWrite.writeSanitySheet(SanitySheet, 62, 2, "Pass");
+			ExcelWrite.writeSanitySheet(SanitySheet, 27, 1, "Pass");
 			Thread.sleep(10000);
 	      }
 		
@@ -142,7 +140,7 @@ public void clickIconShareIncident() throws InterruptedException {
 			incidentActionClose().click();
 			Thread.sleep(2000);
 			System.out.println("Event action closed");
-			ExcelWrite.writeSanitySheet(SanitySheet, 80, 2, "Pass");
+			
 		}
 		
 		
@@ -160,13 +158,14 @@ public void clickIncidentResolutionFalseAlarm() throws InterruptedException {
 		}
 }
 	
-public void enterIncidentActionResponse() throws InterruptedException {
+public void enterIncidentActionResponse() throws InterruptedException, IOException {
 	
 	if (txtIncidentActionResponse().isDisplayed()) {
 		txtIncidentActionResponse().click();
 		txtIncidentActionResponse().sendKeys("Its a False Alarm");
 		Thread.sleep(2000);
 		btnSaveIncidentResponse().click();
+		ExcelWrite.writeSanitySheet(SanitySheet, 38, 1, "Pass");
 	}
 }	
 

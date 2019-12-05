@@ -18,7 +18,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 				Base.highLightElement(driver, HamburgerMenu());
 				HamburgerMenu().click();
 				Base.takeScreenShot();
-				ExcelWrite.writeSanitySheet(SanitySheet, 24, 2, "Pass");
+				ExcelWrite.writeSanitySheet(SanitySheet, 8, 1, "Pass");
 				// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 				Thread.sleep(5000);
 

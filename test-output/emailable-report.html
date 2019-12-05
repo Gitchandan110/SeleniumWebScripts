@@ -8,11 +8,69 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">34,936</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">SK_Login</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">217,354</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">SK_Broadcast</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">71,934</td><td></td><td></td></tr>
+<tr><td><a href="#t2">SK_HomePage</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">82,767</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">SK_LA_OpenIncident</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">142,767</td><td></td><td></td></tr>
+<tr><td><a href="#t4">SK_SA_OpenIncident</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">64,021</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">SK_Observer_OpenIncident</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">130,875</td><td></td><td></td></tr>
+<tr><td><a href="#t6">SK_EventAction</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">95,819</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t7">SK_ShareIncident</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">119,475</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">9</th><th class="num attn">1</th><th class="num">0</th><th class="num">925,012</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_Broadcast</td><td><a href="#m0">launchSafetyApp</a></td><td rowspan="1">1575096263527</td><td rowspan="1">15386</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SK_Login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.TestNGScript.file.SK_Login</td><td><a href="#m0">loginLASafetyKuvrr</a></td><td rowspan="1">1575522925399</td><td rowspan="1">7026</td></tr><tr class="passedeven"><td><a href="#m1">loginObsSafetyKuvrr</a></td><td rowspan="1">1575523065919</td><td rowspan="1">6246</td></tr><tr class="passedeven"><td><a href="#m2">loginSASafetyKuvrr</a></td><td rowspan="1">1575522998892</td><td rowspan="1">10116</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">SK_Broadcast &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_Broadcast</td><td><a href="#m3">launchSafetyApp</a></td><td rowspan="1">1575523128000</td><td rowspan="1">16387</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">SK_HomePage &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_HomePage</td><td><a href="#m4">TestHambugerMenuClick</a></td><td rowspan="1">1575523198994</td><td rowspan="1">28138</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">SK_LA_OpenIncident &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_LA_OpenIncident</td><td><a href="#m5">launchSafetyApp</a></td><td rowspan="1">1575523287171</td><td rowspan="1">82792</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">SK_SA_OpenIncident &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.TestNGScript.file.SK_SA_OpenIncident</td><td><a href="#m6">launchSKApp</a></td><td rowspan="1">1575523370770</td><td rowspan="1">63983</td></tr><tr><th colspan="4">SK_SA_OpenIncident &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.TestNGScript.file.SK_SA_OpenIncident</td><td><a href="#m7">closeBrowser</a></td><td rowspan="1">1575523434775</td><td rowspan="1">0</td></tr><tr><th colspan="4">SK_SA_OpenIncident &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.TestNGScript.file.SK_SA_OpenIncident</td><td><a href="#m8">launchSafetyApp</a></td><td rowspan="1">1575523434773</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">SK_Observer_OpenIncident &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_Observer_OpenIncident</td><td><a href="#m9">launchSafetyApp</a></td><td rowspan="1">1575523494089</td><td rowspan="1">70407</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">SK_EventAction &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_EventAction</td><td><a href="#m10">launchSafetyApp</a></td><td rowspan="1">1575523612838</td><td rowspan="1">47902</td></tr></tbody>
+<tbody id="t7"><tr><th colspan="4">SK_ShareIncident &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.TestNGScript.file.SK_ShareIncident</td><td><a href="#m11">launchSafetyApp</a></td><td rowspan="1">1575523714991</td><td rowspan="1">65239</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.TestNGScript.file.SK_Broadcast#launchSafetyApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_Login</h2><h3 id="m0">com.TestNGScript.file.SK_Login#loginLASafetyKuvrr</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.TestNGScript.file.SK_Login#loginObsSafetyKuvrr</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.TestNGScript.file.SK_Login#loginSASafetyKuvrr</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_Broadcast</h2><h3 id="m3">com.TestNGScript.file.SK_Broadcast#launchSafetyApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_HomePage</h2><h3 id="m4">com.TestNGScript.file.SK_HomePage#TestHambugerMenuClick</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_LA_OpenIncident</h2><h3 id="m5">com.TestNGScript.file.SK_LA_OpenIncident#launchSafetyApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_SA_OpenIncident</h2><h3 id="m6">com.TestNGScript.file.SK_SA_OpenIncident#launchSKApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=78.0.3904.108)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CHANDAN&apos;, ip: &apos;192.168.0.17&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Chandan\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63348}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e322e4d95f2b04dd3727d373268fc4f1
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at com.Commonutills.file.Base.openProdSKApp(Base.java:52)
+	at com.TestNGScript.file.SK_SA_OpenIncident.launchSKApp(SK_SA_OpenIncident.java:30)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.TestNGScript.file.SK_SA_OpenIncident#closeBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.TestNGScript.file.SK_SA_OpenIncident#launchSafetyApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=78.0.3904.108)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CHANDAN&apos;, ip: &apos;192.168.0.17&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Chandan\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63348}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e322e4d95f2b04dd3727d373268fc4f1
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at com.Commonutills.file.Base.openProdSKApp(Base.java:52)
+	at com.TestNGScript.file.SK_SA_OpenIncident.launchSKApp(SK_SA_OpenIncident.java:30)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_Observer_OpenIncident</h2><h3 id="m9">com.TestNGScript.file.SK_Observer_OpenIncident#launchSafetyApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_EventAction</h2><h3 id="m10">com.TestNGScript.file.SK_EventAction#launchSafetyApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SK_ShareIncident</h2><h3 id="m11">com.TestNGScript.file.SK_ShareIncident#launchSafetyApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
