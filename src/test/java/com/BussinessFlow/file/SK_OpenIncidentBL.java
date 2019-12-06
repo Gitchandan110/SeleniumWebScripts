@@ -43,7 +43,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 		try {
 
-			if (OpenIncident().isDisplayed() == true) {
+			if (OpenIncident() !=null && OpenIncident().isDisplayed()) {
 				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, OpenIncident());
 				Thread.sleep(3000);
@@ -66,7 +66,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				System.out.println("No Open Incident Found");
 			}
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 	}
 
@@ -95,7 +95,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			}
 
 		} catch (Exception e) {
-			System.out.println("Exception" + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 

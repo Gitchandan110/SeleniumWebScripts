@@ -9,15 +9,26 @@ public class SK_OpenIncidentPL extends Base {
 
 	public WebElement IncomingIncident() {
 
-		By incomingIncident = By.xpath(("//td[contains(., ' Incoming ')]"));
-		return driver.findElement(incomingIncident);
+		try {
+			By incomingIncident = By.xpath(("//td[contains(., ' Incoming ')]"));
+			return driver.findElement(incomingIncident);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 
 	public WebElement OpenIncident() {
 
-		By openIncident = By.xpath("//td[contains(., ' Open')]");
-		return driver.findElement(openIncident);
+		try {
+			By openIncident = By.xpath("//td[contains(., ' Open')]");
+			return driver.findElement(openIncident);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 
@@ -27,35 +38,60 @@ public class SK_OpenIncidentPL extends Base {
 			By inc911 = By.xpath("//div/img[@title='911']");
 			return driver.findElement(inc911);
 		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
 
 	public WebElement logoKuvrr() {
 
-		By logo = By.xpath("//span[@class='logo']");
-		return driver.findElement(logo);
+		try {
+			By logo = By.xpath("//span[@class='logo']");
+			return driver.findElement(logo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 
 	public WebElement videoContainer() {
 
-		By video = By.xpath("//div[@id='video-container']");
-		return driver.findElement(video);
+		try {
+			By video = By.xpath("//div[@id='video-container']");
+			return driver.findElement(video);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 
 	public WebElement iconShareIncident() {
 
-		By share = By.xpath("//span[@class='share']//a[@id='share-link']");
-		return driver.findElement(share);
+		try {
+			By share = By.xpath("//span[@class='share']//a[@id='share-link']");
+			return driver.findElement(share);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 
 	public WebElement shareIncidentEmailfield() {
 
-		By emailtxt = By.xpath("//textarea[@id='share-recipient-emails']");
-		return driver.findElement(emailtxt);
+		try {
+			By emailtxt = By.xpath("//textarea[@id='share-recipient-emails']");
+			return driver.findElement(emailtxt);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	public WebElement btnSubmitShareIncident() {
