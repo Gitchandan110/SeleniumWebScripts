@@ -70,7 +70,7 @@
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_ShareIncident" />
+            <class name="com.TestNGScript.file.SK_911Incident" />
         </classes>
     </test>
     

@@ -21,6 +21,16 @@ public class SK_OpenIncidentPL extends Base {
 
 	}
 
+	public WebElement Incident911() {
+
+		try {
+			By inc911 = By.xpath("//div/img[@title='911']");
+			return driver.findElement(inc911);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
 	public WebElement logoKuvrr() {
 
 		By logo = By.xpath("//span[@class='logo']");
@@ -94,41 +104,41 @@ public class SK_OpenIncidentPL extends Base {
 		return driver.findElement(btnSave);
 
 	}
-	
+
 	public WebElement btnSmartResponse() {
-		
-		By smartResponse=By.xpath("//a[@id='quick-responses-button']");
+
+		By smartResponse = By.xpath("//a[@id='quick-responses-button']");
 		return driver.findElement(smartResponse);
 	}
-	
+
 	public WebElement chatSmartResponse() {
-		
-		By chat=By.xpath("//div[@id='quick-responses']//ul//li//span[contains(text(),'Are you OK')]");
+
+		By chat = By.xpath("//div[@id='quick-responses']//ul//li//span[contains(text(),'Are you OK')]");
 		return driver.findElement(chat);
 	}
-	
-public WebElement txtSmartResponse() {
-		
-		By txtSR=By.cssSelector("input[name='message'][id='message']");
+
+	public WebElement txtSmartResponse() {
+
+		By txtSR = By.cssSelector("input[name='message'][id='message']");
 		return driver.findElement(txtSR);
 	}
 
-public WebElement btnSendSmartResponse() {
-	
-	By txtSR=By.xpath("//div[@class='field submit-field']//input[@name='submit']");
-	return driver.findElement(txtSR);
-}
+	public WebElement btnSendSmartResponse() {
 
-public WebElement txtEventNotes() {
-	
-	By txtEN=By.cssSelector("textarea[class='notes_message'][id='notes-message']");
-	return driver.findElement(txtEN);
-}
+		By txtSR = By.xpath("//div[@class='field submit-field']//input[@name='submit']");
+		return driver.findElement(txtSR);
+	}
 
-public WebElement btnSaveEventNotes() {
+	public WebElement txtEventNotes() {
 
-By txtSR=By.xpath("//div[@class='field submit-field']//input[@name='notes-submit']");
-return driver.findElement(txtSR);
-}
-	
+		By txtEN = By.cssSelector("textarea[class='notes_message'][id='notes-message']");
+		return driver.findElement(txtEN);
+	}
+
+	public WebElement btnSaveEventNotes() {
+
+		By txtSR = By.xpath("//div[@class='field submit-field']//input[@name='notes-submit']");
+		return driver.findElement(txtSR);
+	}
+
 }

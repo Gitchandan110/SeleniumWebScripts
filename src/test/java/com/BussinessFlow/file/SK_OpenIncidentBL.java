@@ -10,7 +10,7 @@ import com.PageObjectRepository.file.SK_OpenIncidentPL;
 public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 	SK_OpenIncidentPL OpenIncidentPL;
-	String SanitySheet="Sanity_SK";
+	String SanitySheet = "Sanity_SK";
 
 	public void clickIncomingIncident() throws InterruptedException {
 
@@ -24,7 +24,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Base.takeScreenShot();
 				IncomingIncident().click();
 				System.out.println("Incoming Incident was clicked");
-				
+
 				Thread.sleep(15000);
 
 			} else {
@@ -55,12 +55,11 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				System.out.println("Open Incident found and selected");
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
-            // 	Base.scrolltoElement(driver, logoKuvrr());
-             	Base.scrolltoElement(driver, videoContainer());
-             	Base.takeScreenShot();
-             	System.out.println("Please wait for 15 seconds");
-               	Thread.sleep(15000);
-             	
+				// Base.scrolltoElement(driver, logoKuvrr());
+				Base.scrolltoElement(driver, videoContainer());
+				Base.takeScreenShot();
+				System.out.println("Please wait for 15 seconds");
+				Thread.sleep(15000);
 
 			} else {
 
@@ -70,14 +69,43 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 		}
 	}
-	
+
+	public void click911Incident() throws InterruptedException {
+
+		try {
+			
+			if (Incident911() != null && Incident911().isDisplayed()) {
+				Base.scrolltoElement(driver, Incident911());
+				Thread.sleep(3000);
+				Base.highLightElement(driver, Incident911());
+				ExcelWrite.writeSanitySheet(SanitySheet, 20, 1, "Pass");
+				Thread.sleep(2000);
+				Incident911().click();
+				System.out.println("911 Incident found and selected");
+				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
+				Thread.sleep(5000);
+				Base.scrolltoElement(driver, videoContainer());
+				Base.takeScreenShot();
+				System.out.println("Please wait for 5 seconds");
+				Thread.sleep(5000);
+			} else {
+
+				System.out.println("No 911 Incident Found");
+
+			}
+
+		} catch (Exception e) {
+			System.out.println("Exception" + e.getMessage());
+		}
+	}
+
 	public void clickSmartResponse() throws InterruptedException, IOException {
-		
+
 		Base.scrolltoElement(driver, btnSmartResponse());
 		if (btnSmartResponse().isDisplayed()) {
-		//	btnSmartResponse().click();
-		//	chatSmartResponse().click();
-		//	System.out.println("Samrt Response Chat is selected");
+			// btnSmartResponse().click();
+			// chatSmartResponse().click();
+			// System.out.println("Samrt Response Chat is selected");
 			txtSmartResponse().click();
 			txtSmartResponse().sendKeys("Where are You?");
 			System.out.println("SmartResponse: Where are You?");
@@ -85,12 +113,12 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			Thread.sleep(2000);
 			System.out.println("SmartResponse chat is performed");
 			ExcelWrite.writeSanitySheet(SanitySheet, 14, 1, "Pass");
-			
+
 		}
 	}
 
 	public void enterEventNotes() throws InterruptedException, IOException {
-		
+
 		if (txtEventNotes().isDisplayed()) {
 			txtEventNotes().click();
 			txtEventNotes().sendKeys("Event Notes");
@@ -99,82 +127,71 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			System.out.println("Event Notes sent");
 			ExcelWrite.writeSanitySheet(SanitySheet, 15, 1, "Pass");
 		}
-	}	
-	
-public void clickIconShareIncident() throws InterruptedException {
-		
-		
+	}
+
+	public void clickIconShareIncident() throws InterruptedException {
+
 		if (iconShareIncident().isDisplayed()) {
 			iconShareIncident().click();
 			Thread.sleep(2000);
 			System.out.println("Share Incident icon is found and clicked");
-			
+
 		}
-		
+
 		else {
-			
+
 			System.out.println("Unable to Share an incident");
-			
+
 		}
 	}
-	
+
 	public void submitShareIncident() throws InterruptedException, IOException {
-		
-	      if (shareIncidentEmailfield().isDisplayed()) {
+
+		if (shareIncidentEmailfield().isDisplayed()) {
 			shareIncidentEmailfield().click();
 			shareIncidentEmailfield().sendKeys("ck@yopmail.com;chandan@yopmail.com;test@yopmail.com");
 			btnSubmitShareIncident().click();
 			Base.takeScreenShot();
 			Thread.sleep(2000);
-			System.out.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
+			System.out
+					.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
 			ExcelWrite.writeSanitySheet(SanitySheet, 27, 1, "Pass");
 			Thread.sleep(10000);
-	      }
-		
-}
-	
-	
+		}
+
+	}
+
 	public void clickIncidentActionsClose() throws InterruptedException, IOException {
-		
+
 		if (dropdownIncidentAction().isDisplayed()) {
 			dropdownIncidentAction().click();
 			incidentActionClose().click();
 			Thread.sleep(2000);
 			System.out.println("Event action closed");
-			
+
 		}
-		
-		
-		
+
 	}
-	
-	
-public void clickIncidentResolutionFalseAlarm() throws InterruptedException {
-		
+
+	public void clickIncidentResolutionFalseAlarm() throws InterruptedException {
+
 		if (dropdownIncidentResolution().isDisplayed()) {
 			dropdownIncidentResolution().click();
 			incidentResolutionFalseAlarm().click();
 			Thread.sleep(2000);
 			System.out.println("Incident Resolution: False Alarm selected");
 		}
-}
-	
-public void enterIncidentActionResponse() throws InterruptedException, IOException {
-	
-	if (txtIncidentActionResponse().isDisplayed()) {
-		txtIncidentActionResponse().click();
-		txtIncidentActionResponse().sendKeys("Its a False Alarm");
-		Thread.sleep(2000);
-		btnSaveIncidentResponse().click();
-		ExcelWrite.writeSanitySheet(SanitySheet, 38, 1, "Pass");
 	}
-}	
 
+	public void enterIncidentActionResponse() throws InterruptedException, IOException {
 
+		if (txtIncidentActionResponse().isDisplayed()) {
+			txtIncidentActionResponse().click();
+			txtIncidentActionResponse().sendKeys("Its a False Alarm");
+			Thread.sleep(2000);
+			btnSaveIncidentResponse().click();
+			ExcelWrite.writeSanitySheet(SanitySheet, 38, 1, "Pass");
+		}
+	}
 
-	
-	
-}	
-	
-
-
+}

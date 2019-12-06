@@ -16,7 +16,7 @@ import com.BussinessFlow.file.SK_OpenIncidentBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_ShareIncident extends Base {
+public class SK_911Incident extends Base {
 
 	SK_OpenIncidentBL incidentbl = PageFactory.initElements(driver, SK_OpenIncidentBL.class);
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
@@ -41,9 +41,9 @@ public class SK_ShareIncident extends Base {
 		//loginSKbl.loginSA();
 		//loginSKbl.loginLA();
 		loginSKbl.loginObserver();
-		incidentbl.clickOpenIncident();
-		incidentbl.clickIconShareIncident();
-		incidentbl.submitShareIncident();
+		incidentbl.click911Incident();
+		incidentbl.enterEventNotes();
+		
 		
 		
 	}

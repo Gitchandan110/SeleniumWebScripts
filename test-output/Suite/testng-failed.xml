@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_SA_OpenIncident(failed)">
+  <test thread-count="5" name="SK_ShareIncident(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_SA_OpenIncident">
+      <class name="com.TestNGScript.file.SK_ShareIncident">
         <methods>
-          <include name="closeBrowser"/>
           <include name="launchSafetyApp"/>
           <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_SA_OpenIncident -->
+      </class> <!-- com.TestNGScript.file.SK_ShareIncident -->
     </classes>
-  </test> <!-- SK_SA_OpenIncident(failed) -->
+  </test> <!-- SK_ShareIncident(failed) -->
 </suite> <!-- Failed suite [Suite] -->
