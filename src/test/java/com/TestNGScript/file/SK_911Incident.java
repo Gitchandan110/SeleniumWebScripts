@@ -44,8 +44,6 @@ public class SK_911Incident extends Base {
 		incidentbl.click911Incident();
 		incidentbl.enterEventNotes();
 		
-		
-		
 	}
 
 	@AfterMethod

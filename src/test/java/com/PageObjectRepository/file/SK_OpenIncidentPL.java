@@ -68,6 +68,21 @@ public class SK_OpenIncidentPL extends Base {
 		return null;
 
 	}
+	
+	public WebElement mapContainer() {
+		
+	try {
+		By map=By.xpath("//div[@class='profile-map-container']");
+		return driver.findElement(map);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return null;
+	
+		
+		
+	}
 
 	public WebElement iconShareIncident() {
 

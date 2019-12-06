@@ -30,7 +30,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (Password().isDisplayed()) {
 				Password().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
 				System.out.println("Password entered");
-				Base.takeScreenShot();
+				
 
 			}
 
@@ -40,6 +40,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (BtnContinue().isDisplayed()) {
+				Base.takeScreenShot("LoginScreen");
 				BtnContinue().click();
 				Thread.sleep(2000);
 
@@ -48,14 +49,13 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (driver.getTitle().contains("Active Events")) {
 
 				System.out.println("Page Title verified. Login successfull");
-				Base.takeScreenShot();
 				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Pass");
 
 			}
 
 			if (errorLoginFail().isDisplayed()) {
 				System.out.println("Unable to Login due to incorrect user credential");
-				Base.takeScreenShot();
+				Base.takeScreenShot("LoginScreen");
 				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Fail");
 			}
 
@@ -92,6 +92,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (BtnContinue().isDisplayed()) {
+				Base.takeScreenShot("LoginScreen");
 				BtnContinue().click();
 				Thread.sleep(2000);
 
@@ -105,6 +106,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (errorLoginFail().isDisplayed()) {
+				Base.takeScreenShot("LoginScreen");
 				System.out.println("Unable to Login due to incorrect user credential");
 				ExcelWrite.writeSanitySheet(SanitySheet, 21, 2, "Fail");
 			}
@@ -142,6 +144,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (BtnContinue().isDisplayed()) {
+				Base.takeScreenShot("LoginScreen");
 				BtnContinue().click();
 				Thread.sleep(2000);
 
@@ -155,6 +158,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (errorLoginFail().isDisplayed()) {
+				Base.takeScreenShot("LoginScreen");
 				System.out.println("Unable to Login due to incorrect user credential");
 				ExcelWrite.writeSanitySheet(SanitySheet, 3, 1, "Fail");
 			}

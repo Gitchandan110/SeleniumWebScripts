@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,7 +40,7 @@ public class Base {
 	    driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-	    driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	    driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		return driver;
 	
 	
@@ -106,20 +107,35 @@ public class Base {
 	}
 	
 	
-	public static void takeScreenShot() throws IOException {
+	public static void takeScreenShot(String screenName) throws IOException {
 		
-		//TakeScreenShot is a interface in java so its Object can not be created. 
-		//So We need to type cast takescreen shot by writing it under small bracket like this (TakeScreenshot).
+		String imageLocation = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots\\";
+		//String screenName= obj.getTagName();
+		
+		try {
+			TakesScreenshot ts=(TakesScreenshot)driver;
+			File capturedImage=ts.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFileToDirectory(capturedImage, new File(imageLocation + screenName));
+			System.out.println("Screenshot captured");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+public static void screenShotWebElement(WebElement object) throws IOException {
+		
 		
 		TakesScreenshot ts=(TakesScreenshot)driver;
-		
-		File capturedImage=ts.getScreenshotAs(OutputType.FILE);
-		
+		File imgObj=object.getScreenshotAs(OutputType.FILE);
 		String newFileName = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots"+ ".jpg";
-		
-	//	FileUtils.copyFile(capturedImage, new File(""));
-		FileUtils.copyFileToDirectory(capturedImage, new File(newFileName));
-		System.out.println("Screenshot captured");
+		FileUtils.copyFileToDirectory(imgObj, new File(newFileName));
 		
 	}
 

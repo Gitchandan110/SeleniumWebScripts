@@ -1,6 +1,10 @@
 package com.BussinessFlow.file;
 
+import java.io.File;
 import java.io.IOException;
+
+import org.apache.maven.shared.utils.io.FileUtils;
+import org.openqa.selenium.OutputType;
 
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
@@ -21,7 +25,6 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Thread.sleep(3000);
 				Base.highLightElement(driver, IncomingIncident());
 				Thread.sleep(2000);
-				Base.takeScreenShot();
 				IncomingIncident().click();
 				System.out.println("Incoming Incident was clicked");
 
@@ -46,10 +49,11 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			if (OpenIncident() !=null && OpenIncident().isDisplayed()) {
 				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, OpenIncident());
+				Base.screenShotWebElement(OpenIncident());
 				Thread.sleep(3000);
 				Base.highLightElement(driver, OpenIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
-				Base.takeScreenShot();
+				Base.takeScreenShot("Active Screen");
 				Thread.sleep(2000);
 				OpenIncident().click();
 				System.out.println("Open Incident found and selected");
@@ -57,7 +61,10 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Thread.sleep(5000);
 				// Base.scrolltoElement(driver, logoKuvrr());
 				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot();
+				Base.takeScreenShot("IncidentPage");
+				Base.scrolltoElement(driver, mapContainer());
+				Base.screenShotWebElement(mapContainer());
+				ExcelWrite.writeSanitySheet(SanitySheet, 10, 1, "Pass");
 				System.out.println("Please wait for 15 seconds");
 				Thread.sleep(15000);
 
@@ -85,7 +92,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
 				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot();
+				Base.takeScreenShot("911");
 				System.out.println("Please wait for 5 seconds");
 				Thread.sleep(5000);
 			} else {
@@ -151,7 +158,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			shareIncidentEmailfield().click();
 			shareIncidentEmailfield().sendKeys("ck@yopmail.com;chandan@yopmail.com;test@yopmail.com");
 			btnSubmitShareIncident().click();
-			Base.takeScreenShot();
+			Base.takeScreenShot("ShareIncident");
 			Thread.sleep(2000);
 			System.out
 					.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");

@@ -17,7 +17,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 7, 1, "Pass");
 				Base.highLightElement(driver, HamburgerMenu());
 				HamburgerMenu().click();
-				Base.takeScreenShot();
+				Base.takeScreenShot("MenuList");
 				ExcelWrite.writeSanitySheet(SanitySheet, 8, 1, "Pass");
 				// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 				Thread.sleep(5000);
@@ -44,7 +44,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 				Base.highLightElement(driver, LinkOrganization());
 				LinkOrganization().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot();
+				Base.takeScreenShot("OrganizationPage");
 
 			} else {
 

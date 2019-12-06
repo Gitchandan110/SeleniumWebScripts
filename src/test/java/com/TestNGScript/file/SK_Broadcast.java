@@ -37,7 +37,6 @@ public class SK_Broadcast extends Base{
 	     	loginSKbl.loginLA();
 	    	broadcastbl.verifyBroadcastBtn();
 			broadcastbl.verifyBroadcastMessage();
-			Base.takeScreenShot();
 			broadcastbl.verifyBtnSubmit();
 			ExcelWrite.writeSanitySheet(SanitySheet, 5, 1, "Pass");
 			
@@ -52,7 +51,6 @@ public class SK_Broadcast extends Base{
     	loginSKbl.loginObserver();
 		broadcastbl.verifyBroadcastBtn();
 		broadcastbl.verifyBroadcastMessage();
-		Base.takeScreenShot();
 		broadcastbl.verifyBtnSubmit();
 		ExcelWrite.writeSanitySheet(SanitySheet, 4, 1, "Pass");
 		
