@@ -49,6 +49,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			if (OpenIncident() !=null && OpenIncident().isDisplayed()) {
 				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, OpenIncident());
+				ExcelWrite.writeSanitySheet(SanitySheet, 17, 1, "Pass");
 				Base.screenShotWebElement(OpenIncident());
 				Thread.sleep(3000);
 				Base.highLightElement(driver, OpenIncident());
