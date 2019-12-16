@@ -1,37 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111167" started-at="2019-12-07T06:51:45Z" finished-at="2019-12-07T06:53:36Z">
+  <suite name="Suite" duration-ms="829747" started-at="2019-12-16T05:46:06Z" finished-at="2019-12-16T05:59:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="111167" started-at="2019-12-07T06:51:45Z" finished-at="2019-12-07T06:53:36Z">
-      <class name="com.TestNGScript.file.SK_Broadcast">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@10b48321]" name="launchSKApp" is-config="true" duration-ms="38613" started-at="2019-12-07T06:51:45Z" finished-at="2019-12-07T06:52:23Z">
+    <test name="SK_Login" duration-ms="143746" started-at="2019-12-16T05:46:06Z" finished-at="2019-12-16T05:48:30Z">
+      <class name="com.TestNGScript.file.SK_Login">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Login@453da22c]" name="launchSKApp" is-config="true" duration-ms="41229" started-at="2019-12-16T05:46:07Z" finished-at="2019-12-16T05:46:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="testBroadcastLA()[pri:1, instance:com.TestNGScript.file.SK_Broadcast@10b48321]" name="testBroadcastLA" duration-ms="17294" started-at="2019-12-07T06:52:23Z" finished-at="2019-12-07T06:52:41Z">
+        <test-method status="PASS" signature="loginSASafetyKuvrr()[pri:1, instance:com.TestNGScript.file.SK_Login@453da22c]" name="loginSASafetyKuvrr" duration-ms="10423" started-at="2019-12-16T05:46:48Z" finished-at="2019-12-16T05:46:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBroadcastLA -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@10b48321]" name="closeBrowser" is-config="true" duration-ms="846" started-at="2019-12-07T06:52:41Z" finished-at="2019-12-07T06:52:42Z">
+        </test-method> <!-- loginSASafetyKuvrr -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Login@453da22c]" name="closeBrowser" is-config="true" duration-ms="1021" started-at="2019-12-16T05:46:58Z" finished-at="2019-12-16T05:46:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@10b48321]" name="launchSKApp" is-config="true" duration-ms="36566" started-at="2019-12-07T06:52:42Z" finished-at="2019-12-07T06:53:18Z">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Login@453da22c]" name="launchSKApp" is-config="true" duration-ms="37329" started-at="2019-12-16T05:46:59Z" finished-at="2019-12-16T05:47:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="testBroadcastObserver()[pri:2, instance:com.TestNGScript.file.SK_Broadcast@10b48321]" name="testBroadcastObserver" duration-ms="16882" started-at="2019-12-07T06:53:18Z" finished-at="2019-12-07T06:53:35Z">
+        <test-method status="PASS" signature="loginLASafetyKuvrr()[pri:2, instance:com.TestNGScript.file.SK_Login@453da22c]" name="loginLASafetyKuvrr" duration-ms="7773" started-at="2019-12-16T05:47:37Z" finished-at="2019-12-16T05:47:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLASafetyKuvrr -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Login@453da22c]" name="closeBrowser" is-config="true" duration-ms="1201" started-at="2019-12-16T05:47:44Z" finished-at="2019-12-16T05:47:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Login@453da22c]" name="launchSKApp" is-config="true" duration-ms="37450" started-at="2019-12-16T05:47:46Z" finished-at="2019-12-16T05:48:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="loginObsSafetyKuvrr()[pri:3, instance:com.TestNGScript.file.SK_Login@453da22c]" name="loginObsSafetyKuvrr" duration-ms="6141" started-at="2019-12-16T05:48:23Z" finished-at="2019-12-16T05:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginObsSafetyKuvrr -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Login@453da22c]" name="closeBrowser" is-config="true" duration-ms="1110" started-at="2019-12-16T05:48:29Z" finished-at="2019-12-16T05:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_Login -->
+    </test> <!-- SK_Login -->
+    <test name="SK_Broadcast" duration-ms="113251" started-at="2019-12-16T05:48:30Z" finished-at="2019-12-16T05:50:24Z">
+      <class name="com.TestNGScript.file.SK_Broadcast">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@58c1c010]" name="launchSKApp" is-config="true" duration-ms="37892" started-at="2019-12-16T05:48:30Z" finished-at="2019-12-16T05:49:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="testBroadcastLA()[pri:1, instance:com.TestNGScript.file.SK_Broadcast@58c1c010]" name="testBroadcastLA" duration-ms="19004" started-at="2019-12-16T05:49:08Z" finished-at="2019-12-16T05:49:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBroadcastLA -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@58c1c010]" name="closeBrowser" is-config="true" duration-ms="929" started-at="2019-12-16T05:49:27Z" finished-at="2019-12-16T05:49:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@58c1c010]" name="launchSKApp" is-config="true" duration-ms="37243" started-at="2019-12-16T05:49:28Z" finished-at="2019-12-16T05:50:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="testBroadcastObserver()[pri:2, instance:com.TestNGScript.file.SK_Broadcast@58c1c010]" name="testBroadcastObserver" duration-ms="17207" started-at="2019-12-16T05:50:05Z" finished-at="2019-12-16T05:50:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBroadcastObserver -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@10b48321]" name="closeBrowser" is-config="true" duration-ms="915" started-at="2019-12-07T06:53:35Z" finished-at="2019-12-07T06:53:36Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@58c1c010]" name="closeBrowser" is-config="true" duration-ms="957" started-at="2019-12-16T05:50:23Z" finished-at="2019-12-16T05:50:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.TestNGScript.file.SK_Broadcast -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- SK_Broadcast -->
+    <test name="SK_HomePage" duration-ms="63612" started-at="2019-12-16T05:50:24Z" finished-at="2019-12-16T05:51:27Z">
+      <class name="com.TestNGScript.file.SK_HomePage">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_HomePage@429bd883]" name="launchSKApp" is-config="true" duration-ms="35958" started-at="2019-12-16T05:50:24Z" finished-at="2019-12-16T05:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="TestHambugerMenuClick()[pri:0, instance:com.TestNGScript.file.SK_HomePage@429bd883]" name="TestHambugerMenuClick" duration-ms="26731" started-at="2019-12-16T05:51:00Z" finished-at="2019-12-16T05:51:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestHambugerMenuClick -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_HomePage@429bd883]" name="closeBrowser" is-config="true" duration-ms="916" started-at="2019-12-16T05:51:26Z" finished-at="2019-12-16T05:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_HomePage -->
+    </test> <!-- SK_HomePage -->
+    <test name="SK_LA_OpenIncident" duration-ms="113627" started-at="2019-12-16T05:51:27Z" finished-at="2019-12-16T05:53:21Z">
+      <class name="com.TestNGScript.file.SK_LA_OpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_OpenIncident@226a82c4]" name="launchSKApp" is-config="true" duration-ms="35880" started-at="2019-12-16T05:51:27Z" finished-at="2019-12-16T05:52:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_OpenIncident@226a82c4]" name="launchSafetyApp" duration-ms="76796" started-at="2019-12-16T05:52:03Z" finished-at="2019-12-16T05:53:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_OpenIncident@226a82c4]" name="closeBrowser" is-config="true" duration-ms="947" started-at="2019-12-16T05:53:20Z" finished-at="2019-12-16T05:53:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_LA_OpenIncident -->
+    </test> <!-- SK_LA_OpenIncident -->
+    <test name="SK_SA_OpenIncident" duration-ms="114575" started-at="2019-12-16T05:53:21Z" finished-at="2019-12-16T05:55:15Z">
+      <class name="com.TestNGScript.file.SK_SA_OpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_SA_OpenIncident@491666ad]" name="launchSKApp" is-config="true" duration-ms="36095" started-at="2019-12-16T05:53:21Z" finished-at="2019-12-16T05:53:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_SA_OpenIncident@491666ad]" name="launchSafetyApp" duration-ms="77614" started-at="2019-12-16T05:53:57Z" finished-at="2019-12-16T05:55:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_SA_OpenIncident@491666ad]" name="closeBrowser" is-config="true" duration-ms="858" started-at="2019-12-16T05:55:15Z" finished-at="2019-12-16T05:55:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_SA_OpenIncident -->
+    </test> <!-- SK_SA_OpenIncident -->
+    <test name="SK_Observer_OpenIncident" duration-ms="117682" started-at="2019-12-16T05:55:15Z" finished-at="2019-12-16T05:57:13Z">
+      <class name="com.TestNGScript.file.SK_Observer_OpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Observer_OpenIncident@62e136d3]" name="launchSKApp" is-config="true" duration-ms="40439" started-at="2019-12-16T05:55:15Z" finished-at="2019-12-16T05:55:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_Observer_OpenIncident@62e136d3]" name="launchSafetyApp" duration-ms="76383" started-at="2019-12-16T05:55:56Z" finished-at="2019-12-16T05:57:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Observer_OpenIncident@62e136d3]" name="closeBrowser" is-config="true" duration-ms="854" started-at="2019-12-16T05:57:12Z" finished-at="2019-12-16T05:57:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_Observer_OpenIncident -->
+    </test> <!-- SK_Observer_OpenIncident -->
+    <test name="SK_EventAction" duration-ms="90565" started-at="2019-12-16T05:57:13Z" finished-at="2019-12-16T05:58:44Z">
+      <class name="com.TestNGScript.file.SK_EventAction">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_EventAction@770c2e6b]" name="launchSKApp" is-config="true" duration-ms="35179" started-at="2019-12-16T05:57:13Z" finished-at="2019-12-16T05:57:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_EventAction@770c2e6b]" name="launchSafetyApp" duration-ms="54547" started-at="2019-12-16T05:57:48Z" finished-at="2019-12-16T05:58:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_EventAction@770c2e6b]" name="closeBrowser" is-config="true" duration-ms="831" started-at="2019-12-16T05:58:43Z" finished-at="2019-12-16T05:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_EventAction -->
+    </test> <!-- SK_EventAction -->
+    <test name="SK_ShareIncident" duration-ms="72507" started-at="2019-12-16T05:58:44Z" finished-at="2019-12-16T05:59:56Z">
+      <class name="com.TestNGScript.file.SK_911Incident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@2357d90a]" name="launchSKApp" is-config="true" duration-ms="37205" started-at="2019-12-16T05:58:44Z" finished-at="2019-12-16T05:59:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@2357d90a]" name="launchSafetyApp" duration-ms="34452" started-at="2019-12-16T05:59:21Z" finished-at="2019-12-16T05:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_911Incident@2357d90a]" name="closeBrowser" is-config="true" duration-ms="846" started-at="2019-12-16T05:59:55Z" finished-at="2019-12-16T05:59:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_911Incident -->
+    </test> <!-- SK_ShareIncident -->
+  </suite> <!-- Suite -->
 </testng-results>

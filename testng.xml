@@ -10,13 +10,13 @@
         
     </listeners>
 
-    <test name="SK_Login" >
+   <!--  <test name="SK_Login" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_Login" />
         </classes>
-    </test>
+    </test> -->
 
     <test name="SK_Broadcast" >
 
@@ -26,11 +26,11 @@
         </classes>
     </test>
 
-    <test name="SK_HomePage" >
+    <test name="SK_SA_OrganizationPage" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_HomePage" />
+            <class name="com.TestNGScript.file.SK_SA_OrganizationPage" />
         </classes>
     </test>
 
@@ -58,15 +58,15 @@
         </classes>
     </test>
     
-     <test name="SK_EventAction" >
+ <!--     <test name="SK_EventAction" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_EventAction" />
         </classes>
-    </test>
+    </test> -->
     
-      <test name="SK_ShareIncident" >
+      <test name="SK_911Incident" >
 
         <classes>
 
