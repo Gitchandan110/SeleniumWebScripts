@@ -21,11 +21,11 @@ public class SK_BroadcastPL extends Base {
 
 	}
 
-	public WebElement BtnSubmit() {
+	public WebElement BtnSend() {
 
-		By btnSubmit = By.xpath("//input[@type='submit'][@id='submit']");
+		By btnSend = By.xpath("//input[@type='submit'][@id='submit']");
 
-		return driver.findElement(btnSubmit);
+		return driver.findElement(btnSend);
 	}
 
 	public WebElement BtnCancel() {

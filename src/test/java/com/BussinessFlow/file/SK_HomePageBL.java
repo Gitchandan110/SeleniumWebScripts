@@ -9,6 +9,29 @@ public class SK_HomePageBL extends SK_HomePagePL {
 
 	String SanitySheet="Sanity_SK";
 	
+	public void verifyTabClosedIncident() {
+
+		try {
+
+			if (tabClosedIncident().isDisplayed()) {
+
+				Base.highLightElement(driver, tabClosedIncident());
+				tabClosedIncident().click();
+				Thread.sleep(5000);
+		
+			} else {
+
+				System.out.println("Closed Incident not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Closed Incident : " + ex.getStackTrace());
+		}
+
+	}
+
+	
 	public void verifyHamburgerMenu() {
 
 		try {

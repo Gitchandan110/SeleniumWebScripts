@@ -7,6 +7,14 @@ import com.Commonutills.file.Base;
 
 public class SK_HomePagePL extends Base {
 	
+	public WebElement tabClosedIncident() {
+		
+		By tabClosed=By.xpath("//ul[@class='nav nav-tabs incidents-tabs']//*[contains(text(),'Closed')]");
+		return driver.findElement(tabClosed);
+		
+		
+	}
+	
 	
 	public WebElement HamburgerMenu() {
 		

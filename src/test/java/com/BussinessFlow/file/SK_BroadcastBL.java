@@ -61,10 +61,10 @@ public class SK_BroadcastBL extends SK_BroadcastPL {
 
 		try {
 
-			if (BtnSubmit().isDisplayed() == true) {
-				Base.highLightElement(driver, BtnSubmit());
+			if (BtnSend().isDisplayed() == true) {
+				Base.highLightElement(driver, BtnSend());
 				Base.takeScreenShot("BroadcastScreen");
-			    BtnSubmit().click();
+				BtnSend().click();
 		
 
 			} else {

@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4288" started-at="2019-12-16T12:36:03Z" finished-at="2019-12-16T12:36:07Z">
+  <suite name="Default suite" duration-ms="128749" started-at="2019-12-17T09:32:29Z" finished-at="2019-12-17T09:34:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4288" started-at="2019-12-16T12:36:03Z" finished-at="2019-12-16T12:36:07Z">
-      <class name="com.TestNGScript.file.JDBC_MySQL_Red5">
-        <test-method status="PASS" signature="testMySQLDB()[pri:0, instance:com.TestNGScript.file.JDBC_MySQL_Red5@49c43f4e]" name="testMySQLDB" duration-ms="4257" started-at="2019-12-16T12:36:03Z" finished-at="2019-12-16T12:36:07Z">
+    <test name="Default test" duration-ms="128749" started-at="2019-12-17T09:32:29Z" finished-at="2019-12-17T09:34:38Z">
+      <class name="com.TestNGScript.file.SK_LA_ClosedIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ClosedIncident@6166e06f]" name="launchSKApp" is-config="true" duration-ms="18366" started-at="2019-12-17T09:32:29Z" finished-at="2019-12-17T09:32:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMySQLDB -->
-      </class> <!-- com.TestNGScript.file.JDBC_MySQL_Red5 -->
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ClosedIncident@6166e06f]" name="launchSafetyApp" duration-ms="110322" started-at="2019-12-17T09:32:47Z" finished-at="2019-12-17T09:34:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_ClosedIncident@6166e06f]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-12-17T09:34:38Z" finished-at="2019-12-17T09:34:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_LA_ClosedIncident -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
