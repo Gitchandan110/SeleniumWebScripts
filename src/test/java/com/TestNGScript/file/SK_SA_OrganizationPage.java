@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.BussinessFlow.file.SK_LoginBL;
+import com.BussinessFlow.file.SK_MenuListBL;
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
@@ -16,6 +17,7 @@ public class SK_SA_OrganizationPage extends Base {
 
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);
+	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
 	String LoginDataSheet = "Login";
 
 	@BeforeMethod
@@ -34,7 +36,7 @@ public class SK_SA_OrganizationPage extends Base {
 
 		loginSafetyKuvrrBL.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();
-		homePageMenuBL.VerifyOrganizationlink();
+		menuList.clickMenuOrganization();
 
 	}
 

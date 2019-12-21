@@ -13,8 +13,7 @@ public class SK_HomePagePL extends Base {
 		return driver.findElement(tabClosed);
 		
 		
-	}
-	
+	}	
 	
 	public WebElement HamburgerMenu() {
 		
@@ -24,14 +23,6 @@ public class SK_HomePagePL extends Base {
 		
 	}
 	
-	
-	public WebElement LinkOrganization() {
-		
-		By linkOrganization= By.xpath("//a[@href='/organization/']");
-		
-	//	By linkOrganization= By.cssSelector("a[href='/organization/']");
-		
-		return driver.findElement(linkOrganization);
-	}
+
 
 }

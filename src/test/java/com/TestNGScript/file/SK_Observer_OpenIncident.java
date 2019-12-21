@@ -39,7 +39,7 @@ public class SK_Observer_OpenIncident extends Base {
 
 	
 		loginSKbl.loginObserver();
-		incidentbl.clickOpenIncident();
+		incidentbl.clickIncomingIncident();
 		incidentbl.clickSmartResponse();
 		incidentbl.enterEventNotes();
 		incidentbl.clickIncidentActionsClose();

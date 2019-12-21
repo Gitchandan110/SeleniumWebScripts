@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_LoginBL;
+import com.BussinessFlow.file.SK_MenuListBL;
 import com.BussinessFlow.file.SK_OrganizationBL;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_HomePageBL;
@@ -18,6 +19,7 @@ public class SK_SA_Prod_OrganizationPage extends Base {
 	SK_LoginBL prodSALoginbl=PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_OrganizationBL organizationBL=PageFactory.initElements(driver, SK_OrganizationBL.class);
+	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
 	String LoginDataSheet = "Login";
 
 	@BeforeMethod
@@ -36,7 +38,7 @@ public class SK_SA_Prod_OrganizationPage extends Base {
 
 		prodSALoginbl.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();
-		homePageMenuBL.VerifyOrganizationlink();
+		menuList.clickMenuOrganization();
 		organizationBL.getOrgPageRowCount();
 		organizationBL.getOrgPageColumnCount();
 		organizationBL.getColumnHeader();

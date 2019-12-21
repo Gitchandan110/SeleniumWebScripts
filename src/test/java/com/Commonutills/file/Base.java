@@ -15,6 +15,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.appium.java_client.MobileElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
@@ -124,11 +126,6 @@ public class Base {
 		
 	}
 	
-	
-	
-	
-	
-	
 public static void screenShotWebElement(WebElement object) throws IOException {
 		
 		
@@ -138,6 +135,19 @@ public static void screenShotWebElement(WebElement object) throws IOException {
 		FileUtils.copyFileToDirectory(imgObj, new File(newFileName));
 		
 	}
+
+
+public static void waitFor30Seconds(WebElement element) {
+
+	try {
+		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(element));
+		System.out.println("Explicit Wait 30 seconds Done");
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
 
 
 }

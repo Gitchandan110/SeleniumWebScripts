@@ -40,7 +40,7 @@ public class SK_EventAction extends Base {
 		// loginSKbl.loginSA();
 		// loginSKbl.loginLA();
 		loginSKbl.loginObserver();
-		incidentbl.clickOpenIncident();
+		incidentbl.clickIncomingIncident();
 		incidentbl.clickIncidentActionsClose();
 		incidentbl.clickIncidentResolutionFalseAlarm();
 		incidentbl.enterIncidentActionResponse();

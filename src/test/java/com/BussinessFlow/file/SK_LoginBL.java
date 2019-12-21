@@ -53,11 +53,11 @@ public class SK_LoginBL extends SK_LoginPL {
 
 			}
 
-			if (errorLoginFail().isDisplayed()) {
+		/*	if (errorLoginFail().isDisplayed()) {
 				System.out.println("Unable to Login due to incorrect user credential");
 				Base.takeScreenShot("LoginScreen");
 				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Fail");
-			}
+			}*/
 
 		} catch (Exception ex) {
 
@@ -105,11 +105,11 @@ public class SK_LoginBL extends SK_LoginPL {
 
 			}
 
-			if (errorLoginFail().isDisplayed()) {
+		/*	if (errorLoginFail().isDisplayed()) {
 				Base.takeScreenShot("LoginScreen");
 				System.out.println("Unable to Login due to incorrect user credential");
 				ExcelWrite.writeSanitySheet(SanitySheet, 21, 2, "Fail");
-			}
+			}*/
 
 		} catch (Exception ex) {
 
@@ -157,11 +157,11 @@ public class SK_LoginBL extends SK_LoginPL {
 
 			}
 
-			if (errorLoginFail().isDisplayed()) {
+		/*	if (errorLoginFail().isDisplayed()) {
 				Base.takeScreenShot("LoginScreen");
 				System.out.println("Unable to Login due to incorrect user credential");
 				ExcelWrite.writeSanitySheet(SanitySheet, 3, 1, "Fail");
-			}
+			}*/
 
 		} catch (Exception ex) {
 

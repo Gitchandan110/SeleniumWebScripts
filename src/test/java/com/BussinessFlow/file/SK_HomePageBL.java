@@ -58,27 +58,6 @@ public class SK_HomePageBL extends SK_HomePagePL {
 
 	}
 
-	public void VerifyOrganizationlink() {
-
-		try {
-
-			if (LinkOrganization().isDisplayed() == true) {
-
-				Base.highLightElement(driver, LinkOrganization());
-				LinkOrganization().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("OrganizationPage");
-
-			} else {
-
-				System.out.println("Organization link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Organization link : " + ex.getStackTrace());
-		}
-
-	}
+	
 
 }

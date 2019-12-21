@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_Login">
+      <class name="com.TestNGScript.file.SK_SA_Prod_OrganizationPage">
         <methods>
-          <include name="loginLASafetyKuvrr"/>
-          <include name="loginObsSafetyKuvrr"/>
-          <include name="launchSKApp"/>
           <include name="closeBrowser"/>
-          <include name="loginSASafetyKuvrr"/>
+          <include name="launchSKApp"/>
+          <include name="TestOrganizationPage"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_Login -->
+      </class> <!-- com.TestNGScript.file.SK_SA_Prod_OrganizationPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
