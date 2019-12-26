@@ -126,7 +126,7 @@ public class Base {
 		
 	}
 	
-public static void screenShotWebElement(WebElement object) throws IOException {
+/*public static void screenShotWebElement(WebElement object) throws IOException {
 		
 		
 		TakesScreenshot ts=(TakesScreenshot)driver;
@@ -134,7 +134,7 @@ public static void screenShotWebElement(WebElement object) throws IOException {
 		String newFileName = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots"+ ".jpg";
 		FileUtils.copyFileToDirectory(imgObj, new File(newFileName));
 		
-	}
+	}*/
 
 
 public static void waitFor30Seconds(WebElement element) {

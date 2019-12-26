@@ -38,7 +38,7 @@ public class SK_BroadcastBL extends SK_BroadcastPL {
 			if (TextboxBroadcast().isDisplayed() == true) {
 				TextboxBroadcast().click();
 				Base.highLightElement(driver, TextboxBroadcast());
-				TextboxBroadcast().sendKeys("Hello All from Selenium");
+				TextboxBroadcast().sendKeys("Plz ignore this is a test Broadcast msg");
 				System.out.println("Message typed under Broadcast field");
 				
 				

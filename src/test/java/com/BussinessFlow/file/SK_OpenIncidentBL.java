@@ -24,7 +24,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, IncomingIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 17, 1, "Pass");
-				Base.screenShotWebElement(IncomingIncident());
+				Base.takeScreenShot("IncomingIncident");
 				Thread.sleep(3000);
 				Base.highLightElement(driver, IncomingIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
@@ -37,8 +37,6 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				// Base.scrolltoElement(driver, logoKuvrr());
 				Base.scrolltoElement(driver, videoContainer());
 				Base.takeScreenShot("IncidentPage");
-				Base.scrolltoElement(driver, mapContainer());
-				Base.screenShotWebElement(mapContainer());
 				ExcelWrite.writeSanitySheet(SanitySheet, 10, 1, "Pass");
 				System.out.println("Please wait for 15 seconds");
 				Thread.sleep(15000);
@@ -51,7 +49,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, OpenIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 17, 1, "Pass");
-				Base.screenShotWebElement(OpenIncident());
+				Base.takeScreenShot("OpenIncident");
 				Thread.sleep(3000);
 				Base.highLightElement(driver, OpenIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
@@ -64,8 +62,6 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				// Base.scrolltoElement(driver, logoKuvrr());
 				Base.scrolltoElement(driver, videoContainer());
 				Base.takeScreenShot("IncidentPage");
-				Base.scrolltoElement(driver, mapContainer());
-				Base.screenShotWebElement(mapContainer());
 				ExcelWrite.writeSanitySheet(SanitySheet, 10, 1, "Pass");
 				System.out.println("Please wait for 15 seconds");
 				Thread.sleep(15000);
@@ -98,7 +94,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
 				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot("911");
+				Base.takeScreenShot("911 Incident");
 				System.out.println("Please wait for 5 seconds");
 				Thread.sleep(5000);
 			} else {
