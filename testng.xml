@@ -7,16 +7,17 @@
     <listeners>
 
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
-        
     </listeners>
 
-   <!--  <test name="SK_Login" >
+    <!--
+    <test name="SK_Login" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_Login" />
         </classes>
-    </test> -->
+    </test>
+    -->
 
     <test name="SK_Broadcast" >
 
@@ -41,40 +42,32 @@
             <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
         </classes>
     </test>
-    
-     <test name="SK_SA_OpenIncident" >
+
+    <test name="SK_SA_OpenIncident" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_SA_OpenIncident" />
         </classes>
     </test>
-    
-      <test name="SK_Observer_OpenIncident" >
+
+    <test name="SK_Observer_OpenIncident" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_Observer_OpenIncident" />
         </classes>
     </test>
-    
- <!--     <test name="SK_EventAction" >
 
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_EventAction" />
-        </classes>
-    </test> -->
-    
-      <test name="SK_911Incident" >
+    <test name="SK_911Incident" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_911Incident" />
         </classes>
     </test>
-    
-          <test name="SK_LA_ClosedIncident" >
+
+    <test name="SK_LA_ClosedIncident" >
 
         <classes>
 
@@ -82,8 +75,28 @@
         </classes>
     </test>
     
+    
+       <test name="SK_LA_VisitorManagement" >
 
-   <!--  <test name="Amazon_Home" >
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_VisitorManagement" />
+        </classes>
+    </test>
+
+    <!--
+    <test name="SK_EventAction" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_EventAction" />
+        </classes>
+    </test>
+    -->
+
+
+    <!--
+    <test name="Amazon_Home" >
 
         <classes>
 
@@ -105,6 +118,7 @@
 
             <class name="com.TestNGScript.file.MMT_HomePage" />
         </classes>
-    </test>
- -->
+    </test>
+    -->
+
 </suite>

@@ -52,7 +52,7 @@ public class SK_VisitorManagementPL extends Base {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("Exception in WebElement ddStatus:"+ e.getMessage());
+			System.out.println("Exception in WebElement ddStatus:" + e.getMessage());
 		}
 		return null;
 	}
@@ -65,7 +65,7 @@ public class SK_VisitorManagementPL extends Base {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("Exception in WebElement ddActiveStatus:"+ e.getMessage());
+			System.out.println("Exception in WebElement ddActiveStatus:" + e.getMessage());
 		}
 		return null;
 	}
@@ -78,12 +78,11 @@ public class SK_VisitorManagementPL extends Base {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("Exception in WebElement ddInactiveStatus:"+ e.getMessage());
+			System.out.println("Exception in WebElement ddInactiveStatus:" + e.getMessage());
 		}
 		return null;
 	}
-	
-	
+
 	public WebElement btnFilter() {
 
 		try {
@@ -95,12 +94,36 @@ public class SK_VisitorManagementPL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement btnClear() {
 
 		try {
 			By FilterButton = By.xpath("//input [@name='cancel']");
 			return driver.findElement(FilterButton);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public WebElement linkDetails() {
+
+		try {
+			By details = By.linkText("Details");
+			return driver.findElement(details);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public WebElement btnCancelDetails() {
+
+		try {
+			By cancel = By.xpath("//a[@class='kv-btn kv-btn-primary']");
+			return driver.findElement(cancel);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -28,6 +28,7 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 				filterPassTypeTitle().sendKeys("VP");
 				btnFilter().click();
 				Thread.sleep(5000);
+				Base.takeScreenShot("ManageVisitorPassTypes");
 				btnClear().click();
 				System.out.println("filterPassTypeTitle Pass");
 				Base.waitFor30Seconds(filterNumberOfDays());
@@ -39,11 +40,12 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 				Thread.sleep(5000);
 				btnFilter().click();
 				Thread.sleep(5000);
+				Base.takeScreenShot("ManageVisitorPassTypes");
 				btnClear().click();
 				System.out.println("filterNumberOfDays Pass");
 				Base.waitFor30Seconds(ddStatus());
 			}
-			
+
 			if (ddStatus() != null && ddStatus().isDisplayed()) {
 				Base.highLightElement(driver, ddStatus());
 				ddStatus().click();
@@ -51,6 +53,7 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 				ddActiveStatus().click();
 				btnFilter().click();
 				Thread.sleep(5000);
+				Base.takeScreenShot("ManageVisitorPassTypes");
 				btnClear().click();
 				System.out.println("ddActiveStatus() Pass");
 				Base.waitFor30Seconds(ddStatus());
@@ -59,15 +62,26 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 				ddInactiveStatus().click();
 				btnFilter().click();
 				Thread.sleep(5000);
+				Base.takeScreenShot("ManageVisitorPassTypes");
 				btnClear().click();
 				System.out.println("ddInActiveStatus() Pass");
-			}	
-			
-			
-			
-			
+				Thread.sleep(5000);
 
-		} catch (Exception e) {
+			}
+			if (linkDetails() != null && linkDetails().isDisplayed()) {
+				System.out.println("linkDetails found");
+				linkDetails().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("ManageVisitorPassTypes");
+				Base.scrollEndofthePage(driver);
+				Thread.sleep(3000);
+				btnCancelDetails().click();
+				Thread.sleep(5000);
+
+			}
+		}
+
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Exception in Page ManageVisitorPassTypes:" + e.getMessage());

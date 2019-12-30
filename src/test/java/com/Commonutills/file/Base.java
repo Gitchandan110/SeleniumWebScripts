@@ -109,6 +109,24 @@ public class Base {
 	}
 	
 	
+	public static void scrollEndofthePage(WebDriver driver) {
+		
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+
+			System.out.println(e.getMessage());
+		}
+		
+		}
+	
+	
+	
+	
 	public static void takeScreenShot(String screenName) throws IOException {
 		
 		String imageLocation = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots\\";

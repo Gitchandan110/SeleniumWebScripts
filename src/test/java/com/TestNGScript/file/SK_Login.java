@@ -19,9 +19,9 @@ public class SK_Login extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		openProdSKApp();
+	//	openProdSKApp();
 		// openTestSKApp();
-		// openIntSKApp();
+		 openIntSKApp();
 
 	}
 

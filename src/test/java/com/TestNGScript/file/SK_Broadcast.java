@@ -24,9 +24,9 @@ public class SK_Broadcast extends Base{
 	public void launchSKApp() throws InterruptedException, IOException {
 		
 		
-		openProdSKApp();
+	//	openProdSKApp();
 	//	openTestSKApp();
-	//	openIntSKApp();
+		openIntSKApp();
 			
 	}
 	

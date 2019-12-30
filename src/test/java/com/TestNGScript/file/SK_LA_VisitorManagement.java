@@ -54,7 +54,7 @@ public class SK_LA_VisitorManagement extends Base {
 
 	public void closeBrowser() {
 
-     driver.quit();
+    driver.quit();
 	
 	}
 

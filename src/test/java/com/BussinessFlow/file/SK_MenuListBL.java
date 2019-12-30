@@ -34,7 +34,6 @@ public class SK_MenuListBL extends SK_MenuListPL{
 
 			if (menuVisitorManagement() !=null && menuVisitorManagement().isDisplayed()) {
 				menuVisitorManagement().click();
-				Base.highLightElement(driver, menuVisitorManagement());
 				Thread.sleep(2000);
 				
 
