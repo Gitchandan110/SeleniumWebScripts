@@ -1,5 +1,6 @@
 package com.BussinessFlow.file;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import com.Commonutills.file.Base;
@@ -86,6 +87,49 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 			e.printStackTrace();
 			System.out.println("Exception in Page ManageVisitorPassTypes:" + e.getMessage());
 		}
+	}
+
+	public void clickButtonCreateVisitorPassType() throws InterruptedException {
+
+		try {
+			if (btnCreateVisitorPassType() != null && btnCreateVisitorPassType().isDisplayed()) {
+
+				btnCreateVisitorPassType().click();
+				Thread.sleep(5000);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void fillCreateVisitorPassType() throws InterruptedException {
+
+		try {
+			Assert.assertEquals("Create Visitor Pass Type", driver.getTitle());
+			System.out.println("Page title matched");
+			if (txtVisitorPassTypeTiltle() != null && txtVisitorPassTypeTiltle().isDisplayed()) {
+				txtVisitorPassTypeTiltle().sendKeys("Test Visitor Pass: "+ Base.SystemTime());
+				Thread.sleep(2000);
+				txtDiscriptionVisitorPassType().click();
+				txtDiscriptionVisitorPassType().sendKeys("Visitor Pass Type Description");
+				ddTimeZone().click();
+				Thread.sleep(2000);
+				txtSearchTimeZone().sendKeys("Asia/Kolkata");
+				timeZoneAsiaKolkata().click();
+				txtNumberOfDays().sendKeys("999");
+				Thread.sleep(2000);
+				btnMonitorEverywhere().click();
+				Thread.sleep(3000);
+				btnSubmit().click();
+				Thread.sleep(5000);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 }

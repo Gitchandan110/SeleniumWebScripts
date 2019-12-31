@@ -55,6 +55,7 @@ public class SK_MenuListBL extends SK_MenuListPL{
 
 			if (menuVisitorPassType() !=null && menuVisitorPassType().isDisplayed()) {
 				menuVisitorPassType().click();
+				System.out.println("menuVisitorPassType selected");
 				Thread.sleep(5000);
 				
 

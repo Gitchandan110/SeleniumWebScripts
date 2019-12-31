@@ -122,7 +122,7 @@ public class SK_VisitorManagementPL extends Base {
 	public WebElement btnCancelDetails() {
 
 		try {
-			By cancel = By.xpath("//a[@class='kv-btn kv-btn-primary']");
+			By cancel = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains (text(),'Cancel')]");
 			return driver.findElement(cancel);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -131,4 +131,113 @@ public class SK_VisitorManagementPL extends Base {
 		return null;
 	}
 
+	
+	public WebElement btnCreateVisitorPassType() {
+
+		try {
+			By btnCreate = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Create Visitor Pass Type')]");
+			return driver.findElement(btnCreate);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtVisitorPassTypeTiltle() {
+
+		try {
+			By passTitle = By.cssSelector("input[type='text'][id='txtPasscodeName']");
+			return driver.findElement(passTitle);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtDiscriptionVisitorPassType() {
+
+		try {
+			By txtDiscription = By.xpath("//textarea[@id='txtPasscodeDesc']");
+			return driver.findElement(txtDiscription);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement ddTimeZone() {
+
+		try {
+			By TimeZone = By.xpath("//div[@ng-model='vm.selected_timezone']//div");
+			return driver.findElement(TimeZone);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtSearchTimeZone() {
+
+		try {
+			By searchTimeZone = By.cssSelector("input[type='search'][aria-label='Select box']");
+			return driver.findElement(searchTimeZone);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement timeZoneAsiaKolkata() {
+
+		try {
+			By asiaKolkataTimeZone = By.xpath("//div//span//span[contains(text(),'Asia/Kolkata')]");
+			return driver.findElement(asiaKolkataTimeZone);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtNumberOfDays() {
+
+		try {
+			By numberofDays = By.id("txtPassValidity");
+			return driver.findElement(numberofDays);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement btnMonitorEverywhere() {
+
+		try {
+			By MonitorEverywhere = By.cssSelector("input[type='radio'][value='everywhere']");
+			return driver.findElement(MonitorEverywhere);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement btnSubmit() {
+
+		try {
+			By Submit = By.cssSelector("button[class='kv-btn kv-btn-primary'][type='submit']");
+			return driver.findElement(Submit);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 }

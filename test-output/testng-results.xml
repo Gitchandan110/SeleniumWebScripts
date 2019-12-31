@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="131091" started-at="2019-12-30T13:55:04Z" finished-at="2019-12-30T13:57:15Z">
+  <suite name="Default suite" duration-ms="70977" started-at="2019-12-31T11:10:00Z" finished-at="2019-12-31T11:11:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="131091" started-at="2019-12-30T13:55:04Z" finished-at="2019-12-30T13:57:15Z">
-      <class name="com.TestNGScript.file.SK_LA_VisitorManagement">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_VisitorManagement@1c72da34]" name="launchSKApp" is-config="true" duration-ms="32481" started-at="2019-12-30T13:55:04Z" finished-at="2019-12-30T13:55:37Z">
+    <test name="Default test" duration-ms="70977" started-at="2019-12-31T11:10:00Z" finished-at="2019-12-31T11:11:11Z">
+      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@1c72da34]" name="launchSKApp" is-config="true" duration-ms="21458" started-at="2019-12-31T11:10:00Z" finished-at="2019-12-31T11:10:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_VisitorManagement@1c72da34]" name="launchSafetyApp" duration-ms="97346" started-at="2019-12-30T13:55:37Z" finished-at="2019-12-30T13:57:14Z">
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@1c72da34]" name="launchSafetyApp" duration-ms="49479" started-at="2019-12-31T11:10:21Z" finished-at="2019-12-31T11:11:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSafetyApp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_VisitorManagement@1c72da34]" name="closeBrowser" is-config="true" duration-ms="1231" started-at="2019-12-30T13:57:14Z" finished-at="2019-12-30T13:57:15Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@1c72da34]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-12-31T11:11:11Z" finished-at="2019-12-31T11:11:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.TestNGScript.file.SK_LA_VisitorManagement -->
+      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPassType -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

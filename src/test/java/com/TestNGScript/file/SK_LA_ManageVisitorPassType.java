@@ -19,7 +19,7 @@ import com.BussinessFlow.file.SK_VisitorManagementBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_VisitorManagement extends Base {
+public class SK_LA_ManageVisitorPassType extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);

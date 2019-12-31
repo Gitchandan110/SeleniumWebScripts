@@ -76,11 +76,11 @@
     </test>
     
     
-       <test name="SK_LA_VisitorManagement" >
+       <test name="SK_LA_ManageVisitorPassType" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_LA_VisitorManagement" />
+            <class name="com.TestNGScript.file.SK_LA_ManageVisitorPassType" />
         </classes>
     </test>
 
