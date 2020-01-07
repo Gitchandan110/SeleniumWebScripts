@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_VisitorManagementPL extends Base {
+public class SK_VisitorPassTypePL extends Base {
 
 	public WebElement pageManageVisitorPassTypes() {
 
@@ -195,7 +195,8 @@ public class SK_VisitorManagementPL extends Base {
 	public WebElement timeZoneAsiaKolkata() {
 
 		try {
-			By asiaKolkataTimeZone = By.xpath("//div//span//span[contains(text(),'Asia/Kolkata')]");
+		//	By asiaKolkataTimeZone = By.xpath("//div//span//span[contains(text(),'Asia/Kolkata')]");
+			By asiaKolkataTimeZone = By.xpath("//div[@class='option ui-select-choices-row-inner']");
 			return driver.findElement(asiaKolkataTimeZone);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -239,5 +240,20 @@ public class SK_VisitorManagementPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement btnEditVisitorPassType() {
+
+		try {
+			By edit = By.xpath("//tbody//tr//td//a[contains(text(),'Edit')]");
+			return driver.findElement(edit);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+
 	
 }

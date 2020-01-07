@@ -39,7 +39,17 @@ public class SK_MenuListPL extends Base {
 		return null;
 	}
 	
-	
+	public WebElement menuVisitors() {
+
+		try {
+			By menuVisitors = By.xpath("//a[@href='/visitor_management/visitors/']");
+			return driver.findElement(menuVisitors);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 
 }

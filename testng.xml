@@ -16,7 +16,7 @@
 
             <class name="com.TestNGScript.file.SK_Login" />
         </classes>
-    </test>
+    </test>
     -->
 
     <test name="SK_Broadcast" >
@@ -74,13 +74,28 @@
             <class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
         </classes>
     </test>
-    
-    
-       <test name="SK_LA_ManageVisitorPassType" >
+
+    <test name="SK_LA_ManageVisitorPassType" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_LA_ManageVisitorPassType" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_EditVisitorPassType" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_EditVisitorPassType" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_CreateVisitorPassType" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType" />
         </classes>
     </test>
 
@@ -91,7 +106,7 @@
 
             <class name="com.TestNGScript.file.SK_EventAction" />
         </classes>
-    </test>
+    </test>
     -->
 
 
@@ -118,7 +133,7 @@
 
             <class name="com.TestNGScript.file.MMT_HomePage" />
         </classes>
-    </test>
+    </test>
     -->
 
 </suite>

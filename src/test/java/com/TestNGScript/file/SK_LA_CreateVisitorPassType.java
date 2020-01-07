@@ -13,7 +13,7 @@ import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_MenuListBL;
 import com.BussinessFlow.file.SK_OpenIncidentBL;
-import com.BussinessFlow.file.SK_VisitorManagementBL;
+import com.BussinessFlow.file.SK_VisitorPassTypesBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
@@ -22,7 +22,7 @@ public class SK_LA_CreateVisitorPassType extends Base {
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_MenuListBL menuList = PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_VisitorManagementBL visitorManagementbl = PageFactory.initElements(driver, SK_VisitorManagementBL.class);
+	SK_VisitorPassTypesBL visitorManagementbl = PageFactory.initElements(driver, SK_VisitorPassTypesBL.class);
 
 	String LoginDataSheet = "Login";
 

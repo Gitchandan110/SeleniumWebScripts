@@ -4,11 +4,11 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SK_VisitorManagementPL;
+import com.PageObjectRepository.file.SK_VisitorPassTypePL;
 
 import junit.framework.Assert;
 
-public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
+public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 
 	public void verifyPageManageVisitorPassTypes() {
 
@@ -26,7 +26,7 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 
 			if (filterPassTypeTitle() != null && filterPassTypeTitle().isDisplayed()) {
 				Base.highLightElement(driver, filterPassTypeTitle());
-				filterPassTypeTitle().sendKeys("VP");
+				filterPassTypeTitle().sendKeys("Test Visitor");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.takeScreenShot("ManageVisitorPassTypes");
@@ -110,10 +110,10 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 			Assert.assertEquals("Create Visitor Pass Type", driver.getTitle());
 			System.out.println("Page title matched");
 			if (txtVisitorPassTypeTiltle() != null && txtVisitorPassTypeTiltle().isDisplayed()) {
-				txtVisitorPassTypeTiltle().sendKeys("Test Visitor Pass: "+ Base.SystemTime());
+				txtVisitorPassTypeTiltle().sendKeys("Test Visitor Pass: "+ Base.SystemDateTime());
 				Thread.sleep(2000);
 				txtDiscriptionVisitorPassType().click();
-				txtDiscriptionVisitorPassType().sendKeys("Visitor Pass Type Description");
+				txtDiscriptionVisitorPassType().sendKeys("Visitor Pass Type Description: "+ Base.SystemTime());
 				ddTimeZone().click();
 				Thread.sleep(2000);
 				txtSearchTimeZone().sendKeys("Asia/Kolkata");
@@ -123,6 +123,7 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 				btnMonitorEverywhere().click();
 				Thread.sleep(3000);
 				btnSubmit().click();
+				System.out.println("fillCreateVisitorPassType() Pass");
 				Thread.sleep(5000);
 			}
 		} catch (Exception e) {
@@ -131,5 +132,39 @@ public class SK_VisitorManagementBL extends SK_VisitorManagementPL {
 		}
 
 	}
+	
+	public void editVisitorPassType() throws InterruptedException {
+
+		try {
+			
+			if (btnEditVisitorPassType() != null && btnEditVisitorPassType().isDisplayed()) {
+				btnEditVisitorPassType().click();
+				Thread.sleep(5000);
+				txtVisitorPassTypeTiltle().clear();
+				txtVisitorPassTypeTiltle().sendKeys("Test Visitor Pass: "+ Base.SystemDateTime());
+				Thread.sleep(2000);
+				txtDiscriptionVisitorPassType().clear();
+				txtDiscriptionVisitorPassType().sendKeys("Visitor Pass Type Description:"+ Base.SystemTime());
+				ddTimeZone().click();
+				Thread.sleep(2000);
+				txtSearchTimeZone().sendKeys("Asia/Kolkata");
+				Thread.sleep(2000);
+				timeZoneAsiaKolkata().click();
+				txtNumberOfDays().clear();
+				txtNumberOfDays().sendKeys("999");
+				Thread.sleep(2000);
+				btnMonitorEverywhere().click();
+				Thread.sleep(3000);
+				btnSubmit().click();
+				System.out.println("editVisitorPassType() Pass");
+				Thread.sleep(5000);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 
 }

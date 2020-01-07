@@ -1,25 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70977" started-at="2019-12-31T11:10:00Z" finished-at="2019-12-31T11:11:11Z">
+  <suite name="Suite" duration-ms="945141" started-at="2020-01-06T05:31:38Z" finished-at="2020-01-06T05:47:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70977" started-at="2019-12-31T11:10:00Z" finished-at="2019-12-31T11:11:11Z">
-      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@1c72da34]" name="launchSKApp" is-config="true" duration-ms="21458" started-at="2019-12-31T11:10:00Z" finished-at="2019-12-31T11:10:21Z">
+    <test name="SK_Broadcast" duration-ms="79016" started-at="2020-01-06T05:31:38Z" finished-at="2020-01-06T05:32:57Z">
+      <class name="com.TestNGScript.file.SK_Broadcast">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@49e202ad]" name="launchSKApp" is-config="true" duration-ms="20598" started-at="2020-01-06T05:31:38Z" finished-at="2020-01-06T05:31:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@1c72da34]" name="launchSafetyApp" duration-ms="49479" started-at="2019-12-31T11:10:21Z" finished-at="2019-12-31T11:11:11Z">
+        <test-method status="PASS" signature="testBroadcastLA()[pri:1, instance:com.TestNGScript.file.SK_Broadcast@49e202ad]" name="testBroadcastLA" duration-ms="19505" started-at="2020-01-06T05:31:58Z" finished-at="2020-01-06T05:32:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBroadcastLA -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@49e202ad]" name="closeBrowser" is-config="true" duration-ms="866" started-at="2020-01-06T05:32:18Z" finished-at="2020-01-06T05:32:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@49e202ad]" name="launchSKApp" is-config="true" duration-ms="17599" started-at="2020-01-06T05:32:19Z" finished-at="2020-01-06T05:32:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="testBroadcastObserver()[pri:2, instance:com.TestNGScript.file.SK_Broadcast@49e202ad]" name="testBroadcastObserver" duration-ms="18707" started-at="2020-01-06T05:32:36Z" finished-at="2020-01-06T05:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBroadcastObserver -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Broadcast@49e202ad]" name="closeBrowser" is-config="true" duration-ms="1618" started-at="2020-01-06T05:32:55Z" finished-at="2020-01-06T05:32:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_Broadcast -->
+    </test> <!-- SK_Broadcast -->
+    <test name="SK_SA_OrganizationPage" duration-ms="46142" started-at="2020-01-06T05:32:57Z" finished-at="2020-01-06T05:33:43Z">
+      <class name="com.TestNGScript.file.SK_SA_OrganizationPage">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_SA_OrganizationPage@f0f2775]" name="launchSKApp" is-config="true" duration-ms="18933" started-at="2020-01-06T05:32:57Z" finished-at="2020-01-06T05:33:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="TestHambugerMenuClick()[pri:0, instance:com.TestNGScript.file.SK_SA_OrganizationPage@f0f2775]" name="TestHambugerMenuClick" duration-ms="26140" started-at="2020-01-06T05:33:16Z" finished-at="2020-01-06T05:33:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestHambugerMenuClick -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_SA_OrganizationPage@f0f2775]" name="closeBrowser" is-config="true" duration-ms="1059" started-at="2020-01-06T05:33:42Z" finished-at="2020-01-06T05:33:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_SA_OrganizationPage -->
+    </test> <!-- SK_SA_OrganizationPage -->
+    <test name="SK_LA_OpenIncident" duration-ms="96105" started-at="2020-01-06T05:33:43Z" finished-at="2020-01-06T05:35:19Z">
+      <class name="com.TestNGScript.file.SK_LA_OpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_OpenIncident@351d0846]" name="launchSKApp" is-config="true" duration-ms="18743" started-at="2020-01-06T05:33:43Z" finished-at="2020-01-06T05:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_OpenIncident@351d0846]" name="launchSafetyApp" duration-ms="76102" started-at="2020-01-06T05:34:02Z" finished-at="2020-01-06T05:35:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSafetyApp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@1c72da34]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-12-31T11:11:11Z" finished-at="2019-12-31T11:11:11Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_OpenIncident@351d0846]" name="closeBrowser" is-config="true" duration-ms="1253" started-at="2020-01-06T05:35:18Z" finished-at="2020-01-06T05:35:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_LA_OpenIncident -->
+    </test> <!-- SK_LA_OpenIncident -->
+    <test name="SK_SA_OpenIncident" duration-ms="117288" started-at="2020-01-06T05:35:19Z" finished-at="2020-01-06T05:37:17Z">
+      <class name="com.TestNGScript.file.SK_SA_OpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_SA_OpenIncident@6b53e23f]" name="launchSKApp" is-config="true" duration-ms="34815" started-at="2020-01-06T05:35:19Z" finished-at="2020-01-06T05:35:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_SA_OpenIncident@6b53e23f]" name="launchSafetyApp" duration-ms="81669" started-at="2020-01-06T05:35:54Z" finished-at="2020-01-06T05:37:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_SA_OpenIncident@6b53e23f]" name="closeBrowser" is-config="true" duration-ms="803" started-at="2020-01-06T05:37:16Z" finished-at="2020-01-06T05:37:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_SA_OpenIncident -->
+    </test> <!-- SK_SA_OpenIncident -->
+    <test name="SK_Observer_OpenIncident" duration-ms="119873" started-at="2020-01-06T05:37:17Z" finished-at="2020-01-06T05:39:16Z">
+      <class name="com.TestNGScript.file.SK_Observer_OpenIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_Observer_OpenIncident@51931956]" name="launchSKApp" is-config="true" duration-ms="45059" started-at="2020-01-06T05:37:17Z" finished-at="2020-01-06T05:38:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_Observer_OpenIncident@51931956]" name="launchSafetyApp" duration-ms="73844" started-at="2020-01-06T05:38:02Z" finished-at="2020-01-06T05:39:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_Observer_OpenIncident@51931956]" name="closeBrowser" is-config="true" duration-ms="968" started-at="2020-01-06T05:39:15Z" finished-at="2020-01-06T05:39:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_Observer_OpenIncident -->
+    </test> <!-- SK_Observer_OpenIncident -->
+    <test name="SK_911Incident" duration-ms="53291" started-at="2020-01-06T05:39:16Z" finished-at="2020-01-06T05:40:10Z">
+      <class name="com.TestNGScript.file.SK_911Incident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@4206a205]" name="launchSKApp" is-config="true" duration-ms="17570" started-at="2020-01-06T05:39:16Z" finished-at="2020-01-06T05:39:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@4206a205]" name="launchSafetyApp" duration-ms="34064" started-at="2020-01-06T05:39:34Z" finished-at="2020-01-06T05:40:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_911Incident@4206a205]" name="closeBrowser" is-config="true" duration-ms="1609" started-at="2020-01-06T05:40:08Z" finished-at="2020-01-06T05:40:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_911Incident -->
+    </test> <!-- SK_911Incident -->
+    <test name="SK_LA_ClosedIncident" duration-ms="132838" started-at="2020-01-06T05:40:10Z" finished-at="2020-01-06T05:42:23Z">
+      <class name="com.TestNGScript.file.SK_LA_ClosedIncident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ClosedIncident@1a38c59b]" name="launchSKApp" is-config="true" duration-ms="25620" started-at="2020-01-06T05:40:10Z" finished-at="2020-01-06T05:40:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ClosedIncident@1a38c59b]" name="launchSafetyApp" duration-ms="107215" started-at="2020-01-06T05:40:35Z" finished-at="2020-01-06T05:42:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_ClosedIncident@1a38c59b]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2020-01-06T05:42:23Z" finished-at="2020-01-06T05:42:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_LA_ClosedIncident -->
+    </test> <!-- SK_LA_ClosedIncident -->
+    <test name="SK_LA_ManageVisitorPassType" duration-ms="124610" started-at="2020-01-06T05:42:23Z" finished-at="2020-01-06T05:44:27Z">
+      <class name="com.TestNGScript.file.SK_LA_ManageVisitorPassType">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ManageVisitorPassType@41ee392b]" name="launchSKApp" is-config="true" duration-ms="27497" started-at="2020-01-06T05:42:23Z" finished-at="2020-01-06T05:42:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ManageVisitorPassType@41ee392b]" name="launchSafetyApp" duration-ms="96082" started-at="2020-01-06T05:42:50Z" finished-at="2020-01-06T05:44:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_ManageVisitorPassType@41ee392b]" name="closeBrowser" is-config="true" duration-ms="1031" started-at="2020-01-06T05:44:26Z" finished-at="2020-01-06T05:44:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_LA_ManageVisitorPassType -->
+    </test> <!-- SK_LA_ManageVisitorPassType -->
+    <test name="SK_LA_EditVisitorPassType" duration-ms="75803" started-at="2020-01-06T05:44:27Z" finished-at="2020-01-06T05:45:43Z">
+      <class name="com.TestNGScript.file.SK_LA_EditVisitorPassType">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_EditVisitorPassType@64c87930]" name="launchSKApp" is-config="true" duration-ms="25681" started-at="2020-01-06T05:44:27Z" finished-at="2020-01-06T05:44:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_EditVisitorPassType@64c87930]" name="launchSafetyApp" duration-ms="49297" started-at="2020-01-06T05:44:53Z" finished-at="2020-01-06T05:45:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_EditVisitorPassType@64c87930]" name="closeBrowser" is-config="true" duration-ms="825" started-at="2020-01-06T05:45:42Z" finished-at="2020-01-06T05:45:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_LA_EditVisitorPassType -->
+    </test> <!-- SK_LA_EditVisitorPassType -->
+    <test name="SK_LA_CreateVisitorPassType" duration-ms="99712" started-at="2020-01-06T05:45:43Z" finished-at="2020-01-06T05:47:23Z">
+      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@5d47c63f]" name="launchSKApp" is-config="true" duration-ms="52172" started-at="2020-01-06T05:45:43Z" finished-at="2020-01-06T05:46:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@5d47c63f]" name="launchSafetyApp" duration-ms="46674" started-at="2020-01-06T05:46:35Z" finished-at="2020-01-06T05:47:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_CreateVisitorPassType@5d47c63f]" name="closeBrowser" is-config="true" duration-ms="850" started-at="2020-01-06T05:47:22Z" finished-at="2020-01-06T05:47:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPassType -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- SK_LA_CreateVisitorPassType -->
+  </suite> <!-- Suite -->
 </testng-results>

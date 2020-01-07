@@ -3,9 +3,9 @@ package com.BussinessFlow.file;
 import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_MenuListPL;
 
-public class SK_MenuListBL extends SK_MenuListPL{
-	
-	public void clickMenuOrganization()  {
+public class SK_MenuListBL extends SK_MenuListPL {
+
+	public void clickMenuOrganization() {
 
 		try {
 
@@ -27,15 +27,14 @@ public class SK_MenuListBL extends SK_MenuListPL{
 		}
 
 	}
-	
-	public void clickMenuVisitorManagement()  {
+
+	public void clickMenuVisitorManagement() {
 
 		try {
 
-			if (menuVisitorManagement() !=null && menuVisitorManagement().isDisplayed()) {
+			if (menuVisitorManagement() != null && menuVisitorManagement().isDisplayed()) {
 				menuVisitorManagement().click();
 				Thread.sleep(2000);
-				
 
 			} else {
 
@@ -49,15 +48,14 @@ public class SK_MenuListBL extends SK_MenuListPL{
 
 	}
 
-	public void clickMenuVisitorPassType()  {
+	public void clickMenuVisitorPassType() {
 
 		try {
 
-			if (menuVisitorPassType() !=null && menuVisitorPassType().isDisplayed()) {
+			if (menuVisitorPassType() != null && menuVisitorPassType().isDisplayed()) {
 				menuVisitorPassType().click();
 				System.out.println("menuVisitorPassType selected");
 				Thread.sleep(5000);
-				
 
 			} else {
 
@@ -67,6 +65,27 @@ public class SK_MenuListBL extends SK_MenuListPL{
 		} catch (Exception ex) {
 
 			System.out.println("Exception in menuVisitorPassType(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	public void clickMenuVisitors() {
+
+		try {
+
+			if (menuVisitors() != null && menuVisitors().isDisplayed()) {
+				menuVisitors().click();
+				System.out.println("menuVisitor selected");
+				Thread.sleep(5000);
+
+			} else {
+
+				System.out.println("menuVisitors not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuVisitors): " + ex.getStackTrace());
 		}
 
 	}

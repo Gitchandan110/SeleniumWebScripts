@@ -167,9 +167,20 @@ public class Base {
 			Calendar cal = Calendar.getInstance();
 			Date date = cal.getTime();
 			DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-			return dateFormat.format(date);
+			String Time= dateFormat.format(date);
+			return Time;
 			
 		}
+	
+	public static String SystemDateTime() {
+
+		 DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		 Date date = new Date();
+		 String dateTime= dateFormat.format(date);
+	     return dateTime;
+		
 	}
+	
+}
 
 
