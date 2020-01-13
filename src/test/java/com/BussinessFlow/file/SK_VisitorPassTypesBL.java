@@ -120,10 +120,15 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 				timeZoneAsiaKolkata().click();
 				txtNumberOfDays().sendKeys("999");
 				Thread.sleep(2000);
+				txtEmailSubject().sendKeys("Email Invite");
+				Thread.sleep(2000);
 				btnMonitorEverywhere().click();
 				Thread.sleep(3000);
-				btnSubmit().click();
-				System.out.println("fillCreateVisitorPassType() Pass");
+				Base.scrollEndofthePage(driver);
+				//	btnSubmit().click();
+				Base.highLightElement(driver, btnCancel());
+				Thread.sleep(2000);
+				btnCancel().click();
 				Thread.sleep(5000);
 			}
 		} catch (Exception e) {
@@ -153,9 +158,14 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 				txtNumberOfDays().clear();
 				txtNumberOfDays().sendKeys("999");
 				Thread.sleep(2000);
+				txtEmailSubject().sendKeys("Email Subject");
 				btnMonitorEverywhere().click();
 				Thread.sleep(3000);
-				btnSubmit().click();
+				Base.scrollEndofthePage(driver);
+			//	btnSubmit().click();
+				Base.highLightElement(driver, btnCancel());
+				Thread.sleep(2000);
+				btnCancel().click();
 				System.out.println("editVisitorPassType() Pass");
 				Thread.sleep(5000);
 			}

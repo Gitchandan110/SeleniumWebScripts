@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_SA_Prod_OrganizationPage">
+      <class name="com.TestNGScript.file.SK_LA_CreateVisitor">
         <methods>
           <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
           <include name="launchSKApp"/>
-          <include name="TestOrganizationPage"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_SA_Prod_OrganizationPage -->
+      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

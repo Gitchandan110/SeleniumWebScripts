@@ -98,6 +98,22 @@
             <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType" />
         </classes>
     </test>
+    
+     <test name="SK_LA_ManageVisitors" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_ManageVisitors" />
+        </classes>
+    </test>
+    
+        <test name="SK_LA_CreateVisitor" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_CreateVisitor" />
+        </classes>
+    </test>
 
     <!--
     <test name="SK_EventAction" >

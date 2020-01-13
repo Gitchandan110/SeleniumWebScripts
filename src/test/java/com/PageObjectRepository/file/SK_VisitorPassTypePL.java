@@ -131,11 +131,11 @@ public class SK_VisitorPassTypePL extends Base {
 		return null;
 	}
 
-	
 	public WebElement btnCreateVisitorPassType() {
 
 		try {
-			By btnCreate = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Create Visitor Pass Type')]");
+			By btnCreate = By
+					.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Create Visitor Pass Type')]");
 			return driver.findElement(btnCreate);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -143,7 +143,7 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtVisitorPassTypeTiltle() {
 
 		try {
@@ -155,7 +155,7 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtDiscriptionVisitorPassType() {
 
 		try {
@@ -167,7 +167,7 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement ddTimeZone() {
 
 		try {
@@ -179,7 +179,7 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtSearchTimeZone() {
 
 		try {
@@ -191,11 +191,12 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement timeZoneAsiaKolkata() {
 
 		try {
-		//	By asiaKolkataTimeZone = By.xpath("//div//span//span[contains(text(),'Asia/Kolkata')]");
+			// By asiaKolkataTimeZone =
+			// By.xpath("//div//span//span[contains(text(),'Asia/Kolkata')]");
 			By asiaKolkataTimeZone = By.xpath("//div[@class='option ui-select-choices-row-inner']");
 			return driver.findElement(asiaKolkataTimeZone);
 		} catch (Exception e) {
@@ -204,7 +205,7 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtNumberOfDays() {
 
 		try {
@@ -217,6 +218,20 @@ public class SK_VisitorPassTypePL extends Base {
 		return null;
 	}
 	
+	public WebElement txtEmailSubject() {
+
+		try {
+			By emailSubject = By.id("email_subject");
+			return driver.findElement(emailSubject);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+
 	public WebElement btnMonitorEverywhere() {
 
 		try {
@@ -228,7 +243,7 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement btnSubmit() {
 
 		try {
@@ -240,7 +255,19 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
+
+	public WebElement btnCancel() {
+
+		try {
+			By Cancel = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Cancel')]");
+			return driver.findElement(Cancel);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	public WebElement btnEditVisitorPassType() {
 
 		try {
@@ -252,8 +279,5 @@ public class SK_VisitorPassTypePL extends Base {
 		}
 		return null;
 	}
-	
-	
 
-	
 }

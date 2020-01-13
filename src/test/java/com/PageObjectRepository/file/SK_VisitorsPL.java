@@ -155,11 +155,11 @@ public class SK_VisitorsPL extends Base {
 		return null;
 	}
 
-	public WebElement btnNewVisitor() {
+	public WebElement linkIssueVisitorPass() {
 
 		try {
-			By btnNewVisitor = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'New Visitor')]");
-			return driver.findElement(btnNewVisitor);
+			By visitorPass = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Issue Visitor Pass')]");
+			return driver.findElement(visitorPass);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -208,6 +208,18 @@ public class SK_VisitorsPL extends Base {
 		try {
 			By submit = By.xpath("//input[@type='submit'][@name='search']");
 			return driver.findElement(submit);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement btnCancel() {
+
+		try {
+			By Cancel = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Cancel')]");
+			return driver.findElement(Cancel);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -286,5 +298,90 @@ public class SK_VisitorsPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement radioSafetyKuvrrApp() {
+
+		try {
+			By safetyKuvrr = By.xpath("//input[@type='radio'][@ng-value='true']");
+			return driver.findElement(safetyKuvrr);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement radioNotificationsOnly() {
+
+		try {
+			By notificationsOnly = By.xpath("//input[@type='radio'][@ng-value='false']");
+			return driver.findElement(notificationsOnly);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtNotes() {
+
+		try {
+			By Notes = By.id("notes");
+			return driver.findElement(Notes);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement ddVisitorPassType() {
+
+		try {
+			By PassType = By.id("passcode");
+			return driver.findElement(PassType);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement optionPassType() {
+
+		try {
+			By PassOption = By.xpath("//select[@id='passcode']/option[contains (text(), 'VP_11:30am_12:30pm_1Day')]");
+			return driver.findElement(PassOption);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement btnSubmitCreateVisitor() {
+
+		try {
+			By submit = By.xpath("//button[@type='submit']");
+			return driver.findElement(submit);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement btnCanceIssueVisitorPass() {
+
+		try {
+			By Cancel = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains(text(),'Cancel')]");
+			return driver.findElement(Cancel);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 
 }
