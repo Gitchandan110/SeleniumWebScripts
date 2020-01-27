@@ -17,8 +17,6 @@
             <class name="com.TestNGScript.file.SK_Login" />
         </classes>
     </test>
-    -->
-
     <test name="SK_Broadcast" >
 
         <classes>
@@ -32,6 +30,14 @@
         <classes>
 
             <class name="com.TestNGScript.file.SK_SA_OrganizationPage" />
+        </classes>
+    </test>
+    -->
+ <test name="SK_LA_MenuList" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_MenuList" />
         </classes>
     </test>
 
@@ -98,35 +104,33 @@
             <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType" />
         </classes>
     </test>
-    
-     <test name="SK_LA_ManageVisitors" >
+
+    <test name="SK_LA_ManageVisitorPasses" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_LA_ManageVisitors" />
+            <class name="com.TestNGScript.file.SK_LA_ManageVisitorPasses" />
         </classes>
     </test>
-    
-        <test name="SK_LA_CreateVisitor" >
+
+    <test name="SK_LA_IssueVisitorPass" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_LA_CreateVisitor" />
+            <class name="com.TestNGScript.file.SK_LA_IssueVisitorPass" />
         </classes>
     </test>
 
     <!--
-    <test name="SK_EventAction" >
+     <test name="SK_EventAction" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_EventAction" />
         </classes>
-    </test>
-    -->
-
-
-    <!--
+    </test>
+    
+    
     <test name="Amazon_Home" >
 
         <classes>
@@ -149,7 +153,7 @@
 
             <class name="com.TestNGScript.file.MMT_HomePage" />
         </classes>
-    </test>
+    </test>
     -->
 
 </suite>

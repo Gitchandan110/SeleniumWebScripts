@@ -4,48 +4,26 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_LA_OpenIncident(failed)">
+  <test thread-count="5" name="SK_LA_CreateVisitorPassType(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_OpenIncident">
-        <methods>
-          <include name="launchSKApp"/>
-          <include name="closeBrowser"/>
-          <include name="launchSafetyApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_OpenIncident -->
-    </classes>
-  </test> <!-- SK_LA_OpenIncident(failed) -->
-  <test thread-count="5" name="SK_SA_OpenIncident(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_SA_OpenIncident">
+      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType">
         <methods>
           <include name="closeBrowser"/>
           <include name="launchSafetyApp"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_SA_OpenIncident -->
+      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPassType -->
     </classes>
-  </test> <!-- SK_SA_OpenIncident(failed) -->
-  <test thread-count="5" name="SK_Observer_OpenIncident(failed)">
+  </test> <!-- SK_LA_CreateVisitorPassType(failed) -->
+  <test thread-count="5" name="SK_LA_CreateVisitor(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_Observer_OpenIncident">
+      <class name="com.TestNGScript.file.SK_LA_CreateVisitor">
         <methods>
           <include name="closeBrowser"/>
           <include name="launchSafetyApp"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_Observer_OpenIncident -->
+      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitor -->
     </classes>
-  </test> <!-- SK_Observer_OpenIncident(failed) -->
-  <test thread-count="5" name="SK_911Incident(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_911Incident">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSafetyApp"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_911Incident -->
-    </classes>
-  </test> <!-- SK_911Incident(failed) -->
+  </test> <!-- SK_LA_CreateVisitor(failed) -->
 </suite> <!-- Failed suite [Suite] -->

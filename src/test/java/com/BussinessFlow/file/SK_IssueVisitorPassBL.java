@@ -6,14 +6,14 @@ import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_VisitorsPL;
 import junit.framework.Assert;
 
-public class SK_CreateVisitorsBL extends SK_VisitorsPL {
+public class SK_IssueVisitorPassBL extends SK_VisitorsPL {
 
-	public void verifyCreateVisitors() {
+	public void verifyIssueVisitorPass() {
 
 		try {
 				Assert.assertEquals("Issue Visitor Pass", driver.getTitle());
-				System.out.println("Landed on Create Visitors Page");
-			if (btnCountryCode() != null && btnCountryCode().isDisplayed()) {
+				System.out.println("Landed on Issue A Visitor Pass Page");
+				if (btnCountryCode() != null && btnCountryCode().isDisplayed()) {
 				Base.highLightElement(driver, btnCountryCode());
 				btnCountryCode().click();
 				Thread.sleep(3000);
@@ -24,8 +24,8 @@ public class SK_CreateVisitorsBL extends SK_VisitorsPL {
 
 			if (txtMobile() != null && txtMobile().isDisplayed()) {
 				Base.highLightElement(driver, txtMobile());
-				txtMobile().sendKeys("8178041681");
-				Base.takeScreenShot("Create Visitors");
+				txtMobile().sendKeys("0000123456");
+				Base.takeScreenShot("Issue A Visitor Pass");
 				btnSubmit().click();
 				Thread.sleep(3000);
 				
@@ -34,7 +34,7 @@ public class SK_CreateVisitorsBL extends SK_VisitorsPL {
 			if (txtFirstName() != null && txtFirstName().isDisplayed()) {
 				Base.highLightElement(driver, txtFirstName());
 				txtFirstName().clear();
-				txtFirstName().sendKeys("ckvisitorWithApp");
+				txtFirstName().sendKeys("V");
 				System.out.println("txtFirstName() Pass");
 				txtLastName().clear();
 				txtLastName().sendKeys("SK");
@@ -46,7 +46,7 @@ public class SK_CreateVisitorsBL extends SK_VisitorsPL {
 				radioSafetyKuvrrApp().click();
 				txtNotes().click();
 				txtNotes().sendKeys("Visitor Notes");
-				Base.takeScreenShot("Create Visitors");
+				Base.takeScreenShot("Issue A Visitor Pass");
 				Base.scrollEndofthePage(driver);
 				ddVisitorPassType().click();
 				Thread.sleep(2000);

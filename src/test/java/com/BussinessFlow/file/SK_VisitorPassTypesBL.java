@@ -10,7 +10,7 @@ import junit.framework.Assert;
 
 public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 
-	public void verifyPageManageVisitorPassTypes() {
+	public void verifyManageVisitorPassTypes() {
 
 		try {
 			if (pageManageVisitorPassTypes() != null && pageManageVisitorPassTypes().isDisplayed()) {
@@ -26,7 +26,7 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 
 			if (filterPassTypeTitle() != null && filterPassTypeTitle().isDisplayed()) {
 				Base.highLightElement(driver, filterPassTypeTitle());
-				filterPassTypeTitle().sendKeys("Test Visitor");
+				filterPassTypeTitle().sendKeys("VP");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.takeScreenShot("ManageVisitorPassTypes");
@@ -37,7 +37,7 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 
 			if (filterNumberOfDays() != null && filterNumberOfDays().isDisplayed()) {
 				Base.highLightElement(driver, filterNumberOfDays());
-				filterNumberOfDays().sendKeys("2");
+				filterNumberOfDays().sendKeys("365");
 				Thread.sleep(5000);
 				btnFilter().click();
 				Thread.sleep(5000);
@@ -110,25 +110,26 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 			Assert.assertEquals("Create Visitor Pass Type", driver.getTitle());
 			System.out.println("Page title matched");
 			if (txtVisitorPassTypeTiltle() != null && txtVisitorPassTypeTiltle().isDisplayed()) {
-				txtVisitorPassTypeTiltle().sendKeys("Test Visitor Pass: "+ Base.SystemDateTime());
+				txtVisitorPassTypeTiltle().sendKeys("VP: "+ Base.SystemDateTime());
 				Thread.sleep(2000);
 				txtDiscriptionVisitorPassType().click();
-				txtDiscriptionVisitorPassType().sendKeys("Visitor Pass Type Description: "+ Base.SystemTime());
+				txtDiscriptionVisitorPassType().sendKeys("VPDescription: "+ Base.SystemTime());
 				ddTimeZone().click();
 				Thread.sleep(2000);
 				txtSearchTimeZone().sendKeys("Asia/Kolkata");
 				timeZoneAsiaKolkata().click();
-				txtNumberOfDays().sendKeys("999");
+				txtNumberOfDays().sendKeys("1");
 				Thread.sleep(2000);
 				txtEmailSubject().sendKeys("Email Invite");
 				Thread.sleep(2000);
 				btnMonitorEverywhere().click();
 				Thread.sleep(3000);
 				Base.scrollEndofthePage(driver);
-				//	btnSubmit().click();
-				Base.highLightElement(driver, btnCancel());
+				Base.highLightElement(driver, btnSubmit());
+				btnSubmit().click();
+			//	Base.highLightElement(driver, btnCancel());
 				Thread.sleep(2000);
-				btnCancel().click();
+			//	btnCancel().click();
 				Thread.sleep(5000);
 			}
 		} catch (Exception e) {
@@ -146,17 +147,17 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
 				btnEditVisitorPassType().click();
 				Thread.sleep(5000);
 				txtVisitorPassTypeTiltle().clear();
-				txtVisitorPassTypeTiltle().sendKeys("Test Visitor Pass: "+ Base.SystemDateTime());
+				txtVisitorPassTypeTiltle().sendKeys("VP: "+ Base.SystemDateTime());
 				Thread.sleep(2000);
 				txtDiscriptionVisitorPassType().clear();
-				txtDiscriptionVisitorPassType().sendKeys("Visitor Pass Type Description:"+ Base.SystemTime());
+				txtDiscriptionVisitorPassType().sendKeys("VPDescription:"+ Base.SystemTime());
 				ddTimeZone().click();
 				Thread.sleep(2000);
 				txtSearchTimeZone().sendKeys("Asia/Kolkata");
 				Thread.sleep(2000);
 				timeZoneAsiaKolkata().click();
 				txtNumberOfDays().clear();
-				txtNumberOfDays().sendKeys("999");
+				txtNumberOfDays().sendKeys("3");
 				Thread.sleep(2000);
 				txtEmailSubject().sendKeys("Email Subject");
 				btnMonitorEverywhere().click();

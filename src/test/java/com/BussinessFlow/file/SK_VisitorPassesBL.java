@@ -6,20 +6,20 @@ import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_VisitorsPL;
 import junit.framework.Assert;
 
-public class SK_ManageVisitorsBL extends SK_VisitorsPL {
+public class SK_VisitorPassesBL extends SK_VisitorsPL {
 
-	public void verifyPageManageVisitors() {
+	public void verifyManageVisitorPasses() {
 
 		try {
-			if (pageManageVisitors() != null && pageManageVisitors().isDisplayed()) {
-				Assert.assertEquals("Manage Visitors", driver.getTitle());
-				System.out.println("Landed on Manage Visitors Page");
-				Base.takeScreenShot("Manage Visitors");
+			if (txtManageVisitorPasses() != null && txtManageVisitorPasses().isDisplayed()) {
+				Assert.assertEquals("Manage Visitor Passes", driver.getTitle());
+				System.out.println("Landed on Manage Visitors Passes");
+				Base.takeScreenShot("Manage Visitor Passes");
 			}
 
 			else {
 
-				System.out.println("Unable to find Manage Visitors Page");
+				System.out.println("Unable to find Manage Visitors Passes");
 			}
 
 			if (filterLastName() != null && filterLastName().isDisplayed()) {
@@ -35,7 +35,7 @@ public class SK_ManageVisitorsBL extends SK_VisitorsPL {
 
 			if (filterFirstName() != null && filterFirstName().isDisplayed()) {
 				Base.highLightElement(driver, filterFirstName());
-				filterFirstName().sendKeys("CKV");
+				filterFirstName().sendKeys("V");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.takeScreenShot("Manage Visitors");
@@ -46,7 +46,7 @@ public class SK_ManageVisitorsBL extends SK_VisitorsPL {
 
 			if (filterEmail() != null && filterEmail().isDisplayed()) {
 				Base.highLightElement(driver, filterEmail());
-				filterEmail().sendKeys("ckvisitor2@yopmail.com");
+				filterEmail().sendKeys("vapp@yopmail.com");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.takeScreenShot("Manage Visitors");
@@ -57,7 +57,7 @@ public class SK_ManageVisitorsBL extends SK_VisitorsPL {
 
 			if (filterMobileNumber() != null && filterMobileNumber().isDisplayed()) {
 				Base.highLightElement(driver, filterMobileNumber());
-				filterMobileNumber().sendKeys("8178041681");
+				filterMobileNumber().sendKeys("8588026657");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.takeScreenShot("Manage Visitors");
@@ -102,18 +102,17 @@ public class SK_ManageVisitorsBL extends SK_VisitorsPL {
 		}
 	}
 
-	public void clickBtnNewVisitor() throws InterruptedException {
+	public void clickIssueVisitorPass() throws InterruptedException {
 
 		try {
 			if (linkIssueVisitorPass() != null && linkIssueVisitorPass().isDisplayed()) {
-
 				linkIssueVisitorPass().click();
 				Thread.sleep(5000);
 			}
 
 		} catch (Exception e) {
 
-			System.out.println("clickBtnNewVisitor()" + e.getMessage());
+			System.out.println("IssueVisitorPass()" + e.getMessage());
 
 		}
 	}

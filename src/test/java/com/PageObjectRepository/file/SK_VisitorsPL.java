@@ -7,10 +7,10 @@ import com.Commonutills.file.Base;
 
 public class SK_VisitorsPL extends Base {
 
-	public WebElement pageManageVisitors() {
+	public WebElement txtManageVisitorPasses() {
 
 		try {
-			By pageName = By.xpath("//*[@class='col-md-8' and contains(text(),'Manage Visitors')]");
+			By pageName = By.xpath("//*[@class='col-md-8' and contains(text(),'Manage Visitor Passes')]");
 			return driver.findElement(pageName);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
