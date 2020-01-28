@@ -9,7 +9,7 @@
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
 
-    <!--
+    
     <test name="SK_Login" >
 
         <classes>
@@ -32,7 +32,16 @@
             <class name="com.TestNGScript.file.SK_SA_OrganizationPage" />
         </classes>
     </test>
-    -->
+   
+ <test name="SK_LA_MenuList" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_MenuList" />
+        </classes>
+    </test>
+    
+ 
  <test name="SK_LA_MenuList" >
 
         <classes>
@@ -81,79 +90,22 @@
         </classes>
     </test>
 
-    <test name="SK_LA_ManageVisitorPassType" >
+    <test name="SK_LA_VisitorPassType" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_LA_ManageVisitorPassType" />
+            <class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
         </classes>
     </test>
 
-    <test name="SK_LA_EditVisitorPassType" >
+
+    <test name="SK_LA_VisitorPasses" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_LA_EditVisitorPassType" />
+            <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
         </classes>
     </test>
-
-    <test name="SK_LA_CreateVisitorPassType" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_ManageVisitorPasses" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_ManageVisitorPasses" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_IssueVisitorPass" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_IssueVisitorPass" />
-        </classes>
-    </test>
-
-    <!--
-     <test name="SK_EventAction" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_EventAction" />
-        </classes>
-    </test>
-    
-    
-    <test name="Amazon_Home" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.Amazon_Home" />
-        </classes>
-    </test>
-
-    <test name="Amazon_Login" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.Amazon_Login" />
-        </classes>
-    </test>
-
-    <test name="MMT_HomePage" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.MMT_HomePage" />
-        </classes>
-    </test>
-    -->
-
+  
+   
 </suite>

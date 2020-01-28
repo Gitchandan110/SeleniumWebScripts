@@ -75,7 +75,20 @@ public class SK_MenuListPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement ExternalContact() {
 
+		try {
+			By EventAttendence = By.xpath("//li[@class='system-nav-item-external-contacts ']");
+			return driver.findElement(EventAttendence);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
 	public WebElement menuNotifications() {
 
 		try {
@@ -177,7 +190,7 @@ public class SK_MenuListPL extends Base {
 	public WebElement Reports() {
 
 		try {
-			By Reports = By.xpath("//li[@class='system-nav-item-tableau-report ']");
+			By Reports = By.xpath("//a[@href='/tableau/reports/']");
 			return driver.findElement(Reports);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

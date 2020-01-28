@@ -140,7 +140,32 @@ public class SK_MenuListBL extends SK_MenuListPL {
 		}
 
 	}
+	
+	
+	public void clickExternalContact() {
 
+		try {
+
+			if (ExternalContact().isDisplayed() == true) {
+
+				Base.highLightElement(driver, ExternalContact());
+				ExternalContact().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("ExternalContact");
+
+			} else {
+
+				System.out.println("ExternalContact() link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ExternalContact() link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
 	public void clickNotifications() {
 
 		try {
@@ -313,7 +338,30 @@ public class SK_MenuListBL extends SK_MenuListPL {
 	}
 	
 	
+	public void clickReports() {
+
+		try {
+
+			if (Reports().isDisplayed() == true) {
+				Base.scrolltoElement(driver, Reports());
+				Base.highLightElement(driver, Reports());
+				Reports().click();
+				Thread.sleep(8000);
+				Base.takeScreenShot("Reports");
+
+			} else {
+
+				System.out.println("Reports() link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Reports() link : " + ex.getStackTrace());
+		}
+
+	}
 	
+		
 	
 	
 	

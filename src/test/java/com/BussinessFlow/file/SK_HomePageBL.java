@@ -57,6 +57,75 @@ public class SK_HomePageBL extends SK_HomePagePL {
 
 	}
 
+	public void clickReports() {
+
+		try {
+
+			if (btnReports().isDisplayed() == true) {
+				Base.scrolltoElement(driver, btnReports());
+				Base.highLightElement(driver, btnReports());
+				btnReports().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Reports");
+
+			} else {
+
+				System.out.println("Reports() link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Reports() link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickERP() {
+
+		try {
+
+			if (btnERP().isDisplayed() == true) {
+				Base.highLightElement(driver, btnERP());
+				btnERP().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("ERP");
+
+			} else {
+
+				System.out.println("ERP() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ERP() link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickMAP() {
+
+		try {
+
+			if (btnMAP().isDisplayed() == true) {
+				Base.highLightElement(driver, btnMAP());
+				btnMAP().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("MAP");
+
+			} else {
+
+				System.out.println("MAP() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in MAP() link : " + ex.getStackTrace());
+		}
+
+	}
+	
 	
 
 }

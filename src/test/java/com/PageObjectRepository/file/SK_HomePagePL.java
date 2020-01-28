@@ -23,6 +23,42 @@ public class SK_HomePagePL extends Base {
 		
 	}
 	
+	public WebElement btnReports() {
 
+		try {
+			By Reports = By.xpath("//a[@href='/tableau/reports/']");
+			return driver.findElement(Reports);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement btnERP() {
+
+		try {
+			By ERP = By.xpath("//a[@class='erp-btn']");
+			return driver.findElement(ERP);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement btnMAP() {
+
+		try {
+			By map = By.xpath("//a[@class='map-btn']");
+			return driver.findElement(map);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 }
