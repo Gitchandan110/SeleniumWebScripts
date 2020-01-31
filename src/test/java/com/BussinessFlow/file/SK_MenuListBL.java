@@ -1,5 +1,7 @@
 package com.BussinessFlow.file;
 
+import java.util.Set;
+
 import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_MenuListPL;
 
@@ -293,29 +295,8 @@ public class SK_MenuListBL extends SK_MenuListPL {
 
 	}
 
-	public void clickMap() {
-
-		try {
-
-			if (Map() != null && Map().isDisplayed()) {
-				Base.highLightElement(driver, Map());
-				Map().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("Map");
-
-			} else {
-
-				System.out.println("Map() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Map() : " + ex.getStackTrace());
-		}
-
-	}
 	
-	public void clickVideoConference() {
+    public void clickVideoConference() {
 
 		try {
 

@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="SK_LA_CreateVisitorPassType(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType">
+      <class name="com.TestNGScript.file.SK_Broadcast">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSafetyApp"/>
+          <include name="testBroadcastLA"/>
           <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPassType -->
-    </classes>
-  </test> <!-- SK_LA_CreateVisitorPassType(failed) -->
-  <test thread-count="5" name="SK_LA_CreateVisitor(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_CreateVisitor">
-        <methods>
+          <include name="testBroadcastObserver"/>
           <include name="closeBrowser"/>
-          <include name="launchSafetyApp"/>
-          <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitor -->
+      </class> <!-- com.TestNGScript.file.SK_Broadcast -->
     </classes>
-  </test> <!-- SK_LA_CreateVisitor(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
