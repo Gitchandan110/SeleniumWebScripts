@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="SK_911Incident(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_Broadcast">
+      <class name="com.TestNGScript.file.SK_911Incident">
         <methods>
-          <include name="testBroadcastLA"/>
-          <include name="launchSKApp"/>
-          <include name="testBroadcastObserver"/>
           <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+          <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_Broadcast -->
+      </class> <!-- com.TestNGScript.file.SK_911Incident -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- SK_911Incident(failed) -->
+</suite> <!-- Failed suite [Suite] -->

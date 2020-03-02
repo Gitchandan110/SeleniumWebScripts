@@ -63,11 +63,27 @@ public class SK_MenuListPL extends Base {
 
 		return driver.findElement(MenuOrg);
 	}
+	
+	
+	public WebElement Contacts() {
+
+		try {
+			By contacts = By.xpath("//li[@class='system-nav-item-org-contacts']");
+			return driver.findElement(contacts);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
 
 	public WebElement EmergencyContact() {
 
 		try {
-			By EventAttendence = By.xpath("//li[@class='system-nav-item-org-contacts ']");
+			By EventAttendence = By.xpath("//li//a[contains(text(),'Emergency Contacts')]");
+			
 			return driver.findElement(EventAttendence);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -79,7 +95,7 @@ public class SK_MenuListPL extends Base {
 	public WebElement ExternalContact() {
 
 		try {
-			By EventAttendence = By.xpath("//li[@class='system-nav-item-external-contacts ']");
+			By EventAttendence = By.xpath("//li//a[contains(text(),'External Contacts')]");
 			return driver.findElement(EventAttendence);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -92,10 +108,41 @@ public class SK_MenuListPL extends Base {
 	public WebElement menuNotifications() {
 
 		try {
-			By Notifications = By.xpath("//li[@class='system-nav-item-broadcast']");
+			By Notifications = By.xpath("//li[@class='system-nav-item-broadcast']//a");
 			return driver.findElement(Notifications);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement sendNotifications() {
+
+		try {
+			By Send = By.xpath("//li//a[@href='/notification/send/']");
+			return driver.findElement(Send);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	
+
+	
+	public WebElement ManageGroups() {
+
+		try {
+			By ManageGroups = By.xpath("//a[@href='/notification/group/list/']");
+			return driver.findElement(ManageGroups);
+
+		} catch (Exception e) {
+			System.out.println("ManageGroups() locator is incorrect" + e.getMessage());
 			e.printStackTrace();
 		}
 		return null;
@@ -104,8 +151,9 @@ public class SK_MenuListPL extends Base {
 	public WebElement menuManageTemplates() {
 
 		try {
-			By ManageTemplates = By.xpath("//a[@href='/broadcast/template/list/']");
-			System.out.println("menuManageTemplates() locator is correct");
+			By ManageTemplates = By.xpath("//li//a[contains(text(),'Manage Template')]");
+			
+		//	By ManageTemplates = By.xpath("//a[@href='/broadcast/template/list/']");
 			return driver.findElement(ManageTemplates);
 
 		} catch (Exception e) {

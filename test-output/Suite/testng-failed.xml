@@ -4,26 +4,15 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_LA_CreateVisitorPassType(failed)">
+  <test thread-count="5" name="SK_911Incident(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPassType">
+      <class name="com.TestNGScript.file.SK_911Incident">
         <methods>
           <include name="closeBrowser"/>
           <include name="launchSafetyApp"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPassType -->
+      </class> <!-- com.TestNGScript.file.SK_911Incident -->
     </classes>
-  </test> <!-- SK_LA_CreateVisitorPassType(failed) -->
-  <test thread-count="5" name="SK_LA_CreateVisitor(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_CreateVisitor">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSafetyApp"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitor -->
-    </classes>
-  </test> <!-- SK_LA_CreateVisitor(failed) -->
+  </test> <!-- SK_911Incident(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -13,7 +13,7 @@ import com.BussinessFlow.file.SK_HomePageBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_SA_OrganizationPage extends Base {
+public class SK_SA_Organization extends Base {
 
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_LoginBL loginSafetyKuvrrBL = PageFactory.initElements(driver, SK_LoginBL.class);

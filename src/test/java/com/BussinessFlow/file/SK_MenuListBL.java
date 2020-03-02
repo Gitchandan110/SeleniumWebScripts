@@ -119,6 +119,32 @@ public class SK_MenuListBL extends SK_MenuListPL {
 		}
 
 	}
+	
+
+	public void clickContacts() {
+
+		try {
+
+			if (Contacts().isDisplayed() == true) {
+
+				Base.highLightElement(driver, Contacts());
+				Contacts().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Contacts");
+
+			} else {
+
+				System.out.println("Contact() link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Contact() link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
 
 	public void clickEmergencyContact() {
 
@@ -129,7 +155,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, EmergencyContact());
 				EmergencyContact().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("EmergencyContact");
+				Base.takeScreenShot("Contacts");
 
 			} else {
 
@@ -153,7 +179,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, ExternalContact());
 				ExternalContact().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("ExternalContact");
+				Base.takeScreenShot("Contacts");
 
 			} else {
 
@@ -173,10 +199,11 @@ public class SK_MenuListBL extends SK_MenuListPL {
 		try {
 
 			if (menuNotifications() != null && menuNotifications().isDisplayed()) {
+				Base.scrolltoElement(driver, menuNotifications());
 				Base.highLightElement(driver, menuNotifications());
 				menuNotifications().click();
-				Thread.sleep(8000);
-				Base.takeScreenShot("Notifications");
+				Thread.sleep(7000);
+				
 
 			} else {
 
@@ -189,6 +216,58 @@ public class SK_MenuListBL extends SK_MenuListPL {
 		}
 
 	}
+	
+	public void clickSendNotification() {
+
+		try {
+
+			if (sendNotifications() != null && sendNotifications().isDisplayed()) {
+				Base.highLightElement(driver, sendNotifications());
+				sendNotifications().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Notifications");
+
+			} else {
+
+				System.out.println("SendNotification() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in SendNotification() : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
+	public void clickManageGroups() {
+
+		try {
+
+			if (ManageGroups() != null && ManageGroups().isDisplayed()) {
+				Base.highLightElement(driver, ManageGroups());
+				ManageGroups().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Notifications");
+
+			} else {
+
+				System.out.println("ManageGroups() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ManageGroups() : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
+	
+	
+	
 
 	public void clickManageTemplates() {
 
@@ -198,6 +277,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, menuManageTemplates());
 				menuManageTemplates().click();
 				Thread.sleep(5000);
+				Base.takeScreenShot("Notifications");
 
 			} else {
 

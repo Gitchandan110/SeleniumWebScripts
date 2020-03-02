@@ -9,39 +9,30 @@
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
 
-    
     <test name="SK_Login" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_Login" />
         </classes>
-    </test>
-    <test name="SK_Broadcast" >
+    </test>
+
+    <test name="SK_LA_HomePage" >
 
         <classes>
 
-            <class name="com.TestNGScript.file.SK_Broadcast" />
+            <class name="com.TestNGScript.file.SK_LA_HomePage" />
         </classes>
     </test>
 
-    <test name="SK_SA_OrganizationPage" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_SA_OrganizationPage" />
-        </classes>
-    </test>
-   
- <test name="SK_LA_MenuList" >
+    <test name="SK_LA_MenuList" >
 
         <classes>
 
             <class name="com.TestNGScript.file.SK_LA_MenuList" />
         </classes>
     </test>
-    
- 
+
     <test name="SK_LA_OpenIncident" >
 
         <classes>
@@ -90,7 +81,6 @@
         </classes>
     </test>
 
-
     <test name="SK_LA_VisitorPasses" >
 
         <classes>
@@ -98,6 +88,21 @@
             <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
         </classes>
     </test>
-  
-   
+
+    <test name="SK_SA_Organization" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_SA_Organization" />
+        </classes>
+    </test>
+
+    <test name="SK_SA_OrganizationList" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_SA_OrganizationList" />
+        </classes>
+    </test>
+
 </suite>

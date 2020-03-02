@@ -13,7 +13,7 @@ import com.BussinessFlow.file.SK_HomePageBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_SA_Prod_OrganizationPage extends Base {
+public class SK_SA_OrganizationList extends Base {
 
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_LoginBL prodSALoginbl=PageFactory.initElements(driver, SK_LoginBL.class);
@@ -26,8 +26,8 @@ public class SK_SA_Prod_OrganizationPage extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		  openProdSKApp();
-	//	openTestSKApp();
+	//	  openProdSKApp();
+	     openTestSKApp();
 	//	openIntSKApp();
 
 	}
