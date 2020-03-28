@@ -9,6 +9,30 @@
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
 
+    <test name="SK_LA_ManageTemplate" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_ManageTemplate" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_VisitorPassType" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_VisitorPasses" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
+        </classes>
+    </test>
+
     <test name="SK_Login" >
 
         <classes>
@@ -70,22 +94,6 @@
         <classes>
 
             <class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_VisitorPassType" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_VisitorPasses" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
         </classes>
     </test>
 

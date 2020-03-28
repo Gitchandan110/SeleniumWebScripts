@@ -31,9 +31,10 @@ public class SK_LA_ClosedIncident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		    //  openProdSKApp();
-				openTestSKApp();
-			//	openIntSKApp();
+	//  openProdSKApp();
+		openTestSKApp();
+	//	openIntSKApp();
+
 
 	}
 

@@ -131,5 +131,78 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement txtTitleNotificationTemplate() {
 
+		try {
+			By Title = By.id("txtTemplateName");
+			return driver.findElement(Title);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtEmailSub() {
+
+		try {
+			By Email = By.xpath("//input[@ng-model='vm.frm.email_subject']");
+			return driver.findElement(Email);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement txtEmailContainer() {
+
+		try {
+			By EmailContainer = By.xpath("//div[@id='email_content']//div//p");
+			return driver.findElement(EmailContainer);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+	public WebElement txtMobileSMS() {
+
+		try {
+			By Mobile = By.xpath("//textarea[@ng-model='vm.frm.sms_content']");
+			return driver.findElement(Mobile);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtAppNotification() {
+
+		try {
+			By App = By.xpath("//textarea[@ng-model='vm.frm.notification_content']");
+			return driver.findElement(App);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement txtIVR() {
+
+		try {
+			By IVR = By.xpath("//textarea[@ng-model='vm.frm.voice_content']");
+			return driver.findElement(IVR);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

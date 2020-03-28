@@ -121,7 +121,19 @@ public class SK_MenuListPL extends Base {
 	public WebElement sendNotifications() {
 
 		try {
-			By Send = By.xpath("//li//a[@href='/notification/send/']");
+			By Send = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Send')]");
+			return driver.findElement(Send);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement scheduleNotifications() {
+
+		try {
+			By Send = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Schedule')]");
 			return driver.findElement(Send);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -131,14 +143,12 @@ public class SK_MenuListPL extends Base {
 	}
 	
 	
-	
-	
 
 	
 	public WebElement ManageGroups() {
 
 		try {
-			By ManageGroups = By.xpath("//a[@href='/notification/group/list/']");
+			By ManageGroups = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Manage Groups')]");
 			return driver.findElement(ManageGroups);
 
 		} catch (Exception e) {
@@ -151,7 +161,7 @@ public class SK_MenuListPL extends Base {
 	public WebElement menuManageTemplates() {
 
 		try {
-			By ManageTemplates = By.xpath("//li//a[contains(text(),'Manage Template')]");
+			By ManageTemplates = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Manage Template')]");
 			
 		//	By ManageTemplates = By.xpath("//a[@href='/broadcast/template/list/']");
 			return driver.findElement(ManageTemplates);

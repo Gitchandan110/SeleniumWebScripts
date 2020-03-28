@@ -31,22 +31,24 @@ public class SK_LA_ManageTemplate extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		 //   openProdSKApp();
-				openTestSKApp();
-		//	openIntSKApp();
+	//  openProdSKApp();
+		openTestSKApp();
+	//	openIntSKApp();
+
 	}
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void ManageTemplates() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickNotifications();
     	menuList.clickManageTemplates();
-    	manageTemplatesbl.verifyManageTemplates();
+    //	manageTemplatesbl.verifyManageTemplates();
     	manageTemplatesbl.clickLinkCreateTemplate();
+    	manageTemplatesbl.CreateNotificationTemplate();
 	}
 
 	@AfterMethod

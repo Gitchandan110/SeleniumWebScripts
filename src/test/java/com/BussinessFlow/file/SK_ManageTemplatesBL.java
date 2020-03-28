@@ -14,7 +14,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				if (pageManageTemplate() != null && pageManageTemplate().isDisplayed()) {
 					Assert.assertEquals("Manage Templates", driver.getTitle());
 					System.out.println("Landed on Manage Templates Page");
-					Base.takeScreenShot("Manage Templates");
+					Base.takeScreenShot("Notifications");
 				}
 
 				else {
@@ -27,7 +27,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 					filterTemplateTiltle().sendKeys("NTGeo");
 					btnFilter().click();
 					Thread.sleep(5000);
-					Base.takeScreenShot("Manage Templates");
+					Base.takeScreenShot("Notifications");
 					btnClear().click();
 					System.out.println("filterTemplateTiltle() Pass");
 					Base.waitFor30Seconds(filterStatus());
@@ -40,7 +40,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 					filterActiveStatus().click();
 					btnFilter().click();
 					Thread.sleep(5000);
-					Base.takeScreenShot("Manage Templates");
+					Base.takeScreenShot("Notifications");
 					btnClear().click();
 					System.out.println("filterActiveStatus() Pass");
 					Base.waitFor30Seconds(filterStatus());
@@ -48,7 +48,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 					filterInactiveStatus().click();
 					btnFilter().click();
 					Thread.sleep(5000);
-					Base.takeScreenShot("Manage Templates");
+					Base.takeScreenShot("Notifications");
 					btnClear().click();
 					System.out.println("filterInactiveStatus() Pass");
 					Thread.sleep(5000);
@@ -58,7 +58,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 					System.out.println("linkDetails found");
 					linkDetails().click();
 					Thread.sleep(5000);
-					Base.takeScreenShot("Manage Templates");
+					Base.takeScreenShot("Notifications");
 					Base.scrollEndofthePage(driver);
 					Thread.sleep(3000);
 					btnCancelDetails().click();
@@ -77,9 +77,9 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 		public void clickLinkCreateTemplate() throws InterruptedException {
 
 			try {
-				if (linkCreateTemplate()  != null && linkCreateTemplate() .isDisplayed()) {
+				if (linkCreateTemplate()  != null && linkCreateTemplate().isDisplayed()) {
 
-					linkCreateTemplate() .click();
+					linkCreateTemplate().click();
 					Thread.sleep(5000);
 				}
 			} catch (Exception e) {
@@ -88,6 +88,37 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 			}
 
 		}
+		
+		
+		public void CreateNotificationTemplate() throws InterruptedException {
+
+			try {
+				if (txtTitleNotificationTemplate()  != null && txtTitleNotificationTemplate().isDisplayed()) {
+					txtTitleNotificationTemplate().sendKeys("NtfTemplateTest" + Base.SystemTime());
+					Thread.sleep(2000);
+					txtEmailSub().sendKeys("TestNT:"+ Base.SystemTime());
+					txtEmailContainer().click();
+					txtEmailContainer().sendKeys("This is Notification Template Email");
+					txtMobileSMS().sendKeys("This is Notification Template SMS");
+					txtAppNotification().sendKeys("This is App Notification Template");
+					txtIVR().sendKeys("This is IVR Notification Template");
+					
+					
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 
 		/*public void fillCreateVisitorPassType() throws InterruptedException {
 
