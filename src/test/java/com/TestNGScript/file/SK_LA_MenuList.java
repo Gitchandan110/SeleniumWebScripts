@@ -44,7 +44,7 @@ public class SK_LA_MenuList extends Base {
 
 		
     	loginSKbl.loginLA();
-    	/*homePageMenuBL.verifyHamburgerMenu();
+    	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickActiveEvents();
     	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickClosedEvents();
@@ -58,22 +58,33 @@ public class SK_LA_MenuList extends Base {
     	menuList.clickContacts();
     	menuList.clickEmergencyContact();
      	homePageMenuBL.verifyHamburgerMenu();
-     	menuList.clickExternalContact();*/
+     	menuList.clickExternalContact();
+     	
      	homePageMenuBL.verifyHamburgerMenu();
      	menuList.clickNotifications();
      	menuList.clickSendNotification();
+     	
      	homePageMenuBL.verifyHamburgerMenu();
-     	menuList.clickManageTemplates();
+      	menuList.clickScheduletification();
+     	
+     	
      	homePageMenuBL.verifyHamburgerMenu();
-     	menuList.clickManageGroups();
-       	homePageMenuBL.verifyHamburgerMenu();
+       	menuList.clickManageGroups();
+     	
+     	
+     	homePageMenuBL.verifyHamburgerMenu();
+       	menuList.clickManageTemplates();
+     	
+     	homePageMenuBL.verifyHamburgerMenu();
+       	menuList.clickNotificationHistory();
+     	
 	}
 
 	@AfterMethod
 
 	public void closeBrowser() {
 
-  //  driver.quit();
+     driver.quit();
 	
 	}
 

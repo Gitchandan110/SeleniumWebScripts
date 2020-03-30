@@ -239,7 +239,27 @@ public class SK_MenuListBL extends SK_MenuListPL {
 
 	}
 	
-	
+	public void clickScheduletification() {
+
+		try {
+
+			if (scheduleNotifications() != null && scheduleNotifications().isDisplayed()) {
+				Base.highLightElement(driver, scheduleNotifications());
+				scheduleNotifications().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Notifications");
+
+			} else {
+
+				System.out.println("scheduleNotifications() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in scheduleNotifications() : " + ex.getStackTrace());
+		}
+
+	}
 	
 	public void clickManageGroups() {
 
@@ -263,12 +283,6 @@ public class SK_MenuListBL extends SK_MenuListPL {
 
 	}
 	
-	
-	
-	
-	
-	
-
 	public void clickManageTemplates() {
 
 		try {
@@ -290,6 +304,29 @@ public class SK_MenuListBL extends SK_MenuListPL {
 		}
 
 	}
+	
+	public void clickNotificationHistory() {
+
+		try {
+
+			if (menuNotificationHistory() != null && menuNotificationHistory().isDisplayed()) {
+				Base.highLightElement(driver, menuNotificationHistory());
+				menuNotificationHistory().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Notifications");
+
+			} else {
+
+				System.out.println("menuNotificationHistory() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuNotificationHistory() : " + ex.getStackTrace());
+		}
+
+	}	
+		
 
 	public void clickMenuVisitorManagement() {
 

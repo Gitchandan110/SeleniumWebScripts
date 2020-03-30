@@ -142,9 +142,7 @@ public class SK_MenuListPL extends Base {
 		return null;
 	}
 	
-	
-
-	
+		
 	public WebElement ManageGroups() {
 
 		try {
@@ -173,6 +171,25 @@ public class SK_MenuListPL extends Base {
 		return null;
 	}
 
+	public WebElement menuNotificationHistory() {
+
+		try {
+			By History = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'History')]");
+			
+		//	By ManageTemplates = By.xpath("//a[@href='/broadcast/template/list/']");
+			return driver.findElement(History);
+
+		} catch (Exception e) {
+			System.out.println("menuNotificationHistory() locator is incorrect" + e.getMessage());
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	
+	
+	
+	
 	public WebElement menuVisitorManagement() {
 
 		try {

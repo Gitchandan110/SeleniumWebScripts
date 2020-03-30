@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90706" started-at="2020-03-28T10:49:02Z" finished-at="2020-03-28T10:50:33Z">
+  <suite name="Default suite" duration-ms="210560" started-at="2020-03-30T07:12:52Z" finished-at="2020-03-30T07:16:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90706" started-at="2020-03-28T10:49:02Z" finished-at="2020-03-28T10:50:33Z">
-      <class name="com.TestNGScript.file.SK_LA_ManageTemplate">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_ManageTemplate@1c72da34]" name="launchSKApp" is-config="true" duration-ms="33811" started-at="2020-03-28T10:49:02Z" finished-at="2020-03-28T10:49:36Z">
+    <test name="Default test" duration-ms="210560" started-at="2020-03-30T07:12:52Z" finished-at="2020-03-30T07:16:22Z">
+      <class name="com.TestNGScript.file.SK_LA_MenuList">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_MenuList@6166e06f]" name="launchSKApp" is-config="true" duration-ms="61285" started-at="2020-03-30T07:12:52Z" finished-at="2020-03-30T07:13:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="ManageTemplates()[pri:0, instance:com.TestNGScript.file.SK_LA_ManageTemplate@1c72da34]" name="ManageTemplates" duration-ms="56861" started-at="2020-03-28T10:49:36Z" finished-at="2020-03-28T10:50:33Z">
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_MenuList@6166e06f]" name="launchSafetyApp" duration-ms="149237" started-at="2020-03-30T07:13:53Z" finished-at="2020-03-30T07:16:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ManageTemplates -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_ManageTemplate@1c72da34]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2020-03-28T10:50:33Z" finished-at="2020-03-28T10:50:33Z">
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_MenuList@6166e06f]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2020-03-30T07:16:22Z" finished-at="2020-03-30T07:16:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.TestNGScript.file.SK_LA_ManageTemplate -->
+      </class> <!-- com.TestNGScript.file.SK_LA_MenuList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
