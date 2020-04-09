@@ -24,9 +24,9 @@ public class SK_SA_Organization extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-	//  openProdSKApp();
-		openTestSKApp();
-	//	openIntSKApp();
+		//  openProdSKApp();
+    	//	openTestSKApp();
+			openIntSKApp();
 
 
 	}

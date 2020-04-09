@@ -38,9 +38,12 @@ public class SK_OrganizationBL extends SK_OrganizationPL {
 		try {
 			int OrgColumnCount = columnHeaderOrganization().size();
 			for (int i = 1; i <= OrgColumnCount; i++) {
-				String ColumnHeader = driver
+				/*String ColumnHeader = driver
 						.findElement(By.xpath("//*[@id='content']//div//div[3]//table//thead//tr//td[" + i + "]"))
-						.getText();
+						.getText();*/
+				
+ String ColumnHeader = driver.findElement(By.xpath("//table[@summary='List of Organizations']//thead//tr//td["+ i +"]")).getText();
+						
 				System.out.println("Column Header are :" + ColumnHeader);
 
 			//	ExcelWrite.writeInputDataExcel(OrganizationSheet, 0, i - 1, ColumnHeader);
