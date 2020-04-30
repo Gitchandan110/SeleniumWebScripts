@@ -32,8 +32,8 @@ public class SK_LA_VisitorPassType extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		//  openProdSKApp();
-    	//	openTestSKApp();
+	 	 //   openProdSKApp();
+    	 //   openTestSKApp();
 			openIntSKApp();
 
 

@@ -68,20 +68,18 @@ public class SK_OpenIncidentPL extends Base {
 		return null;
 
 	}
-	
+
 	public WebElement mapContainer() {
-		
-	try {
-		By map=By.xpath("//div[@class='profile-map-container']");
-		return driver.findElement(map);
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return null;
-	
-		
-		
+
+		try {
+			By map = By.xpath("//div[@class='profile-map-container']");
+			return driver.findElement(map);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
 	}
 
 	public WebElement iconShareIncident() {
@@ -156,6 +154,12 @@ public class SK_OpenIncidentPL extends Base {
 
 	}
 
+	public WebElement chatRoom() {
+
+		By chatRoom = By.xpath("//div[@class='chat-container'][@id='chat']");
+		return driver.findElement(chatRoom);
+	}
+
 	public WebElement btnSmartResponse() {
 
 		By smartResponse = By.xpath("//a[@id='quick-responses-button']");
@@ -164,7 +168,8 @@ public class SK_OpenIncidentPL extends Base {
 
 	public WebElement chatSmartResponse() {
 
-		By chat = By.xpath("//div[@id='quick-responses']//ul//li//span[contains(text(),'Are you OK')]");
+		By chat = By
+				.xpath("//div[@id='quick-responses']//ul//li//span[contains(text(),'Keep speaking we can hear you')]");
 		return driver.findElement(chat);
 	}
 

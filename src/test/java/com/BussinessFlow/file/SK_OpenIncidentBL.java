@@ -2,9 +2,12 @@ package com.BussinessFlow.file;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.interactions.Actions;
 
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
@@ -20,11 +23,12 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 		try {
 
-			if (IncomingIncident() !=null && IncomingIncident().isDisplayed()) {
+			if (IncomingIncident() != null && IncomingIncident().isDisplayed()) {
+
 				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
 				Base.scrolltoElement(driver, IncomingIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 17, 1, "Pass");
-				Base.takeScreenShot("IncomingIncident");
+				Base.takeScreenShot("Incoming Incident");
 				Thread.sleep(3000);
 				Base.highLightElement(driver, IncomingIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
@@ -34,69 +38,70 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				System.out.println("Incoming Incident found and selected");
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
-				// Base.scrolltoElement(driver, logoKuvrr());
-				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot("IncidentPage");
-				ExcelWrite.writeSanitySheet(SanitySheet, 10, 1, "Pass");
-				System.out.println("Please wait for 15 seconds");
-				Thread.sleep(15000);
-
+				Base.manageChildWindow();
+				
+				
 			} else {
 
 				System.out.println("No Incoming Incident Found Now Searching for Open Incident");
 
-				if (OpenIncident() !=null && OpenIncident().isDisplayed()) {
-				ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
-				Base.scrolltoElement(driver, OpenIncident());
-				ExcelWrite.writeSanitySheet(SanitySheet, 17, 1, "Pass");
-				Base.takeScreenShot("OpenIncident");
-				Thread.sleep(3000);
-				Base.highLightElement(driver, OpenIncident());
-				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
-				Base.takeScreenShot("Active Screen");
-				Thread.sleep(2000);
-				OpenIncident().click();
-				System.out.println("Open Incident found and selected");
-				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
-				Thread.sleep(5000);
-				// Base.scrolltoElement(driver, logoKuvrr());
-				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot("IncidentPage");
-				ExcelWrite.writeSanitySheet(SanitySheet, 10, 1, "Pass");
-				System.out.println("Please wait for 15 seconds");
-				Thread.sleep(15000);
+				if (OpenIncident() != null && OpenIncident().isDisplayed()) {
+					ExcelWrite.writeSanitySheet(SanitySheet, 9, 1, "Pass");
+					Base.scrolltoElement(driver, OpenIncident());
+					ExcelWrite.writeSanitySheet(SanitySheet, 17, 1, "Pass");
+					Thread.sleep(3000);
+					Base.highLightElement(driver, OpenIncident());
+					ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
+					Base.takeScreenShot("Open Incident");
+					Thread.sleep(2000);
+					OpenIncident().click();
+					System.out.println("Open Incident found and selected");
+					ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
+					Thread.sleep(5000);
+					Base.manageChildWindow();
+					 
+				} else {
 
-			} else {
-
-				System.out.println("No Open Incident Found");
+					System.out.println("No Open Incident Found");
+				}
 			}
-		} 
-			
+
 		}
-		
+
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	public void verifyVideoContainer() throws IOException, InterruptedException {
+		
+		Base.waitFor30Seconds(videoContainer());
+		System.out.println(SystemTime());
+		Base.scrolltoElement(driver, videoContainer());
+		Thread.sleep(10000);
+		Base.takeScreenShot("Incident Screen");
+		
+		
 	}
 
 	public void click911Incident() throws InterruptedException {
 
 		try {
-			
+
 			if (Incident911() != null && Incident911().isDisplayed()) {
 				Base.scrolltoElement(driver, Incident911());
 				Thread.sleep(3000);
 				Base.highLightElement(driver, Incident911());
+				Base.takeScreenShot("911 Incident");
 				ExcelWrite.writeSanitySheet(SanitySheet, 20, 1, "Pass");
 				Thread.sleep(2000);
 				Incident911().click();
 				System.out.println("911 Incident found and selected");
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
-				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot("911 Incident");
-				System.out.println("Please wait for 5 seconds");
-				Thread.sleep(5000);
+				Base.manageChildWindow();
+				 
 			} else {
 
 				System.out.println("No 911 Incident Found");
@@ -108,20 +113,29 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 		}
 	}
 
-	public void clickSmartResponse() throws InterruptedException, IOException {
+	public void verifySmartResponse() throws InterruptedException, IOException {
 
 		try {
-			Base.scrolltoElement(driver, btnSmartResponse());
+			Base.scrolltoElement(driver, chatRoom());
 			if (btnSmartResponse().isDisplayed()) {
-				// btnSmartResponse().click();
-				// chatSmartResponse().click();
-				// System.out.println("Samrt Response Chat is selected");
+				btnSmartResponse().click();
+				Thread.sleep(2000);
+			    Base.highLightElement(driver, chatSmartResponse());
+			    Base.takeScreenShot("Incident Screen");
+			    
+			    Actions actions = new Actions(this.driver);
+			    actions.moveToElement(chatSmartResponse());
+			    Thread.sleep(9000);
+			    Base.takeScreenShot("Incident Screen");
+			    chatSmartResponse().click();
+			    Thread.sleep(8000);
+			    Base.takeScreenShot("Incident Screen");
 				txtSmartResponse().click();
 				txtSmartResponse().sendKeys("Where are You?");
 				System.out.println("SmartResponse: Where are You?");
 				btnSendSmartResponse().click();
-				Thread.sleep(2000);
-				System.out.println("SmartResponse chat is performed");
+				 Thread.sleep(8000);
+				Base.takeScreenShot("Incident Screen");
 				ExcelWrite.writeSanitySheet(SanitySheet, 14, 1, "Pass");
 
 			}
@@ -138,6 +152,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				txtEventNotes().click();
 				txtEventNotes().sendKeys("Event Notes");
 				btnSaveEventNotes().click();
+				Base.takeScreenShot("Incident Screen");
 				Thread.sleep(2000);
 				System.out.println("Event Notes sent");
 				ExcelWrite.writeSanitySheet(SanitySheet, 15, 1, "Pass");
@@ -177,10 +192,10 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				shareIncidentEmailfield().click();
 				shareIncidentEmailfield().sendKeys("ck@yopmail.com;chandan@yopmail.com;test@yopmail.com");
 				btnSubmitShareIncident().click();
-				Base.takeScreenShot("ShareIncident");
+				Base.takeScreenShot("Incident Screen");
 				Thread.sleep(2000);
-				System.out
-						.println("Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
+				System.out.println(
+						"Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
 				ExcelWrite.writeSanitySheet(SanitySheet, 27, 1, "Pass");
 				Thread.sleep(10000);
 			}
@@ -229,6 +244,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			if (txtIncidentActionResponse().isDisplayed()) {
 				txtIncidentActionResponse().click();
 				txtIncidentActionResponse().sendKeys("Its a False Alarm");
+				Base.takeScreenShot("Incident Screen");
 				Thread.sleep(2000);
 				btnSaveIncidentResponse().click();
 				ExcelWrite.writeSanitySheet(SanitySheet, 38, 1, "Pass");

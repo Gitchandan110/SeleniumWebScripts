@@ -6,6 +6,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.By;
@@ -164,23 +166,51 @@ public class Base {
 
 	public static String SystemTime() {
 
-			Calendar cal = Calendar.getInstance();
-			Date date = cal.getTime();
-			DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-			String Time= dateFormat.format(date);
-			return Time;
-			
-		}
-	
+		Calendar cal = Calendar.getInstance();
+		Date date = cal.getTime();
+		DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+		String Time = dateFormat.format(date);
+		return Time;
+
+	}
+
 	public static String SystemDateTime() {
 
-		 DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-		 Date date = new Date();
-		 String dateTime= dateFormat.format(date);
-	     return dateTime;
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		Date date = new Date();
+		String dateTime = dateFormat.format(date);
+		return dateTime;
+
+	}
+
+	public static void manageChildWindow() {
+
+		// It will return the parent window name as a String
+		String mainWindow = driver.getWindowHandle();
+		System.out.println("Parent Window is :" + mainWindow);
+		// It returns no. of windows opened by WebDriver and will return Set of Strings
+		Set<String> set = driver.getWindowHandles();
+
+		// Using Iterator to iterate with in windows
+
+		Iterator<String> itr = set.iterator();
+
+		while (itr.hasNext()) {
+			String childWindow = itr.next();
+			System.out.println("child Window is :" + childWindow);
+			// Compare whether the main windows is not equal to child window. If not equal,
+			// we will close.
+			if (!mainWindow.equals(childWindow)) {
+				driver.switchTo().window(childWindow);
+				System.out.println("Driver is switched to Child Window");
+				System.out.println(driver.switchTo().window(childWindow).getTitle());
+				System.out.println(SystemTime());
 		
+			}
+
+		}
+
 	}
 	
+	
 }
-
-

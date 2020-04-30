@@ -27,8 +27,8 @@ public class SK_Observer_OpenIncident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		//  openProdSKApp();
-    	//	openTestSKApp();
+	 	 //   openProdSKApp();
+    	 //   openTestSKApp();
 			openIntSKApp();
 
 
@@ -41,7 +41,8 @@ public class SK_Observer_OpenIncident extends Base {
 	
 		loginSKbl.loginObserver();
 		incidentbl.clickIncomingIncident();
-		incidentbl.clickSmartResponse();
+		incidentbl.verifyVideoContainer();
+		incidentbl.verifySmartResponse();
 		incidentbl.enterEventNotes();
 		incidentbl.clickIncidentActionsClose();
 		incidentbl.clickIncidentResolutionFalseAlarm();

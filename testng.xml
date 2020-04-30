@@ -8,7 +8,9 @@
 
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
-
+    
+    
+  
     <test name="SK_LA_ManageTemplate" >
 
         <classes>
@@ -56,7 +58,9 @@
             <class name="com.TestNGScript.file.SK_LA_HomePage" />
         </classes>
     </test>
-
+    
+    
+  
    <test name="SK_LA_OpenIncident" >
 
         <classes>

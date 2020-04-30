@@ -1,5 +1,7 @@
 package com.PageObjectRepository.file;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -131,7 +133,7 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtTitleNotificationTemplate() {
 
 		try {
@@ -143,7 +145,7 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtEmailSub() {
 
 		try {
@@ -155,8 +157,7 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
-	
-	
+
 	public WebElement txtEmailContainer() {
 
 		try {
@@ -168,7 +169,6 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
-	
 
 	public WebElement txtMobileSMS() {
 
@@ -181,12 +181,24 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
-	
+
 	public WebElement txtAppNotification() {
 
 		try {
 			By App = By.xpath("//textarea[@ng-model='vm.frm.notification_content']");
 			return driver.findElement(App);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public WebElement chkbxGeoAware() {
+
+		try {
+			By GeoAware = By.xpath("//input[@type='checkbox'][@ng-model='vm.frm.geo_aware']");
+			return driver.findElement(GeoAware);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -205,4 +217,77 @@ public class SK_ManageTemplatesPL extends Base {
 		}
 		return null;
 	}
+	
+
+	public WebElement dropdownUserGroups() {
+
+		try {
+			By UserGroup = By.xpath("//div[@ng-model='vm.userGroups_selected']");
+			return driver.findElement(UserGroup);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public List<WebElement> UserGroupList() {
+
+		By UserGroups = By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option']//div//span");
+		return driver.findElements(UserGroups);
+
+	}
+	
+	public WebElement UserGroup() {
+
+		By UserGroup = By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option']");
+		return driver.findElement(UserGroup);
+
+	}
+	
+
+	public WebElement dropdownUsers() {
+
+		try {
+			By Users = By.xpath("//div[@ng-model='vm.users_selected']");
+			return driver.findElement(Users);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public List<WebElement> UsersList(){
+		
+		By UserList=By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option']//div//span");
+		
+		return driver.findElements(UserList);
+		
+	
+	}
+	
+	public WebElement Users() {
+
+		By User = By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option']");
+		return driver.findElement(User);
+
+	}
+	
+	public WebElement radioBtnInactive() {
+
+		By Inactive = By.xpath("//input[@type='radio'][@ng-value='false']");
+		return driver.findElement(Inactive);
+
+	}
+	
+
+	public WebElement BtnSubmit() {
+
+		By Submit = By.xpath("//button[@type='submit']");
+		return driver.findElement(Submit);
+
+	}
+	
+	
 }
