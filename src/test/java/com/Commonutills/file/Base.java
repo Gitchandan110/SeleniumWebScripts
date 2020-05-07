@@ -163,6 +163,19 @@ public class Base {
 		}
 
 	}
+	
+	
+	public static void waitFor180Seconds(WebElement element) {
+
+		try {
+			new WebDriverWait(driver, 180).until(ExpectedConditions.visibilityOf(element));
+			System.out.println("Explicit Wait 180 seconds Done");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	public static String SystemTime() {
 

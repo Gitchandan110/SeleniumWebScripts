@@ -6,7 +6,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.maven.shared.utils.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import com.Commonutills.file.Base;
@@ -37,10 +39,9 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				IncomingIncident().click();
 				System.out.println("Incoming Incident found and selected");
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				Base.manageChildWindow();
-				
-				
+
 			} else {
 
 				System.out.println("No Incoming Incident Found Now Searching for Open Incident");
@@ -59,7 +60,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 					ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 					Thread.sleep(5000);
 					Base.manageChildWindow();
-					 
+
 				} else {
 
 					System.out.println("No Open Incident Found");
@@ -72,17 +73,16 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	public void verifyVideoContainer() throws IOException, InterruptedException {
-		
-		Base.waitFor30Seconds(videoContainer());
+
+		System.out.println("Waiting for Video Screen");
+		Base.waitFor180Seconds(videoContainer());
 		System.out.println(SystemTime());
 		Base.scrolltoElement(driver, videoContainer());
 		Thread.sleep(10000);
 		Base.takeScreenShot("Incident Screen");
-		
-		
+
 	}
 
 	public void click911Incident() throws InterruptedException {
@@ -101,7 +101,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 31, 1, "Pass");
 				Thread.sleep(5000);
 				Base.manageChildWindow();
-				 
+
 			} else {
 
 				System.out.println("No 911 Incident Found");
@@ -120,21 +120,21 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			if (btnSmartResponse().isDisplayed()) {
 				btnSmartResponse().click();
 				Thread.sleep(2000);
-			    Base.highLightElement(driver, chatSmartResponse());
-			    Base.takeScreenShot("Incident Screen");
-			    
-			    Actions actions = new Actions(this.driver);
-			    actions.moveToElement(chatSmartResponse());
-			    Thread.sleep(9000);
-			    Base.takeScreenShot("Incident Screen");
-			    chatSmartResponse().click();
-			    Thread.sleep(8000);
-			    Base.takeScreenShot("Incident Screen");
+				Base.highLightElement(driver, chatSmartResponse());
+				Base.takeScreenShot("Incident Screen");
+
+				Actions actions = new Actions(this.driver);
+				actions.moveToElement(chatSmartResponse());
+				Thread.sleep(9000);
+				Base.takeScreenShot("Incident Screen");
+				chatSmartResponse().click();
+				Thread.sleep(8000);
+				Base.takeScreenShot("Incident Screen");
 				txtSmartResponse().click();
 				txtSmartResponse().sendKeys("Where are You?");
 				System.out.println("SmartResponse: Where are You?");
 				btnSendSmartResponse().click();
-				 Thread.sleep(8000);
+				Thread.sleep(8000);
 				Base.takeScreenShot("Incident Screen");
 				ExcelWrite.writeSanitySheet(SanitySheet, 14, 1, "Pass");
 
@@ -254,5 +254,85 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			e.printStackTrace();
 		}
 	}
+
+	public void selectAllActiveEvents() {
+
+		try {
+
+			Base.scrolltoElement(driver, incidentTable());
+			int countActiveEvents = allActiveEvents().size();
+
+			System.out.println("Total number of New Tip Incidents are : " + countActiveEvents);
+
+			for (int i = 1; i <= countActiveEvents; i++) {
+
+				WebElement checkbox = driver
+						.findElement(By.xpath("//tbody//tr[" + i + "]//td//input[@type='checkbox']"));
+				String titleTip = driver.findElement(By.xpath("//tbody//tr[" + i + "]//td[10]//div//img"))
+						.getAttribute("title");
+				System.out.println("Tip Tytle is : " + titleTip);
+				checkbox.click();
+
+			}
+
+		} catch (Exception e) {
+
+			System.out.println(e);
+		}
+
+	}
+	
+	public void verifyFilter() {
+
+		try {
+			if (btnFilterActiveEvents() != null && btnFilterActiveEvents().isDisplayed()) {
+				btnFilterActiveEvents().click();
+				Thread.sleep(2000);
+				System.out.println("Filter button found and clicked");
+
+			}
+
+			else {
+
+				System.out.println("Filter button not found");
+
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void verifyCloseAction() {
+
+		try {
+			if (btnCloseEvents() != null && btnCloseEvents().isDisplayed()) {
+				btnCloseEvents().click();
+				Thread.sleep(2000);
+				System.out.println("Close button found and clicked");
+				dropdownResolution().click();
+				optionResolution().click();
+				txtResponse().sendKeys(" Both 911 and Medical Emergencies, which are automatically closed by the system when triggered, will continue to show in the Active events tab for up to five minutes from event start. After the duration, these events will show up only in the Closed tab.");
+				Base.takeScreenShot("Action Close");
+				btnSubmit().click();
+				Thread.sleep(5000);
+				
+			}
+
+			else {
+
+				System.out.println("Close button not found");
+
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
 
 }

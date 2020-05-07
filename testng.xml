@@ -8,60 +8,8 @@
 
         <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
     </listeners>
-    
-    
-  
-    <test name="SK_LA_ManageTemplate" >
 
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_ManageTemplate" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_VisitorPassType" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_VisitorPasses" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
-        </classes>
-    </test>
-    
-     <test name="SK_LA_MenuList" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_MenuList" />
-        </classes>
-    </test>
-
-    <test name="SK_Login" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_Login" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_HomePage" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_HomePage" />
-        </classes>
-    </test>
-    
-    
-  
-   <test name="SK_LA_OpenIncident" >
+    <test name="SK_LA_OpenIncident" >
 
         <classes>
 
@@ -101,6 +49,54 @@
         </classes>
     </test>
 
+    <test name="SK_LA_ManageTemplate" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_ManageTemplate" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_VisitorPassType" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_VisitorPasses" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_MenuList" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_MenuList" />
+        </classes>
+    </test>
+
+    <test name="SK_Login" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_Login" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_HomePage" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_HomePage" />
+        </classes>
+    </test>
+
     <test name="SK_SA_Organization" >
 
         <classes>
@@ -114,6 +110,14 @@
         <classes>
 
             <class name="com.TestNGScript.file.SK_SA_OrganizationList" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_CloseActiveEvents" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_CloseActiveEvents" />
         </classes>
     </test>
 

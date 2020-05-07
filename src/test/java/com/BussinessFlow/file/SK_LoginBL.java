@@ -94,7 +94,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (BtnContinue().isDisplayed()) {
 				Base.takeScreenShot("LoginScreen");
 				BtnContinue().click();
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 
 			}
 

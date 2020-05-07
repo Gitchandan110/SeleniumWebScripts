@@ -1,5 +1,7 @@
 package com.PageObjectRepository.file;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -10,10 +12,76 @@ public class SK_OpenIncidentPL extends Base {
 	public WebElement IncomingIncident() {
 
 		try {
-			By incomingIncident = By.xpath(("//td[contains(., ' Incoming ')]"));
+			By incomingIncident = By.xpath(("//td[contains(., 'Incoming')]"));
 			return driver.findElement(incomingIncident);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
+	}
+
+	public WebElement InvestigatingEvent() {
+
+		try {
+			By investigating = By.xpath(("//td[contains(., 'Investigating')]"));
+			return driver.findElement(investigating);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
+	}
+
+	public WebElement OpenEvent() {
+
+		try {
+			By openEvent = By.xpath(("//tr[@class='condensed-profile profile']"));
+			return driver.findElement(openEvent);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
+	}
+
+	public List<WebElement> allActiveEvents() {
+
+		try {
+			By allEvents = By.xpath(("//table[@class='incident-responsive'][@id='incident-table']//tbody//tr"));
+			return driver.findElements(allEvents);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
+	}
+
+	public WebElement incidentTable() {
+
+		try {
+			By incidentTable = By.xpath(("//table[@class='incident-responsive'][@id='incident-table']"));
+			return driver.findElement(incidentTable);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
+	}
+
+	// input[@name='selected_event'][@type='checkbox']
+
+	public WebElement chkbxIncident() {
+
+		try {
+			By chkbxIncident = By.xpath("//input[@name='selected_event'][@type='checkbox']");
+			return driver.findElement(chkbxIncident);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -197,4 +265,43 @@ public class SK_OpenIncidentPL extends Base {
 		return driver.findElement(txtSR);
 	}
 
+	public WebElement btnFilterActiveEvents() {
+
+		By Filter = By.xpath("//input[@type='button'][@name='filter']");
+		return driver.findElement(Filter);
+	}
+
+	public WebElement btnCloseEvents() {
+
+		By Close = By.xpath("//a[@id='incidentClose-link'][@title='Close Events']");
+		return driver.findElement(Close);
+	}
+
+	public WebElement dropdownResolution() {
+
+		By Resolution = By.xpath("//select[@id='action_resolution']");
+		return driver.findElement(Resolution);
+	}
+
+	public WebElement optionResolution() {
+
+		By Resolution = By
+				.xpath("//select[@id='action_resolution']//option[contains (text(),'Contacted Organization')]");
+		return driver.findElement(Resolution);
+	}
+	
+	
+	public WebElement txtResponse() {
+
+		By Response = By.xpath("//textarea[@id='events_action_response']");
+		return driver.findElement(Response);
+	}
+	
+
+	public WebElement btnSubmit() {
+		
+		By Submit = By.xpath("//input[@id='filter-submit'][@class='btn submit']");
+		return driver.findElement(Submit);
+	}
+	
 }
