@@ -117,12 +117,21 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 		try {
 			Base.scrolltoElement(driver, chatRoom());
+			if (txtSmartResponse().isDisplayed()) {
+			txtSmartResponse().click();
+			txtSmartResponse().sendKeys("Test Threat Keyword like: depressed, whore, weapon, trafficking, theft, suicide, sad, rude, pussy \r\n" + 
+					" punch, prostitute, pistol, pimp, pervert, passed out, molesting, molestation, hitting, gun, fuck,fighting, fight, fallen, escort, drunk, drugs, \r\n" + 
+					"drinking, creep, booze, boobs,bomb, bitch, asshole, assault, alcohol, tits, cunt, mofo, faint,pot, heroine, graffiti, spray, nigger, rifle, shotgun, goon, snatch, terror, attack, fire, threat, trap, knife ");
+		
+			btnSendSmartResponse().click();
+			Thread.sleep(8000);
+		
 			if (btnSmartResponse().isDisplayed()) {
 				btnSmartResponse().click();
 				Thread.sleep(2000);
 				Base.highLightElement(driver, chatSmartResponse());
 				Base.takeScreenShot("Incident Screen");
-
+			}
 				Actions actions = new Actions(this.driver);
 				actions.moveToElement(chatSmartResponse());
 				Thread.sleep(9000);
@@ -130,11 +139,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				chatSmartResponse().click();
 				Thread.sleep(8000);
 				Base.takeScreenShot("Incident Screen");
-				txtSmartResponse().click();
-				txtSmartResponse().sendKeys("Where are You?");
-				System.out.println("SmartResponse: Where are You?");
-				btnSendSmartResponse().click();
-				Thread.sleep(8000);
+				System.out.println("SmartResponse chat text submitted");
 				Base.takeScreenShot("Incident Screen");
 				ExcelWrite.writeSanitySheet(SanitySheet, 14, 1, "Pass");
 
@@ -150,7 +155,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 		try {
 			if (txtEventNotes().isDisplayed()) {
 				txtEventNotes().click();
-				txtEventNotes().sendKeys("Event Notes");
+				txtEventNotes().sendKeys("Be careful as criminals always carrying anything like Bomb, Knife, Gun, and they can do gun Shot, Fire, Firing, Attack Terrorist, Attacking, Terror, Missile Attack, Threat, Trap, Snatch, Robbery, Bank Loot, Assault, Goon, Acid Attack, Stone Pelting");
 				btnSaveEventNotes().click();
 				Base.takeScreenShot("Incident Screen");
 				Thread.sleep(2000);
