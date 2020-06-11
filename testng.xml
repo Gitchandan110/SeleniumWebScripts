@@ -14,7 +14,14 @@
         <classes>
 
             <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
-            
+        </classes>
+    </test>
+
+    <test name="SK_LA_ShareActiveEvent" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_ShareActiveEvent" />
         </classes>
     </test>
 
@@ -47,6 +54,14 @@
         <classes>
 
             <class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
+        </classes>
+    </test>
+
+    <test name="SK_LA_Reports" >
+
+        <classes>
+
+            <class name="com.TestNGScript.file.SK_LA_Reports" />
         </classes>
     </test>
 

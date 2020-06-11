@@ -26,10 +26,10 @@ public class SK_LA_CloseActiveEvents extends Base {
 	@BeforeMethod
 
 	public void launchSKApp() throws InterruptedException, IOException {
-
+		
 		 //   openProdSKApp();
-              openTestSKApp();
-        //	openIntSKApp();
+	    //    openTestSKApp();
+	    	openIntSKApp();
 
 	}
 

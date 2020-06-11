@@ -33,9 +33,9 @@ public class SK_LA_VisitorPasses extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-	      openTestSKApp();
-	    // openIntSKApp();
-	    
+	    //    openTestSKApp();
+	    	openIntSKApp();
+	    	
 	}
 
 	@Test(priority=1)

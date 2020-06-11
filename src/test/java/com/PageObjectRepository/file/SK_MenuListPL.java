@@ -170,6 +170,22 @@ public class SK_MenuListPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement menuTipNotification() {
+
+		try {
+			By TipNotification = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Tip Notifications')]");
+			
+		//	By ManageTemplates = By.xpath("//a[@href='/broadcast/template/list/']");
+			return driver.findElement(TipNotification);
+
+		} catch (Exception e) {
+			System.out.println("menuManageTemplates() locator is incorrect" + e.getMessage());
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 	public WebElement menuNotificationHistory() {
 

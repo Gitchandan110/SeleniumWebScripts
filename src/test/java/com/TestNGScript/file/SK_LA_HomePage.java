@@ -29,11 +29,11 @@ public class SK_LA_HomePage extends Base {
 	@BeforeMethod
 
 	public void launchSKApp() throws InterruptedException, IOException {
-
+		
 		 //   openProdSKApp();
-	       openTestSKApp();
-	       // openIntSKApp();
-			
+	    //    openTestSKApp();
+	    	openIntSKApp();
+	    	
 	}
 
 	@Test()

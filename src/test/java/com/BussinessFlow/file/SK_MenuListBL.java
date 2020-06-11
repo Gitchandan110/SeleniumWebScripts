@@ -305,6 +305,32 @@ public class SK_MenuListBL extends SK_MenuListPL {
 
 	}
 	
+	
+	
+	public void clickTipNotification() {
+
+		try {
+
+			if (menuTipNotification() != null && menuTipNotification().isDisplayed()) {
+				Base.highLightElement(driver, menuTipNotification());
+				menuTipNotification().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Notifications");
+
+			} else {
+
+				System.out.println("menuTipNotification() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuTipNotification() : " + ex.getStackTrace());
+		}
+
+	}
+	
+		
+	
 	public void clickNotificationHistory() {
 
 		try {

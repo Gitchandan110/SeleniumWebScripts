@@ -276,6 +276,16 @@ public class SK_OpenIncidentPL extends Base {
 		By Close = By.xpath("//a[@id='incidentClose-link'][@title='Close Events']");
 		return driver.findElement(Close);
 	}
+	
+	
+	public WebElement btnShareIncident() {
+
+		By Share = By.xpath("//a[@id='share-link'][@title='Share']");
+		return driver.findElement(Share);
+	}
+	
+	
+	
 
 	public WebElement dropdownResolution() {
 
@@ -283,6 +293,14 @@ public class SK_OpenIncidentPL extends Base {
 		return driver.findElement(Resolution);
 	}
 
+	
+	public WebElement txtEmailField() {
+
+		By EmailField = By.xpath("//textarea[@id='share-recipient-emails']");
+		return driver.findElement(EmailField);
+	}
+	
+	
 	public WebElement optionResolution() {
 
 		By Resolution = By
@@ -302,6 +320,12 @@ public class SK_OpenIncidentPL extends Base {
 		
 		By Submit = By.xpath("//input[@id='filter-submit'][@class='btn submit']");
 		return driver.findElement(Submit);
+	}
+	
+	public WebElement btnShare() {
+		
+		By Share = By.xpath("//input[@id='share-submit'][@class='btn submit']");
+		return driver.findElement(Share);
 	}
 	
 }

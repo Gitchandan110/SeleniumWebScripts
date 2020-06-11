@@ -287,6 +287,24 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 
 	}
 	
+	
+	public void selectActiveEvents() {
+
+		try {
+
+			Base.scrolltoElement(driver, incidentTable());
+
+			WebElement checkbox = driver.findElement(By.xpath("//tbody//tr[1]//td//input[@type='checkbox']"));
+
+			checkbox.click();
+
+		} catch (Exception e) {
+
+			System.out.println(e);
+		}
+
+	}
+	
 	public void verifyFilter() {
 
 		try {
@@ -336,7 +354,31 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 		}
 	}
 	
-	
+	public void verifyShareIncident() {
+
+		try {
+			if (btnShareIncident() != null && btnShareIncident().isDisplayed()) {
+				btnShareIncident().click();
+				Thread.sleep(2000);
+				System.out.println("Share Linkn found and clicked");
+				txtEmailField().click();
+				txtEmailField().sendKeys("ck@yopmail.com;chandan.kumar@netsutra.com");
+				Base.takeScreenShot("Share Active Incident");
+				btnShare().click();
+				Thread.sleep(5000);
+				
+			}
+
+			else {
+
+				System.out.println("Share Active Incident not working");
+
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	
 
