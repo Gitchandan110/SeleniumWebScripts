@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SK_SA_OpenIncident" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SK_LA_ManageTemplate" hash-for-method="ManageTemplates">ManageTemplates</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -136,11 +136,6 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SK_LA_ManageTemplate" hash-for-method="ManageTemplates">ManageTemplates</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SK_LA_VisitorPassType" hash-for-method="ManageVisitorPassType">ManageVisitorPassType</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -162,6 +157,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SK_LA_OpenIncident" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.TestNGScript.file.SK_SA_OpenIncident" hash-for-method="launchSafetyApp">launchSafetyApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -229,31 +229,31 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.TestNGScript.file.SK_SA_OpenIncident</span>
+              <span class="class-name">com.TestNGScript.file.SK_LA_ManageTemplate</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="launchSafetyApp">
-                  </a> <!-- launchSafetyApp -->
-                  <span class="method-name">launchSafetyApp</span>
-                  <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: Cannot read property &apos;scrollIntoView&apos; of null
-  (Session info: chrome=83.0.4103.97)
+                  <a name="ManageTemplates">
+                  </a> <!-- ManageTemplates -->
+                  <span class="method-name">ManageTemplates</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;radio&quot; ng-model=&quot;vm.frm.active&quot; ng-value=&quot;false&quot; class=&quot;pcode-control ng-pristine ng-untouched ng-valid ng-not-empty&quot; name=&quot;6&quot; value=&quot;false&quot;&gt; is not clickable at point (244, 548). Other element would receive the click: &lt;div class=&quot;option ui-select-choices-row-inner&quot; data-selectable=&quot;&quot; uis-transclude-append=&quot;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=83.0.4103.106)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CHANDAN&apos;, ip: &apos;192.168.42.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Chandan\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: c58478c761f78fdc030778578ed11608
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Chandan\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56439}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f5e5d9698609544178b4b69371f9c88b
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-	at com.Commonutills.file.Base.scrolltoElement(Base.java:100)
-	at com.BussinessFlow.file.SK_OpenIncidentBL.verifyVideoContainer(SK_OpenIncidentBL.java:82)
-	at com.TestNGScript.file.SK_SA_OpenIncident.launchSafetyApp(SK_SA_OpenIncident.java:43)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.BussinessFlow.file.SK_ManageTemplatesBL.selectInactiveRadioBtn(SK_ManageTemplatesBL.java:221)
+	at com.TestNGScript.file.SK_LA_ManageTemplate.ManageTemplates(SK_LA_ManageTemplate.java:54)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -338,6 +338,21 @@ Session ID: c58478c761f78fdc030778578ed11608
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.TestNGScript.file.SK_SA_OpenIncident</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="launchSafetyApp">
+                  </a> <!-- launchSafetyApp -->
+                  <span class="method-name">launchSafetyApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.TestNGScript.file.SK_Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -360,21 +375,6 @@ Session ID: c58478c761f78fdc030778578ed11608
                   <a name="loginSASafetyKuvrr">
                   </a> <!-- loginSASafetyKuvrr -->
                   <span class="method-name">loginSASafetyKuvrr</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.TestNGScript.file.SK_LA_ManageTemplate</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="ManageTemplates">
-                  </a> <!-- ManageTemplates -->
-                  <span class="method-name">ManageTemplates</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -699,92 +699,92 @@ data.addRows(21);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'launchSafetyApp')
 data.setCell(0, 2, 'com.TestNGScript.file.SK_LA_MenuList')
-data.setCell(0, 3, 314095);
+data.setCell(0, 3, 320070);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'MangaeVisitorPasses')
-data.setCell(1, 2, 'com.TestNGScript.file.SK_LA_VisitorPasses')
-data.setCell(1, 3, 115795);
+data.setCell(1, 1, 'launchSafetyApp')
+data.setCell(1, 2, 'com.TestNGScript.file.SK_LA_ClosedIncident')
+data.setCell(1, 3, 124289);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'launchSafetyApp')
-data.setCell(2, 2, 'com.TestNGScript.file.SK_LA_ClosedIncident')
-data.setCell(2, 3, 115179);
+data.setCell(2, 1, 'MangaeVisitorPasses')
+data.setCell(2, 2, 'com.TestNGScript.file.SK_LA_VisitorPasses')
+data.setCell(2, 3, 120181);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'ManageVisitorPassType')
 data.setCell(3, 2, 'com.TestNGScript.file.SK_LA_VisitorPassType')
-data.setCell(3, 3, 105899);
+data.setCell(3, 3, 106137);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'ManageTemplates')
-data.setCell(4, 2, 'com.TestNGScript.file.SK_LA_ManageTemplate')
-data.setCell(4, 3, 103440);
+data.setCell(4, 1, 'launchSafetyApp')
+data.setCell(4, 2, 'com.TestNGScript.file.SK_Observer_OpenIncident')
+data.setCell(4, 3, 94158);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'launchSafetyApp')
-data.setCell(5, 2, 'com.TestNGScript.file.SK_LA_OpenIncident')
-data.setCell(5, 3, 93883);
+data.setCell(5, 1, 'verifyReport')
+data.setCell(5, 2, 'com.TestNGScript.file.SK_LA_HomePage')
+data.setCell(5, 3, 93976);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'launchSafetyApp')
-data.setCell(6, 2, 'com.TestNGScript.file.SK_Observer_OpenIncident')
-data.setCell(6, 3, 92528);
+data.setCell(6, 2, 'com.TestNGScript.file.SK_SA_OpenIncident')
+data.setCell(6, 3, 81943);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'ManageTemplates')
-data.setCell(7, 2, 'com.TestNGScript.file.SK_LA_Reports')
-data.setCell(7, 3, 84275);
+data.setCell(7, 1, 'IssueVisitorPass')
+data.setCell(7, 2, 'com.TestNGScript.file.SK_LA_VisitorPasses')
+data.setCell(7, 3, 78735);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyReport')
-data.setCell(8, 2, 'com.TestNGScript.file.SK_LA_HomePage')
-data.setCell(8, 3, 83677);
+data.setCell(8, 1, 'EditVisitorPassType')
+data.setCell(8, 2, 'com.TestNGScript.file.SK_LA_VisitorPassType')
+data.setCell(8, 3, 71873);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'CreateVisitorPassType')
-data.setCell(9, 2, 'com.TestNGScript.file.SK_LA_VisitorPassType')
-data.setCell(9, 3, 72956);
+data.setCell(9, 1, 'ManageTemplates')
+data.setCell(9, 2, 'com.TestNGScript.file.SK_LA_ManageTemplate')
+data.setCell(9, 3, 71825);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'EditVisitorPassType')
+data.setCell(10, 1, 'CreateVisitorPassType')
 data.setCell(10, 2, 'com.TestNGScript.file.SK_LA_VisitorPassType')
-data.setCell(10, 3, 69523);
+data.setCell(10, 3, 71128);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'IssueVisitorPass')
-data.setCell(11, 2, 'com.TestNGScript.file.SK_LA_VisitorPasses')
-data.setCell(11, 3, 67588);
+data.setCell(11, 1, 'launchSafetyApp')
+data.setCell(11, 2, 'com.TestNGScript.file.SK_LA_OpenIncident')
+data.setCell(11, 3, 65618);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyCloseAction')
-data.setCell(12, 2, 'com.TestNGScript.file.SK_LA_CloseActiveEvents')
-data.setCell(12, 3, 49053);
+data.setCell(12, 1, 'TestOrganizationPage')
+data.setCell(12, 2, 'com.TestNGScript.file.SK_SA_OrganizationList')
+data.setCell(12, 3, 55307);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifyCloseAction')
-data.setCell(13, 2, 'com.TestNGScript.file.SK_LA_ShareActiveEvent')
-data.setCell(13, 3, 33744);
+data.setCell(13, 1, 'ManageTemplates')
+data.setCell(13, 2, 'com.TestNGScript.file.SK_LA_Reports')
+data.setCell(13, 3, 46474);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'loginLASafetyKuvrr')
-data.setCell(14, 2, 'com.TestNGScript.file.SK_Login')
-data.setCell(14, 3, 14575);
+data.setCell(14, 1, 'TestHambugerMenuClick')
+data.setCell(14, 2, 'com.TestNGScript.file.SK_SA_Organization')
+data.setCell(14, 3, 41083);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'launchSafetyApp')
-data.setCell(15, 2, 'com.TestNGScript.file.SK_911Incident')
-data.setCell(15, 3, 13683);
+data.setCell(15, 1, 'verifyCloseAction')
+data.setCell(15, 2, 'com.TestNGScript.file.SK_LA_CloseActiveEvents')
+data.setCell(15, 3, 39452);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'loginObsSafetyKuvrr')
-data.setCell(16, 2, 'com.TestNGScript.file.SK_Login')
-data.setCell(16, 3, 10748);
+data.setCell(16, 1, 'verifyCloseAction')
+data.setCell(16, 2, 'com.TestNGScript.file.SK_LA_ShareActiveEvent')
+data.setCell(16, 3, 32644);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'launchSafetyApp')
-data.setCell(17, 2, 'com.TestNGScript.file.SK_SA_OpenIncident')
-data.setCell(17, 3, 5074);
+data.setCell(17, 1, 'loginObsSafetyKuvrr')
+data.setCell(17, 2, 'com.TestNGScript.file.SK_Login')
+data.setCell(17, 3, 26394);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'loginSASafetyKuvrr')
+data.setCell(18, 1, 'loginLASafetyKuvrr')
 data.setCell(18, 2, 'com.TestNGScript.file.SK_Login')
-data.setCell(18, 3, 4747);
+data.setCell(18, 3, 22668);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'TestOrganizationPage')
-data.setCell(19, 2, 'com.TestNGScript.file.SK_SA_OrganizationList')
-data.setCell(19, 3, 4741);
+data.setCell(19, 1, 'launchSafetyApp')
+data.setCell(19, 2, 'com.TestNGScript.file.SK_911Incident')
+data.setCell(19, 3, 21759);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'TestHambugerMenuClick')
-data.setCell(20, 2, 'com.TestNGScript.file.SK_SA_Organization')
-data.setCell(20, 3, 4558);
+data.setCell(20, 1, 'loginSASafetyKuvrr')
+data.setCell(20, 2, 'com.TestNGScript.file.SK_Login')
+data.setCell(20, 3, 14340);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 minutes</span>
+              <span class="suite-total-time">Total running time: 26 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -817,298 +817,298 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">39028 ms</span>
+                <span class="method-start">44687 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">132915 ms</span>
+                <span class="method-start">110309 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_ShareActiveEvent</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">133966 ms</span>
+                <span class="method-start">111275 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCloseAction</span>
-                <span class="method-start">162187 ms</span>
+                <span class="method-start">142997 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">195933 ms</span>
+                <span class="method-start">175643 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_SA_OpenIncident</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">196802 ms</span>
+                <span class="method-start">176543 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">227858 ms</span>
+                <span class="method-start">224442 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">232937 ms</span>
+                <span class="method-start">306388 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_Observer_OpenIncident</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">233819 ms</span>
+                <span class="method-start">307296 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">266998 ms</span>
+                <span class="method-start">366689 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">359529 ms</span>
+                <span class="method-start">460850 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_911Incident</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">360507 ms</span>
+                <span class="method-start">461751 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">392745 ms</span>
+                <span class="method-start">528336 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">406429 ms</span>
+                <span class="method-start">550101 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_ClosedIncident</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">407305 ms</span>
+                <span class="method-start">551120 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">440554 ms</span>
+                <span class="method-start">615001 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">555741 ms</span>
+                <span class="method-start">739295 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_Reports</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">556741 ms</span>
+                <span class="method-start">740257 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ManageTemplates</span>
-                <span class="method-start">589190 ms</span>
+                <span class="method-start">798915 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">673467 ms</span>
+                <span class="method-start">845390 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_ManageTemplate</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">674370 ms</span>
+                <span class="method-start">846283 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">ManageTemplates</span>
-                <span class="method-start">704287 ms</span>
+                <span class="method-start">898100 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">807727 ms</span>
+                <span class="method-start">969927 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_VisitorPassType</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">808603 ms</span>
+                <span class="method-start">970847 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ManageVisitorPassType</span>
-                <span class="method-start">845971 ms</span>
+                <span class="method-start">1011749 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">951886 ms</span>
+                <span class="method-start">1117900 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">952761 ms</span>
+                <span class="method-start">1118789 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">EditVisitorPassType</span>
-                <span class="method-start">976137 ms</span>
+                <span class="method-start">1154116 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1045661 ms</span>
+                <span class="method-start">1225992 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1046505 ms</span>
+                <span class="method-start">1226833 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CreateVisitorPassType</span>
-                <span class="method-start">1086448 ms</span>
+                <span class="method-start">1268315 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1159409 ms</span>
+                <span class="method-start">1339448 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_VisitorPasses</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1160513 ms</span>
+                <span class="method-start">1340337 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">MangaeVisitorPasses</span>
-                <span class="method-start">1195824 ms</span>
+                <span class="method-start">1390694 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1311620 ms</span>
+                <span class="method-start">1510876 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1312512 ms</span>
+                <span class="method-start">1511708 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">IssueVisitorPass</span>
-                <span class="method-start">1345346 ms</span>
+                <span class="method-start">1560154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1412937 ms</span>
+                <span class="method-start">1638893 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_MenuList</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1413838 ms</span>
+                <span class="method-start">1639821 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">launchSafetyApp</span>
-                <span class="method-start">1441635 ms</span>
+                <span class="method-start">1682383 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1755731 ms</span>
+                <span class="method-start">2002454 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_Login</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1756724 ms</span>
+                <span class="method-start">2003348 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginSASafetyKuvrr</span>
-                <span class="method-start">1780890 ms</span>
+                <span class="method-start">2050036 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1785637 ms</span>
+                <span class="method-start">2064377 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1786443 ms</span>
+                <span class="method-start">2065174 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginLASafetyKuvrr</span>
-                <span class="method-start">1820034 ms</span>
+                <span class="method-start">2110338 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1834610 ms</span>
+                <span class="method-start">2133010 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1835530 ms</span>
+                <span class="method-start">2133899 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginObsSafetyKuvrr</span>
-                <span class="method-start">1856459 ms</span>
+                <span class="method-start">2197248 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1867208 ms</span>
+                <span class="method-start">2223643 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_HomePage</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1868046 ms</span>
+                <span class="method-start">2224485 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyReport</span>
-                <span class="method-start">1892375 ms</span>
+                <span class="method-start">2285108 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">1976057 ms</span>
+                <span class="method-start">2379085 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_SA_Organization</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">1977013 ms</span>
+                <span class="method-start">2379988 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TestHambugerMenuClick</span>
-                <span class="method-start">1999088 ms</span>
+                <span class="method-start">2441505 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">2003646 ms</span>
+                <span class="method-start">2482590 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_SA_OrganizationList</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">2004462 ms</span>
+                <span class="method-start">2483498 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TestOrganizationPage</span>
-                <span class="method-start">2025937 ms</span>
+                <span class="method-start">2543752 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">2030678 ms</span>
+                <span class="method-start">2599061 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestNGScript.file.SK_LA_CloseActiveEvents</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchSKApp</span>
-                <span class="method-start">2031514 ms</span>
+                <span class="method-start">2599995 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCloseAction</span>
-                <span class="method-start">2055005 ms</span>
+                <span class="method-start">2635694 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">2104061 ms</span>
+                <span class="method-start">2675151 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

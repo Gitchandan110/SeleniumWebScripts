@@ -1,140 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite
-    name="Suite"
-    verbose="1" >
 
-    <listeners>
+<suite name="Suite" parallel="false" verbose="1">
 
-        <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
-    </listeners>
+<listeners>
+<listener class-name="com.ExtentReportListner.ExtentReporterNG" />
+</listeners>
 
-    <test name="SK_LA_OpenIncident" >
+  
+  
+<test name="SK_LA_OpenIncident" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_OpenIncident" />
+</classes>
+</test>
 
-        <classes>
 
-            <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
-        </classes>
-    </test>
+<test name="SK_LA_ShareActiveEvent" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ShareActiveEvent" />
+</classes>
+</test>
 
-    <test name="SK_LA_ShareActiveEvent" >
 
-        <classes>
+<test name="SK_SA_OpenIncident" >
+<classes>
+<class name="com.TestNGScript.file.SK_SA_OpenIncident" />
+</classes>
+</test>
 
-            <class name="com.TestNGScript.file.SK_LA_ShareActiveEvent" />
-        </classes>
-    </test>
 
-    <test name="SK_SA_OpenIncident" >
+<test name="SK_Observer_OpenIncident" >
+<classes>
+<class name="com.TestNGScript.file.SK_Observer_OpenIncident" />
+</classes>
+</test>
 
-        <classes>
+    
+<test name="SK_911Incident" >
+<classes>
+<class name="com.TestNGScript.file.SK_911Incident" />
+</classes>
+</test>
 
-            <class name="com.TestNGScript.file.SK_SA_OpenIncident" />
-        </classes>
-    </test>
+<test name="SK_LA_ClosedIncident" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
+</classes>
+</test>
 
-    <test name="SK_Observer_OpenIncident" >
 
-        <classes>
 
-            <class name="com.TestNGScript.file.SK_Observer_OpenIncident" />
-        </classes>
-    </test>
+<test name="SK_LA_Reports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_Reports" />
+</classes>
+</test>
 
-    <test name="SK_911Incident" >
+    
+<test name="SK_LA_ManageTemplate" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ManageTemplate" />
+</classes>
+</test>
 
-        <classes>
+<test name="SK_LA_VisitorPassType" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
+</classes>
+</test>
 
-            <class name="com.TestNGScript.file.SK_911Incident" />
-        </classes>
-    </test>
+   
+<test name="SK_LA_VisitorPasses" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
+</classes>
+</test>
 
-    <test name="SK_LA_ClosedIncident" >
 
-        <classes>
+<test name="SK_LA_MenuList" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_MenuList" />
+</classes>
+</test>
 
-            <class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
-        </classes>
-    </test>
+<test name="SK_Login" >
+<classes>
+<class name="com.TestNGScript.file.SK_Login" />
+</classes>
+</test>
 
-    <test name="SK_LA_Reports" >
+    
+<test name="SK_LA_HomePage" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_HomePage" />
+</classes>
+</test>
 
-        <classes>
+    
+<test name="SK_SA_Organization" >
+<classes>
+<class name="com.TestNGScript.file.SK_SA_Organization" />
+</classes>
+</test>
 
-            <class name="com.TestNGScript.file.SK_LA_Reports" />
-        </classes>
-    </test>
+    
+<test name="SK_SA_OrganizationList" >
+<classes>
+<class name="com.TestNGScript.file.SK_SA_OrganizationList" />
+</classes>
+</test>
 
-    <test name="SK_LA_ManageTemplate" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_ManageTemplate" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_VisitorPassType" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_VisitorPasses" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_MenuList" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_MenuList" />
-        </classes>
-    </test>
-
-    <test name="SK_Login" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_Login" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_HomePage" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_HomePage" />
-        </classes>
-    </test>
-
-    <test name="SK_SA_Organization" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_SA_Organization" />
-        </classes>
-    </test>
-
-    <test name="SK_SA_OrganizationList" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_SA_OrganizationList" />
-        </classes>
-    </test>
-
-    <test name="SK_LA_CloseActiveEvents" >
-
-        <classes>
-
-            <class name="com.TestNGScript.file.SK_LA_CloseActiveEvents" />
-        </classes>
-    </test>
+   
+<test name="SK_LA_CloseActiveEvents" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_CloseActiveEvents" />
+</classes>
+</test>
 
 </suite>
