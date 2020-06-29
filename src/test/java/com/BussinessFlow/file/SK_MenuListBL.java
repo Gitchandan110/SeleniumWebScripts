@@ -3,9 +3,9 @@ package com.BussinessFlow.file;
 import java.util.Set;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SK_MenuListPL;
+import com.PageObjectRepository.file.SK_MenuListPO;
 
-public class SK_MenuListBL extends SK_MenuListPL {
+public class SK_MenuListBL extends SK_MenuListPO {
 
 	public void clickActiveEvents() {
 
@@ -15,8 +15,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, ActiveEvents());
 				ActiveEvents().click();
 				Thread.sleep(5000);
-				Base.scrollEndofthePage(driver);
-				Base.takeScreenShot("ActiveEvents");
+				Base.FullPageScreenShot("Active Events");
 
 			} else {
 
@@ -38,8 +37,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, ClosedEvents());
 				ClosedEvents().click();
 				Thread.sleep(5000);
-				Base.scrollEndofthePage(driver);
-				Base.takeScreenShot("ClosedEvents");
+				Base.FullPageScreenShot("Closed Events");
 
 			} else {
 
@@ -61,7 +59,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, EventNotification());
 				EventNotification().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("EventNotification");
+				Base.FullPageScreenShot("Event Notification");
 
 			} else {
 
@@ -83,7 +81,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, EventAttendence());
 				EventAttendence().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("EventAttendence");
+				Base.FullPageScreenShot("Event Attendence");
 
 			} else {
 
@@ -106,7 +104,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, menuOrganization());
 				menuOrganization().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("OrganizationPage");
+				Base.FullPageScreenShot("Organization");
 
 			} else {
 
@@ -129,8 +127,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 
 				Base.highLightElement(driver, Contacts());
 				Contacts().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("Contacts");
+								
 
 			} else {
 
@@ -155,7 +152,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, EmergencyContact());
 				EmergencyContact().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Contacts");
+				Base.FullPageScreenShot("Emergency Contacts");
 
 			} else {
 
@@ -179,7 +176,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, ExternalContact());
 				ExternalContact().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Contacts");
+				Base.FullPageScreenShot("External Contacts");
 
 			} else {
 
@@ -225,8 +222,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, sendNotifications());
 				sendNotifications().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
-
+				Base.FullPageScreenShot("Send Notifications");
 			} else {
 
 				System.out.println("SendNotification() not found");
@@ -239,15 +235,16 @@ public class SK_MenuListBL extends SK_MenuListPL {
 
 	}
 	
-	public void clickScheduletification() {
+	public void clickScheduleNotification() {
 
 		try {
 
 			if (scheduleNotifications() != null && scheduleNotifications().isDisplayed()) {
 				Base.highLightElement(driver, scheduleNotifications());
 				scheduleNotifications().click();
+				System.out.println("Schedule Notifications found and clicked");
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Schedule Notification");
 
 			} else {
 
@@ -269,7 +266,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, ManageGroups());
 				ManageGroups().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Manage Groups");
 
 			} else {
 
@@ -291,7 +288,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, menuManageTemplates());
 				menuManageTemplates().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Manage Templates");
 
 			} else {
 
@@ -315,7 +312,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, menuTipNotification());
 				menuTipNotification().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Tip Notification");
 
 			} else {
 
@@ -339,7 +336,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				Base.highLightElement(driver, menuNotificationHistory());
 				menuNotificationHistory().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Notification History");
 
 			} else {
 
@@ -382,6 +379,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				menuVisitorPassType().click();
 				System.out.println("menuVisitorPassType selected");
 				Thread.sleep(5000);
+				Base.FullPageScreenShot("Visitor Pass Type");
 
 			} else {
 
@@ -403,6 +401,7 @@ public class SK_MenuListBL extends SK_MenuListPL {
 				linkVisitorPasses().click();
 				System.out.println("Visitor Passes selected");
 				Thread.sleep(5000);
+				Base.FullPageScreenShot("Visitor Passes");
 
 			} else {
 

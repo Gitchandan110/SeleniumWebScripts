@@ -18,7 +18,7 @@ import com.BussinessFlow.file.SK_MenuListBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_VisitorPasses extends Base {
+public class SK_LA_ManageVisitorPasses extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
@@ -51,23 +51,6 @@ public class SK_LA_VisitorPasses extends Base {
 	}
 	
 	
-	@Test(priority=2)
-
-	public void IssueVisitorPass() throws IOException, InterruptedException {
-
-		
-		loginSKbl.loginLA();
-    	homePageMenuBL.verifyHamburgerMenu();
-    	menuList.clickMenuVisitorManagement();
-    	menuList.clickVisitorPasses();
-    	visitorPassesbl.clickIssueVisitorPass();
-    	issuePassbl.verifyIssueVisitorPass();
-	}
-
-	
-	
-	
-
 	@AfterMethod
 
 	public void closeBrowser() {

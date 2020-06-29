@@ -2,11 +2,11 @@ package com.BussinessFlow.file;
 
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_BroadcastPL;
+import com.PageObjectRepository.file.SK_BroadcastPO;
 
-public class SK_BroadcastBL extends SK_BroadcastPL {
+public class SK_BroadcastBL extends SK_BroadcastPO {
 
-	SK_BroadcastPL BroadcastPL;
+	SK_BroadcastPO BroadcastPL;
 	
 	public void verifyBroadcastBtn() {
 

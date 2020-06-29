@@ -13,11 +13,11 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_OrganizationPL;
+import com.PageObjectRepository.file.SK_OrganizationPO;
 
-public class SK_OrganizationBL extends SK_OrganizationPL {
+public class SK_OrganizationBL extends SK_OrganizationPO {
 
-	SK_OrganizationPL organizationpl;
+	SK_OrganizationPO organizationpl;
 	String OrganizationSheet = "Web_Organization";
 
 	public void getOrgPageRowCount() {

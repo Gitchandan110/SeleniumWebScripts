@@ -1,21 +1,24 @@
 package com.BussinessFlow.file;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SK_ManageTemplatesPL;
+import com.PageObjectRepository.file.SK_ManageTemplatesPO;
 
 import junit.framework.Assert;
 
-public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
+public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 
 	public void verifyManageTemplates() {
 
 		try {
+			
 			if (pageManageTemplate() != null && pageManageTemplate().isDisplayed()) {
 				Assert.assertEquals("Manage Templates", driver.getTitle());
 				System.out.println("Landed on Manage Templates Page");
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Manage Templates");
 			}
 
 			else {
@@ -28,7 +31,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				filterTemplateTiltle().sendKeys("NTGeo");
 				btnFilter().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.takeScreenShot("Manage Templates");
 				btnClear().click();
 				System.out.println("filterTemplateTiltle() Pass");
 				Base.waitFor30Seconds(filterStatus());
@@ -41,7 +44,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				filterActiveStatus().click();
 				btnFilter().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.takeScreenShot("Manage Templates");
 				btnClear().click();
 				System.out.println("filterActiveStatus() Pass");
 				Base.waitFor30Seconds(filterStatus());
@@ -49,7 +52,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				filterInactiveStatus().click();
 				btnFilter().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.takeScreenShot("Manage Templates");
 				btnClear().click();
 				System.out.println("filterInactiveStatus() Pass");
 				Thread.sleep(5000);
@@ -59,7 +62,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				System.out.println("linkDetails found");
 				linkDetails().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.FullPageScreenShot("Notification Template Detail");
 				Base.scrollEndofthePage(driver);
 				Thread.sleep(3000);
 				btnCancelDetails().click();
@@ -124,6 +127,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 		try {
 			if (dropdownUserGroups() != null && dropdownUserGroups().isDisplayed()) {
 				dropdownUserGroups().click();
+				Base.takeScreenShot("Manage Templates");
 				System.out.println("dropdownUserGroups() click");
 			}
 			int CountUserGroup = UserGroupList().size();
@@ -170,12 +174,12 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 		try {
 			if (dropdownUsers() != null && dropdownUsers().isDisplayed()) {
 				dropdownUsers().click();
-
+				Base.takeScreenShot("Manage Templates");
 			}
 			int CountUsers = UsersList().size();
-			System.out.println("Totla Number of Userss are :" + CountUsers);
-/*
-			for (int i = 1; i < 73; i++) {
+			System.out.println("Total Number of Userss are :" + CountUsers);
+
+			for (int i = 1; i < 7; i++) {
 
 				String UsersName = driver.findElement(By.xpath(
 						"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i + "]//div//span"))
@@ -185,9 +189,9 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				Users().click();
 				dropdownUsers().click();
 
-			}*/
+			}
 			
-			int j=1;
+		/*	int j=1;
 			
 			while (CountUsers >= j ) {
 				
@@ -201,7 +205,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 				j++;
 			}
 			
-			
+			*/
 			
 			
 			chkbxGeoAware().click();
@@ -223,17 +227,27 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPL {
 		
 	}
 	
-public void selectSubmitBtn() throws InterruptedException {
-		
-		if(BtnSubmit() !=null && BtnSubmit().isDisplayed()) {
-			
-			BtnSubmit().click();
-			Thread.sleep(5000);
+	public void selectSubmitBtn() throws InterruptedException, IOException {
+
+		try {
+			if (BtnSubmit() != null && BtnSubmit().isDisplayed()) {
+				Base.FullPageScreenShot("Create Notification Templates");
+				BtnSubmit().click();
+				Thread.sleep(5000);
+
+			}
+
+			if (ErrorMessage().isDisplayed()) {
+				System.out.println("Create Notification Template Fail");
+				Base.FullPageScreenShot("Create Notification Template Fail");
+
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
 
 	
 }

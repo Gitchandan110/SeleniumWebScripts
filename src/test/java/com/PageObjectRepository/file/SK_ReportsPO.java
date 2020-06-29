@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_ReportsPL extends Base {
+public class SK_ReportsPO extends Base {
 
 	public WebElement EventsReport() {
 

@@ -1,5 +1,6 @@
 package com.Commonutills.file;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -9,6 +10,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
+
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -23,6 +27,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class Base {
 
@@ -122,7 +129,7 @@ public class Base {
 
 	}
 
-	public static void takeScreenShot(String screenName) throws IOException {
+	public static void takeScreenShot(String ScreenName) throws IOException {
 
 		String imageLocation = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots\\";
 		// String screenName= obj.getTagName();
@@ -130,7 +137,23 @@ public class Base {
 		try {
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File capturedImage = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFileToDirectory(capturedImage, new File(imageLocation + screenName));
+			FileUtils.copyFileToDirectory(capturedImage, new File(imageLocation + ScreenName));
+			System.out.println("Screenshot captured");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void FullPageScreenShot(String screenName) throws IOException {
+
+		try {
+			Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+					.takeScreenshot(driver);
+
+			ImageIO.write(fpScreenshot.getImage(), "png", new File(".\\FullPage_Screenshots\\" + screenName + ".png"));
+
 			System.out.println("Screenshot captured");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -163,8 +186,7 @@ public class Base {
 		}
 
 	}
-	
-	
+
 	public static void waitFor180Seconds(WebElement element) {
 
 		try {
@@ -196,7 +218,7 @@ public class Base {
 
 	}
 
-	public static void manageChildWindow() {
+	public static void manageChildWindow() throws IOException {
 
 		// It will return the parent window name as a String
 		String mainWindow = driver.getWindowHandle();
@@ -218,12 +240,12 @@ public class Base {
 				System.out.println("Driver is switched to Child Window");
 				System.out.println(driver.switchTo().window(childWindow).getTitle());
 				System.out.println(SystemTime());
-		
+				Base.FullPageScreenShot("Incident Screen");
+
 			}
 
 		}
 
 	}
-	
-	
+
 }

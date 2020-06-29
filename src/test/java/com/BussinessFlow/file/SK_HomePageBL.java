@@ -5,25 +5,47 @@ import java.util.Set;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_ERPPL;
-import com.PageObjectRepository.file.SK_HomePagePL;
-import com.PageObjectRepository.file.SK_MapPL;
+import com.PageObjectRepository.file.SK_ERPPO;
+import com.PageObjectRepository.file.SK_HomePagePO;
+import com.PageObjectRepository.file.SK_MapPO;
 
-public class SK_HomePageBL extends SK_HomePagePL {
+public class SK_HomePageBL extends SK_HomePagePO {
 
 	String SanitySheet = "Sanity_SK";
-	SK_MapPL mapPl = new SK_MapPL();
-	SK_ERPPL ERPL = new SK_ERPPL();
+	SK_MapPO mapPl = new SK_MapPO();
+	SK_ERPPO ERPL = new SK_ERPPO();
+	
+	
+	public void verifyActiveEventsPage() {
+
+		try {
+
+			if (driver.getTitle().contains("Active Events")) {
+				System.out.println("Active Events Page Title verified");
+				Base.FullPageScreenShot("ActiveEvents");
+				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Pass");
+
+			} else {
+
+				System.out.println("Active Events Page Title not verified");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Active Events Page : " + ex.getStackTrace());
+		}
+
+	}
 
 	public void verifyTabClosedIncident() {
 
 		try {
 
 			if (tabClosedIncident().isDisplayed()) {
-
 				Base.highLightElement(driver, tabClosedIncident());
 				tabClosedIncident().click();
 				Thread.sleep(5000);
+				Base.FullPageScreenShot("ClosedEvents");
 
 			} else {
 
@@ -45,6 +67,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 7, 1, "Pass");
 				Base.highLightElement(driver, HamburgerMenu());
 				HamburgerMenu().click();
+				Base.FullPageScreenShot("MenuOptions");
 				ExcelWrite.writeSanitySheet(SanitySheet, 8, 1, "Pass");
 				// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 				Thread.sleep(7000);
@@ -71,7 +94,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 				Base.highLightElement(driver, btnReports());
 				btnReports().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Reports");
+				Base.FullPageScreenShot("Reports");
 
 			} else {
 
@@ -112,6 +135,7 @@ public class SK_HomePageBL extends SK_HomePagePL {
 					if (!parentWindowId.equalsIgnoreCase(childWindowId)) {
 						driver.switchTo().window(childWindowId);
 						Thread.sleep(5000);
+						Base.FullPageScreenShot("MapScreen");
 
 						if (mapPl.dropdownMAP() != null && mapPl.dropdownMAP().isDisplayed()) {
 							Base.highLightElement(driver, mapPl.dropdownMAP());
@@ -119,10 +143,9 @@ public class SK_HomePageBL extends SK_HomePagePL {
 							mapPl.mapNetsutra().click();
 							driver.manage().window().maximize();
 							Thread.sleep(10000);
-							Base.takeScreenShot("Map Indoor");
+							Base.FullPageScreenShot("MapNetsutra");
 							mapPl.btnMapBox().click();
 							Thread.sleep(3000);
-							Base.takeScreenShot("Map Indoor");
 							driver.close();
 
 						} else {
@@ -163,18 +186,16 @@ public class SK_HomePageBL extends SK_HomePagePL {
 
 						if (ERPL.dropdownERP() != null && ERPL.dropdownERP().isDisplayed()) {
 							Base.highLightElement(driver, ERPL.dropdownERP());
-							Base.takeScreenShot("ERP");
 							ERPL.dropdownERP().click();
 							Thread.sleep(3000);
-							Base.takeScreenShot("ERP");
+							Base.FullPageScreenShot("ERP");
 							ERPL.erpEarthquick().click();
 							Thread.sleep(3000);
-							Base.takeScreenShot("ERP");
+							Base.FullPageScreenShot("ERP_Earthquick");
 							ERPL.dropdownERP().click();
 							Thread.sleep(3000);
 							ERPL.erpEvacuation().click();
 							Thread.sleep(3000);
-							Base.takeScreenShot("ERP");
 							driver.close();
 
 						}

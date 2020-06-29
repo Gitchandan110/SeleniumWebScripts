@@ -3,10 +3,10 @@ package com.BussinessFlow.file;
 import java.util.Set;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SK_MenuListPL;
-import com.PageObjectRepository.file.SK_ReportsPL;
+import com.PageObjectRepository.file.SK_MenuListPO;
+import com.PageObjectRepository.file.SK_ReportsPO;
 
-public class SK_ReportsBL extends SK_ReportsPL {
+public class SK_ReportsBL extends SK_ReportsPO {
 
 	public void clickEventsReport() {
 

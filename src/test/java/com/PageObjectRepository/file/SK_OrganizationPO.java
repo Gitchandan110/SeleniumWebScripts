@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_OrganizationPL extends Base {
+public class SK_OrganizationPO extends Base {
 
 	public WebElement colDetails() {
 

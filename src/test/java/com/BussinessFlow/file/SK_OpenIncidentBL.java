@@ -14,11 +14,11 @@ import org.openqa.selenium.interactions.Actions;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_OpenIncidentPL;
+import com.PageObjectRepository.file.SK_OpenIncidentPO;
 
-public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
+public class SK_OpenIncidentBL extends SK_OpenIncidentPO {
 
-	SK_OpenIncidentPL OpenIncidentPL;
+	SK_OpenIncidentPO OpenIncidentPL;
 	String SanitySheet = "Sanity_SK";
 
 	public void clickIncomingIncident() throws InterruptedException {
@@ -34,7 +34,6 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 				Thread.sleep(3000);
 				Base.highLightElement(driver, IncomingIncident());
 				ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
-				Base.takeScreenShot("Active Screen");
 				Thread.sleep(2000);
 				IncomingIncident().click();
 				System.out.println("Incoming Incident found and selected");
@@ -53,7 +52,6 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 					Thread.sleep(3000);
 					Base.highLightElement(driver, OpenIncident());
 					ExcelWrite.writeSanitySheet(SanitySheet, 32, 1, "Pass");
-					Base.takeScreenShot("Open Incident");
 					Thread.sleep(2000);
 					OpenIncident().click();
 					System.out.println("Open Incident found and selected");
@@ -81,8 +79,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 		System.out.println(SystemTime());
 		Base.scrolltoElement(driver, videoContainer());
 		Thread.sleep(10000);
-		Base.takeScreenShot("Incident Screen");
-
+		
 	}
 
 	public void click911Incident() throws InterruptedException {
@@ -249,9 +246,9 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPL {
 			if (txtIncidentActionResponse().isDisplayed()) {
 				txtIncidentActionResponse().click();
 				txtIncidentActionResponse().sendKeys("Its a False Alarm");
-				Base.takeScreenShot("Incident Screen");
-				Thread.sleep(2000);
 				btnSaveIncidentResponse().click();
+				Thread.sleep(5000);
+				Base.FullPageScreenShot("Incident Screen Action");
 				ExcelWrite.writeSanitySheet(SanitySheet, 38, 1, "Pass");
 			}
 		} catch (Exception e) {

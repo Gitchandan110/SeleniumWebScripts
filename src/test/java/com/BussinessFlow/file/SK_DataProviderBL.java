@@ -1,8 +1,8 @@
 package com.BussinessFlow.file;
 
-import com.PageObjectRepository.file.SK_LoginPL;
+import com.PageObjectRepository.file.SK_LoginPO;
 
-public class SK_DataProviderBL extends SK_LoginPL{
+public class SK_DataProviderBL extends SK_LoginPO{
 	
 	
 		

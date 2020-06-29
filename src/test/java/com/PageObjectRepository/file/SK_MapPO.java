@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_ERPPL extends Base{
+public class SK_MapPO extends Base{
 	
-	public WebElement dropdownERP() {
+	public WebElement dropdownMAP() {
 
 		try {
-			By ddErp = By.xpath("//a[@class='dd-selected']");
-			return driver.findElement(ddErp);
+			By ddmap = By.xpath("//select[@id='map-list']");
+			return driver.findElement(ddmap);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -19,11 +19,11 @@ public class SK_ERPPL extends Base{
 		return null;
 	}
 	
-	public WebElement erpEarthquick() {
+	public WebElement mapNetsutra() {
 
 		try {
-			By earthQuick = By.xpath("//label[@class='dd-option-text' and contains(text(),'Earthquick')]");
-			return driver.findElement(earthQuick);
+			By mapNetsutra = By.xpath("//select[@id='map-list']//option [contains(text(),'Netsutra')]");
+			return driver.findElement(mapNetsutra);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,19 +31,17 @@ public class SK_ERPPL extends Base{
 		return null;
 	}
 	
-	public WebElement erpEvacuation() {
+	public WebElement btnMapBox() {
 
 		try {
-			By earthQuick = By.xpath("//label[@class='dd-option-text' and contains(text(),'Evacuation')]");
-			return driver.findElement(earthQuick);
+			By MapBox = By.xpath("//button[@class='mapboxgl-ctrl-icon mapbox-gl-draw_line']");
+			return driver.findElement(MapBox);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
-	
-
 	
 
 

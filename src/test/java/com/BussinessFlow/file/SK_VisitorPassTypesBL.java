@@ -4,11 +4,11 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SK_VisitorPassTypePL;
+import com.PageObjectRepository.file.SK_VisitorPassTypePO;
 
 import junit.framework.Assert;
 
-public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePL {
+public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePO {
 
 	public void verifyManageVisitorPassTypes() {
 

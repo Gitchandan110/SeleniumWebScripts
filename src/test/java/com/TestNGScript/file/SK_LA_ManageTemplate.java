@@ -46,7 +46,7 @@ public class SK_LA_ManageTemplate extends Base {
     	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickNotifications();
     	menuList.clickManageTemplates();
-    //	manageTemplatesbl.verifyManageTemplates();
+    	manageTemplatesbl.verifyManageTemplates();
     	manageTemplatesbl.clickLinkCreateTemplate();
     	manageTemplatesbl.fillNotificationContent();
     	manageTemplatesbl.selectUserGroup();

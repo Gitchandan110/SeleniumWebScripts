@@ -9,9 +9,9 @@ import org.openqa.selenium.OutputType;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_ClosedIncidentPL;
+import com.PageObjectRepository.file.SK_ClosedIncidentPO;
 
-public class SK_ClosedIncidentBL extends SK_ClosedIncidentPL {
+public class SK_ClosedIncidentBL extends SK_ClosedIncidentPO {
 
 	String SanitySheet = "Sanity_SK";
 	
@@ -24,7 +24,6 @@ public class SK_ClosedIncidentBL extends SK_ClosedIncidentPL {
 			if (closedSOS() !=null && closedSOS().isDisplayed()) {
 				Base.scrolltoElement(driver, closedSOS());
 				String mainWindow = driver.getWindowHandle();
-				Base.takeScreenShot("Closed Incidents");
 				ExcelWrite.writeSanitySheet(SanitySheet, 33, 1, "Pass");
 				Thread.sleep(3000);
 				closedSOS().click();
@@ -35,7 +34,7 @@ public class SK_ClosedIncidentBL extends SK_ClosedIncidentPL {
 				ExcelWrite.writeSanitySheet(SanitySheet, 34, 1, "Pass");
 				System.out.println("Please wait for 10 seconds");
 				Thread.sleep(10000);
-				Base.takeScreenShot("Closed Incidents");
+				Base.FullPageScreenShot("closedSOS");
 				driver.close();
 				driver.switchTo().window(mainWindow);
 				
@@ -65,8 +64,8 @@ public class SK_ClosedIncidentBL extends SK_ClosedIncidentPL {
 				Base.scrolltoElement(driver, videoContainer());
 				System.out.println("Please wait for 10 seconds");
 				Thread.sleep(10000);
+				Base.FullPageScreenShot("closedSafeWalk");
 				ExcelWrite.writeSanitySheet(SanitySheet, 35, 1, "Pass");
-				Base.takeScreenShot("Closed Incidents");
 				driver.close();
 				driver.switchTo().window(mainWindow);
 
@@ -94,7 +93,7 @@ public class SK_ClosedIncidentBL extends SK_ClosedIncidentPL {
 				Thread.sleep(5000);
 				Base.manageChildWindow();
 				Base.scrolltoElement(driver, videoContainer());
-				Base.takeScreenShot("Closed Incidents");
+				Base.FullPageScreenShot("closed911");
 				System.out.println("Please wait for 5 seconds");
 				Thread.sleep(5000);
 				ExcelWrite.writeSanitySheet(SanitySheet, 36, 1, "Pass");

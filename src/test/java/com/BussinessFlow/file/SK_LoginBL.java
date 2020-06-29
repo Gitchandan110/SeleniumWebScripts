@@ -9,14 +9,14 @@ import org.testng.Assert;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_LoginPL;
+import com.PageObjectRepository.file.SK_LoginPO;
 
-public class SK_LoginBL extends SK_LoginPL {
+public class SK_LoginBL extends SK_LoginPO {
 
 	String LoginDataSheet = "Login";
 	String SanitySheet = "Sanity_SK";
 
-	public void loginSA() throws IOException {
+	public void loginSA() throws IOException, InterruptedException {
 
 		try {
 			if (Email().isDisplayed()) {
@@ -30,7 +30,6 @@ public class SK_LoginBL extends SK_LoginPL {
 			if (Password().isDisplayed()) {
 				Password().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 3));
 				System.out.println("Password entered");
-				
 
 			}
 
@@ -40,35 +39,25 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (BtnContinue().isDisplayed()) {
-				Base.takeScreenShot("LoginScreen");
+				Base.FullPageScreenShot("LoginScreen_SA");
 				BtnContinue().click();
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 
 			}
 
-			if (driver.getTitle().contains("Active Events")) {
-
-				System.out.println("Page Title verified. Login successfull");
-				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Pass");
-
-			}
-
-		/*	if (errorLoginFail().isDisplayed()) {
+			if (errorLoginFail().isDisplayed()) {
+				Base.FullPageScreenShot("LoginFail_SA");
 				System.out.println("Unable to Login due to incorrect user credential");
-				Base.takeScreenShot("LoginScreen");
 				ExcelWrite.writeSanitySheet(SanitySheet, 1, 1, "Fail");
-			}*/
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception message:" + ex.getMessage());
-			System.out.println("StackTrace error:" + ex.getStackTrace());
-			System.out.println("ExceptionCause :" + ex.getCause());
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
 
-	public void loginLA() throws IOException {
+	public void loginLA() throws IOException, InterruptedException {
 
 		try {
 			if (Email().isDisplayed()) {
@@ -81,6 +70,7 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (Password().isDisplayed()) {
+
 				Password().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 5));
 				System.out.println("Password entered");
 
@@ -92,35 +82,25 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (BtnContinue().isDisplayed()) {
-				Base.takeScreenShot("LoginScreen");
+				Base.FullPageScreenShot("LoginScreen_LA");
 				BtnContinue().click();
 				Thread.sleep(5000);
 
 			}
 
-			if (driver.getTitle().contains("Active Events")) {
-
-				System.out.println("Page Title verified. Login successfull");
-				ExcelWrite.writeSanitySheet(SanitySheet, 2, 1, "Pass");
-
-			}
-
-		/*	if (errorLoginFail().isDisplayed()) {
-				Base.takeScreenShot("LoginScreen");
+			if (errorLoginFail().isDisplayed()) {
+				Base.FullPageScreenShot("LoginFail_LA");
 				System.out.println("Unable to Login due to incorrect user credential");
 				ExcelWrite.writeSanitySheet(SanitySheet, 21, 2, "Fail");
-			}*/
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception message:" + ex.getMessage());
-			System.out.println("StackTrace error:" + ex.getStackTrace());
-			System.out.println("ExceptionCause :" + ex.getCause());
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
 
-	public void loginObserver() throws IOException {
+	public void loginObserver() throws IOException, InterruptedException {
 
 		try {
 			if (Email().isDisplayed()) {
@@ -144,32 +124,21 @@ public class SK_LoginBL extends SK_LoginPL {
 			}
 
 			if (BtnContinue().isDisplayed()) {
-				Base.takeScreenShot("LoginScreen");
+				Base.FullPageScreenShot("LoginScreen_Observer");
 				BtnContinue().click();
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 
 			}
 
-			if (driver.getTitle().contains("Active Events")) {
-
-				System.out.println("Page Title verified. Login successfull");
-				ExcelWrite.writeSanitySheet(SanitySheet, 3, 1, "Pass");
-
-			}
-
-		/*	if (errorLoginFail().isDisplayed()) {
-				Base.takeScreenShot("LoginScreen");
+			if (errorLoginFail().isDisplayed()) {
+				Base.FullPageScreenShot("LoginFail_Observer");
 				System.out.println("Unable to Login due to incorrect user credential");
 				ExcelWrite.writeSanitySheet(SanitySheet, 3, 1, "Fail");
-			}*/
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception message:" + ex.getMessage());
-			System.out.println("StackTrace error:" + ex.getStackTrace());
-			System.out.println("ExceptionCause :" + ex.getCause());
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
-
 }

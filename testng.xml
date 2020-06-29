@@ -71,11 +71,19 @@
 </test>
 
    
-<test name="SK_LA_VisitorPasses" >
+<test name="SK_LA_ManageVisitorPasses" >
 <classes>
-<class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
+<class name="com.TestNGScript.file.SK_LA_ManageVisitorPasses" />
 </classes>
 </test>
+
+
+<test name="SK_LA_CreateVisitorPasses" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_CreateVisitorPasses" />
+</classes>
+</test>
+
 
 
 <test name="SK_LA_MenuList" >

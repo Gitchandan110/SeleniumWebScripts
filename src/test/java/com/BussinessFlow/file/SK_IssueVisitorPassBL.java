@@ -3,32 +3,35 @@ package com.BussinessFlow.file;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import com.Commonutills.file.Base;
-import com.PageObjectRepository.file.SK_VisitorsPL;
+import com.PageObjectRepository.file.SK_VisitorsPO;
 import junit.framework.Assert;
 
-public class SK_IssueVisitorPassBL extends SK_VisitorsPL {
+public class SK_IssueVisitorPassBL extends SK_VisitorsPO {
 
 	public void verifyIssueVisitorPass() {
 
 		try {
-				Assert.assertEquals("Issue Visitor Pass", driver.getTitle());
-				System.out.println("Landed on Issue A Visitor Pass Page");
-				if (btnCountryCode() != null && btnCountryCode().isDisplayed()) {
+			Assert.assertEquals("Issue Visitor Pass", driver.getTitle());
+			System.out.println("Landed on Issue A Visitor Pass Page");
+			if (btnCountryCode() != null && btnCountryCode().isDisplayed()) {
 				Base.highLightElement(driver, btnCountryCode());
 				btnCountryCode().click();
 				Thread.sleep(3000);
+				Base.FullPageScreenShot("IssueVisitorPass_CountryCode");
 				CountryCodeIndia().click();
 				System.out.println("Country Code Selected");
-				
+
 			}
 
 			if (txtMobile() != null && txtMobile().isDisplayed()) {
 				Base.highLightElement(driver, txtMobile());
 				txtMobile().sendKeys("0000123456");
-				Base.takeScreenShot("Issue A Visitor Pass");
+				btnCountryCode().click();
+				Thread.sleep(2000);
+				Base.FullPageScreenShot("IssueVisitorPass_CountryCode");
 				btnSubmit().click();
 				Thread.sleep(3000);
-				
+
 			}
 
 			if (txtFirstName() != null && txtFirstName().isDisplayed()) {
@@ -43,25 +46,33 @@ public class SK_IssueVisitorPassBL extends SK_VisitorsPL {
 				ddHost().click();
 				ddHost().sendKeys("Lackorg@yopmail.com");
 				selectHost().click();
+				txtEmail().click();
+				txtEmail().sendKeys("Vtest@yopmail.com");
 				radioSafetyKuvrrApp().click();
+				chkbxERP().click();
+				chkbxMaps().click();
 				txtNotes().click();
 				txtNotes().sendKeys("Visitor Notes");
-				Base.takeScreenShot("Issue A Visitor Pass");
 				Base.scrollEndofthePage(driver);
 				ddVisitorPassType().click();
 				Thread.sleep(2000);
+				Base.takeScreenShot("IssueVisitorPass");
 				optionPassType().click();
 				Thread.sleep(2000);
-				Base.highLightElement(driver, btnCanceIssueVisitorPass());
-			//	btnSubmitCreateVisitor().click();
-				btnCanceIssueVisitorPass().click();
+				Base.FullPageScreenShot("Create Visitor Pass");
+				Base.highLightElement(driver, btnSubmitCreateVisitor());
+				btnSubmitCreateVisitor().click();
 				Thread.sleep(5000);
-				
-		
+
+				if (ErrorMessage().isDisplayed()) {
+					System.out.println("Create Visitor Pass Fail");
+					Base.FullPageScreenShot("Create Visitor Pass Fail");
+				}
+
 			}
 		} catch (Exception e) {
 
-			System.out.println("clickBtnNewVisitor()" + e.getMessage());
+			System.out.println("verifyIssueVisitorPass" + e.getMessage());
 
 		}
 	}

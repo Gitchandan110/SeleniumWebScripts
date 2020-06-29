@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_VisitorsPL extends Base {
+public class SK_VisitorsPO extends Base {
 
 	public WebElement txtManageVisitorPasses() {
 
@@ -71,12 +71,12 @@ public class SK_VisitorsPL extends Base {
 	public WebElement ddType() {
 
 		try {
-			By status = By.xpath("//select[@id='is_app_user']");
-			return driver.findElement(status);
+			By Type = By.xpath("//select[@id='is_app_user']");
+			return driver.findElement(Type);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("Exception in WebElement ddStatus:" + e.getMessage());
+			System.out.println("Exception in WebElement ddType:" + e.getMessage());
 		}
 		return null;
 	}
@@ -106,6 +106,62 @@ public class SK_VisitorsPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement ddStatus() {
+
+		try {
+			By status = By.xpath("//select[@id='visitor_status']");
+			return driver.findElement(status);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception in WebElement ddStatus:" + e.getMessage());
+		}
+		return null;
+	}
+	
+	
+	public WebElement ddStatusAll() {
+
+		try {
+			By statusAll = By.xpath("//select[@id='visitor_status']//option[contains (text(),'All')]");
+			return driver.findElement(statusAll);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception in ddstatusExpired:" + e.getMessage());
+		}
+		return null;
+	}
+	
+	public WebElement ddStatusExpired() {
+
+		try {
+			By statusExpired = By.xpath("//select[@id='visitor_status']//option[contains (text(),'Expired')]");
+			return driver.findElement(statusExpired);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception in ddstatusExpired:" + e.getMessage());
+		}
+		return null;
+	}
+	
+	public WebElement ddStatusNonExpired() {
+
+		try {
+			By statusExpired = By.xpath("//select[@id='visitor_status']//option[contains (text(),'Non Expired')]");
+			return driver.findElement(statusExpired);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception in ddStatusNonExpired:" + e.getMessage());
+		}
+		return null;
+	}
+	
+	
+	
 
 	public WebElement btnFilter() {
 
@@ -130,6 +186,10 @@ public class SK_VisitorsPL extends Base {
 		}
 		return null;
 	}
+	
+	
+	
+	
 
 	public WebElement linkDetails() {
 
@@ -311,6 +371,32 @@ public class SK_VisitorsPL extends Base {
 		return null;
 	}
 	
+	public WebElement chkbxERP() {
+
+		try {
+			By safetyKuvrr = By.xpath("//input[@type='checkbox'][@ng-model='vm.frm.can_access_erps']");
+			return driver.findElement(safetyKuvrr);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement chkbxMaps() {
+
+		try {
+			By safetyKuvrr = By.xpath("//input[@type='checkbox'][@ng-model='vm.frm.can_access_maps']");
+			return driver.findElement(safetyKuvrr);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+		
 	public WebElement radioNotificationsOnly() {
 
 		try {
@@ -382,6 +468,14 @@ public class SK_VisitorsPL extends Base {
 		}
 		return null;
 	}
+	
+	public WebElement ErrorMessage() {
+
+		By ErrorMessage = By.xpath("//div[@class='alert alert-error']");
+		return driver.findElement(ErrorMessage);
+
+	}
+	
 
 
 }

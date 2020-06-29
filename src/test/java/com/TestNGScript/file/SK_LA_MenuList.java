@@ -74,7 +74,7 @@ public class SK_LA_MenuList extends Base {
      	menuList.clickSendNotification();
      	
      	homePageMenuBL.verifyHamburgerMenu();
-      	menuList.clickScheduletification();
+      	menuList.clickScheduleNotification();
      	
      	
      	homePageMenuBL.verifyHamburgerMenu();

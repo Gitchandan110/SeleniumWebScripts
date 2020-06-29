@@ -1,5 +1,5 @@
 package com.PageObjectRepository.file;
 
-public class TodaysDealsPL {
+public class TodaysDealsPO {
 
 }

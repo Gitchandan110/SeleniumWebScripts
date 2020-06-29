@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="SK_LA_ManageTemplate(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_ManageTemplate">
+      <class name="com.TestNGScript.file.SK_LA_ScheduleNotification">
         <methods>
           <include name="closeBrowser"/>
           <include name="ManageTemplates"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_ManageTemplate -->
+      </class> <!-- com.TestNGScript.file.SK_LA_ScheduleNotification -->
     </classes>
-  </test> <!-- SK_LA_ManageTemplate(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

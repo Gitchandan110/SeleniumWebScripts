@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_ClosedIncidentPL extends Base {
+public class SK_ClosedIncidentPO extends Base {
 
 	public WebElement closedSOS() {
 

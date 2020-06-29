@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_ManageTemplatesPL extends Base {
+public class SK_ManageTemplatesPO extends Base {
 
 	public WebElement pageManageTemplate() {
 
@@ -288,6 +288,15 @@ public class SK_ManageTemplatesPL extends Base {
 		return driver.findElement(Submit);
 
 	}
+	
+	public WebElement ErrorMessage() {
+
+		By ErrorMessage = By.xpath("//div[@class='alert alert-error']");
+		return driver.findElement(ErrorMessage);
+
+	}
+	
+	
 	
 	
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_MenuListPL extends Base {
+public class SK_MenuListPO extends Base {
 
 	public WebElement ActiveEvents() {
 

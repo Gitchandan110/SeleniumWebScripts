@@ -27,7 +27,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 1)
 
-	public void loginSASafetyKuvrr() throws IOException {
+	public void loginSASafetyKuvrr() throws IOException, InterruptedException {
 
 		loginSKbl.loginSA();
 
@@ -35,7 +35,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 2)
 
-	public void loginLASafetyKuvrr() throws IOException {
+	public void loginLASafetyKuvrr() throws IOException, InterruptedException {
 
 		loginSKbl.loginLA();
 
@@ -43,7 +43,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 3)
 
-	public void loginObsSafetyKuvrr() throws IOException {
+	public void loginObsSafetyKuvrr() throws IOException, InterruptedException {
 
 		loginSKbl.loginObserver();
 

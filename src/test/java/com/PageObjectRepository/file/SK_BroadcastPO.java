@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_BroadcastPL extends Base {
+public class SK_BroadcastPO extends Base {
 
 	public WebElement BtnBroadcast() {
 
