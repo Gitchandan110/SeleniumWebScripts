@@ -5,7 +5,7 @@ import java.util.Set;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
-import com.PageObjectRepository.file.SK_ERPPO;
+import com.PageObjectRepository.file.SK_ERP_PO;
 import com.PageObjectRepository.file.SK_HomePagePO;
 import com.PageObjectRepository.file.SK_MapPO;
 
@@ -13,7 +13,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 
 	String SanitySheet = "Sanity_SK";
 	SK_MapPO mapPl = new SK_MapPO();
-	SK_ERPPO ERPL = new SK_ERPPO();
+	SK_ERP_PO ERPL = new SK_ERP_PO();
 	
 	
 	public void verifyActiveEventsPage() {

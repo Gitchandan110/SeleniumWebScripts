@@ -293,7 +293,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement EventResponsePlans() {
 
 		try {
-			By IRP = By.xpath("//li[@class='system-nav-item-irp']");
+			By IRP = By.xpath("//li[@class='system-nav-item-irp']//a");
 			return driver.findElement(IRP);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -302,6 +302,35 @@ public class SK_MenuListPO extends Base {
 		return null;
 	}
 
+
+	
+	public WebElement ManageERP() {
+
+		try {
+			By ManageERP = By.xpath("//li[@class='system-nav-item-irp']//ul//li//a[contains (text(),'Manage')]");
+			return driver.findElement(ManageERP);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement ShowERP() {
+
+		try {
+			By ShowERP = By.xpath("//li[@class='system-nav-item-irp']//ul//li//a[contains (text(),'Show')]");
+			return driver.findElement(ShowERP);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	
 	public WebElement Geofences() {
 
 		try {

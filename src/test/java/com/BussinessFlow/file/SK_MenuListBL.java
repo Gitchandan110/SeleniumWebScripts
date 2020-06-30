@@ -485,6 +485,73 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	}
 	
 		
+	public void clickEventResponsePlans() {
+
+		try {
+
+			if (EventResponsePlans().isDisplayed() == true) {
+				Base.scrolltoElement(driver, EventResponsePlans());
+				Base.highLightElement(driver, EventResponsePlans());
+				EventResponsePlans().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("ERP");
+
+			} else {
+
+				System.out.println("ERP link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ERP link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	public void clickManageERP() {
+
+		try {
+
+			if (ManageERP().isDisplayed() == true) {
+				ManageERP().click();
+				Thread.sleep(6000);
+				System.out.println("ERP List screen displayed");
+				Base.FullPageScreenShot("Manage ERP");
+
+			} else {
+
+				System.out.println("ManageERP link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ManageERP link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickShowERP() {
+
+		try {
+
+			if (ShowERP().isDisplayed() == true) {
+				ShowERP().click();
+				Thread.sleep(3000);
+				System.out.println("Show ERP screen displayed");
+				Base.FullPageScreenShot("Show ERP");
+
+			} else {
+
+				System.out.println("ShowERP link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ShowERP link : " + ex.getStackTrace());
+		}
+
+	}
 	
 	
 	

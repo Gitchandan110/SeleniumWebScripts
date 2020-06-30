@@ -50,6 +50,19 @@
 </test>
 
 
+<test name="SK_LA_EventResponsePlans" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_EventResponsePlans" />
+</classes>
+</test>
+
+<test name="SK_LA_ScheduleNotification" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ScheduleNotification" />
+</classes>
+</test>
+
+
 
 <test name="SK_LA_Reports" >
 <classes>
