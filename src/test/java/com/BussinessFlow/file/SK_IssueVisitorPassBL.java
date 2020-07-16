@@ -2,6 +2,11 @@ package com.BussinessFlow.file;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_VisitorsPO;
 import junit.framework.Assert;
@@ -17,7 +22,7 @@ public class SK_IssueVisitorPassBL extends SK_VisitorsPO {
 				Base.highLightElement(driver, btnCountryCode());
 				btnCountryCode().click();
 				Thread.sleep(3000);
-				Base.FullPageScreenShot("IssueVisitorPass_CountryCode");
+				Base.takeScreenShot("IssueVisitorPass");
 				CountryCodeIndia().click();
 				System.out.println("Country Code Selected");
 
@@ -26,9 +31,9 @@ public class SK_IssueVisitorPassBL extends SK_VisitorsPO {
 			if (txtMobile() != null && txtMobile().isDisplayed()) {
 				Base.highLightElement(driver, txtMobile());
 				txtMobile().sendKeys("0000123456");
-				btnCountryCode().click();
+			//	btnCountryCode().click();
 				Thread.sleep(2000);
-				Base.FullPageScreenShot("IssueVisitorPass_CountryCode");
+				Base.takeScreenShot("IssueVisitorPass");
 				btnSubmit().click();
 				Thread.sleep(3000);
 
@@ -47,22 +52,29 @@ public class SK_IssueVisitorPassBL extends SK_VisitorsPO {
 				ddHost().sendKeys("Lackorg@yopmail.com");
 				selectHost().click();
 				txtEmail().click();
-				txtEmail().sendKeys("Vtest@yopmail.com");
+				
+				DateFormat dateFormat = new SimpleDateFormat("ss");
+				String timeString = dateFormat.format(new Date()).toString();
+				
+				
+				txtEmail().sendKeys("Visitor" +timeString+ "@yopmail.com");
 				radioSafetyKuvrrApp().click();
+				Thread.sleep(2000);
 				chkbxERP().click();
 				chkbxMaps().click();
 				txtNotes().click();
 				txtNotes().sendKeys("Visitor Notes");
+				Thread.sleep(2000);
 				Base.scrollEndofthePage(driver);
 				ddVisitorPassType().click();
 				Thread.sleep(2000);
 				Base.takeScreenShot("IssueVisitorPass");
-				optionPassType().click();
+				PassTypeVP_10AM_8PM_365Days().click();
 				Thread.sleep(2000);
 				Base.FullPageScreenShot("Create Visitor Pass");
 				Base.highLightElement(driver, btnSubmitCreateVisitor());
 				btnSubmitCreateVisitor().click();
-				Thread.sleep(5000);
+				Thread.sleep(8000);
 
 				if (ErrorMessage().isDisplayed()) {
 					System.out.println("Create Visitor Pass Fail");

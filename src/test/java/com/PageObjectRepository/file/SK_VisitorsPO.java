@@ -433,10 +433,10 @@ public class SK_VisitorsPO extends Base {
 		return null;
 	}
 	
-	public WebElement optionPassType() {
+	public WebElement PassTypeVP_10AM_8PM_365Days() {
 
 		try {
-			By PassOption = By.xpath("//select[@id='passcode']/option[contains (text(), 'VP_11:30am_12:30pm_1Day')]");
+			By PassOption = By.xpath("//select[@id='passcode']/option[contains (text(), 'VP_10AM_8PM_365Days')]");
 			return driver.findElement(PassOption);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

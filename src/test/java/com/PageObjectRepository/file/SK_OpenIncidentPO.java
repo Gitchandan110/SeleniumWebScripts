@@ -318,7 +318,7 @@ public class SK_OpenIncidentPO extends Base {
 
 	public WebElement btnSubmit() {
 		
-		By Submit = By.xpath("//input[@id='filter-submit'][@class='btn submit']");
+		By Submit = By.xpath("//input[@type='button'][@class='btn submit']");
 		return driver.findElement(Submit);
 	}
 	
@@ -327,5 +327,14 @@ public class SK_OpenIncidentPO extends Base {
 		By Share = By.xpath("//input[@id='share-submit'][@class='btn submit']");
 		return driver.findElement(Share);
 	}
+	
+	
+	
+	public WebElement btnCloseEventView() {
+		
+		By CloseEventView = By.xpath("//button[@type='button' and contains (text(),'Close Event View')]");
+		return driver.findElement(CloseEventView);
+	}
+	
 	
 }

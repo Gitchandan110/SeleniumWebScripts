@@ -7,12 +7,12 @@ import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
 import com.PageObjectRepository.file.SK_ERP_PO;
 import com.PageObjectRepository.file.SK_HomePagePO;
-import com.PageObjectRepository.file.SK_MapPO;
+import com.PageObjectRepository.file.SK_Maps_PO;
 
 public class SK_HomePageBL extends SK_HomePagePO {
 
 	String SanitySheet = "Sanity_SK";
-	SK_MapPO mapPl = new SK_MapPO();
+	SK_Maps_PO mapPl = new SK_Maps_PO();
 	SK_ERP_PO ERPL = new SK_ERP_PO();
 	
 	
@@ -142,7 +142,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 							mapPl.dropdownMAP().click();
 							mapPl.mapNetsutra().click();
 							driver.manage().window().maximize();
-							Thread.sleep(10000);
+							Thread.sleep(15000);
 							Base.FullPageScreenShot("MapNetsutra");
 							mapPl.btnMapBox().click();
 							Thread.sleep(3000);

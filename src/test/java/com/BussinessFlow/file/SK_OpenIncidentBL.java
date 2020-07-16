@@ -116,9 +116,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPO {
 			Base.scrolltoElement(driver, chatRoom());
 			if (txtSmartResponse().isDisplayed()) {
 			txtSmartResponse().click();
-			txtSmartResponse().sendKeys("Test Threat Keyword like: depressed, whore, weapon, trafficking, theft, suicide, sad, rude, pussy \r\n" + 
-					" punch, prostitute, pistol, pimp, pervert, passed out, molesting, molestation, hitting, gun, fuck,fighting, fight, fallen, escort, drunk, drugs, \r\n" + 
-					"drinking, creep, booze, boobs,bomb, bitch, asshole, assault, alcohol, tits, cunt, mofo, faint,pot, heroine, graffiti, spray, nigger, rifle, shotgun, goon, snatch, terror, attack, fire, threat, trap, knife ");
+			txtSmartResponse().sendKeys("Test Threat Keyword like: depressed, weapon, trafficking, theft, suicide, terror, attack, fire, threat, trap, knife ");
 		
 			btnSendSmartResponse().click();
 			Thread.sleep(8000);
@@ -152,7 +150,7 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPO {
 		try {
 			if (txtEventNotes().isDisplayed()) {
 				txtEventNotes().click();
-				txtEventNotes().sendKeys("Be careful as criminals always carrying anything like Bomb, Knife, Gun, and they can do gun Shot, Fire, Firing, Attack Terrorist, Attacking, Terror, Missile Attack, Threat, Trap, Snatch, Robbery, Bank Loot, Assault, Goon, Acid Attack, Stone Pelting");
+				txtEventNotes().sendKeys("Be careful as criminals always carrying anything like Bomb, Knife, Gun, and they can do gun Shot, Fire, Goon, Acid Attack, Stone Pelting");
 				btnSaveEventNotes().click();
 				Base.takeScreenShot("Incident Screen");
 				Thread.sleep(2000);
@@ -200,6 +198,9 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPO {
 						"Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
 				ExcelWrite.writeSanitySheet(SanitySheet, 27, 1, "Pass");
 				Thread.sleep(10000);
+				driver.switchTo().alert().accept();
+				btnCloseEventView().click();
+				Thread.sleep(5000);
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -329,14 +330,17 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPO {
 		try {
 			if (btnCloseEvents() != null && btnCloseEvents().isDisplayed()) {
 				btnCloseEvents().click();
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				System.out.println("Close button found and clicked");
 				dropdownResolution().click();
-				optionResolution().click();
+				Thread.sleep(3000);
+				txtResponse().click();
 				txtResponse().sendKeys(" Both 911 and Medical Emergencies, which are automatically closed by the system when triggered, will continue to show in the Active events tab for up to five minutes from event start. After the duration, these events will show up only in the Closed tab.");
 				Base.takeScreenShot("Action Close");
+				Thread.sleep(3000);
+				Base.highLightElement(driver, btnSubmit());
 				btnSubmit().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				
 			}
 

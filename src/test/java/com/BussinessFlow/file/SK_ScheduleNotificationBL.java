@@ -26,7 +26,7 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 
 			if (filterTitle() != null && filterTitle().isDisplayed()) {
 				Base.highLightElement(driver, filterTitle());
-				filterTitle().sendKeys("SchDaily");
+				filterTitle().sendKeys("Sch");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.FullPageScreenShot("Schedule Notification Title");

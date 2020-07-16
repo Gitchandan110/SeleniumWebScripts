@@ -3,6 +3,8 @@ package com.BussinessFlow.file;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 
 import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_ManageTemplatesPO;
@@ -14,7 +16,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 	public void verifyManageTemplates() {
 
 		try {
-			
+
 			if (pageManageTemplate() != null && pageManageTemplate().isDisplayed()) {
 				Assert.assertEquals("Manage Templates", driver.getTitle());
 				System.out.println("Landed on Manage Templates Page");
@@ -126,42 +128,26 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 
 		try {
 			if (dropdownUserGroups() != null && dropdownUserGroups().isDisplayed()) {
-				dropdownUserGroups().click();
-				Base.takeScreenShot("Manage Templates");
-				System.out.println("dropdownUserGroups() click");
+				// int CountUserGroup = UserGroupList().size();
+				// System.out.println("Total Number of User Groups are :" + CountUserGroup);
+
+				for (int i = 1; i < 5; i++) {
+					dropdownUserGroups().click();
+
+					String UserGroupName = driver.findElement(
+							By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i
+									+ "]//div//span"))
+							.getText();
+
+					System.out.println("UserGroupName are :" + UserGroupName);
+					UserGroup().click();
+
+				}
+
+				Thread.sleep(2000);
+				chkbxGeoAware().click();
+
 			}
-			int CountUserGroup = UserGroupList().size();
-			System.out.println("Totla Number of User Groups are :" + CountUserGroup);
-
-			for (int i = 1; i < 7; i++) {
-
-				String UserGroupName = driver.findElement(By.xpath(
-						"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i + "]//div//span"))
-						.getText();
-
-				System.out.println("UserGroupName are :" + UserGroupName);
-				UserGroup().click();
-				dropdownUserGroups().click();
-
-			}
-			
-		/*	int i=1;
-			
-			while(CountUserGroup > 1) {
-				String UserGroupName = driver.findElement(By.xpath(
-						"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i + "]//div//span"))
-						.getText();
-
-				System.out.println("UserGroupName are :" + UserGroupName);
-				UserGroup().click();
-				dropdownUserGroups().click();
-				i++;
-						
-			}*/
-			
-			
-			chkbxGeoAware().click();
-
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -179,7 +165,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 			int CountUsers = UsersList().size();
 			System.out.println("Total Number of Userss are :" + CountUsers);
 
-			for (int i = 1; i < 7; i++) {
+			for (int i = 1; i < 4; i++) {
 
 				String UsersName = driver.findElement(By.xpath(
 						"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i + "]//div//span"))
@@ -190,43 +176,38 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 				dropdownUsers().click();
 
 			}
-			
-		/*	int j=1;
-			
-			while (CountUsers >= j ) {
-				
-				String UsersName = driver.findElement(By.xpath(
-						"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + j + "]//div//span"))
-						.getText();
 
-				System.out.println("UserName are :" + UsersName);
-				Users().click();
-				dropdownUsers().click();	
-				j++;
-			}
-			
-			*/
-			
-			
+			/*
+			 * int j=1;
+			 * 
+			 * while (CountUsers >= j ) {
+			 * 
+			 * String UsersName = driver.findElement(By.xpath(
+			 * "//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + j
+			 * + "]//div//span")) .getText();
+			 * 
+			 * System.out.println("UserName are :" + UsersName); Users().click();
+			 * dropdownUsers().click(); j++; }
+			 * 
+			 */
+
 			chkbxGeoAware().click();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		
-
 	}
-	
+
 	public void selectInactiveRadioBtn() {
-		
-		if(radioBtnInactive() !=null && radioBtnInactive().isDisplayed()) {
-			
+
+		if (radioBtnInactive() != null && radioBtnInactive().isDisplayed()) {
+
 			radioBtnInactive().click();
 		}
-		
+
 	}
-	
+
 	public void selectSubmitBtn() throws InterruptedException, IOException {
 
 		try {
@@ -249,5 +230,4 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 
 	}
 
-	
 }

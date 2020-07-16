@@ -33,8 +33,8 @@ public class SK_LA_ManageVisitorPasses extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-        openTestSKApp();
-  //	openIntSKApp();
+	    //   openTestSKApp();
+	    	 openIntSKApp();
 	    	
 	}
 
@@ -48,6 +48,10 @@ public class SK_LA_ManageVisitorPasses extends Base {
     	menuList.clickMenuVisitorManagement();
     	menuList.clickVisitorPasses();
     	visitorPassesbl.verifyManageVisitorPasses();
+    	visitorPassesbl.verifyFilterManageVisitorPasses();
+    	visitorPassesbl.verifyPassStatus();
+    	visitorPassesbl.verifyPassDetails();
+    	
 	}
 	
 	

@@ -1,11 +1,13 @@
 package com.PageObjectRepository.file;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.Commonutills.file.Base;
 
-public class SK_MapPO extends Base{
+public class SK_Maps_PO extends Base{
 	
 	public WebElement dropdownMAP() {
 
@@ -19,6 +21,24 @@ public class SK_MapPO extends Base{
 		return null;
 	}
 	
+
+	
+	public List<WebElement> Maps() {
+
+		try {
+			
+			By Maps = By.xpath("//select[@id='map-list']//option");
+			return driver.findElements(Maps);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	
 	public WebElement mapNetsutra() {
 
 		try {
@@ -30,6 +50,10 @@ public class SK_MapPO extends Base{
 		}
 		return null;
 	}
+	
+	
+	
+	
 	
 	public WebElement btnMapBox() {
 

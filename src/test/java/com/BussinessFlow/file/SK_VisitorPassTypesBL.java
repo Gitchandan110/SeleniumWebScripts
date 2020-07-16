@@ -124,13 +124,12 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePO {
 				Thread.sleep(2000);
 				btnMonitorEverywhere().click();
 				Thread.sleep(3000);
+				Base.FullPageScreenShot("CreateVisitorPassType");
 				Base.scrollEndofthePage(driver);
 				Base.highLightElement(driver, btnSubmit());
 				btnSubmit().click();
-			//	Base.highLightElement(driver, btnCancel());
-				Thread.sleep(2000);
-			//	btnCancel().click();
-				Thread.sleep(5000);
+				Thread.sleep(8000);
+			
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -162,13 +161,13 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePO {
 				txtEmailSubject().sendKeys("Email Subject");
 				btnMonitorEverywhere().click();
 				Thread.sleep(3000);
+				Base.FullPageScreenShot("EditVisitorPassType");
 				Base.scrollEndofthePage(driver);
-			//	btnSubmit().click();
-				Base.highLightElement(driver, btnCancel());
-				Thread.sleep(2000);
-				btnCancel().click();
+				Base.highLightElement(driver, btnSubmit());
+				btnSubmit().click();
+				Thread.sleep(8000);
 				System.out.println("editVisitorPassType() Pass");
-				Thread.sleep(5000);
+			
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

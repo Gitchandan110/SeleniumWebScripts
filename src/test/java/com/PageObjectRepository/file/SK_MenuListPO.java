@@ -201,9 +201,32 @@ public class SK_MenuListPO extends Base {
 		}
 		return null;
 	}
+	
+	
+	public WebElement menuCovidCover() {
 
+		try {
+			By CovidCover = By.xpath("//li[@class='system-nav-item-survey']//a");
+			return driver.findElement(CovidCover);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 	
+	public WebElement menuConfigure() {
+
+		try {
+			By Configure = By.xpath("//li//a[contains (text(),'Configure')]");
+			return driver.findElement(Configure);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 	
 	public WebElement menuVisitorManagement() {
@@ -257,7 +280,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement Map() {
 
 		try {
-			By Map = By.xpath("//li[@class='system-nav-item-maps']");
+			By Map = By.xpath("//li[@class='system-nav-item-maps']//a");
 			return driver.findElement(Map);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

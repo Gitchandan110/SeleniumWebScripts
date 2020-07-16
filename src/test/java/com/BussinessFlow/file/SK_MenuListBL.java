@@ -335,7 +335,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 			if (menuNotificationHistory() != null && menuNotificationHistory().isDisplayed()) {
 				Base.highLightElement(driver, menuNotificationHistory());
 				menuNotificationHistory().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				Base.FullPageScreenShot("Notification History");
 
 			} else {
@@ -349,6 +349,60 @@ public class SK_MenuListBL extends SK_MenuListPO {
 		}
 
 	}	
+	
+	
+	public void clickCovidCover() {
+
+		try {
+
+			if (menuCovidCover() != null && menuCovidCover().isDisplayed()) {
+				Base.scrolltoElement(driver, menuCovidCover());
+				Base.highLightElement(driver, menuCovidCover());
+				menuCovidCover().click();
+				Base.takeScreenShot("CovidCover");
+				Thread.sleep(3000);
+				
+
+			} else {
+
+				System.out.println("menuCovidCover() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuCovidCover() : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickConfigure() {
+
+		try {
+
+			if (menuConfigure() != null && menuConfigure().isDisplayed()) {
+				Base.scrolltoElement(driver, menuConfigure());
+				menuConfigure().click();
+				Thread.sleep(7000);
+				
+
+			} else {
+
+				System.out.println("menuConfigure() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuConfigure() : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
+	
+	
+	
 		
 
 	public void clickMenuVisitorManagement() {
@@ -436,6 +490,38 @@ public class SK_MenuListBL extends SK_MenuListPO {
 		}
 
 	}
+	
+	
+	public void clickMaps() {
+
+		try {
+
+			if (Map() != null && Map().isDisplayed()) {
+				Base.highLightElement(driver, Map());
+				Map().click();
+				System.out.println("Map clicked");
+				Thread.sleep(5000);
+				Base.takeScreenShot("Map");
+
+			} else {
+
+				System.out.println("Map not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Map : " + ex.getStackTrace());
+		}
+
+	}
+
+	
+	
+	
+	
+	
+	
+	
 
 	
     public void clickVideoConference() {
