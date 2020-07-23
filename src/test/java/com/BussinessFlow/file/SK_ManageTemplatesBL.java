@@ -111,8 +111,8 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 				System.out.println("txtMobileSMS() done");
 				txtAppNotification().sendKeys("This is App Notification Template");
 				System.out.println("txtAppNotification() done");
-				chkbxGeoAware().click();
-				System.out.println("chkbxGeoAware() done");
+				/*chkbxGeoAware().click();
+				System.out.println("chkbxGeoAware() done");*/
 				txtIVR().sendKeys("This is IVR Notification Template");
 				System.out.println("Text to Voice done");
 

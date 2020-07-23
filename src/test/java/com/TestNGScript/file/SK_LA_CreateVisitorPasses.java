@@ -33,8 +33,11 @@ public class SK_LA_CreateVisitorPasses extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-	    //   openTestSKApp();
-	    	 openIntSKApp();
+        openTestSKApp();
+   //	 openIntSKApp();
+        
+        
+        System.out.println("SK_LA_CreateVisitorPasses Started");
 	    	
 	}
 
@@ -56,7 +59,7 @@ public class SK_LA_CreateVisitorPasses extends Base {
 
 	public void closeBrowser() {
 
- //   driver.quit();
+     driver.quit();
 	
 	}
 

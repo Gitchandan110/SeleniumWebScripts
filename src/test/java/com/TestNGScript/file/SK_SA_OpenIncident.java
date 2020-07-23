@@ -28,10 +28,10 @@ public class SK_SA_OpenIncident extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-	    //   openTestSKApp();
-	    	 openIntSKApp();
+        openTestSKApp();
+   //	 openIntSKApp();
 	    
-	    
+        System.out.println("SK_SA_OpenIncident Started");
 	}
 
 	@Test()
