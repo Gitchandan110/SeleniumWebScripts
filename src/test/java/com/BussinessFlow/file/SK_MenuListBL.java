@@ -384,6 +384,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 				Base.scrolltoElement(driver, menuConfigure());
 				menuConfigure().click();
 				Thread.sleep(7000);
+				Base.FullPageScreenShot("Covid Survey Configuration");
 				
 
 			} else {

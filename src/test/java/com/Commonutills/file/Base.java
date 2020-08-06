@@ -1,6 +1,5 @@
 package com.Commonutills.file;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -14,18 +13,17 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 
 import org.apache.maven.shared.utils.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.appium.java_client.MobileElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
@@ -146,13 +144,13 @@ public class Base {
 
 	}
 
-	public static void FullPageScreenShot(String screenName) throws IOException {
+	public static void FullPageScreenShot(String ScreenName) throws IOException {
 
 		try {
 			Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 					.takeScreenshot(driver);
 
-			ImageIO.write(fpScreenshot.getImage(), "png", new File(".\\FullPage_Screenshots\\" + screenName + ".png"));
+			ImageIO.write(fpScreenshot.getImage(), "png", new File(".\\FullPage_Screenshots\\" + ScreenName + ".png"));
 
 			System.out.println("Screenshot captured");
 		} catch (Exception e) {
@@ -161,20 +159,18 @@ public class Base {
 		}
 
 	}
+	
+	public static void F12PrintScreen() throws IOException {
+		
+		Actions actions = new Actions(driver);
+		actions.sendKeys(Keys.F12).perform();
+		System.out.println("F12PrintScreen() done");
 
-	/*
-	 * public static void screenShotWebElement(WebElement object) throws IOException
-	 * {
-	 * 
-	 * 
-	 * TakesScreenshot ts=(TakesScreenshot)driver; File
-	 * imgObj=object.getScreenshotAs(OutputType.FILE); String newFileName =
-	 * "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots"+ ".jpg";
-	 * FileUtils.copyFileToDirectory(imgObj, new File(newFileName));
-	 * 
-	 * }
-	 */
-
+	}
+	
+	
+	
+	
 	public static void waitFor30Seconds(WebElement element) {
 
 		try {

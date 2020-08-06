@@ -361,12 +361,14 @@ public class SK_OpenIncidentBL extends SK_OpenIncidentPO {
 			if (btnShareIncident() != null && btnShareIncident().isDisplayed()) {
 				btnShareIncident().click();
 				Thread.sleep(2000);
-				System.out.println("Share Linkn found and clicked");
+				System.out.println("Share Incident Link found and clicked");
 				txtEmailField().click();
 				txtEmailField().sendKeys("ck@yopmail.com;chandan.kumar@netsutra.com");
-				Base.takeScreenShot("Share Active Incident");
+				Base.takeScreenShot("Share Incoming Incidents");
 				btnShare().click();
-				Thread.sleep(5000);
+				Thread.sleep(4000);
+			
+				
 				
 			}
 

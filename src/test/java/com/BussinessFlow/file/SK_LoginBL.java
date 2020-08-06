@@ -61,6 +61,7 @@ public class SK_LoginBL extends SK_LoginPO {
 
 		try {
 			if (Email().isDisplayed()) {
+				Base.F12PrintScreen();
 				Email().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 4));
 				System.out.println("User is:" + ExcelUtils.ReadExcel(LoginDataSheet, 1, 4));
 			}
