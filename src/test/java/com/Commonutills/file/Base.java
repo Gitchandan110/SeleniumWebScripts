@@ -1,5 +1,11 @@
 package com.Commonutills.file;
 
+import java.awt.AWTException;
+import java.awt.GraphicsEnvironment;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -13,9 +19,11 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 
 import org.apache.maven.shared.utils.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -167,6 +175,30 @@ public class Base {
 		System.out.println("F12PrintScreen() done");
 
 	}
+	
+	public static void RobotPrintScreen() throws IOException {
+		
+		try {
+		
+		Robot rob = new Robot();
+		
+		rob.keyPress(KeyEvent.VK_PRINTSCREEN);
+		rob.keyRelease(KeyEvent.VK_PRINTSCREEN);
+	
+		System.out.println("RobotPrintScreen() done");
+		
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+
+
+	
+	
+ 
+	
 	
 	
 	

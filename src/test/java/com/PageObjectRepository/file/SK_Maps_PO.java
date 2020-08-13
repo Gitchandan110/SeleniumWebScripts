@@ -23,12 +23,12 @@ public class SK_Maps_PO extends Base{
 	
 
 	
-	public List<WebElement> Maps() {
+	public List<WebElement> AllMaps() {
 
 		try {
 			
-			By Maps = By.xpath("//select[@id='map-list']//option");
-			return driver.findElements(Maps);
+			By AllMaps = By.xpath("//select[@id='map-list']//option");
+			return driver.findElements(AllMaps);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -42,7 +42,7 @@ public class SK_Maps_PO extends Base{
 	public WebElement mapNetsutra() {
 
 		try {
-			By mapNetsutra = By.xpath("//select[@id='map-list']//option [contains(text(),'Netsutra')]");
+			By mapNetsutra = By.xpath("//select[@id='map-list']//option[contains(text(),'Netsutra')]");
 			return driver.findElement(mapNetsutra);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

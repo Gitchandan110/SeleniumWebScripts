@@ -14,8 +14,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 	String SanitySheet = "Sanity_SK";
 	SK_Maps_PO mapPl = new SK_Maps_PO();
 	SK_ERP_PO ERPL = new SK_ERP_PO();
-	
-	
+
 	public void verifyActiveEventsPage() {
 
 		try {
@@ -67,7 +66,8 @@ public class SK_HomePageBL extends SK_HomePagePO {
 				ExcelWrite.writeSanitySheet(SanitySheet, 7, 1, "Pass");
 				Base.highLightElement(driver, HamburgerMenu());
 				HamburgerMenu().click();
-				Base.FullPageScreenShot("MenuOptions");
+				System.out.println("Hamburger menu Clicked");
+				Base.takeScreenShot("Menu List");
 				ExcelWrite.writeSanitySheet(SanitySheet, 8, 1, "Pass");
 				// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 				Thread.sleep(7000);
@@ -117,7 +117,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 				String parentWindowId = driver.getWindowHandle();
 				System.out.println("Parent Window ID is: " + parentWindowId);
 				btnMAP().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 
 				// To iterate over all open windows
 
@@ -196,7 +196,6 @@ public class SK_HomePageBL extends SK_HomePagePO {
 							Thread.sleep(3000);
 							ERPL.erpEvacuation().click();
 							Thread.sleep(3000);
-							driver.close();
 
 						}
 					}
@@ -209,6 +208,25 @@ public class SK_HomePageBL extends SK_HomePagePO {
 		} catch (Exception ex) {
 
 			System.out.println("Exception in ERP() link : " + ex.getStackTrace());
+		}
+
+	}
+
+	public void ViewAVAlerts() {
+
+		try {
+
+			if (btnAVAlerts().isDisplayed() == true) {
+				Base.highLightElement(driver, btnAVAlerts());
+				btnAVAlerts().click();
+				Thread.sleep(5000);
+				System.out.println("btnAVAlerts() clicked");
+				Base.FullPageScreenShot("Initiate AV Alert");
+
+			}
+		} catch (Exception ex) {
+
+			System.out.println("Exception in btnAVAlerts() : " + ex.getStackTrace());
 		}
 
 	}

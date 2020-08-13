@@ -190,12 +190,38 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
+	public void clickMenuCommunications() {
+
+		try {
+			
+		
+			if (menuCommunications() != null && menuCommunications().isDisplayed()) {
+				Base.scrolltoElement(driver, menuCommunications());
+				Base.highLightElement(driver, menuCommunications());
+				menuCommunications().click();
+				System.out.println("menuCommunications() Clicked");
+				Thread.sleep(3000);
+			}
+
+			else {
+
+				System.out.println("menuCommunications() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuCommunications() : " + ex.getStackTrace());
+		}
+
+	}
+	
 	
 	public void clickNotifications() {
 
 		try {
-
-			if (menuNotifications() != null && menuNotifications().isDisplayed()) {
+			
+		
+			 if (menuNotifications() != null && menuNotifications().isDisplayed()) {
 				Base.scrolltoElement(driver, menuNotifications());
 				Base.highLightElement(driver, menuNotifications());
 				menuNotifications().click();
@@ -280,24 +306,25 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
-	public void clickManageTemplates() {
+	public void clickTemplates() {
 
 		try {
 
-			if (menuManageTemplates() != null && menuManageTemplates().isDisplayed()) {
-				Base.highLightElement(driver, menuManageTemplates());
-				menuManageTemplates().click();
+			if (menuTemplates() != null && menuTemplates().isDisplayed()) {
+				Base.highLightElement(driver, menuTemplates());
+				menuTemplates().click();
+				System.out.println("menuTemplates() Clicked");
 				Thread.sleep(5000);
-				Base.FullPageScreenShot("Manage Templates");
+				Base.FullPageScreenShot("Templates");
 
 			} else {
 
-				System.out.println("menuManageTemplates() not found");
+				System.out.println("menuTemplates() not found");
 			}
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in menuManageTemplates() : " + ex.getStackTrace());
+			System.out.println("Exception in menuTemplates() : " + ex.getStackTrace());
 		}
 
 	}
@@ -359,6 +386,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 				Base.scrolltoElement(driver, menuCovidCover());
 				Base.highLightElement(driver, menuCovidCover());
 				menuCovidCover().click();
+				System.out.println("menuCovidCover() Clicked");
 				Base.takeScreenShot("CovidCover");
 				Thread.sleep(3000);
 				
@@ -400,15 +428,37 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	}
 	
 	
+	public void clickMenuOrganizationResources() {
+
+		try {
+			
+
+			if (menuOrganizationResources() != null && menuOrganizationResources().isDisplayed()) {
+				Base.highLightElement(driver, menuOrganizationResources());
+				menuOrganizationResources().click();
+				Thread.sleep(3000);
+				Base.takeScreenShot("Organization Resources");
+			
+			}
+			
+			else {
+
+				System.out.println("Menu Organization Resources not found");
+			}
+			
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Organization Resources : " + ex.getStackTrace());
+		} 
+
+	}
+
 	
-	
-	
-	
-		
 
 	public void clickMenuVisitorManagement() {
 
 		try {
+			
 
 			if (menuVisitorManagement() != null && menuVisitorManagement().isDisplayed()) {
 				menuVisitorManagement().click();
@@ -418,7 +468,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 				System.out.println("Visitor Management Menu not found");
 			}
-
+			
 		} catch (Exception ex) {
 
 			System.out.println("Exception in Visitor Management : " + ex.getStackTrace());
@@ -501,7 +551,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 				Base.highLightElement(driver, Map());
 				Map().click();
 				System.out.println("Map clicked");
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				Base.takeScreenShot("Map");
 
 			} else {
@@ -517,14 +567,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	}
 
 	
-	
-	
-	
-	
-	
-	
 
-	
     public void clickVideoConference() {
 
 		try {
@@ -575,8 +618,8 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	public void clickEventResponsePlans() {
 
 		try {
-
-			if (EventResponsePlans().isDisplayed() == true) {
+			
+				if (EventResponsePlans().isDisplayed() == true) {
 				Base.scrolltoElement(driver, EventResponsePlans());
 				Base.highLightElement(driver, EventResponsePlans());
 				EventResponsePlans().click();

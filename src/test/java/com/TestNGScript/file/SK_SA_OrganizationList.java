@@ -27,8 +27,8 @@ public class SK_SA_OrganizationList extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 		
 		 //   openProdSKApp();
-	     //   openTestSKApp();
-	          openIntSKApp();
+        openTestSKApp();
+  //    openIntSKApp();
         
         System.out.println("SK_SA_OrganizationList Started");   
 	    	

@@ -33,9 +33,9 @@ public class SK_LA_MenuList extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-	     //   openTestSKApp();
-	          openIntSKApp();
-             
+        openTestSKApp();
+  //    openIntSKApp();
+              
              
              System.out.println("SK_LA_MenuList Started");
              
@@ -46,7 +46,7 @@ public class SK_LA_MenuList extends Base {
 
 	public void launchSafetyApp() throws IOException, InterruptedException {
 
-		
+		/*
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
        	menuList.clickActiveEvents();
@@ -86,13 +86,13 @@ public class SK_LA_MenuList extends Base {
      	
      	
      	homePageMenuBL.verifyHamburgerMenu();
-       	menuList.clickManageTemplates();
+       	menuList.clickTemplates();
        	
        	homePageMenuBL.verifyHamburgerMenu();
        	menuList.clickTipNotification();
      	
      	homePageMenuBL.verifyHamburgerMenu();
-       	menuList.clickNotificationHistory();
+       	menuList.clickNotificationHistory();*/
      	
 	}
 

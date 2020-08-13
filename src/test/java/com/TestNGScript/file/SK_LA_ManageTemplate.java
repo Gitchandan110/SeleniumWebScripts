@@ -32,8 +32,8 @@ public class SK_LA_ManageTemplate extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-	     //   openTestSKApp();
-	          openIntSKApp();
+        openTestSKApp();
+  //    openIntSKApp();
         
         System.out.println("SK_LA_ManageTemplate Started");
 	    	
@@ -46,8 +46,9 @@ public class SK_LA_ManageTemplate extends Base {
 		
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
+    	menuList.clickMenuCommunications();
     	menuList.clickNotifications();
-    	menuList.clickManageTemplates();
+    	menuList.clickTemplates();
     	manageTemplatesbl.verifyManageTemplates();
     	manageTemplatesbl.clickLinkCreateTemplate();
     	manageTemplatesbl.fillNotificationContent();

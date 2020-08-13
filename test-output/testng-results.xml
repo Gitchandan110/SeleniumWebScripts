@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="106034" started-at="2020-08-06T11:49:05Z" finished-at="2020-08-06T11:50:52Z">
+  <suite name="Default suite" duration-ms="205949" started-at="2020-08-13T15:48:28Z" finished-at="2020-08-13T15:51:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="106034" started-at="2020-08-06T11:49:05Z" finished-at="2020-08-06T11:50:52Z">
-      <class name="com.TestNGScript.file.SK_LA_CovidCover">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CovidCover@15d9bc04]" name="launchSKApp" is-config="true" duration-ms="50002" started-at="2020-08-06T11:49:06Z" finished-at="2020-08-06T11:49:56Z">
+    <test name="Default test" duration-ms="205949" started-at="2020-08-13T15:48:28Z" finished-at="2020-08-13T15:51:54Z">
+      <class name="com.TestNGScript.file.SK_LA_Maps">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_Maps@516be40f]" name="launchSKApp" is-config="true" duration-ms="41198" started-at="2020-08-13T15:48:28Z" finished-at="2020-08-13T15:49:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="ManageTemplates()[pri:0, instance:com.TestNGScript.file.SK_LA_CovidCover@15d9bc04]" name="ManageTemplates" duration-ms="54957" started-at="2020-08-06T11:49:56Z" finished-at="2020-08-06T11:50:50Z">
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_Maps@516be40f]" name="launchSafetyApp" duration-ms="164691" started-at="2020-08-13T15:49:09Z" finished-at="2020-08-13T15:51:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ManageTemplates -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_CovidCover@15d9bc04]" name="closeBrowser" is-config="true" duration-ms="1042" started-at="2020-08-06T11:50:50Z" finished-at="2020-08-06T11:50:52Z">
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_Maps@516be40f]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2020-08-13T15:51:54Z" finished-at="2020-08-13T15:51:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.TestNGScript.file.SK_LA_CovidCover -->
+      </class> <!-- com.TestNGScript.file.SK_LA_Maps -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

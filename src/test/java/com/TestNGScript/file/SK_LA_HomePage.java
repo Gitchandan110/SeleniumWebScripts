@@ -31,8 +31,8 @@ public class SK_LA_HomePage extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 		
 		 //   openProdSKApp();
-	     //   openTestSKApp();
-	          openIntSKApp();
+        openTestSKApp();
+  //    openIntSKApp();
         
         System.out.println("SK_LA_HomePage Started");
 	    	
@@ -44,9 +44,12 @@ public class SK_LA_HomePage extends Base {
 
 		
     	loginSKbl.loginLA();
-    	homePageMenuBL.clickReports();
-       	homePageMenuBL.ViewMap();
+    	homePageMenuBL.ViewAVAlerts();
+       	homePageMenuBL.clickReports();
     	homePageMenuBL.ViewERP();
+    	homePageMenuBL.ViewMap();
+    	
+    	
 	}
 
 	@AfterMethod

@@ -33,8 +33,8 @@ public class SK_LA_CreateVisitorPasses extends Base {
 	public void launchSKApp() throws InterruptedException, IOException {
 
 		 //   openProdSKApp();
-	     //   openTestSKApp();
-	          openIntSKApp();
+        openTestSKApp();
+  //    openIntSKApp();
         
         System.out.println("SK_LA_CreateVisitorPasses Started");
 	    	
@@ -42,7 +42,22 @@ public class SK_LA_CreateVisitorPasses extends Base {
 
 	@Test(priority=1)
 
-	public void IssueVisitorPass() throws IOException, InterruptedException {
+	public void IssueVisitorPassWithSKApp() throws IOException, InterruptedException {
+
+		
+		loginSKbl.loginLA();
+    	homePageMenuBL.verifyHamburgerMenu();
+    	menuList.clickMenuOrganizationResources();
+    	menuList.clickMenuVisitorManagement();
+    	menuList.clickVisitorPasses();
+    	visitorPassesbl.clickIssueVisitorPass();
+    	issuePassbl.verifyIssueVisitorPassWithSKApp();
+	}
+	
+	
+	@Test(priority=2)
+
+	public void IssueVisitorPassWithNotificationOnly() throws IOException, InterruptedException {
 
 		
 		loginSKbl.loginLA();
@@ -50,7 +65,7 @@ public class SK_LA_CreateVisitorPasses extends Base {
     	menuList.clickMenuVisitorManagement();
     	menuList.clickVisitorPasses();
     	visitorPassesbl.clickIssueVisitorPass();
-    	issuePassbl.verifyIssueVisitorPass();
+    	issuePassbl.verifyIssueVisitorPassNotificationOnly();
 	}
 
 	

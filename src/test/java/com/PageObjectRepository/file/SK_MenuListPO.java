@@ -105,6 +105,19 @@ public class SK_MenuListPO extends Base {
 	}
 	
 	
+	
+	public WebElement menuCommunications() {
+
+		try {
+			By Communications = By.xpath("//li[@class='dropdown communications']//a");
+			return driver.findElement(Communications);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public WebElement menuNotifications() {
 
 		try {
@@ -156,16 +169,14 @@ public class SK_MenuListPO extends Base {
 		return null;
 	}
 
-	public WebElement menuManageTemplates() {
+	public WebElement menuTemplates() {
 
 		try {
-			By ManageTemplates = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Manage Template')]");
-			
-		//	By ManageTemplates = By.xpath("//a[@href='/broadcast/template/list/']");
-			return driver.findElement(ManageTemplates);
+			By Templates = By.linkText("Templates");
+			return driver.findElement(Templates);
 
 		} catch (Exception e) {
-			System.out.println("menuManageTemplates() locator is incorrect" + e.getMessage());
+			System.out.println("menuTemplates() locator is incorrect" + e.getMessage());
 			e.printStackTrace();
 		}
 		return null;
@@ -206,7 +217,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement menuCovidCover() {
 
 		try {
-			By CovidCover = By.xpath("//li[@class='system-nav-item-survey']//a");
+			By CovidCover = By.xpath("//li[@class='dropdown covid_kuvrr']//a");
 			return driver.findElement(CovidCover);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -219,7 +230,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement menuConfigure() {
 
 		try {
-			By Configure = By.xpath("//li//a[contains (text(),'Configure')]");
+			By Configure = By.xpath("//li[@class='system-nav-item-survey-config ']//a");
 			return driver.findElement(Configure);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -227,6 +238,24 @@ public class SK_MenuListPO extends Base {
 		}
 		return null;
 	}
+	
+	
+	
+	public WebElement menuOrganizationResources() {
+
+		try {
+			By OrganizationResources = By.xpath("//li[@class='dropdown organizations']//a");
+			return driver.findElement(OrganizationResources);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	
 	
 	
 	public WebElement menuVisitorManagement() {

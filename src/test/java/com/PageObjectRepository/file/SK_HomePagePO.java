@@ -26,7 +26,7 @@ public class SK_HomePagePO extends Base {
 	public WebElement btnReports() {
 
 		try {
-			By Reports = By.xpath("//a[@href='/tableau/reports/']");
+			By Reports = By.xpath("//a[@class='report-btn' and contains (text(),'Reports')]");
 			return driver.findElement(Reports);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -52,8 +52,20 @@ public class SK_HomePagePO extends Base {
 	public WebElement btnMAP() {
 
 		try {
-			By map = By.xpath("//a[@class='map-btn']");
+			By map = By.xpath("//a[@class='map-btn' and contains (text(),'Map')]");
 			return driver.findElement(map);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement btnAVAlerts() {
+
+		try {
+			By AVAlerts = By.xpath("//a[@class='av-btn' and contains (text(),'AV Alerts')]");
+			return driver.findElement(AVAlerts);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -9,7 +9,7 @@
 
   
   
-<test name="SK_LA_OpenIncident" >
+ <test name="SK_LA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
 </classes>
@@ -39,7 +39,7 @@
     
 <test name="SK_911Incident" >
 <classes>
-<class name="com.TestNGScript.file.SK_911Incident" />
+<class name="com.TestNGScript.file.SK_911Incident" /> 
 </classes>
 </test>
 

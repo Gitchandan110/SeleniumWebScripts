@@ -362,7 +362,7 @@ public class SK_VisitorsPO extends Base {
 	public WebElement radioSafetyKuvrrApp() {
 
 		try {
-			By safetyKuvrr = By.xpath("//input[@type='radio'][@ng-value='true']");
+			By safetyKuvrr = By.xpath("//input[@type='radio'][@ng-model='vm.frm.is_app_user'][@ng-value='true']");
 			return driver.findElement(safetyKuvrr);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
