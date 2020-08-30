@@ -55,13 +55,13 @@ public class SK_MenuListPO extends Base {
 		return null;
 	}
 
-	public WebElement menuOrganization() {
+	public WebElement menuAdministration() {
 
-		By MenuOrg = By.xpath("//a[@href='/organization/']");
+		By Administration = By.xpath("//a[@href='/organization/']");
 
 		// By linkOrganization= By.cssSelector("a[href='/organization/']");
 
-		return driver.findElement(MenuOrg);
+		return driver.findElement(Administration);
 	}
 	
 	
@@ -143,11 +143,11 @@ public class SK_MenuListPO extends Base {
 		return null;
 	}
 	
-	public WebElement scheduleNotifications() {
+	public WebElement MenuSchedule() {
 
 		try {
-			By Send = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Schedule')]");
-			return driver.findElement(Send);
+			By Schedule = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Schedule')]");
+			return driver.findElement(Schedule);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -333,7 +333,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement Reports() {
 
 		try {
-			By Reports = By.xpath("//a[@href='/tableau/reports/']");
+			By Reports = By.xpath("//li[@class='dropdown reports']//a");
 			return driver.findElement(Reports);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -341,6 +341,23 @@ public class SK_MenuListPO extends Base {
 		}
 		return null;
 	}
+	
+
+	
+	
+	public WebElement AllReports() {
+
+		try {
+			By AllReports = By.xpath("//li[@class='system-nav-item-all-reports ']//a");
+			return driver.findElement(AllReports);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
 
 	public WebElement EventResponsePlans() {
 

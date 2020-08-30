@@ -4,17 +4,6 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_SA_OpenIncident(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_SA_OpenIncident">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSafetyApp"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_SA_OpenIncident -->
-    </classes>
-  </test> <!-- SK_SA_OpenIncident(failed) -->
   <test thread-count="5" name="SK_LA_EventResponsePlans(failed)">
     <classes>
       <class name="com.TestNGScript.file.SK_LA_EventResponsePlans">
@@ -26,4 +15,15 @@
       </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
     </classes>
   </test> <!-- SK_LA_EventResponsePlans(failed) -->
+  <test thread-count="5" name="SK_LA_CreateVisitorPasses(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPasses">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+          <include name="IssueVisitorPassWithNotificationOnly"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPasses -->
+    </classes>
+  </test> <!-- SK_LA_CreateVisitorPasses(failed) -->
 </suite> <!-- Failed suite [Suite] -->

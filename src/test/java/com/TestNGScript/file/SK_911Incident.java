@@ -12,15 +12,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.BussinessFlow.file.SK_LoginBL;
-import com.BussinessFlow.file.SK_OpenIncidentBL;
+import com.BussinessFlow.file.SK_ActiveEventBL;
+import com.BussinessFlow.file.SK_EventScreenBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
 public class SK_911Incident extends Base {
 
-	SK_OpenIncidentBL incidentbl = PageFactory.initElements(driver, SK_OpenIncidentBL.class);
+	SK_ActiveEventBL incidentbl = PageFactory.initElements(driver, SK_ActiveEventBL.class);
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
-
+	SK_EventScreenBL eventbl= PageFactory.initElements(driver, SK_EventScreenBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -28,8 +29,8 @@ public class SK_911Incident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		 //   openProdSKApp();
-              openTestSKApp();
+		     openProdSKApp();
+		 //     openTestSKApp();
         //    openIntSKApp();
 		         
 		        System.out.println("Starting SK_911Incident");
@@ -43,10 +44,10 @@ public class SK_911Incident extends Base {
 	
 		
 		//loginSKbl.loginSA();
-		//loginSKbl.loginLA();
-		loginSKbl.loginObserver();
+		  loginSKbl.loginLA();
+		//loginSKbl.loginObserver();
 		incidentbl.click911Incident();
-		incidentbl.enterEventNotes();
+		eventbl.enterEventNotes();
 		
 	}
 

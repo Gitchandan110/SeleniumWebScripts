@@ -42,7 +42,29 @@ public class SK_LoginPO extends Base {
 		return driver.findElement(errorMessage);
 
 	}
-
 	
+	
+	public WebElement linkForgotPassword() {
+
+		By forgotPassword = By.xpath("//div[@class='forgot-password']//a");
+		return driver.findElement(forgotPassword);
+
+	}
+
+	public WebElement emailResetPassword() {
+
+		By emailResetPassword = By.xpath("//input[@name='email_address'][@type='email']");
+		return driver.findElement(emailResetPassword);
+
+	}
+	
+	
+	
+	public WebElement btnSubmitResetPassword() {
+
+		By btnSubmit = By.xpath("//input[@id='btn-submit'][@value='Submit']");
+		return driver.findElement(btnSubmit);
+
+	}
 
 }

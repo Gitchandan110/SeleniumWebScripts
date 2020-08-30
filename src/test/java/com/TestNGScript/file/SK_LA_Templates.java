@@ -15,16 +15,15 @@ import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_ManageTemplatesBL;
 import com.BussinessFlow.file.SK_VisitorPassesBL;
 import com.BussinessFlow.file.SK_MenuListBL;
-import com.BussinessFlow.file.SK_ScheduleNotificationBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_ScheduleNotification extends Base {
+public class SK_LA_Templates extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_ScheduleNotificationBL scheduleNotificationbl=PageFactory.initElements(driver, SK_ScheduleNotificationBL.class);
+	SK_ManageTemplatesBL manageTemplatesbl=PageFactory.initElements(driver, SK_ManageTemplatesBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -32,12 +31,12 @@ public class SK_LA_ScheduleNotification extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		 //   openProdSKApp();
-        openTestSKApp();
-  //    openIntSKApp();
-	    	
+		   openProdSKApp();
+			 //     openTestSKApp();
+	        //    openIntSKApp();
         
-        System.out.println("SK_LA_ScheduleNotification Started");
+        System.out.println("SK_LA_Templates Started");
+	    	
 	}
 
 	@Test()
@@ -46,13 +45,17 @@ public class SK_LA_ScheduleNotification extends Base {
 
 		
     	loginSKbl.loginLA();
-      	homePageMenuBL.verifyHamburgerMenu();
+    	homePageMenuBL.verifyHamburgerMenu();
+    	menuList.clickMenuCommunications();
     	menuList.clickNotifications();
-    	menuList.clickScheduleNotification();
-    	scheduleNotificationbl.verifyScheduleNotification();
-    	scheduleNotificationbl.clickLinkNewSchedule();
-    	scheduleNotificationbl.createNewScheduleNotification();
-    	
+    	menuList.clickTemplates();
+    	manageTemplatesbl.verifyManageTemplates();
+    	manageTemplatesbl.clickLinkCreateTemplate();
+    	manageTemplatesbl.fillNotificationContent();
+    	manageTemplatesbl.selectUserGroup();
+    	manageTemplatesbl.selectUsers();
+    	manageTemplatesbl.selectInactiveRadioBtn();
+    	manageTemplatesbl.selectSubmitBtn();
 	}
 
 	@AfterMethod

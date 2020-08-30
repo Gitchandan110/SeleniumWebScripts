@@ -26,9 +26,9 @@ public class SK_SA_OrganizationList extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 		
-		 //   openProdSKApp();
-        openTestSKApp();
-  //    openIntSKApp();
+		   openProdSKApp();
+			 //     openTestSKApp();
+	        //    openIntSKApp();
         
         System.out.println("SK_SA_OrganizationList Started");   
 	    	
@@ -40,7 +40,8 @@ public class SK_SA_OrganizationList extends Base {
 
 		prodSALoginbl.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();
-		menuList.clickMenuOrganization();
+		menuList.clickMenuOrganizationResources();
+		menuList.clickMenuAdministration();
 		organizationBL.getOrgPageRowCount();
 		organizationBL.getOrgPageColumnCount();
 		organizationBL.getColumnHeader();

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="205949" started-at="2020-08-13T15:48:28Z" finished-at="2020-08-13T15:51:54Z">
+  <suite name="Default suite" duration-ms="84881" started-at="2020-08-30T09:20:49Z" finished-at="2020-08-30T09:22:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="205949" started-at="2020-08-13T15:48:28Z" finished-at="2020-08-13T15:51:54Z">
-      <class name="com.TestNGScript.file.SK_LA_Maps">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_Maps@516be40f]" name="launchSKApp" is-config="true" duration-ms="41198" started-at="2020-08-13T15:48:28Z" finished-at="2020-08-13T15:49:09Z">
+    <test name="Default test" duration-ms="84881" started-at="2020-08-30T09:20:49Z" finished-at="2020-08-30T09:22:14Z">
+      <class name="com.TestNGScript.file.SK_LA_CloseActiveEvents">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_LA_CloseActiveEvents@146044d7]" name="launchSKApp" is-config="true" duration-ms="34323" started-at="2020-08-30T09:20:49Z" finished-at="2020-08-30T09:21:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_LA_Maps@516be40f]" name="launchSafetyApp" duration-ms="164691" started-at="2020-08-13T15:49:09Z" finished-at="2020-08-13T15:51:54Z">
+        <test-method status="PASS" signature="verifyCloseAction()[pri:0, instance:com.TestNGScript.file.SK_LA_CloseActiveEvents@146044d7]" name="verifyCloseAction" duration-ms="49569" started-at="2020-08-30T09:21:23Z" finished-at="2020-08-30T09:22:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchSafetyApp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_Maps@516be40f]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2020-08-13T15:51:54Z" finished-at="2020-08-13T15:51:54Z">
+        </test-method> <!-- verifyCloseAction -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_LA_CloseActiveEvents@146044d7]" name="closeBrowser" is-config="true" duration-ms="931" started-at="2020-08-30T09:22:13Z" finished-at="2020-08-30T09:22:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.TestNGScript.file.SK_LA_Maps -->
+      </class> <!-- com.TestNGScript.file.SK_LA_CloseActiveEvents -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

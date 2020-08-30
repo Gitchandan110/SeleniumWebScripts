@@ -95,25 +95,25 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 
-	public void clickMenuOrganization() {
+	public void clickMenuAdministration() {
 
 		try {
 
-			if (menuOrganization().isDisplayed() == true) {
+			if (menuAdministration().isDisplayed() == true) {
 
-				Base.highLightElement(driver, menuOrganization());
-				menuOrganization().click();
+				Base.highLightElement(driver, menuAdministration());
+				menuAdministration().click();
 				Thread.sleep(5000);
-				Base.FullPageScreenShot("Organization");
+				Base.FullPageScreenShot("Administration");
 
 			} else {
 
-				System.out.println("Organization link not found");
+				System.out.println("Administration link not found");
 			}
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in Organization link : " + ex.getStackTrace());
+			System.out.println("Exception in Administration link : " + ex.getStackTrace());
 		}
 
 	}
@@ -261,25 +261,25 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
-	public void clickScheduleNotification() {
+	public void clickSchedule() {
 
 		try {
 
-			if (scheduleNotifications() != null && scheduleNotifications().isDisplayed()) {
-				Base.highLightElement(driver, scheduleNotifications());
-				scheduleNotifications().click();
-				System.out.println("Schedule Notifications found and clicked");
+			if (MenuSchedule() != null && MenuSchedule().isDisplayed()) {
+				Base.highLightElement(driver, MenuSchedule());
+				MenuSchedule().click();
+				System.out.println("Schedule found and clicked");
 				Thread.sleep(5000);
-				Base.FullPageScreenShot("Schedule Notification");
+				Base.FullPageScreenShot("Schedule");
 
 			} else {
 
-				System.out.println("scheduleNotifications() not found");
+				System.out.println("schedule() not found");
 			}
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in scheduleNotifications() : " + ex.getStackTrace());
+			System.out.println("Exception in schedule() : " + ex.getStackTrace());
 		}
 
 	}
@@ -610,6 +610,28 @@ public class SK_MenuListBL extends SK_MenuListPO {
 		} catch (Exception ex) {
 
 			System.out.println("Exception in Reports() link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickAllReports() {
+
+		try {
+
+			if (AllReports().isDisplayed() == true) {
+				AllReports().click();
+				Thread.sleep(8000);
+				Base.takeScreenShot("Reports");
+
+			} else {
+
+				System.out.println("All Reports() link not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in All Reports() link : " + ex.getStackTrace());
 		}
 
 	}

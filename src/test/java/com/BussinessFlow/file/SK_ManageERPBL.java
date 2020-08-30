@@ -1,6 +1,9 @@
 package com.BussinessFlow.file;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -80,27 +83,30 @@ public class SK_ManageERPBL extends SK_ERP_PO {
 	public void verifyEditERP() throws InterruptedException {
 		
 		int ErpRowCount=tableRow().size();
-		System.out.println("Total Row Count is : "+ ErpRowCount);
+		System.out.println("Total ERP Row Count is : "+ ErpRowCount);
 		
 //	WebElement buttonEdit=driver.findElement(By.xpath("//table[@summary='List of Emergency Response Plans']//tbody//tr//td[2]//a"));		
 		
-	//	for (int i=1; i <= ErpRowCount; i++) {
+		for (int i=1; i <= ErpRowCount; i++) {
 			
-			int i=1;
-			while(ErpRowCount >= i) {
-				
+		/*	int i=1;
+			while(ErpRowCount >= i) {*/
+			
+				////tr//td [contains(text(), 'Earthquake')]
 				
 		driver.findElement(By.xpath("//table[@summary='List of Emergency Response Plans']//tbody//tr["+ i +"]//td[2]//a")).click();
 		Thread.sleep(3000);
 		Base.scrolltoElement(driver, btnSortingKeys());
 		btnSortingKeys().click();
 		btnSortingKeys().clear();
-		btnSortingKeys().sendKeys("5");
+		DateFormat dateFormat = new SimpleDateFormat("ss");
+		String timeString = dateFormat.format(new Date()).toString();
+		btnSortingKeys().sendKeys(timeString);
 		btnSubmit().click();
 		Thread.sleep(5000);
 		driver.navigate().to("https://safety-test.kuvrr.com/erp/");
 		Thread.sleep(5000);
-        i++;
+      //  i++;
 					
 		}
 		

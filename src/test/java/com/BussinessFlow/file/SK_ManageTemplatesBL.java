@@ -30,7 +30,7 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 
 			if (filterTemplateTiltle() != null && filterTemplateTiltle().isDisplayed()) {
 				Base.highLightElement(driver, filterTemplateTiltle());
-				filterTemplateTiltle().sendKeys("NTGeo");
+				filterTemplateTiltle().sendKeys("Template");
 				btnFilter().click();
 				Thread.sleep(5000);
 				Base.takeScreenShot("Manage Templates");

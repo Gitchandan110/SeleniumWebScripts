@@ -70,6 +70,7 @@ public class Base {
 		chromeDriver();
 		String urlProd = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 		driver.get(urlProd);
+		System.out.println("Starting Production Server");
 		Thread.sleep(5000);
 
 	}
@@ -79,6 +80,7 @@ public class Base {
 		chromeDriver();
 		String urlTest = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
 		driver.get(urlTest);
+		System.out.println("Starting Test Server");
 		Thread.sleep(5000);
 
 	}
@@ -87,6 +89,7 @@ public class Base {
 		chromeDriver();
 		String urlInt = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
 		driver.get(urlInt);
+		System.out.println("Starting Red5 Server");
 		Thread.sleep(5000);
 
 	}

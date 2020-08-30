@@ -73,6 +73,22 @@ public class SK_ScheduleNotificationPO extends Base {
 		}
 		return null;
 	}
+	
+	
+	
+	public WebElement filterExpiredStatus() {
+
+		try {
+			By ExpiredStatus = By.xpath("//option[@value='Completed']");
+			return driver.findElement(ExpiredStatus);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception in WebElement ddInactiveStatus:" + e.getMessage());
+		}
+		return null;
+	}
+	
 
 	public WebElement btnFilter() {
 
@@ -173,10 +189,10 @@ public class SK_ScheduleNotificationPO extends Base {
 		return null;
 	}
 
-	public WebElement templateOption() {
+	public WebElement AutomationTemplate() {
 
 		try {
-			By templateOption = By.xpath("//option[@class='ng-binding ng-scope' and contains (text(),'Selenium Test Template')]");
+			By templateOption = By.xpath("//option[@class='ng-binding ng-scope' and contains (text(),'Automation Template')]");
 			return driver.findElement(templateOption);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

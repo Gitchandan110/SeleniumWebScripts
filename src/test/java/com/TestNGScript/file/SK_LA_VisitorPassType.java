@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_MenuListBL;
-import com.BussinessFlow.file.SK_OpenIncidentBL;
+import com.BussinessFlow.file.SK_ActiveEventBL;
 import com.BussinessFlow.file.SK_VisitorPassTypesBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
@@ -32,9 +32,9 @@ public class SK_LA_VisitorPassType extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		 //   openProdSKApp();
-        openTestSKApp();
-  //    openIntSKApp();
+		   openProdSKApp();
+			 //     openTestSKApp();
+	        //    openIntSKApp();
 	    
         System.out.println("SK_LA_VisitorPassType Started");
 	}
@@ -46,8 +46,9 @@ public class SK_LA_VisitorPassType extends Base {
 		
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
+    	menuList.clickMenuOrganizationResources();
     	menuList.clickMenuVisitorManagement();
-    	menuList.clickMenuVisitorPassType();
+       	menuList.clickMenuVisitorPassType();
     	visitorManagementbl.verifyManageVisitorPassTypes();
 	}
 
@@ -59,6 +60,7 @@ public class SK_LA_VisitorPassType extends Base {
 
 		loginSKbl.loginLA();
 		homePageMenuBL.verifyHamburgerMenu();
+		menuList.clickMenuOrganizationResources();
 		menuList.clickMenuVisitorManagement();
 		menuList.clickMenuVisitorPassType();
 	    visitorManagementbl.editVisitorPassType();
@@ -73,6 +75,7 @@ public class SK_LA_VisitorPassType extends Base {
 
 		loginSKbl.loginLA();
 		homePageMenuBL.verifyHamburgerMenu();
+		menuList.clickMenuOrganizationResources();
 		menuList.clickMenuVisitorManagement();
 		menuList.clickMenuVisitorPassType();
 	    visitorManagementbl.clickButtonCreateVisitorPassType();

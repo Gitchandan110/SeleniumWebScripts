@@ -15,8 +15,7 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 			if (pageTitle() != null && pageTitle().isDisplayed()) {
 				Assert.assertEquals("Schedule Notification", driver.getTitle());
 				System.out.println("Landed on Schedule Notification Page");
-				
-				
+
 			}
 
 			else {
@@ -42,7 +41,7 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 				filterActiveStatus().click();
 				btnFilter().click();
 				Thread.sleep(5000);
-				Base.FullPageScreenShot("Schedule Notification Active");
+				Base.FullPageScreenShot("Schedule");
 				btnClear().click();
 				System.out.println("filterActiveStatus() Pass");
 				Base.waitFor30Seconds(ddStatus());
@@ -50,9 +49,17 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 				filterInactiveStatus().click();
 				btnFilter().click();
 				Thread.sleep(5000);
-				Base.takeScreenShot("Notifications");
+				Base.takeScreenShot("Schedule");
 				btnClear().click();
 				System.out.println("filterInactiveStatus() Pass");
+				Thread.sleep(5000);
+				ddStatus().click();
+				filterExpiredStatus().click();
+				btnFilter().click();
+				Thread.sleep(5000);
+				Base.takeScreenShot("Schedule");
+				btnClear().click();
+				System.out.println("filterExpiredStatus() Pass");
 				Thread.sleep(5000);
 
 			}
@@ -60,7 +67,7 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 				System.out.println("linkDetails found");
 				linkDetails().click();
 				Thread.sleep(5000);
-				Base.FullPageScreenShot("Schedule Notification Details");
+				Base.FullPageScreenShot("Schedule Details");
 				Base.scrollEndofthePage(driver);
 				Thread.sleep(3000);
 				btnCancelDetails().click();
@@ -91,36 +98,36 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 
 	}
 
-	public void createNewScheduleNotification() throws InterruptedException {
+	public void createNewSchedule() throws InterruptedException {
 
 		try {
 			if (ddSelectTemplate() != null && ddSelectTemplate().isDisplayed()) {
 				ddSelectTemplate().click();
 				System.out.println("ddSelectTemplate() Clicked");
-				Base.takeScreenShot("Notifications");
+				Base.takeScreenShot("Schedule");
 				Thread.sleep(3000);
-				templateOption().click();
+				AutomationTemplate().click();
 				Thread.sleep(3000);
-				Base.takeScreenShot("Notifications");
-				System.out.println("templateOption() selected");
+				Base.takeScreenShot("Schedule");
+				System.out.println("AutomationTemplate() selected");
 				Base.scrolltoElement(driver, ddTimeZone());
 				ddTimeZone().click();
 				Thread.sleep(3000);
 				textTimeZone().sendKeys("Asia/Kolkata");
 				optionAsiaKolkata().click();
 				System.out.println("optionAsiaKolkata() Selected");
-				Base.takeScreenShot("Notifications");
+				Base.takeScreenShot("Schedule");
 				btnCalendarStartDate().click();
 				selectCalendarDate().click();
-				Base.FullPageScreenShot("Create Schedule Notification");
+				Base.FullPageScreenShot("Schedule Creation");
 				btnSubmitSchedule().click();
 				Thread.sleep(5000);
 				if (ErrorMessage().isDisplayed()) {
-				System.out.println("Create Schedule Notification Fail");
-				Base.FullPageScreenShot("Create Schedule Notification Fail");
+					System.out.println("Create Schedule Fail");
+					Base.FullPageScreenShot("Create Schedule Fail");
 
 				}
-				
+
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -129,17 +136,13 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 
 	}
 
-		
-public void selectSubmitBtn() throws InterruptedException {
-		
-		if(BtnSubmit() !=null && BtnSubmit().isDisplayed()) {
+	public void selectSubmitBtn() throws InterruptedException {
+
+		if (BtnSubmit() != null && BtnSubmit().isDisplayed()) {
 			BtnSubmit().click();
 			Thread.sleep(5000);
 		}
-		
-	}
-	
-	
 
-	
+	}
+
 }

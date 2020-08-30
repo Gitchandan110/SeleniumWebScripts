@@ -143,4 +143,32 @@ public class SK_LoginBL extends SK_LoginPO {
 		}
 
 	}
+	
+	public void VerifyForgotPassword() throws IOException, InterruptedException {
+
+		try {
+			if (linkForgotPassword().isDisplayed()) {
+				linkForgotPassword().click();
+				Thread.sleep(7000);
+				
+			}	
+			if (emailResetPassword().isDisplayed()) {
+				emailResetPassword().click();
+				emailResetPassword().sendKeys(ExcelUtils.ReadExcel(LoginDataSheet, 1, 4));
+				btnSubmitResetPassword().click();
+				Thread.sleep(5000);
+				Base.FullPageScreenShot("Password Reset");
+			}
+			else {
+				System.out.println("ForgotPassword() is not Working");
+			}
+
+		
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}	
+	
 }
