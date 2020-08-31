@@ -30,6 +30,104 @@ public class SK_MenuListPO extends Base {
 		}
 		return null;
 	}
+	
+	
+	public WebElement menuGeofences() {
+
+		try {
+			By Geofences = By.xpath("//a[@href='/geofence/']");
+			
+			//a//span[contains(text(),'Geo Fences')]
+			
+			return driver.findElement(Geofences);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement menuContacts() {
+
+		try {
+			By Contacts = By.xpath("//a//span[contains(text(),'Contacts')]");
+			
+			//a//span[contains(text(),'Geo Fences')]
+			
+			return driver.findElement(Contacts);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement menuEmergencyContacts() {
+
+		try {
+			By EmergencyContacts = By.xpath("//a[contains(text(),'Emergency Contacts')]");
+			
+			//a//span[contains(text(),'Geo Fences')]
+			
+			return driver.findElement(EmergencyContacts);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement menuExternalContacts() {
+
+		try {
+			By ExternalContacts = By.xpath("//a[contains(text(),'External Contacts')]");
+			
+			//a//span[contains(text(),'Geo Fences')]
+			
+			return driver.findElement(ExternalContacts);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+
+	
+	public WebElement menuAssets() {
+
+		try {
+			By Assets = By.xpath("//a//span[contains(text(),'Assets')]");
+			
+			//a//span[contains(text(),'Geo Fences')]
+			
+			return driver.findElement(Assets);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+	
+	public WebElement menuManageAssets() {
+
+		try {
+			By ManageAssets = By.xpath("//li//a[@href='/assets/list/']");
+			
+			//a//span[contains(text(),'Geo Fences')]
+			
+			return driver.findElement(ManageAssets);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	public WebElement EventNotification() {
 
@@ -156,14 +254,14 @@ public class SK_MenuListPO extends Base {
 	}
 	
 		
-	public WebElement ManageGroups() {
+	public WebElement MenuGroups() {
 
 		try {
-			By ManageGroups = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Manage Groups')]");
-			return driver.findElement(ManageGroups);
+			By Groups = By.xpath("//li[@class='system-nav-item-broadcast']//ul//li//a[contains(text(),'Groups')]");
+			return driver.findElement(Groups);
 
 		} catch (Exception e) {
-			System.out.println("ManageGroups() locator is incorrect" + e.getMessage());
+			System.out.println("Groups locator is incorrect" + e.getMessage());
 			e.printStackTrace();
 		}
 		return null;

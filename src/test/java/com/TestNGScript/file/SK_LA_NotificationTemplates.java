@@ -11,20 +11,19 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_HomePageBL;
-import com.BussinessFlow.file.SK_IssueVisitorPassBL;
 import com.BussinessFlow.file.SK_LoginBL;
+import com.BussinessFlow.file.SK_ManageTemplatesBL;
 import com.BussinessFlow.file.SK_VisitorPassesBL;
 import com.BussinessFlow.file.SK_MenuListBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_CreateVisitorPasses extends Base {
+public class SK_LA_NotificationTemplates extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_VisitorPassesBL visitorPassesbl=PageFactory.initElements(driver, SK_VisitorPassesBL.class);
-	SK_IssueVisitorPassBL issuePassbl=PageFactory.initElements(driver, SK_IssueVisitorPassBL.class);
+	SK_ManageTemplatesBL manageTemplatesbl=PageFactory.initElements(driver, SK_ManageTemplatesBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -36,44 +35,34 @@ public class SK_LA_CreateVisitorPasses extends Base {
 			 //     openTestSKApp();
 	        //    openIntSKApp();
         
-        System.out.println("SK_LA_CreateVisitorPasses Started");
+        System.out.println("SK_LA_NotificationTemplates Started");
 	    	
 	}
 
-	@Test(priority=1)
+	@Test()
 
-	public void IssueVisitorPassWithSKApp() throws IOException, InterruptedException {
-
-		
-		loginSKbl.loginLA();
-    	homePageMenuBL.verifyHamburgerMenu();
-    	menuList.clickMenuOrganizationResources();
-    	menuList.clickMenuVisitorManagement();
-    	menuList.clickVisitorPasses();
-    	visitorPassesbl.clickIssueVisitorPass();
-    	issuePassbl.verifyIssueVisitorPassWithSKApp();
-	}
-	
-	
-	@Test(priority=2)
-
-	public void IssueVisitorPassWithNotificationOnly() throws IOException, InterruptedException {
+	public void ManageTemplates() throws IOException, InterruptedException {
 
 		
-		loginSKbl.loginLA();
+    	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
-    	menuList.clickMenuVisitorManagement();
-    	menuList.clickVisitorPasses();
-    	visitorPassesbl.clickIssueVisitorPass();
-    	issuePassbl.verifyIssueVisitorPassNotificationOnly();
+    	menuList.clickMenuCommunications();
+    	menuList.clickNotifications();
+    	menuList.clickTemplates();
+    	manageTemplatesbl.verifyManageTemplates();
+    	manageTemplatesbl.clickLinkCreateTemplate();
+    	manageTemplatesbl.fillNotificationContent();
+    	manageTemplatesbl.selectUserGroup();
+    	manageTemplatesbl.selectUsers();
+    	manageTemplatesbl.selectInactiveRadioBtn();
+    	manageTemplatesbl.selectSubmitBtn();
 	}
 
-	
 	@AfterMethod
 
 	public void closeBrowser() {
 
-     driver.quit();
+      driver.quit();
 	
 	}
 

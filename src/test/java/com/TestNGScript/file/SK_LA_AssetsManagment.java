@@ -11,20 +11,17 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_HomePageBL;
-import com.BussinessFlow.file.SK_IssueVisitorPassBL;
 import com.BussinessFlow.file.SK_LoginBL;
-import com.BussinessFlow.file.SK_VisitorPassesBL;
+import com.BussinessFlow.file.SK_MapsBL;
 import com.BussinessFlow.file.SK_MenuListBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_ManageVisitorPasses extends Base {
+public class SK_LA_AssetsManagment extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
-	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_VisitorPassesBL visitorPassesbl=PageFactory.initElements(driver, SK_VisitorPassesBL.class);
-	SK_IssueVisitorPassBL issuePassbl=PageFactory.initElements(driver, SK_IssueVisitorPassBL.class);
+	SK_MenuListBL menulistBL= PageFactory.initElements(driver, SK_MenuListBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -36,26 +33,23 @@ public class SK_LA_ManageVisitorPasses extends Base {
 			 //     openTestSKApp();
 	        //    openIntSKApp();
         
-        System.out.println("SK_LA_ManageVisitorPasses Started");
-	    	
+        System.out.println("SK_LA_AssetsManagment Started");
+
 	}
 
-	@Test(priority=1)
+	@Test()
 
-	public void MangaeVisitorPasses() throws IOException, InterruptedException {
+	public void launchSafetyApp() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
-    	menuList.clickMenuOrganizationResources();
-    	menuList.clickMenuVisitorManagement();
-    	menuList.clickVisitorPasses();
-    	visitorPassesbl.verifyManageVisitorPasses();
-    	visitorPassesbl.verifyFilterManageVisitorPasses();
-    	visitorPassesbl.verifyPassStatus();
-    	visitorPassesbl.verifyPassDetails();
-    	
+    	menulistBL.clickMenuOrganizationResources();
+    	menulistBL.clickAssets();
+    	menulistBL.clickManageAssets();
+     	
 	}
+	
 	
 	
 	@AfterMethod

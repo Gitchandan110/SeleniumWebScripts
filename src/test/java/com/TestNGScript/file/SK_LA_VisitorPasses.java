@@ -12,19 +12,18 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
-import com.BussinessFlow.file.SK_ManageTemplatesBL;
 import com.BussinessFlow.file.SK_VisitorPassesBL;
 import com.BussinessFlow.file.SK_MenuListBL;
-import com.BussinessFlow.file.SK_ScheduleNotificationBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_Schedule extends Base {
+public class SK_LA_VisitorPasses extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_ScheduleNotificationBL scheduleNotificationbl=PageFactory.initElements(driver, SK_ScheduleNotificationBL.class);
+	SK_VisitorPassesBL visitorPassesbl=PageFactory.initElements(driver, SK_VisitorPassesBL.class);
+	
 
 	String LoginDataSheet = "Login";
 
@@ -35,32 +34,37 @@ public class SK_LA_Schedule extends Base {
 		   openProdSKApp();
 			 //     openTestSKApp();
 	        //    openIntSKApp();
-	    	
-        
-        System.out.println("SK_LA_Schedule Started");
+	    
+        System.out.println("SK_LA_VisitorPasses Started");
 	}
 
-	@Test()
+	@Test(priority=1)
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void MangaeVisitorPasses() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
-      	homePageMenuBL.verifyHamburgerMenu();
-      	menuList.clickMenuCommunications();
-    	menuList.clickNotifications();
-      	menuList.clickSchedule();
-    	scheduleNotificationbl.verifyScheduleNotification();
-    	scheduleNotificationbl.clickLinkNewSchedule();
-    	scheduleNotificationbl.createNewSchedule();
+    	homePageMenuBL.verifyHamburgerMenu();
+    	menuList.clickMenuOrganizationResources();
+    	menuList.clickMenuVisitorManagement();
+     	menuList.clickVisitorPasses();
+    	visitorPassesbl.verifyManageVisitorPasses();
+    	visitorPassesbl.verifyFilterManageVisitorPasses();
+    	visitorPassesbl.verifyPassStatus();
+    	visitorPassesbl.verifyPassDetails();
+    	visitorPassesbl.clickIssueVisitorPass();
+    	visitorPassesbl.verifyIssueVisitorPassWithSKApp();
+    	visitorPassesbl.clickIssueVisitorPass();
+    	visitorPassesbl.verifyIssueVisitorPassNotificationOnly();
     	
 	}
-
+	
+	
 	@AfterMethod
 
 	public void closeBrowser() {
 
-     driver.quit();
+    driver.quit();
 	
 	}
 

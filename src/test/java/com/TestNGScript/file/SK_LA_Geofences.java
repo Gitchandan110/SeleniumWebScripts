@@ -12,18 +12,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
-import com.BussinessFlow.file.SK_ManageTemplatesBL;
-import com.BussinessFlow.file.SK_VisitorPassesBL;
+import com.BussinessFlow.file.SK_MapsBL;
 import com.BussinessFlow.file.SK_MenuListBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_Templates extends Base {
+public class SK_LA_Geofences extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
-	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_ManageTemplatesBL manageTemplatesbl=PageFactory.initElements(driver, SK_ManageTemplatesBL.class);
+	SK_MenuListBL menulistBL= PageFactory.initElements(driver, SK_MenuListBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -35,34 +33,28 @@ public class SK_LA_Templates extends Base {
 			 //     openTestSKApp();
 	        //    openIntSKApp();
         
-        System.out.println("SK_LA_Templates Started");
-	    	
+        System.out.println("SK_LA_Geofences Started");
+
 	}
 
 	@Test()
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void launchSafetyApp() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
-    	menuList.clickMenuCommunications();
-    	menuList.clickNotifications();
-    	menuList.clickTemplates();
-    	manageTemplatesbl.verifyManageTemplates();
-    	manageTemplatesbl.clickLinkCreateTemplate();
-    	manageTemplatesbl.fillNotificationContent();
-    	manageTemplatesbl.selectUserGroup();
-    	manageTemplatesbl.selectUsers();
-    	manageTemplatesbl.selectInactiveRadioBtn();
-    	manageTemplatesbl.selectSubmitBtn();
+    	menulistBL.clickMenuOrganizationResources();
+    	menulistBL.clickGeofences();
+    
+     	
 	}
 
 	@AfterMethod
 
 	public void closeBrowser() {
 
-      driver.quit();
+    driver.quit();
 	
 	}
 

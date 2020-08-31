@@ -51,6 +51,80 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 
+	public void clickGeofences() {
+
+		try {
+
+			if (menuGeofences() != null && menuGeofences().isDisplayed()) {
+				Base.highLightElement(driver, menuGeofences());
+				menuGeofences().click();
+				System.out.println("menuGeofences() clicked");
+				Thread.sleep(10000);
+				Base.takeScreenShot("Geofences");
+
+			} else {
+
+				System.out.println("Geofences not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Geofences : " + ex.getStackTrace());
+		}
+
+	}
+
+	
+	public void clickEmergencyContacts() {
+
+		try {
+
+			if (menuContacts() != null && menuContacts().isDisplayed()) {
+				Base.highLightElement(driver, menuContacts());
+				menuContacts().click();
+				menuEmergencyContacts().click();
+				System.out.println("menuEmergencyContacts() clicked");
+				Thread.sleep(10000);
+				Base.takeScreenShot("EmergencyContacts");
+
+			} else {
+
+				System.out.println("EmergencyContacts not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in EmergencyContacts : " + ex.getStackTrace());
+		}
+
+	}
+	
+	public void clickExternalContacts() {
+
+		try {
+
+			if (menuContacts() != null && menuContacts().isDisplayed()) {
+				Base.highLightElement(driver, menuContacts());
+				menuContacts().click();
+				menuExternalContacts().click();
+				System.out.println("menuExternalContacts() clicked");
+				Thread.sleep(10000);
+				Base.takeScreenShot("ExternalContacts");
+
+			} else {
+
+				System.out.println("ExternalContacts not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ExternalContacts : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
 	public void clickEventNotification() {
 
 		try {
@@ -124,10 +198,9 @@ public class SK_MenuListBL extends SK_MenuListPO {
 		try {
 
 			if (Contacts().isDisplayed() == true) {
-
 				Base.highLightElement(driver, Contacts());
 				Contacts().click();
-								
+				Thread.sleep(3000);			
 
 			} else {
 
@@ -172,7 +245,6 @@ public class SK_MenuListBL extends SK_MenuListPO {
 		try {
 
 			if (ExternalContact().isDisplayed() == true) {
-
 				Base.highLightElement(driver, ExternalContact());
 				ExternalContact().click();
 				Thread.sleep(5000);
@@ -190,6 +262,53 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
+	
+	public void clickAssets() {
+
+		try {
+
+			if (menuAssets().isDisplayed() == true) {
+				Base.highLightElement(driver, menuAssets());
+				menuAssets().click();
+				System.out.println("menuAssets found and clicked");
+				Thread.sleep(5000);				
+
+			} else {
+
+				System.out.println("menuAssets() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in menuAssets() : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickManageAssets() {
+
+		try {
+
+			if (menuManageAssets().isDisplayed() == true) {
+				Base.highLightElement(driver, menuManageAssets());
+				menuManageAssets().click();
+				Thread.sleep(9000);
+				Base.FullPageScreenShot("Assets");
+
+			} else {
+
+				System.out.println("Assets not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Assets : " + ex.getStackTrace());
+		}
+
+	}
+	
+		
 	public void clickMenuCommunications() {
 
 		try {
@@ -225,6 +344,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 				Base.scrolltoElement(driver, menuNotifications());
 				Base.highLightElement(driver, menuNotifications());
 				menuNotifications().click();
+				System.out.println("menuNotifications() found and clicked");
 				Thread.sleep(7000);
 				
 
@@ -247,8 +367,8 @@ public class SK_MenuListBL extends SK_MenuListPO {
 			if (sendNotifications() != null && sendNotifications().isDisplayed()) {
 				Base.highLightElement(driver, sendNotifications());
 				sendNotifications().click();
+				System.out.println("Send Notification found and Clicked");
 				Thread.sleep(5000);
-				Base.FullPageScreenShot("Send Notifications");
 			} else {
 
 				System.out.println("SendNotification() not found");
@@ -284,24 +404,24 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
-	public void clickManageGroups() {
+	public void clickGroups() {
 
 		try {
 
-			if (ManageGroups() != null && ManageGroups().isDisplayed()) {
-				Base.highLightElement(driver, ManageGroups());
-				ManageGroups().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Manage Groups");
+			if (MenuGroups() != null && MenuGroups().isDisplayed()) {
+				Base.highLightElement(driver, MenuGroups());
+				MenuGroups().click();
+				Thread.sleep(8000);
+				Base.FullPageScreenShot("Notification Groups");
 
 			} else {
 
-				System.out.println("ManageGroups() not found");
+				System.out.println("Notification Groups not found");
 			}
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in ManageGroups() : " + ex.getStackTrace());
+			System.out.println("Exception in Notification Groups : " + ex.getStackTrace());
 		}
 
 	}
@@ -436,7 +556,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 			if (menuOrganizationResources() != null && menuOrganizationResources().isDisplayed()) {
 				Base.highLightElement(driver, menuOrganizationResources());
 				menuOrganizationResources().click();
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 				Base.takeScreenShot("Organization Resources");
 			
 			}

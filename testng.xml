@@ -47,6 +47,41 @@
 </classes>
 </test>
 
+<test name="SK_LA_Geofences" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_Geofences" />
+</classes>
+</test>
+
+<test name="SK_LA_EmergencyContacts" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_EmergencyContacts" />
+</classes>
+</test>
+
+
+<test name="SK_LA_ExternalContacts" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ExternalContacts" />
+</classes>
+</test>
+
+
+
+<test name="SK_LA_AssetsManagment" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_AssetsManagment" />
+</classes>
+</test>
+
+
+
+<test name="SK_LA_SendNotification" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_SendNotification" />
+</classes>
+</test>
+
 
 <test name="SK_LA_EventResponsePlans" >
 <classes>
@@ -54,12 +89,34 @@
 </classes>
 </test>
 
-<test name="SK_LA_Schedule" >
+<test name="SK_LA_ScheduleNotification" >
 <classes>
-<class name="com.TestNGScript.file.SK_LA_Schedule" />
+<class name="com.TestNGScript.file.SK_LA_ScheduleNotification" />
 </classes>
 </test>
 
+
+
+<test name="SK_LA_NotificationGroups" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_NotificationGroups" />
+</classes>
+</test>
+
+
+
+<test name="SK_LA_TipNotifications" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_TipNotifications" />
+</classes>
+</test>
+
+
+<test name="SK_LA_NotificationHistory" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_NotificationHistory" />
+</classes>
+</test>
 
 <test name="SK_LA_Reports" >
 <classes>
@@ -76,9 +133,9 @@
 </test>
 
     
-<test name="SK_LA_Templates" >
+<test name="SK_LA_NotificationTemplates" >
 <classes>
-<class name="com.TestNGScript.file.SK_LA_Templates" />
+<class name="com.TestNGScript.file.SK_LA_NotificationTemplates" />
 </classes>
 </test>
 
@@ -89,19 +146,11 @@
 </test>
 
    
-<test name="SK_LA_ManageVisitorPasses" >
+<test name="SK_LA_VisitorPasses" >
 <classes>
-<class name="com.TestNGScript.file.SK_LA_ManageVisitorPasses" />
+<class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
 </classes>
 </test>
-
-
-<test name="SK_LA_CreateVisitorPasses" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_CreateVisitorPasses" />
-</classes>
-</test>
-
 
 
 <test name="SK_LA_MenuList" >

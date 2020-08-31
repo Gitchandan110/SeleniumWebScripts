@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_ForgotPassword">
+      <class name="com.TestNGScript.file.SK_LA_VisitorPasses">
         <methods>
           <include name="launchSKApp"/>
-          <include name="VerifyResetPasswordLA"/>
+          <include name="MangaeVisitorPasses"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_ForgotPassword -->
+      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPasses -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

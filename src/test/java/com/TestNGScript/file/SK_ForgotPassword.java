@@ -24,7 +24,7 @@ public class SK_ForgotPassword extends Base {
 	        //    openIntSKApp();
         
         
-        System.out.println("SK_Login Started");
+        System.out.println("SK_ForgotPassword Started");
    	 	
 	}
 

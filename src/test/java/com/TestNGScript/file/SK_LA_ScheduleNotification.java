@@ -10,21 +10,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
+import com.BussinessFlow.file.SK_ManageTemplatesBL;
+import com.BussinessFlow.file.SK_VisitorPassesBL;
 import com.BussinessFlow.file.SK_MenuListBL;
-import com.BussinessFlow.file.SK_ActiveEventBL;
-import com.BussinessFlow.file.SK_VisitorPassTypesBL;
+import com.BussinessFlow.file.SK_ScheduleNotificationBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_VisitorPassType extends Base {
+public class SK_LA_ScheduleNotification extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
 	SK_MenuListBL menuList=PageFactory.initElements(driver, SK_MenuListBL.class);
-	SK_VisitorPassTypesBL visitorManagementbl=PageFactory.initElements(driver, SK_VisitorPassTypesBL.class);
+	SK_ScheduleNotificationBL scheduleNotificationbl=PageFactory.initElements(driver, SK_ScheduleNotificationBL.class);
 
 	String LoginDataSheet = "Login";
 
@@ -35,33 +35,32 @@ public class SK_LA_VisitorPassType extends Base {
 		   openProdSKApp();
 			 //     openTestSKApp();
 	        //    openIntSKApp();
-	    
-        System.out.println("SK_LA_VisitorPassType Started");
+	    	
+        
+        System.out.println("SK_LA_ScheduleNotification Started");
 	}
 
-	@Test(priority=1)
+	@Test()
 
-	public void ManageVisitorPassType() throws IOException, InterruptedException {
+	public void ManageTemplates() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
-    	homePageMenuBL.verifyHamburgerMenu();
-    	menuList.clickMenuOrganizationResources();
-    	menuList.clickMenuVisitorManagement();
-       	menuList.clickMenuVisitorPassType();
-    	visitorManagementbl.verifyManageVisitorPassTypes();
-    	visitorManagementbl.editVisitorPassType();
-    	visitorManagementbl.clickButtonCreateVisitorPassType();
-   	    visitorManagementbl.fillCreateVisitorPassType();
+      	homePageMenuBL.verifyHamburgerMenu();
+      	menuList.clickMenuCommunications();
+    	menuList.clickNotifications();
+      	menuList.clickSchedule();
+    	scheduleNotificationbl.verifyScheduleNotification();
+    	scheduleNotificationbl.clickLinkNewSchedule();
+    	scheduleNotificationbl.createNewSchedule();
+    	
 	}
 
-		
-	
 	@AfterMethod
 
 	public void closeBrowser() {
 
-    driver.quit();
+     driver.quit();
 	
 	}
 
