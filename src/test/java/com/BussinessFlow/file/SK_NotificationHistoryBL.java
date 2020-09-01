@@ -22,7 +22,7 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 			if (pageNotificationHistory() != null && pageNotificationHistory().isDisplayed()) {
 				Assert.assertEquals("Notification History", driver.getTitle());
 				System.out.println("Landed on Notification History Page");
-				
+
 			}
 
 			else {
@@ -63,18 +63,7 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 				Thread.sleep(5000);
 
 			}
-			/*if (linkDetails() != null && linkDetails().isDisplayed()) {
-				System.out.println("linkDetails found");
-				linkDetails().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Tip Notification Detail");
-				Base.scrollEndofthePage(driver);
-				Thread.sleep(3000);
-				btnCancelDetails().click();
-				Thread.sleep(5000);
-				}
-*/
-			
+
 		}
 
 		catch (Exception e) {
@@ -84,6 +73,28 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 		}
 	}
 
-	
+	public void viewHistoryDetails() {
+
+		try {
+
+			if (sourceBroadcast() != null && sourceBroadcast().isDisplayed()) {
+				Base.highLightElement(driver, linkView());
+				linkView().click();
+				Thread.sleep(6000);
+				Base.FullPageScreenShot("Notification History Recipients");
+				System.out.println("Notification Recipients Screen displayed");
+				linkView().click();
+				Thread.sleep(6000);
+				Base.FullPageScreenShot("Notification History Contents ");
+				System.out.println("Notification Contents Screen displayed");
+				btnClose().click();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception in Page Manage Template:" + e.getMessage());
+		}
+
+	}
 
 }

@@ -98,23 +98,40 @@ public class SK_NotificationHistoryPO extends Base {
 		return null;
 	}
 
-	public WebElement linkDetails() {
+	public WebElement linkView() {
 
 		try {
-			By details = By.linkText("Details");
-			return driver.findElement(details);
+			By View = By.xpath("//tbody//tr//td//a[contains(text(),'View')]");
+			return driver.findElement(View);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
-
-	public WebElement btnCancelDetails() {
+	
+	
+	
+	
+	public WebElement sourceBroadcast() {
 
 		try {
-			By cancel = By.xpath("//a[@class='kv-btn kv-btn-primary' and contains (text(),'Cancel')]");
-			return driver.findElement(cancel);
+			By Broadcast = By.xpath("//tbody//tr//td[contains(text(),'Broadcast')]");
+			return driver.findElement(Broadcast);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+
+	public WebElement btnClose() {
+
+		try {
+			By close = By.xpath("//button[@type='button' and contains(text(),'Close')]");
+			return driver.findElement(close);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

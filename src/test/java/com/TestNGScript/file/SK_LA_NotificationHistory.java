@@ -49,13 +49,15 @@ public class SK_LA_NotificationHistory extends Base {
     	menuList.clickNotifications();
     	menuList.clickNotificationHistory();
     	historybl.verifyNotificationHistory();
+    	historybl.viewHistoryDetails();
+    	
 	}
 
 	@AfterMethod
 
 	public void closeBrowser() {
 
-      driver.quit();
+     driver.quit();
 	
 	}
 

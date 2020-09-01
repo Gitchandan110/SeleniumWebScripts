@@ -15,15 +15,26 @@
       </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
     </classes>
   </test> <!-- SK_LA_EventResponsePlans(failed) -->
-  <test thread-count="5" name="SK_LA_CreateVisitorPasses(failed)">
+  <test thread-count="5" name="SK_LA_NotificationTemplates(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_CreateVisitorPasses">
+      <class name="com.TestNGScript.file.SK_LA_NotificationTemplates">
         <methods>
           <include name="closeBrowser"/>
+          <include name="ManageTemplates"/>
           <include name="launchSKApp"/>
-          <include name="IssueVisitorPassWithNotificationOnly"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_CreateVisitorPasses -->
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationTemplates -->
     </classes>
-  </test> <!-- SK_LA_CreateVisitorPasses(failed) -->
+  </test> <!-- SK_LA_NotificationTemplates(failed) -->
+  <test thread-count="5" name="SK_LA_VisitorPassType(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_VisitorPassType">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="ManageVisitorPassType"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPassType -->
+    </classes>
+  </test> <!-- SK_LA_VisitorPassType(failed) -->
 </suite> <!-- Failed suite [Suite] -->
