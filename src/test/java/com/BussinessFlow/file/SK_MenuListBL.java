@@ -404,6 +404,84 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
+	
+	public void clickPolling() {
+
+		try {
+
+			if (Polling() != null && Polling().isDisplayed()) {
+				Base.highLightElement(driver, Polling());
+				Polling().click();
+				System.out.println("Polling() found and clicked");
+				Thread.sleep(5000);
+				
+
+			} else {
+
+				System.out.println("Polling() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Polling() : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
+	public void clickSendAPoll() {
+
+		try {
+
+			if (SendAPoll() != null && SendAPoll().isDisplayed()) {
+				Base.highLightElement(driver, SendAPoll());
+				SendAPoll().click();
+				System.out.println("SendAPoll() found and clicked");
+				Thread.sleep(8000);
+				Base.takeScreenShot("Polling");
+				
+			} else {
+
+				System.out.println("SendAPoll() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in SendAPoll(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickPollGroups() {
+
+		try {
+
+			if (PollGroups() != null && PollGroups().isDisplayed()) {
+				Base.highLightElement(driver, PollGroups());
+				PollGroups().click();
+				System.out.println("PollGroups() found and clicked");
+				Thread.sleep(8000);
+				Base.takeScreenShot("Polling");
+				
+			} else {
+
+				System.out.println("PollGroups() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in PollGroups(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
+	
+	
+	
 	public void clickGroups() {
 
 		try {
@@ -640,29 +718,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 
 	}
 	
-	public void clickPoll() {
-
-		try {
-
-			if (Poll() != null && Poll().isDisplayed()) {
-				Base.highLightElement(driver, Poll());
-				Poll().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("Poll");
-
-			} else {
-
-				System.out.println("Poll() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Poll() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
+		
 	public void clickMaps() {
 
 		try {

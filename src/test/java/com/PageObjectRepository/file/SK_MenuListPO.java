@@ -392,18 +392,43 @@ public class SK_MenuListPO extends Base {
 		return null;
 	}
 
-	public WebElement Poll() {
+	public WebElement Polling() {
 
 		try {
-			By poll = By.xpath("//li[@class='system-nav-item-poll']");
-			return driver.findElement(poll);
+			By Polling = By.xpath("//li[@class='system-nav-item-poll']//a");
+			return driver.findElement(Polling);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
+	
+	public WebElement SendAPoll() {
 
+		try {
+			By SendAPoll = By.xpath("//li//a[contains(text(),'Send a Poll')]");
+			return driver.findElement(SendAPoll);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement PollGroups() {
+
+		try {
+			By PollGroups = By.xpath("//li//a[@href='/notification/send/']");
+			return driver.findElement(PollGroups);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
 	public WebElement Map() {
 
 		try {
