@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_VisitorPasses">
+      <class name="com.TestNGScript.file.SK_LA_NotificationHistory">
         <methods>
-          <include name="launchSKApp"/>
-          <include name="MangaeVisitorPasses"/>
+          <include name="NotificationGroups"/>
           <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPasses -->
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationHistory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

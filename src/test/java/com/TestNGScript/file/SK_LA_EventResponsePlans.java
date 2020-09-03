@@ -33,9 +33,9 @@ public class SK_LA_EventResponsePlans extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		   openProdSKApp();
-			 //     openTestSKApp();
-	        //    openIntSKApp();
+//	    openProdSKApp();
+	      openTestSKApp();
+  //    openIntSKApp();
         
         System.out.println("SK_LA_EventResponsePlans Started");
 	    	

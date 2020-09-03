@@ -31,8 +31,8 @@ public class SK_LA_VisitorPasses extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		   openProdSKApp();
-			 //     openTestSKApp();
+		 //   openProdSKApp();
+		     openTestSKApp();
 	        //    openIntSKApp();
 	    
         System.out.println("SK_LA_VisitorPasses Started");

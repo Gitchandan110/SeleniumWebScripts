@@ -34,9 +34,10 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 				Base.highLightElement(driver, filterTitle());
 				filterTitle().sendKeys("Sch");
 				btnFilter().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				Base.takeScreenShot("Notification History");
 				btnClear().click();
+				Thread.sleep(10000);
 				System.out.println("filterTitle Pass");
 				Base.waitFor30Seconds(filterType());
 			}
@@ -47,20 +48,20 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 				Thread.sleep(5000);
 				filterImmediate().click();
 				btnFilter().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				Base.takeScreenShot("Notification History");
 				btnClear().click();
 				System.out.println("filterImmediate() Pass");
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				filterType().click();
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 				filterScheduled().click();
 				btnFilter().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				Base.takeScreenShot("Notification History");
 				btnClear().click();
 				System.out.println("filterScheduled()  Pass");
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 
 			}
 
@@ -80,7 +81,7 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 			if (sourceBroadcast() != null && sourceBroadcast().isDisplayed()) {
 				Base.highLightElement(driver, linkView());
 				linkView().click();
-				Thread.sleep(6000);
+				Thread.sleep(10000);
 				Base.FullPageScreenShot("Notification History Recipients");
 				System.out.println("Notification Recipients Screen displayed");
 				linkView().click();

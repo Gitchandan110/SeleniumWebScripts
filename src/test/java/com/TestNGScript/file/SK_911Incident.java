@@ -29,8 +29,8 @@ public class SK_911Incident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-		     openProdSKApp();
-		 //     openTestSKApp();
+		//    openProdSKApp();
+		      openTestSKApp();
         //    openIntSKApp();
 		         
 		        System.out.println("Starting SK_911Incident");

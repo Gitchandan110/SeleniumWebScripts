@@ -1,40 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="SK_LA_EventResponsePlans(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_EventResponsePlans">
+      <class name="com.TestNGScript.file.SK_LA_NotificationHistory">
         <methods>
+          <include name="NotificationGroups"/>
           <include name="closeBrowser"/>
-          <include name="ManageTemplates"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationHistory -->
     </classes>
-  </test> <!-- SK_LA_EventResponsePlans(failed) -->
-  <test thread-count="5" name="SK_LA_NotificationTemplates(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_NotificationTemplates">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="ManageTemplates"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_NotificationTemplates -->
-    </classes>
-  </test> <!-- SK_LA_NotificationTemplates(failed) -->
-  <test thread-count="5" name="SK_LA_VisitorPassType(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_VisitorPassType">
-        <methods>
-          <include name="launchSKApp"/>
-          <include name="closeBrowser"/>
-          <include name="ManageVisitorPassType"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPassType -->
-    </classes>
-  </test> <!-- SK_LA_VisitorPassType(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

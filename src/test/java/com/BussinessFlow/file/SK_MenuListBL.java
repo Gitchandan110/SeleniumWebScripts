@@ -560,7 +560,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 			if (menuNotificationHistory() != null && menuNotificationHistory().isDisplayed()) {
 				Base.highLightElement(driver, menuNotificationHistory());
 				menuNotificationHistory().click();
-				Thread.sleep(10000);
+				Thread.sleep(15000);
 				Base.FullPageScreenShot("Notification History");
 
 			} else {

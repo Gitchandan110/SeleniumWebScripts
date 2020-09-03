@@ -7,7 +7,7 @@
 <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
 </listeners>
 
-<!--  <test name="SK_SA_OpenIncident" >
+ <test name="SK_SA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_SA_OpenIncident" />
 </classes>
@@ -39,7 +39,7 @@
 <classes>
 <class name="com.TestNGScript.file.SK_LA_ShareActiveEvent" />
 </classes>
-</test> -->
+</test>
 
 <test name="SK_LA_ClosedIncident" >
 <classes>
