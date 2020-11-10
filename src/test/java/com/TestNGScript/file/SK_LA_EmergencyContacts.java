@@ -29,9 +29,9 @@ public class SK_LA_EmergencyContacts extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-//	    openProdSKApp();
-	      openTestSKApp();
-  //    openIntSKApp();
+        openProdSKApp();
+		     //         openTestSKApp();
+	        //        openIntSKApp();
         
         System.out.println("SK_LA_EmergencyContacts Started");
 

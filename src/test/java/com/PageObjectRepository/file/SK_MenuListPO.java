@@ -521,6 +521,96 @@ public class SK_MenuListPO extends Base {
 	}
 	
 	
+	public WebElement AudioVisualAlarms() {
+
+		try {
+			By AudioVisualAlarms = By.xpath("//li[@class='dropdown av_alarms']//a");
+			return driver.findElement(AudioVisualAlarms);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	public WebElement ActivateAVAlarms() {
+
+		try {
+			By ActivateAVAlarms = By.xpath("//li[@class='system-nav-item-avalert-activate ']//a");
+			return driver.findElement(ActivateAVAlarms);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement ManageAVAlarms() {
+
+		try {
+			By ManageAVAlarms = By.xpath("//li[@class='system-nav-item-manage-avalerts']//a");
+			return driver.findElement(ManageAVAlarms);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+	public WebElement ManageControllers() {
+
+		try {
+			By Controllers = By.xpath("//li//a[contains(text(),'Controller(s)')]");
+			return driver.findElement(Controllers);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	public WebElement ManageAlarmDevices() {
+
+		try {
+			By AlarmDevices = By.xpath("//li//a[contains(text(),'Alarm Devices')]");
+			return driver.findElement(AlarmDevices);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public WebElement ManageVirtualAlarms() {
+
+		try {
+			By VirtualAlarms = By.xpath("//li//a[contains(text(),'Virtual Alarms')]");
+			return driver.findElement(VirtualAlarms);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+	public WebElement AVAlarmsHistory() {
+
+		try {
+			By AVAlarmsHistory = By.xpath("//li[@class='system-nav-item-avalert-history ']//a");
+			return driver.findElement(AVAlarmsHistory);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
 	
 	
 	public WebElement Geofences() {
@@ -538,7 +628,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement Users() {
 
 		try {
-			By users = By.xpath("//li[@class='system-nav-item-users ']");
+			By users = By.xpath("//li[@class='dropdown users']//a");
 			return driver.findElement(users);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -550,7 +640,10 @@ public class SK_MenuListPO extends Base {
 	public WebElement UserProfiles() {
 
 		try {
-			By userProfiles = By.xpath("//li[@class='system-nav-item-user-profiles ']");
+			By userProfiles = By.xpath("//a[@href='/user/']");
+			
+			//xpath[//li[@class='system-nav-item-user-profiles ']//a[@href='/user/']"]
+			
 			return driver.findElement(userProfiles);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

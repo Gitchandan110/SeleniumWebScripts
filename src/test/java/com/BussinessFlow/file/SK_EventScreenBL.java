@@ -111,12 +111,12 @@ public class SK_EventScreenBL extends SK_EventScreenPO {
 		try {
 			if (shareIncidentEmailfield().isDisplayed()) {
 				shareIncidentEmailfield().click();
-				shareIncidentEmailfield().sendKeys("ck@yopmail.com;chandan@yopmail.com;test@yopmail.com");
+				shareIncidentEmailfield().sendKeys("ck@mailinator.com;chandan@mailinator.com;share@mailinator.com");
 				btnSubmitShareIncident().click();
 				Base.takeScreenShot("Incident Screen");
 				Thread.sleep(2000);
 				System.out.println(
-						"Share incident mail are sent to: ck@yopmail.com, chandan@yopmail.com, test@yopmail.com");
+						"Share incident mail are sent to: ck@mailinator.com;chandan@mailinator.com;share@mailinator.com");
 				ExcelWrite.writeSanitySheet(SanitySheet, 27, 1, "Pass");
 				Thread.sleep(10000);
 				driver.switchTo().alert().accept();

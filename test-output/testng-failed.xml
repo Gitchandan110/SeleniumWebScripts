@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="SK_LA_EventResponsePlans(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_NotificationHistory">
+      <class name="com.TestNGScript.file.SK_LA_EventResponsePlans">
         <methods>
-          <include name="NotificationGroups"/>
           <include name="closeBrowser"/>
+          <include name="ManageTemplates"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_NotificationHistory -->
+      </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- SK_LA_EventResponsePlans(failed) -->
+  <test thread-count="5" name="SK_LA_VisitorPassType(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_VisitorPassType">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="ManageVisitorPassType"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPassType -->
+    </classes>
+  </test> <!-- SK_LA_VisitorPassType(failed) -->
+</suite> <!-- Failed suite [Suite] -->

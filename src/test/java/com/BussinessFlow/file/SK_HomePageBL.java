@@ -107,6 +107,58 @@ public class SK_HomePageBL extends SK_HomePagePO {
 		}
 
 	}
+	
+	
+	public void ViewProtocols() {
+
+		try {
+
+			if (btnProtocols().isDisplayed() == true) {
+				Base.highLightElement(driver, btnProtocols());
+				String parentWindowId = driver.getWindowHandle();
+				System.out.println("Parent Window ID is: " + parentWindowId);
+				btnProtocols().click();
+				Thread.sleep(5000);
+				Set<String> allWindows = driver.getWindowHandles();
+				int windowCount = allWindows.size();
+				System.out.println("Total Protocols window count is :" + windowCount);
+
+				for (String childWindowId : allWindows) {
+					if (!parentWindowId.equalsIgnoreCase(childWindowId)) {
+						driver.switchTo().window(childWindowId);
+						Thread.sleep(5000);
+
+						if (ERPL.dropdownERP() != null && ERPL.dropdownERP().isDisplayed()) {
+							Base.highLightElement(driver, ERPL.dropdownERP());
+							ERPL.dropdownERP().click();
+							Thread.sleep(3000);
+							Base.FullPageScreenShot("ERP");
+							ERPL.erpEarthquick().click();
+							Thread.sleep(3000);
+							Base.FullPageScreenShot("ERP_Earthquick");
+							ERPL.dropdownERP().click();
+							Thread.sleep(3000);
+							ERPL.erpEvacuation().click();
+							Thread.sleep(3000);
+
+						}
+					}
+				}
+			} else {
+
+				System.out.println("ERP() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ERP() link : " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	
+	
 
 	public void ViewMap() {
 

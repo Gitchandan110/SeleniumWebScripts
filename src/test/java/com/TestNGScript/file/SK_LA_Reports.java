@@ -30,9 +30,9 @@ public class SK_LA_Reports extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-//	    openProdSKApp();
-	      openTestSKApp();
-  //    openIntSKApp();
+        openProdSKApp();
+		     //         openTestSKApp();
+	        //        openIntSKApp();
         
         System.out.println("SK_LA_Reports Started");
 	    	
@@ -47,11 +47,11 @@ public class SK_LA_Reports extends Base {
     	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickReports();
     	menuList.clickAllReports();
-    	reportsbl.clickEventsReport();
-    	reportsbl.clickEventHistorybyDay();
-    	reportsbl.clickBtnCloseEventHistory();
-    	reportsbl.clickEventHistorybyMonth();
-    	reportsbl.clickBtnCloseEventHistory();
+    //	reportsbl.clickEventsReport();
+    	reportsbl.clickEventHistory();
+    //	reportsbl.clickBtnCloseEventHistory();
+   //	reportsbl.clickEventHistorybyMonth();
+    //	reportsbl.clickBtnCloseEventHistory();
 	}
 
 	@AfterMethod

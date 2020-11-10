@@ -15,17 +15,6 @@
       </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
     </classes>
   </test> <!-- SK_LA_EventResponsePlans(failed) -->
-  <test thread-count="5" name="SK_LA_NotificationTemplates(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_NotificationTemplates">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="ManageTemplates"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_NotificationTemplates -->
-    </classes>
-  </test> <!-- SK_LA_NotificationTemplates(failed) -->
   <test thread-count="5" name="SK_LA_VisitorPassType(failed)">
     <classes>
       <class name="com.TestNGScript.file.SK_LA_VisitorPassType">

@@ -30,24 +30,25 @@ public class SK_ReportsBL extends SK_ReportsPO {
 
 	}
 
-	public void clickEventHistorybyDay() {
+	public void clickEventHistory() {
 
 		try {
 
-			if (EventHistoryDay().isDisplayed() == true) {
-				Base.highLightElement(driver, EventHistoryDay());
-				EventHistoryDay().click();
+			if (EventHistory().isDisplayed() == true) {
+				Base.highLightElement(driver, EventHistory());
+				EventHistory().click();
 				Thread.sleep(12000);
 				Base.takeScreenShot("Reports");
+				Base.FullPageScreenShot("Events History Dashboard");
 
 			} else {
 
-				System.out.println("Event History by Day() not found");
+				System.out.println("Event History not found");
 			}
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in Event History by Day(): " + ex.getStackTrace());
+			System.out.println("Exception in Event History: " + ex.getStackTrace());
 		}
 
 	}

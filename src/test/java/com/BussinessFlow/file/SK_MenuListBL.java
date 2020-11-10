@@ -480,8 +480,6 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	
 	
 	
-	
-	
 	public void clickGroups() {
 
 		try {
@@ -882,6 +880,236 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	}
 	
 	
+	public void clickAudioVisualAlarms() {
+
+		try {
+
+			if (AudioVisualAlarms() != null && AudioVisualAlarms().isDisplayed()) {
+				Base.highLightElement(driver, AudioVisualAlarms());
+				AudioVisualAlarms().click();
+				System.out.println("AudioVisualAlarms() found and clicked");
+				Thread.sleep(5000);
+				
+				
+			} else {
+
+				System.out.println("AudioVisualAlarms() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in AudioVisualAlarms(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickActivateAVAlarms() {
+
+		try {
+
+			if (ActivateAVAlarms() != null && ActivateAVAlarms().isDisplayed()) {
+				Base.highLightElement(driver, ActivateAVAlarms());
+				ActivateAVAlarms().click();
+				System.out.println("ActivateAVAlarms() found and clicked");
+				Thread.sleep(20000);
+				
+				
+				
+			} else {
+
+				System.out.println("Activate AVAlarms not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Activate AVAlarms: " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickManageAlarms() {
+
+		try {
+
+			if (ManageAVAlarms() != null && ManageAVAlarms().isDisplayed()) {
+				Base.highLightElement(driver, ManageAVAlarms());
+				ManageAVAlarms().click();
+				System.out.println("ManageAVAlarms() found and clicked");
+				Thread.sleep(3000);
+		
+				
+				
+			} else {
+
+				System.out.println("ManageAVAlarms() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ManageAVAlarms(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickManageControllers() {
+
+		try {
+
+			if (ManageControllers() != null && ManageControllers().isDisplayed()) {
+				Base.highLightElement(driver, ManageControllers());
+				ManageControllers().click();
+				System.out.println("ManageControllers() found and clicked");
+				Thread.sleep(8000);
+				Base.takeScreenShot("AudioVisual Controllers");
+				
+				
+			} else {
+
+				System.out.println("ManageControllers() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ManageControllers(): " + ex.getStackTrace());
+		}
+
+	}
+		
+	public void clickManageAlarmDevices() {
+
+		try {
+
+			if (ManageAlarmDevices() != null && ManageAlarmDevices().isDisplayed()) {
+				Base.highLightElement(driver, ManageAlarmDevices());
+				ManageAlarmDevices().click();
+				System.out.println("ManageAlarmDevices() found and clicked");
+				Thread.sleep(8000);
+				Base.takeScreenShot("AudioVisual Controllers");
+				
+				
+			} else {
+
+				System.out.println("ManageAlarmDevices() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ManageAlarmDevices(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	public void clickManageVirtualAlarms() {
+
+		try {
+
+			if (ManageVirtualAlarms() != null && ManageVirtualAlarms().isDisplayed()) {
+				Base.highLightElement(driver, ManageVirtualAlarms());
+				ManageVirtualAlarms().click();
+				System.out.println("ManageVirtualAlarms() found and clicked");
+				Thread.sleep(10000);
+				Base.takeScreenShot("AudioVisual Controllers");
+				Base.FullPageScreenShot("Manage VirtualAlarms");
+				
+			} else {
+
+				System.out.println("ManageAlarmDevices() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in ManageAlarmDevices(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickAVAlarmsHistory() {
+
+		try {
+
+			if (AVAlarmsHistory() != null && AVAlarmsHistory().isDisplayed()) {
+				Base.highLightElement(driver, AVAlarmsHistory());
+				AVAlarmsHistory().click();
+				System.out.println("AVAlarmsHistory() found and clicked");
+				Thread.sleep(10000);
+				Base.takeScreenShot("AudioVisual Controllers");
+				Base.FullPageScreenShot("AV Alert History");
+				
+			} else {
+
+				System.out.println("AVAlarmsHistory() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in AVAlarmsHistory(): " + ex.getStackTrace());
+		}
+
+	}	
+	
+	
+	public void clickUsers() {
+
+		try {
+
+			if (Users() != null && Users().isDisplayed()) {
+				Base.highLightElement(driver, Users());
+				Users().click();
+				System.out.println("Users() found and clicked");
+				Thread.sleep(8000);
+				
+				
+			} else {
+
+				System.out.println("Users() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Users(): " + ex.getStackTrace());
+		}
+
+	}
+	
+	
+	public void clickUserProfiles() {
+
+		try {
+
+			if (UserProfiles() != null && UserProfiles().isDisplayed()) {
+				Base.highLightElement(driver, UserProfiles());
+				UserProfiles().click();
+				System.out.println("UserProfiles() found and clicked");
+				Thread.sleep(15000);
+				Base.takeScreenShot("Users");
+				Base.FullPageScreenShot("Users Profile");
+				
+			} else {
+
+				System.out.println("UserProfiles() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in UserProfiles(): " + ex.getStackTrace());
+		}
+
+	}	
+	
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -940,4 +1168,4 @@ public class SK_MenuListBL extends SK_MenuListPO {
 	
 	
 
-}
+

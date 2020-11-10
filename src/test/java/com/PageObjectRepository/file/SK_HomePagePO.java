@@ -23,6 +23,22 @@ public class SK_HomePagePO extends Base {
 		
 	}
 	
+	
+	
+	public WebElement btnProtocols() {
+
+		try {
+			By Protocols = By.xpath("//a[@class='protocol-btn']");
+			return driver.findElement(Protocols);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
 	public WebElement btnReports() {
 
 		try {

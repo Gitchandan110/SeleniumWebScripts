@@ -14,9 +14,9 @@ public class SK_ReportsPO extends Base {
 
 	}
 
-	public WebElement EventHistoryDay() {
+	public WebElement EventHistory() {
 
-		By EventHistoryDay = By.xpath("//div[contains (text(),'Events History By Day')]");
+		By EventHistoryDay = By.xpath("//div[contains (text(),'Events History')]");
 		return driver.findElement(EventHistoryDay);
 
 	}

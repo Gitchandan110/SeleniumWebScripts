@@ -7,11 +7,14 @@
 <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
 </listeners>
 
- <test name="SK_SA_OpenIncident" >
+
+ 
+<!--  <test name="SK_LA_OpenIncident" >
 <classes>
-<class name="com.TestNGScript.file.SK_SA_OpenIncident" />
+<class name="com.TestNGScript.file.SK_LA_OpenIncident" />
 </classes>
 </test> 
+
 
 <test name="SK_Observer_OpenIncident" >
 <classes>
@@ -20,12 +23,6 @@
 </test>  
 
   
-<test name="SK_LA_OpenIncident" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_OpenIncident" />
-</classes>
-</test> 
-
 <test name="SK_911Incident" >
 <classes>
 <class name="com.TestNGScript.file.SK_911Incident" /> 
@@ -33,14 +30,20 @@
 </test>
 
 
-    
 
-<test name="SK_LA_ShareActiveEvent" >
+<test name="SK_SA_OpenIncident" >
+<classes>
+<class name="com.TestNGScript.file.SK_SA_OpenIncident" />
+</classes>
+</test> 
+   
+ 
+ <test name="SK_LA_ShareActiveEvent" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_ShareActiveEvent" />
 </classes>
-</test>
-
+</test> -->
+ 
 <test name="SK_LA_ClosedIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
@@ -52,28 +55,6 @@
 <class name="com.TestNGScript.file.SK_LA_Geofences" />
 </classes>
 </test>
-
-<test name="SK_LA_EmergencyContacts" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_EmergencyContacts" />
-</classes>
-</test>
-
-
-<test name="SK_LA_ExternalContacts" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_ExternalContacts" />
-</classes>
-</test>
-
-
-
-<test name="SK_LA_AssetsManagment" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_AssetsManagment" />
-</classes>
-</test>
-
 
 
 <test name="SK_LA_SendNotification" >
@@ -110,6 +91,29 @@
 <class name="com.TestNGScript.file.SK_LA_TipNotifications" />
 </classes>
 </test>
+
+<test name="SK_LA_EmergencyContacts" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_EmergencyContacts" />
+</classes>
+</test>
+
+
+<test name="SK_LA_ExternalContacts" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ExternalContacts" />
+</classes>
+</test>
+
+
+
+<test name="SK_LA_AssetsManagment" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_AssetsManagment" />
+</classes>
+</test>
+
+
 
 
 <test name="SK_LA_NotificationHistory" >
@@ -216,9 +220,16 @@
 </classes>
 </test>
 
-<!-- <test name="SK_Login" >
+<test name="SK_Login" >
 <classes>
 <class name="com.TestNGScript.file.SK_Login" />
+</classes>
+</test>
+
+
+<!-- <test name="SK_LA_ActivateAVAlarms" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_ActivateAVAlarms" />
 </classes>
 </test> -->
 
