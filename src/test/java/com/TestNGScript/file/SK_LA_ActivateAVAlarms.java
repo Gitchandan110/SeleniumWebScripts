@@ -31,9 +31,7 @@ public class SK_LA_ActivateAVAlarms extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-        openProdSKApp();
-		     //         openTestSKApp();
-	        //        openIntSKApp();
+		           openSKApp();
         
         System.out.println("SK_LA_ActivateAVAlarms Started");
 	    	

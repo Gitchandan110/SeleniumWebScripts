@@ -85,11 +85,25 @@ public class Base {
 
 	}
 
-	public static void openIntSKApp() throws InterruptedException, IOException {
+	public static void openSKApp() throws InterruptedException, IOException {
+		
+		
 		chromeDriver();
-		String urlInt = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
-		driver.get(urlInt);
-		System.out.println("Starting Red5 Server");
+		
+	//	Red5 URL
+	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
+		
+	//Test URL	
+		
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
+		
+	//Prod URL
+		
+	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
+	
+		
+		driver.get(url);
+		System.out.println("Starting SK App");
 		Thread.sleep(5000);
 
 	}

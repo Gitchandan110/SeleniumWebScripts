@@ -2,24 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31940" started-at="2020-11-21T18:59:21Z" finished-at="2020-11-21T18:59:52Z">
+  <suite name="Default suite" duration-ms="138" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31940" started-at="2020-11-21T18:59:21Z" finished-at="2020-11-21T18:59:52Z">
-      <class name="com.TestNGScript.file.SK_911Incident">
-        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@15d9bc04]" name="launchSKApp" is-config="true" duration-ms="31147" started-at="2020-11-21T18:59:21Z" finished-at="2020-11-21T18:59:52Z">
+    <test name="Default test" duration-ms="138" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
+      <class name="com.TestNGScript.file.TestNgAnnotation">
+        <test-method status="PASS" signature="BeforeSuit()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="BeforeSuit" is-config="true" duration-ms="36" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchSKApp -->
-        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@15d9bc04]" name="launchSafetyApp" duration-ms="97" started-at="2020-11-21T18:59:52Z" finished-at="2020-11-21T18:59:52Z">
+        </test-method> <!-- BeforeSuit -->
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="BeforeTest" is-config="true" duration-ms="8" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchSafetyApp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_911Incident@15d9bc04]" name="closeBrowser" is-config="true" duration-ms="670" started-at="2020-11-21T18:59:52Z" finished-at="2020-11-21T18:59:52Z">
+        </test-method> <!-- BeforeTest -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="BeforeClass" is-config="true" duration-ms="5" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.TestNGScript.file.SK_911Incident -->
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="BeforeMethod" is-config="true" duration-ms="4" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="Test" duration-ms="36" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="AfterMethod" is-config="true" duration-ms="4" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="AfterClass" is-config="true" duration-ms="1" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="AfterTest" is-config="true" duration-ms="0" started-at="2020-11-23T15:39:06Z" finished-at="2020-11-23T15:39:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:com.TestNGScript.file.TestNgAnnotation@6b67034]" name="AfterSuite" is-config="true" duration-ms="1" started-at="2020-11-23T15:39:07Z" finished-at="2020-11-23T15:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- com.TestNGScript.file.TestNgAnnotation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

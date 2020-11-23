@@ -9,7 +9,7 @@
 
 
  
-<!--  <test name="SK_LA_OpenIncident" >
+ <test name="SK_LA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
 </classes>
@@ -218,7 +218,7 @@
 <classes>
 <class name="com.TestNGScript.file.SK_LA_CovidCover" />
 </classes>
-</test> -->
+</test> 
 
 <test name="SK_Login" >
 <classes>
