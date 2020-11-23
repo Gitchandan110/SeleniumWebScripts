@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31940" started-at="2020-11-21T18:59:21Z" finished-at="2020-11-21T18:59:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31940" started-at="2020-11-21T18:59:21Z" finished-at="2020-11-21T18:59:52Z">
+      <class name="com.TestNGScript.file.SK_911Incident">
+        <test-method status="PASS" signature="launchSKApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@15d9bc04]" name="launchSKApp" is-config="true" duration-ms="31147" started-at="2020-11-21T18:59:21Z" finished-at="2020-11-21T18:59:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSKApp -->
+        <test-method status="PASS" signature="launchSafetyApp()[pri:0, instance:com.TestNGScript.file.SK_911Incident@15d9bc04]" name="launchSafetyApp" duration-ms="97" started-at="2020-11-21T18:59:52Z" finished-at="2020-11-21T18:59:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSafetyApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.TestNGScript.file.SK_911Incident@15d9bc04]" name="closeBrowser" is-config="true" duration-ms="670" started-at="2020-11-21T18:59:52Z" finished-at="2020-11-21T18:59:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestNGScript.file.SK_911Incident -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
