@@ -38,7 +38,7 @@ public class SK_LA_ManageAVControllers extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void ManageAVControllers() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

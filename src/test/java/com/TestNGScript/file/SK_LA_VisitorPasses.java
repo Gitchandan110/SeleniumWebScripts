@@ -38,7 +38,7 @@ public class SK_LA_VisitorPasses extends Base {
 
 	@Test(priority=1)
 
-	public void MangaeVisitorPasses() throws IOException, InterruptedException {
+	public void VisitorPasses() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

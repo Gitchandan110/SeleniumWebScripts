@@ -34,7 +34,7 @@ public class SK_SA_OrganizationList extends Base {
 
 	@Test()
 
-	public void TestOrganizationPage() throws InterruptedException, IOException {
+	public void OrganizationList() throws InterruptedException, IOException {
 
 		prodSALoginbl.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();
@@ -42,7 +42,7 @@ public class SK_SA_OrganizationList extends Base {
 		menuList.clickMenuAdministration();
 		organizationBL.getOrgPageRowCount();
 		organizationBL.getOrgPageColumnCount();
-		organizationBL.getColumnHeader();
+		organizationBL.getColumnName();
 		organizationBL.getOrganizationName();
 		organizationBL.getOrganizationAddress();
 		organizationBL.getOrganizationCity();

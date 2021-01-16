@@ -40,7 +40,7 @@ public class SK_LA_ScheduleNotification extends Base {
 
 	@Test()
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void ScheduleNotification() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

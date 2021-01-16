@@ -37,7 +37,7 @@ public class SK_LA_AssetsManagment extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void AssetsManagment() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

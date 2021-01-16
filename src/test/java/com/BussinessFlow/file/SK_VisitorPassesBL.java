@@ -234,11 +234,11 @@ public void verifyIssueVisitorPassWithSKApp() {
 				txtCompanyName().sendKeys("Netsutra");
 				System.out.println("txtCompanyName() entered");
 				ddHost().click();
-				ddHost().sendKeys("Lackorg@yopmail.com");
+				ddHost().sendKeys("Lackorg@mailinator.com");
 				selectHost().click();
 				System.out.println("selectHost() done");
 				txtEmail().click();
-				txtEmail().sendKeys("Visitor" +timeString+ "@yopmail.com");
+				txtEmail().sendKeys("Visitor" +timeString+ "@mailinator.com");
 				System.out.println("txtEmail() filled");
 				
 				radioSafetyKuvrrApp().click();
@@ -319,12 +319,12 @@ public void verifyIssueVisitorPassWithSKApp() {
 				Thread.sleep(2000);
 				ddHost().click();
 				Thread.sleep(2000);
-				ddHost().sendKeys("Lackorg@yopmail.com");
+				ddHost().sendKeys("Lackorg@mailinator.com");
 				Thread.sleep(2000);
 				selectHost().click();
 				System.out.println("selectHost() done");
 				txtEmail().click();
-				txtEmail().sendKeys("Vis" +timeString+ "@yopmail.com");
+				txtEmail().sendKeys("Vis" +timeString+ "@mailinator.com");
 				System.out.println("txtEmail() filled");
 				
 			/*	radioSafetyKuvrrApp().click();

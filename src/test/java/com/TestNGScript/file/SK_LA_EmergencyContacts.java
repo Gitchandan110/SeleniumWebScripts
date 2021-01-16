@@ -37,7 +37,7 @@ public class SK_LA_EmergencyContacts extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void EmergencyContacts() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

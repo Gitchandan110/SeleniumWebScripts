@@ -35,7 +35,7 @@ public class SK_LA_ShareActiveEvent extends Base {
 
 	@Test()
 
-	public void verifyCloseAction() throws IOException, InterruptedException {
+	public void ShareActiveEvent() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

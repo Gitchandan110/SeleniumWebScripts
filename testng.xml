@@ -8,12 +8,12 @@
 </listeners>
 
 
- 
+
  <test name="SK_LA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
 </classes>
-</test> 
+</test>  
 
 
 <test name="SK_Observer_OpenIncident" >
@@ -23,33 +23,32 @@
 </test>  
 
   
-<test name="SK_911Incident" >
-<classes>
-<class name="com.TestNGScript.file.SK_911Incident" /> 
-</classes>
-</test>
-
-
-
 <test name="SK_SA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_SA_OpenIncident" />
 </classes>
 </test> 
+
+<test name="SK_911Incident" >
+<classes>
+<class name="com.TestNGScript.file.SK_911Incident" /> 
+</classes>
+</test>
    
- 
+
  <test name="SK_LA_ShareActiveEvent" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_ShareActiveEvent" />
 </classes>
-</test> 
- 
+</test>  
+
+
 <test name="SK_LA_ClosedIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_ClosedIncident" />
 </classes>
-</test>
-
+</test> 
+ 
 <test name="SK_LA_Geofences" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_Geofences" />
@@ -90,13 +89,13 @@
 <classes>
 <class name="com.TestNGScript.file.SK_LA_TipNotifications" />
 </classes>
-</test>
+</test> 
 
 <test name="SK_LA_EmergencyContacts" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_EmergencyContacts" />
 </classes>
-</test>
+</test> 
 
 
 <test name="SK_LA_ExternalContacts" >
@@ -122,13 +121,6 @@
 </classes>
 </test>
 
-<test name="SK_LA_Reports" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_Reports" />
-</classes>
-</test>
-
-
 
 <test name="SK_LA_Maps" >
 <classes>
@@ -141,7 +133,7 @@
 <classes>
 <class name="com.TestNGScript.file.SK_LA_NotificationTemplates" />
 </classes>
-</test>
+</test> 
 
 <test name="SK_LA_VisitorPassType" >
 <classes>
@@ -157,6 +149,43 @@
 </test>
 
 
+
+ <test name="SK_LA_CommunicationReports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_CommunicationReports" />
+</classes>
+</test> 
+ 
+<test name="SK_LA_EventReports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_EventReports" />
+</classes>
+</test> 
+
+<test name="SK_LA_SurveyReports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_SurveyReports" />
+</classes>
+</test> 
+
+<test name="SK_LA_ThermalReports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_SurveyReports" />
+</classes>
+</test> 
+
+<test name="SK_LA_TipReports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_TipReports" />
+</classes>
+</test> 
+
+<test name="SK_LA_UserReports" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_UserReports" />
+</classes>
+</test> 
+ 
 <test name="SK_LA_SendAPoll" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_SendAPoll" />
@@ -218,7 +247,22 @@
 <classes>
 <class name="com.TestNGScript.file.SK_LA_CovidCover" />
 </classes>
-</test> 
+</test>   
+
+
+<test name="SK_LA_UsersContacts" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_UsersContacts" />
+</classes>
+</test>  
+
+
+<test name="SK_LA_UsersProfile" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_UsersProfile" />
+</classes>
+</test>  
+
 
 <test name="SK_Login" >
 <classes>

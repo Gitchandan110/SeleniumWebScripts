@@ -38,7 +38,7 @@ public class SK_LA_SendAPoll extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void NSendAPoll() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

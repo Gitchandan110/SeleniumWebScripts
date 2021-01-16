@@ -39,7 +39,7 @@ public class SK_LA_NotificationTemplates extends Base {
 
 	@Test()
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void NotificationTemplates() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

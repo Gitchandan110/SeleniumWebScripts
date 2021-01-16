@@ -207,7 +207,7 @@ public class SK_ActiveEventBL extends SK_ActiveEventPO {
 				Thread.sleep(2000);
 				System.out.println("Share Incident Link found and clicked");
 				txtEmailField().click();
-				txtEmailField().sendKeys("share@mailinatorcocom;chandan.kumar@netsutra.com");
+				txtEmailField().sendKeys("share@mailinator.com;chandan.kumar@netsutra.com;ck@mailinator.com");
 				Base.takeScreenShot("Share Incoming Incidents");
 				btnShare().click();
 				Thread.sleep(4000);

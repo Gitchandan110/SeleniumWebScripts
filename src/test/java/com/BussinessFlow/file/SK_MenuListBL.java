@@ -607,18 +607,20 @@ public class SK_MenuListBL extends SK_MenuListPO {
 			if (menuConfigure() != null && menuConfigure().isDisplayed()) {
 				Base.scrolltoElement(driver, menuConfigure());
 				menuConfigure().click();
-				Thread.sleep(7000);
+				Thread.sleep(15000);
+				Base.takeScreenShot("CovidCover");
 				Base.FullPageScreenShot("Covid Survey Configuration");
+			
 				
 
 			} else {
 
-				System.out.println("menuConfigure() not found");
+				System.out.println("Covid Survey not found");
 			}
 
 		} catch (Exception ex) {
 
-			System.out.println("Exception in menuConfigure() : " + ex.getStackTrace());
+			System.out.println("Exception in Covid Survey : " + ex.getStackTrace());
 		}
 
 	}
@@ -796,7 +798,7 @@ public class SK_MenuListBL extends SK_MenuListPO {
 			if (AllReports().isDisplayed() == true) {
 				AllReports().click();
 				Thread.sleep(8000);
-				Base.takeScreenShot("Reports");
+				Base.FullPageScreenShot("Reports");
 
 			} else {
 
@@ -1099,6 +1101,88 @@ public class SK_MenuListBL extends SK_MenuListPO {
 		}
 
 	}	
+	
+	public void clickAppUser() {
+
+		try {
+
+			if (AppUser() != null && AppUser().isDisplayed()) {
+				Base.highLightElement(driver, AppUser());
+				AppUser().click();
+				System.out.println("AppUser() found and clicked");
+				Thread.sleep(3000);
+				
+				
+			} else {
+
+				System.out.println("AppUser() not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in AppUser(): " + ex.getStackTrace());
+		}
+
+	}	
+	
+	
+	
+	
+	public void clickAppUsersPermissions() {
+
+		try {
+
+			if (AppUsersPermissions() != null && AppUsersPermissions().isDisplayed()) {
+				Base.highLightElement(driver, AppUsersPermissions());
+				AppUsersPermissions().click();
+				System.out.println("AppUsersPermissions() found and clicked");
+				Thread.sleep(15000);
+				Base.takeScreenShot("AppUsers Permissions");
+				Base.FullPageScreenShot("AppUsers Permissions");
+				
+			} else {
+
+				System.out.println("AppUsers Permissions not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in AppUsers Permissions: " + ex.getStackTrace());
+		}
+
+	}	
+	
+	
+	public void clickUserContacts() {
+
+		try {
+
+			if (userContacts() != null && userContacts().isDisplayed()) {
+				Base.highLightElement(driver, userContacts());
+				userContacts().click();
+				System.out.println("userContacts() found and clicked");
+				Thread.sleep(15000);
+				Base.takeScreenShot("Users");
+				Base.FullPageScreenShot("Users Contacts");
+				
+			} else {
+
+				System.out.println("Users Contacts not found");
+			}
+
+		} catch (Exception ex) {
+
+			System.out.println("Exception in Users Contacts: " + ex.getStackTrace());
+		}
+
+	}	
+	
+	
+	
+	
+	
+	
+	
 	
 }	
 	

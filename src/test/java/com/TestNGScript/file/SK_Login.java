@@ -12,6 +12,7 @@ import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
 public class SK_Login extends Base {
+
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	String LoginDataSheet = "Login";
 
@@ -28,7 +29,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 1)
 
-	public void loginSASafetyKuvrr() throws IOException, InterruptedException {
+	public void loginSA() throws IOException, InterruptedException {
 
 		loginSKbl.loginSA();
 
@@ -36,7 +37,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 2)
 
-	public void loginLASafetyKuvrr() throws IOException, InterruptedException {
+	public void loginLA() throws IOException, InterruptedException {
 
 		loginSKbl.loginLA();
 
@@ -44,7 +45,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 3)
 
-	public void loginObsSafetyKuvrr() throws IOException, InterruptedException {
+	public void loginObs() throws IOException, InterruptedException {
 
 		loginSKbl.loginObserver();
 

@@ -17,7 +17,7 @@ import com.BussinessFlow.file.SK_ReportsBL;
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 
-public class SK_LA_Reports extends Base {
+public class SK_LA_UserReports extends Base {
 
 	SK_LoginBL loginSKbl = PageFactory.initElements(driver, SK_LoginBL.class);
 	SK_HomePageBL homePageMenuBL = PageFactory.initElements(driver, SK_HomePageBL.class);
@@ -38,18 +38,15 @@ public class SK_LA_Reports extends Base {
 
 	@Test()
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void UserReports() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
     	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickReports();
     	menuList.clickAllReports();
-    //	reportsbl.clickEventsReport();
-    	reportsbl.clickEventHistory();
-    //	reportsbl.clickBtnCloseEventHistory();
-   //	reportsbl.clickEventHistorybyMonth();
-    //	reportsbl.clickBtnCloseEventHistory();
+       	reportsbl.clickUserReport();
+       	
 	}
 
 	@AfterMethod

@@ -43,7 +43,7 @@ public class SK_LA_EventResponsePlans extends Base {
 
 	@Test()
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void EventResponsePlans() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

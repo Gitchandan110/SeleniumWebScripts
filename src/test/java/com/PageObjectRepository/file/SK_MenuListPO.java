@@ -651,11 +651,26 @@ public class SK_MenuListPO extends Base {
 		}
 		return null;
 	}
+	
+	
+	
+	
+	public WebElement AppUser() {
+
+		try {
+			By appUser = By.xpath("//li[@class='system-nav-item-users']");
+			return driver.findElement(appUser);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	public WebElement AppUsersPermissions() {
 
 		try {
-			By appPermissions = By.xpath("//li[@class='system-nav-item-user-permissions ']");
+			By appPermissions = By.xpath("//li//a[contains(text(),'Permissions')]");
 			return driver.findElement(appPermissions);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -679,7 +694,7 @@ public class SK_MenuListPO extends Base {
 	public WebElement userContacts() {
 
 		try {
-			By contacts = By.xpath("//li[@class='system-nav-item-user-contacts ']");
+			By contacts = By.xpath("//li//a[@href='/contact/' and contains(text(),'Contacts')]");
 			return driver.findElement(contacts);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

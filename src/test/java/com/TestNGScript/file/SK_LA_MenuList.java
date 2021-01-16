@@ -42,7 +42,7 @@ public class SK_LA_MenuList extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void MenuList() throws IOException, InterruptedException {
 
 		/*
     	loginSKbl.loginLA();

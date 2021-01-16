@@ -38,7 +38,7 @@ public class SK_LA_ManageAlarmDevices extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void ManageAlarmDevices() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

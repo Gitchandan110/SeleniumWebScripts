@@ -4,17 +4,94 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_LA_EventResponsePlans(failed)">
+  <test thread-count="5" name="SK_LA_OpenIncident(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_EventResponsePlans">
+      <class name="com.TestNGScript.file.SK_LA_OpenIncident">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_OpenIncident -->
+    </classes>
+  </test> <!-- SK_LA_OpenIncident(failed) -->
+  <test thread-count="5" name="SK_LA_EmergencyContacts(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_EmergencyContacts">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_EmergencyContacts -->
+    </classes>
+  </test> <!-- SK_LA_EmergencyContacts(failed) -->
+  <test thread-count="5" name="SK_LA_ExternalContacts(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_ExternalContacts">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="launchSafetyApp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_ExternalContacts -->
+    </classes>
+  </test> <!-- SK_LA_ExternalContacts(failed) -->
+  <test thread-count="5" name="SK_LA_AssetsManagment(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_AssetsManagment">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_AssetsManagment -->
+    </classes>
+  </test> <!-- SK_LA_AssetsManagment(failed) -->
+  <test thread-count="5" name="SK_LA_NotificationHistory(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_NotificationHistory">
+        <methods>
+          <include name="NotificationGroups"/>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationHistory -->
+    </classes>
+  </test> <!-- SK_LA_NotificationHistory(failed) -->
+  <test thread-count="5" name="SK_LA_Reports(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_Reports">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="ManageTemplates"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_Reports -->
+    </classes>
+  </test> <!-- SK_LA_Reports(failed) -->
+  <test thread-count="5" name="SK_LA_Maps(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_Maps">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSafetyApp"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_Maps -->
+    </classes>
+  </test> <!-- SK_LA_Maps(failed) -->
+  <test thread-count="5" name="SK_LA_NotificationTemplates(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_NotificationTemplates">
         <methods>
           <include name="closeBrowser"/>
           <include name="ManageTemplates"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationTemplates -->
     </classes>
-  </test> <!-- SK_LA_EventResponsePlans(failed) -->
+  </test> <!-- SK_LA_NotificationTemplates(failed) -->
   <test thread-count="5" name="SK_LA_VisitorPassType(failed)">
     <classes>
       <class name="com.TestNGScript.file.SK_LA_VisitorPassType">
@@ -26,4 +103,127 @@
       </class> <!-- com.TestNGScript.file.SK_LA_VisitorPassType -->
     </classes>
   </test> <!-- SK_LA_VisitorPassType(failed) -->
+  <test thread-count="5" name="SK_LA_VisitorPasses(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_VisitorPasses">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="MangaeVisitorPasses"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPasses -->
+    </classes>
+  </test> <!-- SK_LA_VisitorPasses(failed) -->
+  <test thread-count="5" name="SK_LA_SendAPoll(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_SendAPoll">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="NotificationGroups"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_SendAPoll -->
+    </classes>
+  </test> <!-- SK_LA_SendAPoll(failed) -->
+  <test thread-count="5" name="SK_LA_PollGroups(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_PollGroups">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="NotificationGroups"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_PollGroups -->
+    </classes>
+  </test> <!-- SK_LA_PollGroups(failed) -->
+  <test thread-count="5" name="SK_LA_MenuList(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_MenuList">
+        <methods>
+          <include name="launchSafetyApp"/>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_MenuList -->
+    </classes>
+  </test> <!-- SK_LA_MenuList(failed) -->
+  <test thread-count="5" name="SK_ForgotPassword(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_ForgotPassword">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="VerifyResetPasswordLA"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_ForgotPassword -->
+    </classes>
+  </test> <!-- SK_ForgotPassword(failed) -->
+  <test thread-count="5" name="SK_LA_HomePage(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_HomePage">
+        <methods>
+          <include name="verifyReport"/>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_HomePage -->
+    </classes>
+  </test> <!-- SK_LA_HomePage(failed) -->
+  <test thread-count="5" name="SK_SA_Organization(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_SA_Organization">
+        <methods>
+          <include name="TestHambugerMenuClick"/>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_SA_Organization -->
+    </classes>
+  </test> <!-- SK_SA_Organization(failed) -->
+  <test thread-count="5" name="SK_SA_OrganizationList(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_SA_OrganizationList">
+        <methods>
+          <include name="TestOrganizationPage"/>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_SA_OrganizationList -->
+    </classes>
+  </test> <!-- SK_SA_OrganizationList(failed) -->
+  <test thread-count="5" name="SK_LA_CloseActiveEvents(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_CloseActiveEvents">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="verifyCloseAction"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_CloseActiveEvents -->
+    </classes>
+  </test> <!-- SK_LA_CloseActiveEvents(failed) -->
+  <test thread-count="5" name="SK_LA_CovidCover(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_CovidCover">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="ManageTemplates"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_CovidCover -->
+    </classes>
+  </test> <!-- SK_LA_CovidCover(failed) -->
+  <test thread-count="5" name="SK_Login(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_Login">
+        <methods>
+          <include name="loginLASafetyKuvrr"/>
+          <include name="loginObsSafetyKuvrr"/>
+          <include name="launchSKApp"/>
+          <include name="closeBrowser"/>
+          <include name="loginSASafetyKuvrr"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_Login -->
+    </classes>
+  </test> <!-- SK_Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

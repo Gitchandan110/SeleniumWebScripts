@@ -29,15 +29,14 @@ public class SK_911Incident extends Base {
 
 	public void launchSKApp() throws InterruptedException, IOException {
 
-	                      openSKApp();
-		         
+	            openSKApp();		         
 		        System.out.println("Starting SK_911Incident");
 
 	}
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void verify911() throws IOException, InterruptedException {
 
 	
 		

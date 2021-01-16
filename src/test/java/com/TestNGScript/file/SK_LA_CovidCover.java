@@ -40,16 +40,14 @@ public class SK_LA_CovidCover extends Base {
 
 	@Test()
 
-	public void ManageTemplates() throws IOException, InterruptedException {
+	public void CovidCover() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();
       	homePageMenuBL.verifyHamburgerMenu();
     	menuList.clickCovidCover();
     	menuList.clickConfigure();
-    	/*	scheduleNotificationbl.verifyScheduleNotification();
-    	scheduleNotificationbl.clickLinkNewSchedule();
-    	scheduleNotificationbl.createNewScheduleNotification();*/
+ 
     	
 	}
 

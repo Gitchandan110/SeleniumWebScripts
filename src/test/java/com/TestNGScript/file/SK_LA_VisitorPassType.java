@@ -39,7 +39,7 @@ public class SK_LA_VisitorPassType extends Base {
 
 	@Test(priority=1)
 
-	public void ManageVisitorPassType() throws IOException, InterruptedException {
+	public void VisitorPassType() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

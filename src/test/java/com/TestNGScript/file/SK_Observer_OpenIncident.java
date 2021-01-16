@@ -37,7 +37,7 @@ public class SK_Observer_OpenIncident extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void ObserverOpenIncident() throws IOException, InterruptedException {
 
 	
 		loginSKbl.loginObserver();

@@ -40,7 +40,7 @@ public class SK_LA_ClosedIncident extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void ClosedIncident() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

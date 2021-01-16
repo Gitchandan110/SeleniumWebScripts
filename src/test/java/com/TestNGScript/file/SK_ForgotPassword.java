@@ -27,7 +27,7 @@ public class SK_ForgotPassword extends Base {
 
 	@Test()
 
-	public void VerifyResetPasswordLA() throws IOException, InterruptedException {
+	public void ResetPassword() throws IOException, InterruptedException {
 
 		loginSKbl.VerifyForgotPassword();
 

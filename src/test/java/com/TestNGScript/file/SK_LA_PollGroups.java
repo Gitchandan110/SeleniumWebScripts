@@ -38,7 +38,7 @@ public class SK_LA_PollGroups extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void PollGroups() throws IOException, InterruptedException {
 
 		
     loginSKbl.loginLA();

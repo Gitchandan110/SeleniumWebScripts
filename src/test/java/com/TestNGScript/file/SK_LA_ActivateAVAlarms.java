@@ -39,7 +39,7 @@ public class SK_LA_ActivateAVAlarms extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void AudioVisualAlarm() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

@@ -38,7 +38,7 @@ public class SK_LA_Maps extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void Maps() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

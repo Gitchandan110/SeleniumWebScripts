@@ -38,7 +38,7 @@ public class SK_LA_ManageVirtualAlarms extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void ManageVirtualAlarms() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

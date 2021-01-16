@@ -38,7 +38,7 @@ public class SK_LA_HomePage extends Base {
 
 	@Test()
 
-	public void verifyReport() throws IOException, InterruptedException {
+	public void HomePage() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

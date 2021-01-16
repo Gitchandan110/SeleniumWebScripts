@@ -31,7 +31,7 @@ public class SK_SA_Organization extends Base {
 
 	@Test()
 
-	public void TestHambugerMenuClick() throws InterruptedException, IOException {
+	public void OrganizationScreen() throws InterruptedException, IOException {
 
 		loginSafetyKuvrrBL.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();

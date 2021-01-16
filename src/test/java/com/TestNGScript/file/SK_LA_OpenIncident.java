@@ -37,7 +37,7 @@ public class SK_LA_OpenIncident extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void OpenIncident() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

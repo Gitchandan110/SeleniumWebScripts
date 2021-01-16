@@ -35,7 +35,7 @@ public class SK_LA_CloseActiveEvents extends Base {
 
 	@Test()
 
-	public void verifyCloseAction() throws IOException, InterruptedException {
+	public void CloseActiveEvents() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

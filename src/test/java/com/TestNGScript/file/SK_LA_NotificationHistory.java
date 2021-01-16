@@ -38,7 +38,7 @@ public class SK_LA_NotificationHistory extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void NotificationHistory() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

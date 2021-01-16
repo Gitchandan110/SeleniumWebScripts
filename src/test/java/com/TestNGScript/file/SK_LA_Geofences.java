@@ -37,7 +37,7 @@ public class SK_LA_Geofences extends Base {
 
 	@Test()
 
-	public void launchSafetyApp() throws IOException, InterruptedException {
+	public void Geofences() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

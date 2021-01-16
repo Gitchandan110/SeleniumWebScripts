@@ -16,14 +16,14 @@ public class SK_OrganizationPO extends Base {
 
 	}
 
-	public List<WebElement> columnHeaderOrganization() {
+	public List<WebElement> columnListOrganization() {
 
 		By tcOrg = By.xpath("//table[@summary='List of Organizations']//thead//tr//td");
 		return driver.findElements(tcOrg);
 
 	}
 
-	public List<WebElement> totalRowOrganization() {
+	public List<WebElement> RowListOrganization() {
 
 		By trOrg = By.xpath("//table[@summary='List of Organizations']//tbody//tr");
 

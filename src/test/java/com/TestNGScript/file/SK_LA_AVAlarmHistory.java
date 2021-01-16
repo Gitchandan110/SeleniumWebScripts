@@ -38,7 +38,7 @@ public class SK_LA_AVAlarmHistory extends Base {
 
 	@Test()
 
-	public void NotificationGroups() throws IOException, InterruptedException {
+	public void AVAlarmHistory() throws IOException, InterruptedException {
 
 		
     	loginSKbl.loginLA();

@@ -56,7 +56,7 @@ public class Base {
 	public static WebDriver chromeDriver() {
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\chromedriver.exe");
+				"F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -91,15 +91,15 @@ public class Base {
 		chromeDriver();
 		
 	//	Red5 URL
-	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
 		
 	//Test URL	
 		
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
+	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
 		
 	//Prod URL
 		
-	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
+	// String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 	
 		
 		driver.get(url);
@@ -154,7 +154,7 @@ public class Base {
 
 	public static void takeScreenShot(String ScreenName) throws IOException {
 
-		String imageLocation = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots\\";
+		String imageLocation = "F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Screenshots\\";
 		// String screenName= obj.getTagName();
 
 		try {
@@ -270,6 +270,7 @@ public class Base {
 		System.out.println("Parent Window is :" + mainWindow);
 		// It returns no. of windows opened by WebDriver and will return Set of Strings
 		Set<String> set = driver.getWindowHandles();
+		System.out.println("Child window Strings Set are : "+ set);
 
 		// Using Iterator to iterate with in windows
 
