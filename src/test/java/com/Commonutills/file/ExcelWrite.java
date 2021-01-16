@@ -15,9 +15,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelWrite {
 
-	static File PathInputData = new File("F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\InputData.xlsx");
-	static File PathOutputData = new File("F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\OutputData.xlsx");
-	static File PathSanitySheet = new File("F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\SanityWebSheet.xlsx");
+	static File PathInputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\InputData.xlsx");
+	static File PathOutputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\OutputData.xlsx");
+	static File PathSanitySheet = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\SanityWebSheet.xlsx");
 	
 	public static void writeInputDataExcel(String sheetname, int rownum, int cellnum,  String celldata)
 			throws IOException {

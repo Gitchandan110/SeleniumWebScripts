@@ -56,7 +56,7 @@ public class Base {
 	public static WebDriver chromeDriver() {
 
 		System.setProperty("webdriver.chrome.driver",
-				"F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\chromedriver.exe");
+				"C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -91,7 +91,7 @@ public class Base {
 		chromeDriver();
 		
 	//	Red5 URL
-		String url = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
+	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 3, 1);
 		
 	//Test URL	
 		
@@ -99,7 +99,7 @@ public class Base {
 		
 	//Prod URL
 		
-	// String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
+	 String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 	
 		
 		driver.get(url);
@@ -154,7 +154,7 @@ public class Base {
 
 	public static void takeScreenShot(String ScreenName) throws IOException {
 
-		String imageLocation = "F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Screenshots\\";
+		String imageLocation = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots\\";
 		// String screenName= obj.getTagName();
 
 		try {

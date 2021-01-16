@@ -11,8 +11,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	static File Path = new File("F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\InputData.xlsx");
-	static File PathOutputData = new File("F:\\Eclipse\\Git\\SeleniumWebScripts\\TestAId\\Test Data\\OutputData.xlsx");
+	static File Path = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\InputData.xlsx");
+	static File PathOutputData = new File("C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\OutputData.xlsx");
 		
 	public static String ReadExcel(String sheetName, int rownum, int cellnum) throws IOException {
 
