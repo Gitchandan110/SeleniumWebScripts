@@ -1,10 +1,12 @@
 package com.TestNGScript.file;
 
 import java.io.IOException;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_MenuListBL;
 import com.BussinessFlow.file.SK_OrganizationBL;
@@ -24,7 +26,7 @@ public class SK_SA_OrganizationList extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 		
 		  openSKApp();
         
@@ -34,7 +36,7 @@ public class SK_SA_OrganizationList extends Base {
 
 	@Test()
 
-	public void OrganizationList() throws InterruptedException, IOException {
+	public void OrganizationList() throws Exception {
 
 		prodSALoginbl.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();

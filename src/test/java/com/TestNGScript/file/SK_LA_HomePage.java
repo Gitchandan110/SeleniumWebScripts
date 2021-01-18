@@ -28,7 +28,7 @@ public class SK_LA_HomePage extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 		
 		  openSKApp();
         
@@ -38,7 +38,7 @@ public class SK_LA_HomePage extends Base {
 
 	@Test()
 
-	public void HomePage() throws IOException, InterruptedException {
+	public void HomePage() throws Exception {
 
 		
     	loginSKbl.loginLA();

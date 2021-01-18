@@ -31,7 +31,7 @@ public class SK_LA_UsersProfile extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
         
@@ -41,7 +41,7 @@ public class SK_LA_UsersProfile extends Base {
 
 	@Test()
 
-	public void UsersProfile() throws IOException, InterruptedException {
+	public void UsersProfile() throws Exception {
 
 		
     	loginSKbl.loginLA();

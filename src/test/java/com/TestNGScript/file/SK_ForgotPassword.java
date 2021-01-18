@@ -17,7 +17,7 @@ public class SK_ForgotPassword extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 		
 		           openSKApp();
         
@@ -27,7 +27,7 @@ public class SK_ForgotPassword extends Base {
 
 	@Test()
 
-	public void ResetPassword() throws IOException, InterruptedException {
+	public void ResetPassword() throws Exception {
 
 		loginSKbl.VerifyForgotPassword();
 

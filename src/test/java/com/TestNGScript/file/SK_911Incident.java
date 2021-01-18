@@ -27,7 +27,7 @@ public class SK_911Incident extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 	            openSKApp();		         
 		        System.out.println("Starting SK_911Incident");
@@ -36,7 +36,7 @@ public class SK_911Incident extends Base {
 
 	@Test()
 
-	public void verify911() throws IOException, InterruptedException {
+	public void verify911() throws Exception {
 
 	
 		

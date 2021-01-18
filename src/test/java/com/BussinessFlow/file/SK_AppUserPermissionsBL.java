@@ -11,7 +11,7 @@ import com.PageObjectRepository.file.SK_AppUserPermissionsPO;
 
 public class SK_AppUserPermissionsBL extends SK_AppUserPermissionsPO {
 
-	public void selectcanManageVisitors() throws IOException {
+	public void selectcanManageVisitors() throws Exception {
 
 		int countCheckBoxCanManageVisitors = checkBoxCanManageVisitors().size();
 		System.out.println("Total Number of CanManageVisitors check box is :"

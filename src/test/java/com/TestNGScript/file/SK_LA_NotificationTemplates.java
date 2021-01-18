@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_ManageTemplatesBL;
@@ -29,7 +30,7 @@ public class SK_LA_NotificationTemplates extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
         
@@ -39,7 +40,7 @@ public class SK_LA_NotificationTemplates extends Base {
 
 	@Test()
 
-	public void NotificationTemplates() throws IOException, InterruptedException {
+	public void NotificationTemplates() throws Exception {
 
 		
     	loginSKbl.loginLA();
@@ -47,12 +48,12 @@ public class SK_LA_NotificationTemplates extends Base {
     	menuList.clickMenuCommunications();
     	menuList.clickNotifications();
     	menuList.clickTemplates();
-    	manageTemplatesbl.verifyManageTemplates();
+   // 	manageTemplatesbl.verifyManageTemplates();
     	manageTemplatesbl.clickLinkCreateTemplate();
     	manageTemplatesbl.fillNotificationContent();
     	manageTemplatesbl.selectUserGroup();
     	manageTemplatesbl.selectUsers();
-    	manageTemplatesbl.selectInactiveRadioBtn();
+    //	manageTemplatesbl.selectInactiveRadioBtn();
     	manageTemplatesbl.selectSubmitBtn();
 	}
 
@@ -60,7 +61,7 @@ public class SK_LA_NotificationTemplates extends Base {
 
 	public void closeBrowser() {
 
-      driver.quit();
+    //  driver.quit();
 	
 	}
 

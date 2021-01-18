@@ -30,7 +30,7 @@ public class SK_LA_VisitorPassType extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
 	    
@@ -39,7 +39,7 @@ public class SK_LA_VisitorPassType extends Base {
 
 	@Test(priority=1)
 
-	public void VisitorPassType() throws IOException, InterruptedException {
+	public void VisitorPassType() throws Exception {
 
 		
     	loginSKbl.loginLA();

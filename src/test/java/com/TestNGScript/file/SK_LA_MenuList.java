@@ -30,7 +30,7 @@ public class SK_LA_MenuList extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
               
@@ -42,7 +42,7 @@ public class SK_LA_MenuList extends Base {
 
 	@Test()
 
-	public void MenuList() throws IOException, InterruptedException {
+	public void MenuList() throws Exception {
 
 		/*
     	loginSKbl.loginLA();

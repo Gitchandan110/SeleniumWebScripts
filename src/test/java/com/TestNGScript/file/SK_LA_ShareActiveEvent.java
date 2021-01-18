@@ -25,7 +25,7 @@ public class SK_LA_ShareActiveEvent extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
         
@@ -35,7 +35,7 @@ public class SK_LA_ShareActiveEvent extends Base {
 
 	@Test()
 
-	public void ShareActiveEvent() throws IOException, InterruptedException {
+	public void ShareActiveEvent() throws Exception {
 
 		
     	loginSKbl.loginLA();

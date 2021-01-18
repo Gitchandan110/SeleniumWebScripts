@@ -20,43 +20,37 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 	SK_OrganizationPO organizationpl;
 	String OrganizationSheet = "Web_Organization";
 
-	public void getOrgPageRowCount() {
+	public void getOrgPageRowCount() throws Exception {
 
 		int OrgRowCount = RowListOrganization().size();
 		System.out.println("OrgRowCount are : " + OrgRowCount);
 
 	}
 
-	public void getOrgPageColumnCount() {
+	public void getOrgPageColumnCount() throws Exception {
 		int OrgColumnCount = columnListOrganization().size();
 		System.out.println("OrgColumnCount are : " + OrgColumnCount);
 
 	}
 
-	public void getColumnName() throws IOException {
+	public void getColumnName() throws Exception {
 
-		try {
-			int OrgColumnCount = columnListOrganization().size();
-			for (int i = 1; i <= OrgColumnCount; i++) {
+		int OrgColumnCount = columnListOrganization().size();
+		for (int i = 1; i <= OrgColumnCount; i++) {
 
-				String ColumnName = driver
-						.findElement(
-								By.xpath("//table[@summary='List of Organizations']//thead//tr//td["
-										+ i + "]")).getText();
+			String ColumnName = driver
+					.findElement(
+							By.xpath("//table[@summary='List of Organizations']//thead//tr//td["
+									+ i + "]")).getText();
 
-				System.out.println("Column Names are :" + ColumnName);
+			System.out.println("Column Names are :" + ColumnName);
 
-				ExcelUtils.writeExcel(OrganizationSheet, 0, i - 1,
-						ColumnName);
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println(ex);
+			ExcelUtils.writeExcel(OrganizationSheet, 0, i - 1, ColumnName);
 		}
+
 	}
 
-	public void getOrganizationName() throws IOException {
+	public void getOrganizationName() throws Exception {
 
 		int j = 1;
 		while (RowListOrganization().size() >= j) {
@@ -73,7 +67,7 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 
 	}
 
-	public void getOrganizationAddress() throws IOException {
+	public void getOrganizationAddress() throws Exception {
 
 		int OrgRowCount = RowListOrganization().size();
 		for (int i = 1; i <= OrgRowCount; i++) {
@@ -86,13 +80,12 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 
 			// ExcelWrite.writeInputDataExcel(OrganizationSheet, i, 3,
 			// orgAddress);
-			ExcelUtils
-					.writeExcel(OrganizationSheet, i, 3, orgAddress);
+			ExcelUtils.writeExcel(OrganizationSheet, i, 3, orgAddress);
 		}
 
 	}
 
-	public void getOrganizationCity() throws IOException {
+	public void getOrganizationCity() throws Exception {
 
 		for (int i = 1; i <= RowListOrganization().size(); i++) {
 
@@ -109,7 +102,7 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 
 	}
 
-	public void getOrganizationState() throws IOException {
+	public void getOrganizationState() throws Exception {
 
 		int OrgRowCount = RowListOrganization().size();
 		for (int i = 1; i <= OrgRowCount; i++) {
@@ -128,7 +121,7 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 
 	}
 
-	public void getOrganizationPostalCode() throws IOException {
+	public void getOrganizationPostalCode() throws Exception {
 
 		int OrgRowCount = RowListOrganization().size();
 		for (int i = 1; i <= OrgRowCount; i++) {
@@ -140,14 +133,13 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 
 			System.out.println("orgPostalCode are :" + orgPostalCode);
 
-			ExcelUtils.writeExcel(OrganizationSheet, i, 6,
-					orgPostalCode);
+			ExcelUtils.writeExcel(OrganizationSheet, i, 6, orgPostalCode);
 
 		}
 
 	}
 
-	public void getOrganizationCountry() throws IOException {
+	public void getOrganizationCountry() throws Exception {
 
 		int OrgRowCount = RowListOrganization().size();
 		for (int i = 1; i <= OrgRowCount; i++) {
@@ -159,14 +151,13 @@ public class SK_OrganizationBL extends SK_OrganizationPO {
 
 			System.out.println("orgCountry are :" + orgCountry);
 
-			ExcelUtils
-					.writeExcel(OrganizationSheet, i, 7, orgCountry);
+			ExcelUtils.writeExcel(OrganizationSheet, i, 7, orgCountry);
 
 		}
 
 	}
 
-	public void getOrganizationStatus() throws IOException {
+	public void getOrganizationStatus() throws Exception {
 
 		int OrgRowCount = RowListOrganization().size();
 		for (int i = 1; i <= OrgRowCount; i++) {

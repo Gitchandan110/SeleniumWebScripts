@@ -22,7 +22,7 @@ public class SK_SA_Organization extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
 
@@ -31,7 +31,7 @@ public class SK_SA_Organization extends Base {
 
 	@Test()
 
-	public void OrganizationScreen() throws InterruptedException, IOException {
+	public void OrganizationScreen() throws Exception {
 
 		loginSafetyKuvrrBL.loginSA();
 		homePageMenuBL.verifyHamburgerMenu();

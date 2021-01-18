@@ -7,1249 +7,763 @@ import com.PageObjectRepository.file.SK_MenuListPO;
 
 public class SK_MenuListBL extends SK_MenuListPO {
 
-	public void clickActiveEvents() {
+	public void clickActiveEvents() throws Exception {
 
-		try {
+		if (ActiveEvents().isDisplayed() == true) {
+			Base.highLightElement(driver, ActiveEvents());
+			ActiveEvents().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Active Events");
 
-			if (ActiveEvents().isDisplayed() == true) {
-				Base.highLightElement(driver, ActiveEvents());
-				ActiveEvents().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Active Events");
+		} else {
 
-			} else {
-
-				System.out.println("ActiveEvents link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ActiveEvents() link : " + ex.getStackTrace());
+			System.out.println("ActiveEvents link not found");
 		}
 
 	}
 
-	public void clickClosedEvents() {
+	public void clickClosedEvents() throws Exception {
 
-		try {
+		if (ClosedEvents().isDisplayed() == true) {
+			Base.highLightElement(driver, ClosedEvents());
+			ClosedEvents().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Closed Events");
 
-			if (ClosedEvents().isDisplayed() == true) {
-				Base.highLightElement(driver, ClosedEvents());
-				ClosedEvents().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Closed Events");
+		} else {
 
-			} else {
-
-				System.out.println("ClosedEvents() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ClosedEvents() link : " + ex.getStackTrace());
+			System.out.println("ClosedEvents() link not found");
 		}
 
 	}
 
-	public void clickGeofences() {
+	public void clickGeofences() throws Exception {
 
-		try {
+		if (menuGeofences() != null && menuGeofences().isDisplayed()) {
+			Base.highLightElement(driver, menuGeofences());
+			menuGeofences().click();
+			System.out.println("menuGeofences() clicked");
+			Thread.sleep(10000);
+			Base.takeScreenShot("Geofences");
 
-			if (menuGeofences() != null && menuGeofences().isDisplayed()) {
-				Base.highLightElement(driver, menuGeofences());
-				menuGeofences().click();
-				System.out.println("menuGeofences() clicked");
-				Thread.sleep(10000);
-				Base.takeScreenShot("Geofences");
+		} else {
 
-			} else {
-
-				System.out.println("Geofences not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Geofences : " + ex.getStackTrace());
+			System.out.println("Geofences not found");
 		}
 
 	}
 
-	
-	public void clickEmergencyContacts() {
+	public void clickEmergencyContacts() throws Exception {
 
-		try {
+		if (menuContacts() != null && menuContacts().isDisplayed()) {
+			Base.highLightElement(driver, menuContacts());
+			menuContacts().click();
+			menuEmergencyContacts().click();
+			System.out.println("menuEmergencyContacts() clicked");
+			Thread.sleep(10000);
+			Base.takeScreenShot("EmergencyContacts");
 
-			if (menuContacts() != null && menuContacts().isDisplayed()) {
-				Base.highLightElement(driver, menuContacts());
-				menuContacts().click();
-				menuEmergencyContacts().click();
-				System.out.println("menuEmergencyContacts() clicked");
-				Thread.sleep(10000);
-				Base.takeScreenShot("EmergencyContacts");
+		} else {
 
-			} else {
-
-				System.out.println("EmergencyContacts not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in EmergencyContacts : " + ex.getStackTrace());
-		}
-
-	}
-	
-	public void clickExternalContacts() {
-
-		try {
-
-			if (menuContacts() != null && menuContacts().isDisplayed()) {
-				Base.highLightElement(driver, menuContacts());
-				menuContacts().click();
-				menuExternalContacts().click();
-				System.out.println("menuExternalContacts() clicked");
-				Thread.sleep(10000);
-				Base.takeScreenShot("ExternalContacts");
-
-			} else {
-
-				System.out.println("ExternalContacts not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ExternalContacts : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	
-	public void clickEventNotification() {
-
-		try {
-
-			if (EventNotification().isDisplayed() == true) {
-				Base.highLightElement(driver, EventNotification());
-				EventNotification().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Event Notification");
-
-			} else {
-
-				System.out.println("EventNotification() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in EventNotification() link : " + ex.getStackTrace());
+			System.out.println("EmergencyContacts not found");
 		}
 
 	}
 
-	public void clickEventAttendence() {
+	public void clickExternalContacts() throws Exception {
 
-		try {
+		if (menuContacts() != null && menuContacts().isDisplayed()) {
+			Base.highLightElement(driver, menuContacts());
+			menuContacts().click();
+			menuExternalContacts().click();
+			System.out.println("menuExternalContacts() clicked");
+			Thread.sleep(10000);
+			Base.takeScreenShot("ExternalContacts");
 
-			if (EventAttendence().isDisplayed() == true) {
-				Base.highLightElement(driver, EventAttendence());
-				EventAttendence().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Event Attendence");
+		} else {
 
-			} else {
-
-				System.out.println("EventAttendence() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in EventAttendence() link : " + ex.getStackTrace());
+			System.out.println("ExternalContacts not found");
 		}
 
 	}
 
-	public void clickMenuAdministration() {
+	public void clickEventNotification() throws Exception {
 
-		try {
+		if (EventNotification().isDisplayed() == true) {
+			Base.highLightElement(driver, EventNotification());
+			EventNotification().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Event Notification");
 
-			if (menuAdministration().isDisplayed() == true) {
+		} else {
 
-				Base.highLightElement(driver, menuAdministration());
-				menuAdministration().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Administration");
-
-			} else {
-
-				System.out.println("Administration link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Administration link : " + ex.getStackTrace());
-		}
-
-	}
-	
-
-	public void clickContacts() {
-
-		try {
-
-			if (Contacts().isDisplayed() == true) {
-				Base.highLightElement(driver, Contacts());
-				Contacts().click();
-				Thread.sleep(3000);			
-
-			} else {
-
-				System.out.println("Contact() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Contact() link : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-
-	public void clickEmergencyContact() {
-
-		try {
-
-			if (EmergencyContact().isDisplayed() == true) {
-
-				Base.highLightElement(driver, EmergencyContact());
-				EmergencyContact().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Emergency Contacts");
-
-			} else {
-
-				System.out.println("EmergencyContact() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in EmergencyContact() link : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickExternalContact() {
-
-		try {
-
-			if (ExternalContact().isDisplayed() == true) {
-				Base.highLightElement(driver, ExternalContact());
-				ExternalContact().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("External Contacts");
-
-			} else {
-
-				System.out.println("ExternalContact() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ExternalContact() link : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickAssets() {
-
-		try {
-
-			if (menuAssets().isDisplayed() == true) {
-				Base.highLightElement(driver, menuAssets());
-				menuAssets().click();
-				System.out.println("menuAssets found and clicked");
-				Thread.sleep(5000);				
-
-			} else {
-
-				System.out.println("menuAssets() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuAssets() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickManageAssets() {
-
-		try {
-
-			if (menuManageAssets().isDisplayed() == true) {
-				Base.highLightElement(driver, menuManageAssets());
-				menuManageAssets().click();
-				Thread.sleep(9000);
-				Base.FullPageScreenShot("Assets");
-
-			} else {
-
-				System.out.println("Assets not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Assets : " + ex.getStackTrace());
-		}
-
-	}
-	
-		
-	public void clickMenuCommunications() {
-
-		try {
-			
-		
-			if (menuCommunications() != null && menuCommunications().isDisplayed()) {
-				Base.scrolltoElement(driver, menuCommunications());
-				Base.highLightElement(driver, menuCommunications());
-				menuCommunications().click();
-				System.out.println("menuCommunications() Clicked");
-				Thread.sleep(3000);
-			}
-
-			else {
-
-				System.out.println("menuCommunications() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuCommunications() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickNotifications() {
-
-		try {
-			
-		
-			 if (menuNotifications() != null && menuNotifications().isDisplayed()) {
-				Base.scrolltoElement(driver, menuNotifications());
-				Base.highLightElement(driver, menuNotifications());
-				menuNotifications().click();
-				System.out.println("menuNotifications() found and clicked");
-				Thread.sleep(7000);
-				
-
-			} else {
-
-				System.out.println("menuNotifications() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuNotifications() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	public void clickSendNotification() {
-
-		try {
-
-			if (sendNotifications() != null && sendNotifications().isDisplayed()) {
-				Base.highLightElement(driver, sendNotifications());
-				sendNotifications().click();
-				System.out.println("Send Notification found and Clicked");
-				Thread.sleep(5000);
-			} else {
-
-				System.out.println("SendNotification() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in SendNotification() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	public void clickSchedule() {
-
-		try {
-
-			if (MenuSchedule() != null && MenuSchedule().isDisplayed()) {
-				Base.highLightElement(driver, MenuSchedule());
-				MenuSchedule().click();
-				System.out.println("Schedule found and clicked");
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Schedule");
-
-			} else {
-
-				System.out.println("schedule() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in schedule() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickPolling() {
-
-		try {
-
-			if (Polling() != null && Polling().isDisplayed()) {
-				Base.highLightElement(driver, Polling());
-				Polling().click();
-				System.out.println("Polling() found and clicked");
-				Thread.sleep(5000);
-				
-
-			} else {
-
-				System.out.println("Polling() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Polling() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	
-	public void clickSendAPoll() {
-
-		try {
-
-			if (SendAPoll() != null && SendAPoll().isDisplayed()) {
-				Base.highLightElement(driver, SendAPoll());
-				SendAPoll().click();
-				System.out.println("SendAPoll() found and clicked");
-				Thread.sleep(8000);
-				Base.takeScreenShot("Polling");
-				
-			} else {
-
-				System.out.println("SendAPoll() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in SendAPoll(): " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickPollGroups() {
-
-		try {
-
-			if (PollGroups() != null && PollGroups().isDisplayed()) {
-				Base.highLightElement(driver, PollGroups());
-				PollGroups().click();
-				System.out.println("PollGroups() found and clicked");
-				Thread.sleep(8000);
-				Base.takeScreenShot("Polling");
-				
-			} else {
-
-				System.out.println("PollGroups() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in PollGroups(): " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	
-	
-	public void clickGroups() {
-
-		try {
-
-			if (MenuGroups() != null && MenuGroups().isDisplayed()) {
-				Base.highLightElement(driver, MenuGroups());
-				MenuGroups().click();
-				Thread.sleep(8000);
-				Base.FullPageScreenShot("Notification Groups");
-
-			} else {
-
-				System.out.println("Notification Groups not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Notification Groups : " + ex.getStackTrace());
-		}
-
-	}
-	
-	public void clickTemplates() {
-
-		try {
-
-			if (menuTemplates() != null && menuTemplates().isDisplayed()) {
-				Base.highLightElement(driver, menuTemplates());
-				menuTemplates().click();
-				System.out.println("menuTemplates() Clicked");
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Templates");
-
-			} else {
-
-				System.out.println("menuTemplates() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuTemplates() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	
-	public void clickTipNotification() {
-
-		try {
-
-			if (menuTipNotification() != null && menuTipNotification().isDisplayed()) {
-				Base.highLightElement(driver, menuTipNotification());
-				menuTipNotification().click();
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Tip Notification");
-
-			} else {
-
-				System.out.println("menuTipNotification() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuTipNotification() : " + ex.getStackTrace());
-		}
-
-	}
-	
-		
-	
-	public void clickNotificationHistory() {
-
-		try {
-
-			if (menuNotificationHistory() != null && menuNotificationHistory().isDisplayed()) {
-				Base.highLightElement(driver, menuNotificationHistory());
-				menuNotificationHistory().click();
-				Thread.sleep(15000);
-				Base.FullPageScreenShot("Notification History");
-
-			} else {
-
-				System.out.println("menuNotificationHistory() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuNotificationHistory() : " + ex.getStackTrace());
-		}
-
-	}	
-	
-	
-	public void clickCovidCover() {
-
-		try {
-
-			if (menuCovidCover() != null && menuCovidCover().isDisplayed()) {
-				Base.scrolltoElement(driver, menuCovidCover());
-				Base.highLightElement(driver, menuCovidCover());
-				menuCovidCover().click();
-				System.out.println("menuCovidCover() Clicked");
-				Base.takeScreenShot("CovidCover");
-				Thread.sleep(3000);
-				
-
-			} else {
-
-				System.out.println("menuCovidCover() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in menuCovidCover() : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickConfigure() {
-
-		try {
-
-			if (menuConfigure() != null && menuConfigure().isDisplayed()) {
-				Base.scrolltoElement(driver, menuConfigure());
-				menuConfigure().click();
-				Thread.sleep(15000);
-				Base.takeScreenShot("CovidCover");
-				Base.FullPageScreenShot("Covid Survey Configuration");
-			
-				
-
-			} else {
-
-				System.out.println("Covid Survey not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Covid Survey : " + ex.getStackTrace());
-		}
-
-	}
-	
-	
-	public void clickMenuOrganizationResources() {
-
-		try {
-			
-
-			if (menuOrganizationResources() != null && menuOrganizationResources().isDisplayed()) {
-				Base.highLightElement(driver, menuOrganizationResources());
-				menuOrganizationResources().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("Organization Resources");
-			
-			}
-			
-			else {
-
-				System.out.println("Menu Organization Resources not found");
-			}
-			
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Organization Resources : " + ex.getStackTrace());
-		} 
-
-	}
-
-	
-
-	public void clickMenuVisitorManagement() {
-
-		try {
-			
-
-			if (menuVisitorManagement() != null && menuVisitorManagement().isDisplayed()) {
-				menuVisitorManagement().click();
-				Thread.sleep(2000);
-
-			} else {
-
-				System.out.println("Visitor Management Menu not found");
-			}
-			
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Visitor Management : " + ex.getStackTrace());
+			System.out.println("EventNotification() link not found");
 		}
 
 	}
 
-	public void clickMenuVisitorPassType() {
+	public void clickEventAttendence() throws Exception {
 
-		try {
+		if (EventAttendence().isDisplayed() == true) {
+			Base.highLightElement(driver, EventAttendence());
+			EventAttendence().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Event Attendence");
 
-			if (menuVisitorPassType() != null && menuVisitorPassType().isDisplayed()) {
-				menuVisitorPassType().click();
-				System.out.println("menuVisitorPassType selected");
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Visitor Pass Type");
+		} else {
 
-			} else {
+			System.out.println("EventAttendence() link not found");
+		}
+	}
 
-				System.out.println("menuVisitorPassType() not found");
-			}
+	public void clickMenuAdministration() throws Exception {
 
-		} catch (Exception ex) {
+		if (menuAdministration().isDisplayed() == true) {
 
-			System.out.println("Exception in menuVisitorPassType(): " + ex.getStackTrace());
+			Base.highLightElement(driver, menuAdministration());
+			menuAdministration().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Administration");
+
+		} else {
+
+			System.out.println("Administration link not found");
+		}
+	}
+
+	public void clickContacts() throws Exception {
+
+		if (Contacts().isDisplayed() == true) {
+			Base.highLightElement(driver, Contacts());
+			Contacts().click();
+			Thread.sleep(3000);
+
+		} else {
+
+			System.out.println("Contact() link not found");
+		}
+	}
+
+	public void clickEmergencyContact() throws Exception {
+
+		if (EmergencyContact().isDisplayed() == true) {
+
+			Base.highLightElement(driver, EmergencyContact());
+			EmergencyContact().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Emergency Contacts");
+
+		} else {
+
+			System.out.println("EmergencyContact() link not found");
+		}
+	}
+
+	public void clickExternalContact() throws Exception {
+
+		if (ExternalContact().isDisplayed() == true) {
+			Base.highLightElement(driver, ExternalContact());
+			ExternalContact().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("External Contacts");
+
+		} else {
+
+			System.out.println("ExternalContact() link not found");
+		}
+	}
+
+	public void clickAssets() throws Exception {
+
+		if (menuAssets().isDisplayed() == true) {
+			Base.highLightElement(driver, menuAssets());
+			menuAssets().click();
+			System.out.println("menuAssets found and clicked");
+			Thread.sleep(5000);
+
+		} else {
+
+			System.out.println("menuAssets() not found");
+		}
+	}
+
+	public void clickManageAssets() throws Exception {
+
+		if (menuManageAssets().isDisplayed() == true) {
+			Base.highLightElement(driver, menuManageAssets());
+			menuManageAssets().click();
+			Thread.sleep(9000);
+			Base.FullPageScreenShot("Assets");
+
+		} else {
+
+			System.out.println("Assets not found");
+		}
+	}
+
+	public void clickMenuCommunications() throws Exception {
+
+		if (menuCommunications() != null && menuCommunications().isDisplayed()) {
+			Base.scrolltoElement(driver, menuCommunications());
+			Base.highLightElement(driver, menuCommunications());
+			menuCommunications().click();
+			System.out.println("menuCommunications() Clicked");
+			Thread.sleep(3000);
+		}
+
+		else {
+
+			System.out.println("menuCommunications() not found");
 		}
 
 	}
 
-	public void clickVisitorPasses() {
+	public void clickNotifications() throws Exception {
 
-		try {
+		if (menuNotifications() != null && menuNotifications().isDisplayed()) {
+			Base.scrolltoElement(driver, menuNotifications());
+			Base.highLightElement(driver, menuNotifications());
+			menuNotifications().click();
+			System.out.println("menuNotifications() found and clicked");
+			Thread.sleep(7000);
 
-			if (linkVisitorPasses() != null && linkVisitorPasses().isDisplayed()) {
-				linkVisitorPasses().click();
-				System.out.println("Visitor Passes selected");
-				Thread.sleep(5000);
-				Base.FullPageScreenShot("Visitor Passes");
+		} else {
 
-			} else {
-
-				System.out.println("Visitor Passes not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Visitor Passses): " + ex.getStackTrace());
+			System.out.println("menuNotifications() not found");
 		}
-
 	}
-	
-		
-	public void clickMaps() {
 
-		try {
+	public void clickSendNotification() throws Exception {
 
-			if (Map() != null && Map().isDisplayed()) {
-				Base.highLightElement(driver, Map());
-				Map().click();
-				System.out.println("Map clicked");
-				Thread.sleep(10000);
-				Base.takeScreenShot("Map");
+		if (sendNotifications() != null && sendNotifications().isDisplayed()) {
+			Base.highLightElement(driver, sendNotifications());
+			sendNotifications().click();
+			System.out.println("Send Notification found and Clicked");
+			Thread.sleep(5000);
+		} else {
 
-			} else {
+			System.out.println("SendNotification() not found");
+		}
+	}
 
-				System.out.println("Map not found");
-			}
+	public void clickSchedule() throws Exception {
 
-		} catch (Exception ex) {
+		if (MenuSchedule() != null && MenuSchedule().isDisplayed()) {
+			Base.highLightElement(driver, MenuSchedule());
+			MenuSchedule().click();
+			System.out.println("Schedule found and clicked");
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Schedule");
 
-			System.out.println("Exception in Map : " + ex.getStackTrace());
+		} else {
+
+			System.out.println("schedule() not found");
 		}
 
 	}
 
-	
+	public void clickPolling() throws Exception {
 
-    public void clickVideoConference() {
+		if (Polling() != null && Polling().isDisplayed()) {
+			Base.highLightElement(driver, Polling());
+			Polling().click();
+			System.out.println("Polling() found and clicked");
+			Thread.sleep(5000);
 
-		try {
+		} else {
 
-			if (VideoConference() != null && VideoConference().isDisplayed()) {
-				Base.highLightElement(driver, VideoConference());
-				VideoConference().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("VideoConference");
-
-			} else {
-
-				System.out.println("VideoConference() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in VideoConference() : " + ex.getStackTrace());
+			System.out.println("Polling() not found");
 		}
 
 	}
-	
-	
-	public void clickReports() {
 
-		try {
+	public void clickSendAPoll() throws Exception {
 
-			if (Reports().isDisplayed() == true) {
-				Base.scrolltoElement(driver, Reports());
-				Base.highLightElement(driver, Reports());
-				Reports().click();
-				Thread.sleep(8000);
-				Base.takeScreenShot("Reports");
+		if (SendAPoll() != null && SendAPoll().isDisplayed()) {
+			Base.highLightElement(driver, SendAPoll());
+			SendAPoll().click();
+			System.out.println("SendAPoll() found and clicked");
+			Thread.sleep(8000);
+			Base.takeScreenShot("Polling");
 
-			} else {
+		} else {
 
-				System.out.println("Reports() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Reports() link : " + ex.getStackTrace());
+			System.out.println("SendAPoll() not found");
 		}
 
 	}
-	
-	
-	public void clickAllReports() {
 
-		try {
+	public void clickPollGroups() throws Exception {
 
-			if (AllReports().isDisplayed() == true) {
-				AllReports().click();
-				Thread.sleep(8000);
-				Base.FullPageScreenShot("Reports");
+		if (PollGroups() != null && PollGroups().isDisplayed()) {
+			Base.highLightElement(driver, PollGroups());
+			PollGroups().click();
+			System.out.println("PollGroups() found and clicked");
+			Thread.sleep(8000);
+			Base.takeScreenShot("Polling");
 
-			} else {
+		} else {
 
-				System.out.println("All Reports() link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in All Reports() link : " + ex.getStackTrace());
+			System.out.println("PollGroups() not found");
 		}
 
 	}
-	
-		
-	public void clickEventResponsePlans() {
 
-		try {
-			
-				if (EventResponsePlans().isDisplayed() == true) {
-				Base.scrolltoElement(driver, EventResponsePlans());
-				Base.highLightElement(driver, EventResponsePlans());
-				EventResponsePlans().click();
-				Thread.sleep(5000);
-				Base.takeScreenShot("ERP");
+	public void clickGroups() throws Exception {
 
-			} else {
+		if (MenuGroups() != null && MenuGroups().isDisplayed()) {
+			Base.highLightElement(driver, MenuGroups());
+			MenuGroups().click();
+			Thread.sleep(8000);
+			Base.FullPageScreenShot("Notification Groups");
 
-				System.out.println("ERP link not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
+			System.out.println("Notification Groups not found");
+		}
+	}
 
-			System.out.println("Exception in ERP link : " + ex.getStackTrace());
+	public void clickTemplates() throws Exception {
+
+		if (menuTemplates() != null && menuTemplates().isDisplayed()) {
+			Base.highLightElement(driver, menuTemplates());
+			menuTemplates().click();
+			System.out.println("menuTemplates() Clicked");
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Templates");
+
+		} else {
+
+			System.out.println("menuTemplates() not found");
 		}
 
 	}
-	
-	public void clickManageERP() {
 
-		try {
+	public void clickTipNotification() throws Exception {
 
-			if (ManageERP().isDisplayed() == true) {
-				ManageERP().click();
-				Thread.sleep(6000);
-				System.out.println("ERP List screen displayed");
-				Base.FullPageScreenShot("Manage ERP");
+		if (menuTipNotification() != null
+				&& menuTipNotification().isDisplayed()) {
+			Base.highLightElement(driver, menuTipNotification());
+			menuTipNotification().click();
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Tip Notification");
 
-			} else {
+		} else {
 
-				System.out.println("ManageERP link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ManageERP link : " + ex.getStackTrace());
+			System.out.println("menuTipNotification() not found");
 		}
 
 	}
-	
-	
-	public void clickShowERP() {
 
-		try {
+	public void clickNotificationHistory() throws Exception {
 
-			if (ShowERP().isDisplayed() == true) {
-				ShowERP().click();
-				Thread.sleep(3000);
-				System.out.println("Show ERP screen displayed");
-				Base.FullPageScreenShot("Show ERP");
+		if (menuNotificationHistory() != null
+				&& menuNotificationHistory().isDisplayed()) {
+			Base.highLightElement(driver, menuNotificationHistory());
+			menuNotificationHistory().click();
+			Thread.sleep(15000);
+			Base.FullPageScreenShot("Notification History");
 
-			} else {
+		} else {
 
-				System.out.println("ShowERP link not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ShowERP link : " + ex.getStackTrace());
+			System.out.println("menuNotificationHistory() not found");
 		}
 
 	}
-	
-	
-	public void clickAudioVisualAlarms() {
 
-		try {
+	public void clickCovidCover() throws Exception {
 
-			if (AudioVisualAlarms() != null && AudioVisualAlarms().isDisplayed()) {
-				Base.highLightElement(driver, AudioVisualAlarms());
-				AudioVisualAlarms().click();
-				System.out.println("AudioVisualAlarms() found and clicked");
-				Thread.sleep(5000);
-				
-				
-			} else {
+		if (menuCovidCover() != null && menuCovidCover().isDisplayed()) {
+			Base.scrolltoElement(driver, menuCovidCover());
+			Base.highLightElement(driver, menuCovidCover());
+			menuCovidCover().click();
+			System.out.println("menuCovidCover() Clicked");
+			Base.takeScreenShot("CovidCover");
+			Thread.sleep(3000);
 
-				System.out.println("AudioVisualAlarms() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in AudioVisualAlarms(): " + ex.getStackTrace());
+			System.out.println("menuCovidCover() not found");
 		}
 
 	}
-	
-	
-	public void clickActivateAVAlarms() {
 
-		try {
+	public void clickConfigure() throws Exception {
 
-			if (ActivateAVAlarms() != null && ActivateAVAlarms().isDisplayed()) {
-				Base.highLightElement(driver, ActivateAVAlarms());
-				ActivateAVAlarms().click();
-				System.out.println("ActivateAVAlarms() found and clicked");
-				Thread.sleep(20000);
-				
-				
-				
-			} else {
+		if (menuConfigure() != null && menuConfigure().isDisplayed()) {
+			Base.scrolltoElement(driver, menuConfigure());
+			menuConfigure().click();
+			Thread.sleep(15000);
+			Base.takeScreenShot("CovidCover");
+			Base.FullPageScreenShot("Covid Survey Configuration");
 
-				System.out.println("Activate AVAlarms not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Activate AVAlarms: " + ex.getStackTrace());
+			System.out.println("Covid Survey not found");
 		}
 
 	}
-	
-	
-	public void clickManageAlarms() {
 
-		try {
+	public void clickMenuOrganizationResources() throws Exception {
 
-			if (ManageAVAlarms() != null && ManageAVAlarms().isDisplayed()) {
-				Base.highLightElement(driver, ManageAVAlarms());
-				ManageAVAlarms().click();
-				System.out.println("ManageAVAlarms() found and clicked");
-				Thread.sleep(3000);
-		
-				
-				
-			} else {
+		if (menuOrganizationResources() != null
+				&& menuOrganizationResources().isDisplayed()) {
+			Base.highLightElement(driver, menuOrganizationResources());
+			menuOrganizationResources().click();
+			Thread.sleep(5000);
+			Base.takeScreenShot("Organization Resources");
 
-				System.out.println("ManageAVAlarms() not found");
-			}
+		}
 
-		} catch (Exception ex) {
+		else {
 
-			System.out.println("Exception in ManageAVAlarms(): " + ex.getStackTrace());
+			System.out.println("Menu Organization Resources not found");
+		}
+	}
+
+	public void clickMenuVisitorManagement() throws Exception {
+
+		if (menuVisitorManagement() != null
+				&& menuVisitorManagement().isDisplayed()) {
+			menuVisitorManagement().click();
+			Thread.sleep(2000);
+
+		} else {
+
+			System.out.println("Visitor Management Menu not found");
 		}
 
 	}
-	
-	
-	public void clickManageControllers() {
 
-		try {
+	public void clickMenuVisitorPassType() throws Exception {
 
-			if (ManageControllers() != null && ManageControllers().isDisplayed()) {
-				Base.highLightElement(driver, ManageControllers());
-				ManageControllers().click();
-				System.out.println("ManageControllers() found and clicked");
-				Thread.sleep(8000);
-				Base.takeScreenShot("AudioVisual Controllers");
-				
-				
-			} else {
+		if (menuVisitorPassType() != null
+				&& menuVisitorPassType().isDisplayed()) {
+			menuVisitorPassType().click();
+			System.out.println("menuVisitorPassType selected");
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Visitor Pass Type");
 
-				System.out.println("ManageControllers() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ManageControllers(): " + ex.getStackTrace());
+			System.out.println("menuVisitorPassType() not found");
 		}
 
 	}
-		
-	public void clickManageAlarmDevices() {
 
-		try {
+	public void clickVisitorPasses() throws Exception {
 
-			if (ManageAlarmDevices() != null && ManageAlarmDevices().isDisplayed()) {
-				Base.highLightElement(driver, ManageAlarmDevices());
-				ManageAlarmDevices().click();
-				System.out.println("ManageAlarmDevices() found and clicked");
-				Thread.sleep(8000);
-				Base.takeScreenShot("AudioVisual Controllers");
-				
-				
-			} else {
+		if (linkVisitorPasses() != null && linkVisitorPasses().isDisplayed()) {
+			linkVisitorPasses().click();
+			System.out.println("Visitor Passes selected");
+			Thread.sleep(5000);
+			Base.FullPageScreenShot("Visitor Passes");
 
-				System.out.println("ManageAlarmDevices() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ManageAlarmDevices(): " + ex.getStackTrace());
+			System.out.println("Visitor Passes not found");
 		}
 
 	}
-	
-	public void clickManageVirtualAlarms() {
 
-		try {
+	public void clickMaps() throws Exception {
 
-			if (ManageVirtualAlarms() != null && ManageVirtualAlarms().isDisplayed()) {
-				Base.highLightElement(driver, ManageVirtualAlarms());
-				ManageVirtualAlarms().click();
-				System.out.println("ManageVirtualAlarms() found and clicked");
-				Thread.sleep(10000);
-				Base.takeScreenShot("AudioVisual Controllers");
-				Base.FullPageScreenShot("Manage VirtualAlarms");
-				
-			} else {
+		if (Map() != null && Map().isDisplayed()) {
+			Base.highLightElement(driver, Map());
+			Map().click();
+			System.out.println("Map clicked");
+			Thread.sleep(10000);
+			Base.takeScreenShot("Map");
 
-				System.out.println("ManageAlarmDevices() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in ManageAlarmDevices(): " + ex.getStackTrace());
+			System.out.println("Map not found");
 		}
 
 	}
-	
-	
-	public void clickAVAlarmsHistory() {
 
-		try {
+	public void clickVideoConference() throws Exception {
 
-			if (AVAlarmsHistory() != null && AVAlarmsHistory().isDisplayed()) {
-				Base.highLightElement(driver, AVAlarmsHistory());
-				AVAlarmsHistory().click();
-				System.out.println("AVAlarmsHistory() found and clicked");
-				Thread.sleep(10000);
-				Base.takeScreenShot("AudioVisual Controllers");
-				Base.FullPageScreenShot("AV Alert History");
-				
-			} else {
+		if (VideoConference() != null && VideoConference().isDisplayed()) {
+			Base.highLightElement(driver, VideoConference());
+			VideoConference().click();
+			Thread.sleep(5000);
+			Base.takeScreenShot("VideoConference");
 
-				System.out.println("AVAlarmsHistory() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in AVAlarmsHistory(): " + ex.getStackTrace());
-		}
-
-	}	
-	
-	
-	public void clickUsers() {
-
-		try {
-
-			if (Users() != null && Users().isDisplayed()) {
-				Base.highLightElement(driver, Users());
-				Users().click();
-				System.out.println("Users() found and clicked");
-				Thread.sleep(8000);
-				
-				
-			} else {
-
-				System.out.println("Users() not found");
-			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Users(): " + ex.getStackTrace());
+			System.out.println("VideoConference() not found");
 		}
 
 	}
-	
-	
-	public void clickUserProfiles() {
 
-		try {
+	public void clickReports() throws Exception {
 
-			if (UserProfiles() != null && UserProfiles().isDisplayed()) {
-				Base.highLightElement(driver, UserProfiles());
-				UserProfiles().click();
-				System.out.println("UserProfiles() found and clicked");
-				Thread.sleep(15000);
-				Base.takeScreenShot("Users");
-				Base.FullPageScreenShot("Users Profile");
-				
-			} else {
+		if (Reports().isDisplayed() == true) {
+			Base.scrolltoElement(driver, Reports());
+			Base.highLightElement(driver, Reports());
+			Reports().click();
+			Thread.sleep(8000);
+			Base.takeScreenShot("Reports");
 
-				System.out.println("UserProfiles() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
+			System.out.println("Reports() link not found");
+		}
+	}
 
-			System.out.println("Exception in UserProfiles(): " + ex.getStackTrace());
+	public void clickAllReports() throws Exception {
+
+		if (AllReports().isDisplayed() == true) {
+			AllReports().click();
+			Thread.sleep(8000);
+			Base.FullPageScreenShot("Reports");
+
+		} else {
+
+			System.out.println("All Reports() link not found");
 		}
 
-	}	
-	
-	public void clickAppUser() {
+	}
 
-		try {
+	public void clickEventResponsePlans() throws Exception {
 
-			if (AppUser() != null && AppUser().isDisplayed()) {
-				Base.highLightElement(driver, AppUser());
-				AppUser().click();
-				System.out.println("AppUser() found and clicked");
-				Thread.sleep(3000);
-				
-				
-			} else {
+		if (EventResponsePlans().isDisplayed() == true) {
+			Base.scrolltoElement(driver, EventResponsePlans());
+			Base.highLightElement(driver, EventResponsePlans());
+			EventResponsePlans().click();
+			Thread.sleep(5000);
+			Base.takeScreenShot("ERP");
 
-				System.out.println("AppUser() not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in AppUser(): " + ex.getStackTrace());
+			System.out.println("ERP link not found");
 		}
 
-	}	
-	
-	
-	
-	
-	public void clickAppUsersPermissions() {
+	}
 
-		try {
+	public void clickManageERP() throws Exception {
 
-			if (AppUsersPermissions() != null && AppUsersPermissions().isDisplayed()) {
-				Base.highLightElement(driver, AppUsersPermissions());
-				AppUsersPermissions().click();
-				System.out.println("AppUsersPermissions() found and clicked");
-				Thread.sleep(15000);
-				Base.takeScreenShot("AppUsers Permissions");
-				Base.FullPageScreenShot("AppUsers Permissions");
-				
-			} else {
+		if (ManageERP().isDisplayed() == true) {
+			ManageERP().click();
+			Thread.sleep(6000);
+			System.out.println("ERP List screen displayed");
+			Base.FullPageScreenShot("Manage ERP");
 
-				System.out.println("AppUsers Permissions not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in AppUsers Permissions: " + ex.getStackTrace());
+			System.out.println("ManageERP link not found");
 		}
 
-	}	
-	
-	
-	public void clickUserContacts() {
+	}
 
-		try {
+	public void clickShowERP() throws Exception {
 
-			if (userContacts() != null && userContacts().isDisplayed()) {
-				Base.highLightElement(driver, userContacts());
-				userContacts().click();
-				System.out.println("userContacts() found and clicked");
-				Thread.sleep(15000);
-				Base.takeScreenShot("Users");
-				Base.FullPageScreenShot("Users Contacts");
-				
-			} else {
+		if (ShowERP().isDisplayed() == true) {
+			ShowERP().click();
+			Thread.sleep(3000);
+			System.out.println("Show ERP screen displayed");
+			Base.FullPageScreenShot("Show ERP");
 
-				System.out.println("Users Contacts not found");
-			}
+		} else {
 
-		} catch (Exception ex) {
-
-			System.out.println("Exception in Users Contacts: " + ex.getStackTrace());
+			System.out.println("ShowERP link not found");
 		}
 
-	}	
-	
-	
-	
-	
-	
-	
-	
-	
-}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 
+	public void clickAudioVisualAlarms() throws Exception {
 
+		if (AudioVisualAlarms() != null && AudioVisualAlarms().isDisplayed()) {
+			Base.highLightElement(driver, AudioVisualAlarms());
+			AudioVisualAlarms().click();
+			System.out.println("AudioVisualAlarms() found and clicked");
+			Thread.sleep(5000);
+
+		} else {
+
+			System.out.println("AudioVisualAlarms() not found");
+		}
+
+	}
+
+	public void clickActivateAVAlarms() throws Exception {
+
+		if (ActivateAVAlarms() != null && ActivateAVAlarms().isDisplayed()) {
+			Base.highLightElement(driver, ActivateAVAlarms());
+			ActivateAVAlarms().click();
+			System.out.println("ActivateAVAlarms() found and clicked");
+			Thread.sleep(20000);
+
+		} else {
+
+			System.out.println("Activate AVAlarms not found");
+		}
+
+	}
+
+	public void clickManageAlarms() throws Exception {
+
+		if (ManageAVAlarms() != null && ManageAVAlarms().isDisplayed()) {
+			Base.highLightElement(driver, ManageAVAlarms());
+			ManageAVAlarms().click();
+			System.out.println("ManageAVAlarms() found and clicked");
+			Thread.sleep(3000);
+
+		} else {
+
+			System.out.println("ManageAVAlarms() not found");
+		}
+
+	}
+
+	public void clickManageControllers() throws Exception {
+
+		if (ManageControllers() != null && ManageControllers().isDisplayed()) {
+			Base.highLightElement(driver, ManageControllers());
+			ManageControllers().click();
+			System.out.println("ManageControllers() found and clicked");
+			Thread.sleep(8000);
+			Base.takeScreenShot("AudioVisual Controllers");
+
+		} else {
+
+			System.out.println("ManageControllers() not found");
+		}
+
+	}
+
+	public void clickManageAlarmDevices() throws Exception {
+
+		if (ManageAlarmDevices() != null && ManageAlarmDevices().isDisplayed()) {
+			Base.highLightElement(driver, ManageAlarmDevices());
+			ManageAlarmDevices().click();
+			System.out.println("ManageAlarmDevices() found and clicked");
+			Thread.sleep(8000);
+			Base.takeScreenShot("AudioVisual Controllers");
+
+		} else {
+
+			System.out.println("ManageAlarmDevices() not found");
+		}
+
+	}
+
+	public void clickManageVirtualAlarms() throws Exception {
+
+		if (ManageVirtualAlarms() != null
+				&& ManageVirtualAlarms().isDisplayed()) {
+			Base.highLightElement(driver, ManageVirtualAlarms());
+			ManageVirtualAlarms().click();
+			System.out.println("ManageVirtualAlarms() found and clicked");
+			Thread.sleep(10000);
+			Base.takeScreenShot("AudioVisual Controllers");
+			Base.FullPageScreenShot("Manage VirtualAlarms");
+
+		} else {
+
+			System.out.println("ManageAlarmDevices() not found");
+		}
+
+	}
+
+	public void clickAVAlarmsHistory() throws Exception {
+
+		if (AVAlarmsHistory() != null && AVAlarmsHistory().isDisplayed()) {
+			Base.highLightElement(driver, AVAlarmsHistory());
+			AVAlarmsHistory().click();
+			System.out.println("AVAlarmsHistory() found and clicked");
+			Thread.sleep(10000);
+			Base.takeScreenShot("AudioVisual Controllers");
+			Base.FullPageScreenShot("AV Alert History");
+
+		} else {
+
+			System.out.println("AVAlarmsHistory() not found");
+		}
+
+	}
+
+	public void clickUsers() throws Exception {
+
+		if (Users() != null && Users().isDisplayed()) {
+			Base.highLightElement(driver, Users());
+			Users().click();
+			System.out.println("Users() found and clicked");
+			Thread.sleep(8000);
+
+		} else {
+
+			System.out.println("Users() not found");
+		}
+
+	}
+
+	public void clickUserProfiles() throws Exception {
+
+		if (UserProfiles() != null && UserProfiles().isDisplayed()) {
+			Base.highLightElement(driver, UserProfiles());
+			UserProfiles().click();
+			System.out.println("UserProfiles() found and clicked");
+			Thread.sleep(15000);
+			Base.takeScreenShot("Users");
+			Base.FullPageScreenShot("Users Profile");
+
+		} else {
+
+			System.out.println("UserProfiles() not found");
+		}
+
+	}
+
+	public void clickAppUser() throws Exception {
+
+		if (AppUser() != null && AppUser().isDisplayed()) {
+			Base.highLightElement(driver, AppUser());
+			AppUser().click();
+			System.out.println("AppUser() found and clicked");
+			Thread.sleep(3000);
+
+		} else {
+
+			System.out.println("AppUser() not found");
+		}
+
+	}
+
+	public void clickAppUsersPermissions() throws Exception {
+
+		if (AppUsersPermissions() != null
+				&& AppUsersPermissions().isDisplayed()) {
+			Base.highLightElement(driver, AppUsersPermissions());
+			AppUsersPermissions().click();
+			System.out.println("AppUsersPermissions() found and clicked");
+			Thread.sleep(15000);
+			Base.takeScreenShot("AppUsers Permissions");
+			Base.FullPageScreenShot("AppUsers Permissions");
+
+		} else {
+
+			System.out.println("AppUsers Permissions not found");
+		}
+
+	}
+
+	public void clickUserContacts() throws Exception {
+
+		if (userContacts() != null && userContacts().isDisplayed()) {
+			Base.highLightElement(driver, userContacts());
+			userContacts().click();
+			System.out.println("userContacts() found and clicked");
+			Thread.sleep(15000);
+			Base.takeScreenShot("Users");
+			Base.FullPageScreenShot("Users Contacts");
+
+		} else {
+
+			System.out.println("Users Contacts not found");
+		}
+
+	}
+
+}

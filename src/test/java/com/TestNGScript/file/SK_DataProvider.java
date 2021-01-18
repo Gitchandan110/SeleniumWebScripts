@@ -20,7 +20,7 @@ public class SK_DataProvider extends Base {
 	SK_DataProviderBL dataproviderbl = PageFactory.initElements(driver, SK_DataProviderBL.class);
 
 	@BeforeMethod
-	public void launchSKApp() throws IOException {
+	public void launchSKApp() throws Exception {
 
 		chromeDriver();
 		String urlProd=ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);

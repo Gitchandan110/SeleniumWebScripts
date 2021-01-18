@@ -18,7 +18,7 @@ public class SK_Login extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 		
 		  openSKApp();
         
@@ -29,7 +29,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 1)
 
-	public void loginSA() throws IOException, InterruptedException {
+	public void loginSA() throws Exception {
 
 		loginSKbl.loginSA();
 
@@ -37,7 +37,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 2)
 
-	public void loginLA() throws IOException, InterruptedException {
+	public void loginLA() throws Exception {
 
 		loginSKbl.loginLA();
 
@@ -45,7 +45,7 @@ public class SK_Login extends Base {
 
 	@Test(priority = 3)
 
-	public void loginObs() throws IOException, InterruptedException {
+	public void loginObs() throws Exception {
 
 		loginSKbl.loginObserver();
 

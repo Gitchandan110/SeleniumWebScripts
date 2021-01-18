@@ -25,7 +25,7 @@ public class SK_LA_CloseActiveEvents extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 		
 		  openSKApp();
         
@@ -35,7 +35,7 @@ public class SK_LA_CloseActiveEvents extends Base {
 
 	@Test()
 
-	public void CloseActiveEvents() throws IOException, InterruptedException {
+	public void CloseActiveEvents() throws Exception {
 
 		
     	loginSKbl.loginLA();

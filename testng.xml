@@ -9,7 +9,7 @@
 
 
 
- <test name="SK_LA_OpenIncident" >
+<!--  <test name="SK_LA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
 </classes>
@@ -42,6 +42,12 @@
 </classes>
 </test>  
 
+<test name="SK_LA_CloseActiveEvents" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_CloseActiveEvents" />
+</classes>
+</test>
+ -->
 
 <test name="SK_LA_ClosedIncident" >
 <classes>
@@ -135,19 +141,6 @@
 </classes>
 </test> 
 
-<test name="SK_LA_VisitorPassType" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
-</classes>
-</test>
-
-   
-<test name="SK_LA_VisitorPasses" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
-</classes>
-</test>
-
 
 
  <test name="SK_LA_CommunicationReports" >
@@ -200,13 +193,6 @@
 </test>
 
 
-<test name="SK_LA_MenuList" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_MenuList" />
-</classes>
-</test>
-
-
 <test name="SK_ForgotPassword" >
 <classes>
 <class name="com.TestNGScript.file.SK_ForgotPassword" />
@@ -234,15 +220,6 @@
 </classes>
 </test>
 
-   
-<test name="SK_LA_CloseActiveEvents" >
-<classes>
-<class name="com.TestNGScript.file.SK_LA_CloseActiveEvents" />
-</classes>
-</test>
-
-
-
 <test name="SK_LA_CovidCover" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_CovidCover" />
@@ -264,9 +241,22 @@
 </test>  
 
 
-<test name="SK_Login" >
+<test name="SK_LA_VisitorPassType" >
 <classes>
-<class name="com.TestNGScript.file.SK_Login" />
+<class name="com.TestNGScript.file.SK_LA_VisitorPassType" />
+</classes>
+</test>
+
+   
+<test name="SK_LA_VisitorPasses" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_VisitorPasses" />
+</classes>
+</test>
+
+<test name="SK_LA_MenuList" >
+<classes>
+<class name="com.TestNGScript.file.SK_LA_MenuList" />
 </classes>
 </test>
 
@@ -275,6 +265,15 @@
 <classes>
 <class name="com.TestNGScript.file.SK_LA_ActivateAVAlarms" />
 </classes>
-</test> -->
+</test> 
+
+
+<test name="SK_Login" >
+<classes>
+<class name="com.TestNGScript.file.SK_Login" />
+</classes>
+</test>
+
+-->
 
 </suite>

@@ -26,7 +26,7 @@ public class SK_SA_OpenIncident extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
 	    
@@ -35,7 +35,7 @@ public class SK_SA_OpenIncident extends Base {
 
 	@Test()
 
-	public void SAOpenIncident() throws IOException, InterruptedException {
+	public void SAOpenIncident() throws Exception {
 
 	    loginSKbl.loginSA();
 		incidentbl.clickIncomingIncident();

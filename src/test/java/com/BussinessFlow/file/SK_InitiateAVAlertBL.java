@@ -11,10 +11,9 @@ import com.PageObjectRepository.file.SK_MenuListPO;
 
 public class SK_InitiateAVAlertBL extends SK_InitiateAVAlertPO {
 
-	public void clickAVAlertAlarm() {
+	public void clickAVAlertAlarm() throws Exception{
 
-		try {
-			
+				
 			if (ddOrganizationName() != null && ddOrganizationName().isDisplayed()) {
 				Base.highLightElement(driver, ddOrganizationName());
 				System.out.println("ddOrganizationName() Found");
@@ -45,11 +44,6 @@ public class SK_InitiateAVAlertBL extends SK_InitiateAVAlertPO {
 
 				System.out.println("InitiateAVAlert not Working");
 			}
-
-		} catch (Exception ex) {
-
-			System.out.println("Exception in InitiateAVAlert : " + ex.getStackTrace());
-		}
 
 	}
 

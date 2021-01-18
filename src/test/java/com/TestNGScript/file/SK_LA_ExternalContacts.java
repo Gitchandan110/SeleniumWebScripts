@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_MapsBL;
@@ -27,7 +28,7 @@ public class SK_LA_ExternalContacts extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
         
@@ -37,7 +38,7 @@ public class SK_LA_ExternalContacts extends Base {
 
 	@Test()
 
-	public void ExternalContacts() throws IOException, InterruptedException {
+	public void ExternalContacts() throws Exception {
 
 		
     	loginSKbl.loginLA();

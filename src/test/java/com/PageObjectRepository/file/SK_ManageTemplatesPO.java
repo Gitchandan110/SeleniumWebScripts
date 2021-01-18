@@ -281,6 +281,13 @@ public class SK_ManageTemplatesPO extends Base {
 
 	}
 	
+	public WebElement radioBtnActive() {
+
+		By active = By.xpath("//input[@type='radio'][@ng-value='true']");
+		return driver.findElement(active);
+
+	}
+	
 
 	public WebElement BtnSubmit() {
 

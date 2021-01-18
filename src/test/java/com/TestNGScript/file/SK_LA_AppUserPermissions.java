@@ -30,7 +30,7 @@ public class SK_LA_AppUserPermissions extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
         
@@ -40,7 +40,7 @@ public class SK_LA_AppUserPermissions extends Base {
 
 	@Test()
 
-	public void UsersContacts() throws IOException, InterruptedException {
+	public void UsersContacts() throws Exception {
 
 		
     	loginSKbl.loginLA();

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.BussinessFlow.file.SK_HomePageBL;
 import com.BussinessFlow.file.SK_LoginBL;
 import com.BussinessFlow.file.SK_MenuListBL;
@@ -28,7 +29,7 @@ public class SK_LA_AVAlarmHistory extends Base {
 
 	@BeforeMethod
 
-	public void launchSKApp() throws InterruptedException, IOException {
+	public void launchSKApp() throws Exception {
 
 		  openSKApp();
         
@@ -38,7 +39,7 @@ public class SK_LA_AVAlarmHistory extends Base {
 
 	@Test()
 
-	public void AVAlarmHistory() throws IOException, InterruptedException {
+	public void AVAlarmHistory() throws Exception {
 
 		
     	loginSKbl.loginLA();

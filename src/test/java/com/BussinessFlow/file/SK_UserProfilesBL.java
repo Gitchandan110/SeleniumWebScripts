@@ -13,36 +13,28 @@ import com.PageObjectRepository.file.SK_UserProfilesPO;
 
 public class SK_UserProfilesBL extends SK_UserProfilesPO {
 
-	public void getuserDetails() {
+	public void getuserDetails() throws Exception {
 
-		try {
+		List<WebElement> userDetails = driver.findElements(By
+				.xpath("//table[@summary='List of Users']//tbody//tr"));
+		Iterator<WebElement> itr = userDetails.iterator();
 
-			List<WebElement> userDetails = driver.findElements(By
-					.xpath("//table[@summary='List of Users']//tbody//tr"));
-			Iterator<WebElement> itr = userDetails.iterator();
-			
-			HashMap<String, String> ElementValues = new HashMap<String, String>();
-			
-			int i = 1;
-			
-			while (itr.hasNext()) {
+		HashMap<String, String> ElementValues = new HashMap<String, String>();
 
-				WebElement element = itr.next();
-				String value = element.getText();
-				System.out.println("Element Value is :" + value);
-			
-				ElementValues.put("Element Value : " + i, value);
-				
-				i++;
-			}
+		int i = 1;
 
-			System.out.println(ElementValues);
-		} catch (Exception ex) {
+		while (itr.hasNext()) {
 
-			System.out.println("Exception in getRowData : "
-					+ ex.getStackTrace());
+			WebElement element = itr.next();
+			String value = element.getText();
+			System.out.println("Element Value is :" + value);
+
+			ElementValues.put("Element Value : " + i, value);
+
+			i++;
 		}
 
+		System.out.println(ElementValues);
 	}
 
 }

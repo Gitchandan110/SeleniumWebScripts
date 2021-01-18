@@ -9,9 +9,9 @@ import junit.framework.Assert;
 
 public class SK_SendNotificationBL extends SK_SendNotificationPO {
 
-	public void verifySendNotification() {
+	public void verifySendNotification() throws Exception{
 
-		try {
+		
 			if (pageTitle() != null && pageTitle().isDisplayed()) {
 				Assert.assertEquals("Send Notification", driver.getTitle());
 				System.out.println("Landed on Send Notification Page");
@@ -32,7 +32,7 @@ public class SK_SendNotificationBL extends SK_SendNotificationPO {
 				Base.FullPageScreenShot("Send Notification");
 				Base.scrolltoElement(driver, BtnSubmit());
 				BtnSubmit().click();
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 				if (ErrorMessage().isDisplayed()) {
 					System.out.println("Send Notification Fail");
 					Base.FullPageScreenShot("Send Notification Fail");
@@ -40,10 +40,7 @@ public class SK_SendNotificationBL extends SK_SendNotificationPO {
 				}
 
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
 
 	}
 

@@ -1,11 +1,8 @@
 package com.Commonutills.file;
 
 import java.awt.AWTException;
-import java.awt.GraphicsEnvironment;
 import java.awt.Robot;
-import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -19,11 +16,9 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 
 import org.apache.maven.shared.utils.io.FileUtils;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,18 +37,20 @@ public class Base {
 	public static WebDriver driver;
 	static String LoginDataSheet = "Login";
 
-	public static WebDriver opendriver() {
+	public static WebDriver opendriver()  throws Exception{
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+	//	driver.navigate().refresh();
+	//	driver.navigate().to(driver.getCurrentUrl());
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 		return driver;
 
 	}
 
-	public static WebDriver chromeDriver() {
+	public static WebDriver chromeDriver()  throws Exception{
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Chandan\\Git\\ArtifactMaven\\Test Data\\chromedriver.exe");
@@ -65,7 +62,7 @@ public class Base {
 
 	}
 
-	public static void openProdSKApp() throws InterruptedException, IOException {
+	public static void openProdSKApp() throws Exception {
 
 		chromeDriver();
 		String urlProd = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
@@ -75,7 +72,7 @@ public class Base {
 
 	}
 
-	public static void openTestSKApp() throws InterruptedException, IOException {
+	public static void openTestSKApp() throws Exception {
 
 		chromeDriver();
 		String urlTest = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
@@ -85,7 +82,7 @@ public class Base {
 
 	}
 
-	public static void openSKApp() throws InterruptedException, IOException {
+	public static void openSKApp() throws Exception {
 		
 		
 		chromeDriver();
@@ -138,54 +135,39 @@ public class Base {
 
 	}
 
-	public static void scrollEndofthePage(WebDriver driver) {
+	public static void scrollEndofthePage(WebDriver driver) throws Exception{
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-
-			System.out.println(e.getMessage());
-		}
-
 	}
 
-	public static void takeScreenShot(String ScreenName) throws IOException {
+	public static void takeScreenShot(String ScreenName) throws Exception {
 
 		String imageLocation = "C:\\Users\\Chandan\\Git\\ArtifactMaven\\Screenshots\\";
 		// String screenName= obj.getTagName();
 
-		try {
+	
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File capturedImage = ts.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFileToDirectory(capturedImage, new File(imageLocation + ScreenName));
 			System.out.println("Screenshot captured");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 	}
 
-	public static void FullPageScreenShot(String ScreenName) throws IOException {
+	public static void FullPageScreenShot(String ScreenName) throws Exception {
 
-		try {
+	
 			Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 					.takeScreenshot(driver);
 
 			ImageIO.write(fpScreenshot.getImage(), "png", new File(".\\FullPage_Screenshots\\" + ScreenName + ".png"));
 
 			System.out.println("Screenshot captured");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 
 	}
 	
-	public static void F12PrintScreen() throws IOException {
+	public static void F12PrintScreen()  throws Exception {
 		
 		Actions actions = new Actions(driver);
 		actions.sendKeys(Keys.F12).perform();
@@ -193,9 +175,9 @@ public class Base {
 
 	}
 	
-	public static void RobotPrintScreen() throws IOException {
+	public static void RobotPrintScreen()  throws Exception {
 		
-		try {
+		
 		
 		Robot rob = new Robot();
 		
@@ -203,11 +185,7 @@ public class Base {
 		rob.keyRelease(KeyEvent.VK_PRINTSCREEN);
 	
 		System.out.println("RobotPrintScreen() done");
-		
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
 	}
 	
 
@@ -263,7 +241,7 @@ public class Base {
 
 	}
 
-	public static void manageChildWindow() throws IOException {
+	public static void manageChildWindow() throws Exception {
 
 		// It will return the parent window name as a String
 		String mainWindow = driver.getWindowHandle();

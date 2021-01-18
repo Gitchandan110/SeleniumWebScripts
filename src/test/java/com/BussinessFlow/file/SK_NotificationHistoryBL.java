@@ -11,14 +11,14 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.Commonutills.file.Base;
 import com.PageObjectRepository.file.SK_NotificationHistoryPO;
+
 import junit.framework.Assert;
 
 public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 
-	public void verifyNotificationHistory() {
+	public void verifyNotificationHistory() throws Exception{
 
-		try {
-
+		
 			if (pageNotificationHistory() != null && pageNotificationHistory().isDisplayed()) {
 				Assert.assertEquals("Notification History", driver.getTitle());
 				System.out.println("Landed on Notification History Page");
@@ -67,16 +67,9 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 
 		}
 
-		catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Exception in Page Manage Template:" + e.getMessage());
-		}
-	}
 
-	public void viewHistoryDetails() {
+	public void viewHistoryDetails() throws Exception {
 
-		try {
 
 			if (sourceBroadcast() != null && sourceBroadcast().isDisplayed()) {
 				Base.highLightElement(driver, linkView());
@@ -90,12 +83,8 @@ public class SK_NotificationHistoryBL extends SK_NotificationHistoryPO {
 				System.out.println("Notification Contents Screen displayed");
 				btnClose().click();
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Exception in Page Manage Template:" + e.getMessage());
-		}
-
+			
 	}
-
+	
 }
+	
