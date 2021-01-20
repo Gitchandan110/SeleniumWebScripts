@@ -27,7 +27,7 @@ public class SK_Maps_PO extends Base{
 
 		try {
 			
-			By AllMaps = By.xpath("//select[@id='map-list']//option");
+			By AllMaps = By.xpath("//body//section//select[@id='map-list']//option");
 			return driver.findElements(AllMaps);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

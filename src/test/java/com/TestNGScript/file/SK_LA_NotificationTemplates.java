@@ -48,20 +48,19 @@ public class SK_LA_NotificationTemplates extends Base {
     	menuList.clickMenuCommunications();
     	menuList.clickNotifications();
     	menuList.clickTemplates();
-   // 	manageTemplatesbl.verifyManageTemplates();
+    	manageTemplatesbl.verifyManageTemplates();
     	manageTemplatesbl.clickLinkCreateTemplate();
     	manageTemplatesbl.fillNotificationContent();
     	manageTemplatesbl.selectUserGroup();
     	manageTemplatesbl.selectUsers();
-    //	manageTemplatesbl.selectInactiveRadioBtn();
-    	manageTemplatesbl.selectSubmitBtn();
+     	manageTemplatesbl.selectSubmitBtn();
 	}
 
 	@AfterMethod
 
 	public void closeBrowser() {
 
-    //  driver.quit();
+      driver.quit();
 	
 	}
 

@@ -1,7 +1,9 @@
 package com.BussinessFlow.file;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -28,7 +30,8 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 			System.out.println("Unable to find Manage Templates Page");
 		}
 
-		if (filterTemplateTiltle() != null && filterTemplateTiltle().isDisplayed()) {
+		if (filterTemplateTiltle() != null
+				&& filterTemplateTiltle().isDisplayed()) {
 			Base.highLightElement(driver, filterTemplateTiltle());
 			filterTemplateTiltle().sendKeys("Template");
 			btnFilter().click();
@@ -85,8 +88,10 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 
 	public void fillNotificationContent() throws Exception {
 
-		if (txtTitleNotificationTemplate() != null && txtTitleNotificationTemplate().isDisplayed()) {
-			txtTitleNotificationTemplate().sendKeys("NtfTemplateTest" + Base.SystemTime());
+		if (txtTitleNotificationTemplate() != null
+				&& txtTitleNotificationTemplate().isDisplayed()) {
+			txtTitleNotificationTemplate().sendKeys(
+					"NtfTemplateTest" + Base.SystemTime());
 			System.out.println("txtTitleNotificationTemplate() done");
 			Thread.sleep(2000);
 			txtEmailSub().sendKeys("TestNT:" + Base.SystemTime());
@@ -98,9 +103,6 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 			System.out.println("txtMobileSMS() done");
 			txtAppNotification().sendKeys("This is App Notification Template");
 			System.out.println("txtAppNotification() done");
-			/*
-			 * chkbxGeoAware().click(); System.out.println("chkbxGeoAware() done");
-			 */
 			txtIVR().sendKeys("This is IVR Notification Template");
 			System.out.println("Text to Voice done");
 
@@ -112,17 +114,25 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 
 		if (dropdownUserGroups() != null && dropdownUserGroups().isDisplayed()) {
 			dropdownUserGroups().click();
+			Base.takeScreenShot("Manage Templates");
 			int CountUserGroup = UserGroupList().size();
-			System.out.println("Total Number of User Groups are :" + CountUserGroup);
+			System.out.println("Total Number of User Groups are :"
+					+ CountUserGroup);
 
-			for (int i = 1; i <= 3; i++) {
+			int i = 1;
 
-				String UserGroupName = driver.findElement(By.xpath(
-						"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i + "]//div//span"))
-						.getText();
+			while (i <= 2) {
+				dropdownUserGroups().click();
 
-				System.out.println("UserGroupName are :" + UserGroupName);
-				UserGroup().click();
+	String xpathVariable = "//div[@class='ui-select-choices-group optgroup']//div[@role]["+ i +"]//div//span";
+
+				String userGroupName = driver.findElement(
+						By.xpath(xpathVariable)).getText();
+				System.out.println("userGroupName are :" +userGroupName);
+
+				driver.findElement(By.xpath(xpathVariable)).click();
+
+				i++;
 
 			}
 
@@ -140,14 +150,14 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 		System.out.println("Total Number of Userss are :" + CountUsers);
 
 		for (int i = 1; i < 4; i++) {
-
-			String UsersName = driver.findElement(By.xpath(
-					"//div[@class='ui-select-choices-group optgroup']//div[@role='option'][" + i + "]//div//span"))
-					.getText();
+			dropdownUsers().click();
+			String UsersName = driver
+					.findElement(
+							By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option']["
+									+ i + "]//div//span")).getText();
 
 			System.out.println("UserName are :" + UsersName);
 			Users().click();
-			dropdownUsers().click();
 
 		}
 
@@ -170,13 +180,16 @@ public class SK_ManageTemplatesBL extends SK_ManageTemplatesPO {
 			Thread.sleep(8000);
 
 		}
-
+try{
 		if (ErrorMessage().isDisplayed()) {
 			System.out.println("Create Notification Template Fail");
 			Base.FullPageScreenShot("Create Notification Template Fail");
 
 		}
 
+	} catch(Exception e){
+		
+		e.printStackTrace();
 	}
-
+	}
 }

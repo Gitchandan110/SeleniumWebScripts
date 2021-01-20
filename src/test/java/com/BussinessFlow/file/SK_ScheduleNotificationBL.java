@@ -109,13 +109,18 @@ public class SK_ScheduleNotificationBL extends SK_ScheduleNotificationPO {
 			Base.FullPageScreenShot("Schedule Creation");
 			btnSubmitSchedule().click();
 			Thread.sleep(5000);
+			try{
 			if (ErrorMessage().isDisplayed()) {
 				System.out.println("Create Schedule Fail");
 				Base.FullPageScreenShot("Create Schedule Fail");
 
 			}
 
+		} catch(Exception e) {
+			
+			e.printStackTrace();
 		}
+	}
 	}
 
 	public void selectSubmitBtn() throws Exception {

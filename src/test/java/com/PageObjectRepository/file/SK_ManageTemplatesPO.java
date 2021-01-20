@@ -233,7 +233,9 @@ public class SK_ManageTemplatesPO extends Base {
 
 	public List<WebElement> UserGroupList() {
 
-		By UserGroups = By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role='option']//div//span");
+		
+		By UserGroups = By.xpath("//div[@class='ui-select-choices-group optgroup']//div[@role]");
+		
 		return driver.findElements(UserGroups);
 
 	}
@@ -283,12 +285,11 @@ public class SK_ManageTemplatesPO extends Base {
 	
 	public WebElement radioBtnActive() {
 
-		By active = By.xpath("//input[@type='radio'][@ng-value='true']");
-		return driver.findElement(active);
-
+		By Active = By.xpath("//input[@type='radio'][@ng-value='true']");
+		return driver.findElement(Active);
+	
 	}
 	
-
 	public WebElement BtnSubmit() {
 
 		By Submit = By.xpath("//button[@type='submit']");

@@ -243,6 +243,33 @@ public class SK_VisitorPassTypePO extends Base {
 		}
 		return null;
 	}
+	
+	
+	public WebElement popUpConformationEditVisitorPass() {
+
+		try {
+			By popUpConformation = By.xpath("//div[@class='modal-content']");
+			return driver.findElement(popUpConformation);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+	public WebElement btnCancelEditVisitorPass() {
+
+		try {
+			By btnCancel = By.xpath("//button[contains(text(),'Cancel')]");
+			return driver.findElement(btnCancel);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 	public WebElement btnSubmit() {
 

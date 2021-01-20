@@ -2,6 +2,8 @@ package com.BussinessFlow.file;
 
 import java.util.Set;
 
+import org.openqa.selenium.By;
+
 import com.Commonutills.file.Base;
 import com.Commonutills.file.ExcelUtils;
 import com.Commonutills.file.ExcelWrite;
@@ -137,7 +139,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 			// To get the count of all open window
 
 			int windowCount = allWindows.size();
-			System.out.println("Total Map window count is :" + windowCount);
+			System.out.println("Total Window count is :" + windowCount);
 
 			// Apply enhanced For loop to get the window id of all open window.
 			// Window id will help to uniquely identified the all open window.
@@ -145,32 +147,40 @@ public class SK_HomePageBL extends SK_HomePagePO {
 			for (String childWindowId : allWindows) {
 				if (!parentWindowId.equalsIgnoreCase(childWindowId)) {
 					driver.switchTo().window(childWindowId);
+					System.out.println("Child Window ID is: " + childWindowId);
 					Thread.sleep(5000);
+					driver.manage().window().maximize();
 					Base.FullPageScreenShot("MapScreen");
 
 					if (mapPl.dropdownMAP() != null
 							&& mapPl.dropdownMAP().isDisplayed()) {
 						Base.highLightElement(driver, mapPl.dropdownMAP());
 						mapPl.dropdownMAP().click();
-						mapPl.mapNetsutra().click();
-						driver.manage().window().maximize();
-						Thread.sleep(15000);
-						Base.FullPageScreenShot("MapNetsutra");
-						mapPl.btnMapBox().click();
-						Thread.sleep(3000);
-						driver.close();
-
-					} else {
-
-						System.out.println("MAP not found");
-					}
+						
+					int TotalMapCount=mapPl.AllMaps().size();
+					System.out.println("TotalMapCount is :"+TotalMapCount);
+						
+					int i=1;
+					
+					while(i<=TotalMapCount){
+					mapPl.dropdownMAP().click();
+					String xpathVariable="//select[@id='map-list']//option["+ i +"]";
+				    String MapName=driver.findElement(By.xpath(xpathVariable)).getText();
+					System.out.println("Selected Map Name is :"+MapName);
+					driver.findElement(By.xpath(xpathVariable)).click();
+					Thread.sleep(15000);
+					Base.takeScreenShot("Home Page");
+					i++;
+					
+						
+				} 
+					
+					driver.close();
+					driver.switchTo().window(parentWindowId);
 				}
-
-				driver.switchTo().window(parentWindowId);
-
+				}
+				}
 			}
-		}
-
 	}
 
 	public void ViewERP() throws Exception {
@@ -183,9 +193,9 @@ public class SK_HomePageBL extends SK_HomePagePO {
 			Thread.sleep(5000);
 			Set<String> allWindows = driver.getWindowHandles();
 			int windowCount = allWindows.size();
-			System.out.println("Total ERP window count is :" + windowCount);
-
-			for (String childWindowId : allWindows) {
+			System.out.println("Total Window count is :" + windowCount);
+			
+				for (String childWindowId : allWindows) {
 				if (!parentWindowId.equalsIgnoreCase(childWindowId)) {
 					driver.switchTo().window(childWindowId);
 					Thread.sleep(5000);
@@ -194,24 +204,35 @@ public class SK_HomePageBL extends SK_HomePagePO {
 							&& ERPL.dropdownERP().isDisplayed()) {
 						Base.highLightElement(driver, ERPL.dropdownERP());
 						ERPL.dropdownERP().click();
-						Thread.sleep(3000);
+						// Thread.sleep(3000);
 						Base.FullPageScreenShot("ERP");
-						ERPL.erpEarthquick().click();
-						Thread.sleep(3000);
-						Base.FullPageScreenShot("ERP_Earthquick");
-						ERPL.dropdownERP().click();
-						Thread.sleep(3000);
-						ERPL.erpEvacuation().click();
-						Thread.sleep(3000);
 
+						int TotalERPList = ERPL.listERP().size();
+						System.out.println("TotalERPList are:" + TotalERPList);
+
+						int i = 1;
+
+						while (i <= TotalERPList) {
+							
+	String xpathVariable = "//ul[@class='dd-options dd-click-off-close']//li["+ i + "]//a//label[@class='dd-option-text']";
+
+							String ERPName = driver.findElement(
+									By.xpath(xpathVariable)).getText();
+							System.out.println("ERPName are :" + ERPName);
+
+   driver.findElement(By.xpath("//ul[@class='dd-options dd-click-off-close']//li["+ i + "]//a")).click();
+							
+							Base.takeScreenShot("Home Page");
+							ERPL.dropdownERP().click();
+							i++;
+						}
+					    	driver.close();
+							driver.switchTo().window(parentWindowId);
+						
 					}
 				}
 			}
-		} else {
-
-			System.out.println("ERP() not found");
 		}
-
 	}
 
 	public void ViewAVAlerts() throws Exception {

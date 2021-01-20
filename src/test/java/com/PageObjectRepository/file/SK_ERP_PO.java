@@ -21,6 +21,20 @@ public class SK_ERP_PO extends Base{
 		return null;
 	}
 	
+	public List<WebElement> listERP(){
+		
+		By ERPList=By.xpath("//ul[@class='dd-options dd-click-off-close']//li");
+		
+		return driver.findElements(ERPList);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 	public WebElement erpEarthquick() {
 
 		try {

@@ -63,13 +63,14 @@ public class SK_TipNotificationBL extends SK_TipNotificationPO {
 
 		}
 		if (linkDetails() != null && linkDetails().isDisplayed()) {
-			System.out.println("linkDetails found");
 			linkDetails().click();
+			System.out.println("linkDetails found & Clicked");
 			Thread.sleep(5000);
 			Base.FullPageScreenShot("Tip Notification Detail");
 			Base.scrollEndofthePage(driver);
 			Thread.sleep(3000);
 			btnCancelDetails().click();
+			System.out.println("btnCancelDetails() found");
 			Thread.sleep(5000);
 
 		}
@@ -82,8 +83,9 @@ public class SK_TipNotificationBL extends SK_TipNotificationPO {
 
 		if (btnAddTipNotification() != null
 				&& btnAddTipNotification().isDisplayed()) {
-			Base.highLightElement(driver, btnAddTipNotification());
+       		Base.highLightElement(driver, btnAddTipNotification());
 			btnAddTipNotification().click();
+			System.out.println("btnAddTipNotification() found & Clicked");
 			Thread.sleep(5000);
 		}
 		if (txtTipNotificationTitle() != null
@@ -96,6 +98,7 @@ public class SK_TipNotificationBL extends SK_TipNotificationPO {
 			ddTipTemplateOption().click();
 			Thread.sleep(2000);
 			Base.takeScreenShot("Tip Notifications");
+		
 		}
 	}
 
@@ -104,15 +107,20 @@ public class SK_TipNotificationBL extends SK_TipNotificationPO {
 		if (BtnSubmit() != null && BtnSubmit().isDisplayed()) {
 			BtnSubmit().click();
 			Thread.sleep(5000);
-			Base.FullPageScreenShot("Tip Notifications");
+			Base.FullPageScreenShot("Add Tip Notifications Pass");
 
 		}
+		
+		try{
 
 		if (ErrorMessage().isDisplayed()) {
 			System.out.println("Tip Notifications Fail");
 			Base.FullPageScreenShot("Tip Notifications Fail");
 
 		}
+	} catch (Exception e){
+		
+		e.printStackTrace();
 	}
-
+	}
 }

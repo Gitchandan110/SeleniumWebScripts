@@ -62,29 +62,9 @@ public class Base {
 
 	}
 
-	public static void openProdSKApp() throws Exception {
-
-		chromeDriver();
-		String urlProd = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
-		driver.get(urlProd);
-		System.out.println("Starting Production Server");
-		Thread.sleep(5000);
-
-	}
-
-	public static void openTestSKApp() throws Exception {
-
-		chromeDriver();
-		String urlTest = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
-		driver.get(urlTest);
-		System.out.println("Starting Test Server");
-		Thread.sleep(5000);
-
-	}
-
 	public static void openSKApp() throws Exception {
 		
-		
+	try {	
 		chromeDriver();
 		
 	//	Red5 URL
@@ -92,18 +72,21 @@ public class Base {
 		
 	//Test URL	
 		
-	//	String url = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
+		String url = ExcelUtils.ReadExcel(LoginDataSheet, 2, 1);
 		
 	//Prod URL
 		
-	 String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
+	// String url = ExcelUtils.ReadExcel(LoginDataSheet, 1, 1);
 	
 		
 		driver.get(url);
 		System.out.println("Starting SK App");
 		Thread.sleep(5000);
 
+	} catch (Exception e) {
+		e.printStackTrace();
 	}
+}
 
 	public static void highLightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -187,16 +170,6 @@ public class Base {
 		System.out.println("RobotPrintScreen() done");
 	
 	}
-	
-
-
-	
-	
- 
-	
-	
-	
-	
 	
 	public static void waitFor30Seconds(WebElement element) {
 

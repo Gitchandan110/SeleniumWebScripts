@@ -39,14 +39,14 @@ public class SK_LA_HomePage extends Base {
 	@Test()
 
 	public void HomePage() throws Exception {
-
 		
-    	loginSKbl.loginLA();
-    	homePageMenuBL.ViewAVAlerts();
-       	homePageMenuBL.clickReports();
-    	homePageMenuBL.ViewERP();
-    	homePageMenuBL.ViewMap();
-    	
+		
+		
+		loginSKbl.loginLA();
+		homePageMenuBL.ViewMap();
+		homePageMenuBL.ViewERP();
+    	homePageMenuBL.clickReports();
+        homePageMenuBL.ViewAVAlerts();
     	
 	}
 

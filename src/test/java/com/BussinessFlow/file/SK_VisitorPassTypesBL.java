@@ -83,47 +83,6 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePO {
 		}
 	}
 
-	public void clickButtonCreateVisitorPassType() throws Exception {
-
-		if (btnCreateVisitorPassType() != null
-				&& btnCreateVisitorPassType().isDisplayed()) {
-
-			btnCreateVisitorPassType().click();
-			Thread.sleep(5000);
-		}
-	}
-
-	public void fillCreateVisitorPassType() throws Exception {
-
-		Assert.assertEquals("Create Visitor Pass Type", driver.getTitle());
-		System.out.println("Page title matched");
-		if (txtVisitorPassTypeTiltle() != null
-				&& txtVisitorPassTypeTiltle().isDisplayed()) {
-			txtVisitorPassTypeTiltle().sendKeys("VP: " + Base.SystemDateTime());
-			Thread.sleep(2000);
-			txtDiscriptionVisitorPassType().click();
-			txtDiscriptionVisitorPassType().sendKeys(
-					"VPDescription: " + Base.SystemTime());
-			ddTimeZone().click();
-			Thread.sleep(2000);
-			txtSearchTimeZone().sendKeys("Asia/Kolkata");
-			timeZoneAsiaKolkata().click();
-			txtNumberOfDays().sendKeys("1");
-			Thread.sleep(2000);
-			txtEmailSubject().sendKeys("Email Invite");
-			Thread.sleep(2000);
-			btnMonitorEverywhere().click();
-			Thread.sleep(3000);
-			Base.FullPageScreenShot("CreateVisitorPassType");
-			Base.scrollEndofthePage(driver);
-			Base.highLightElement(driver, btnSubmit());
-			btnSubmit().click();
-			Thread.sleep(8000);
-
-		}
-
-	}
-
 	public void editVisitorPassType() throws Exception {
 
 		if (btnEditVisitorPassType() != null
@@ -145,6 +104,7 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePO {
 			txtNumberOfDays().sendKeys("3");
 			Thread.sleep(2000);
 			txtEmailSubject().sendKeys("Email Subject");
+			Base.takeScreenShot("ManageVisitorPassTypes");
 			btnMonitorEverywhere().click();
 			Thread.sleep(3000);
 			Base.FullPageScreenShot("EditVisitorPassType");
@@ -152,7 +112,72 @@ public class SK_VisitorPassTypesBL extends SK_VisitorPassTypePO {
 			Base.highLightElement(driver, btnSubmit());
 			btnSubmit().click();
 			Thread.sleep(8000);
-			System.out.println("editVisitorPassType() Pass");
+
+		}
+		try {
+
+			if (popUpConformationEditVisitorPass().isDisplayed() == true) {
+				System.out
+						.println("Following non Expired Visitors are associated with this Visitor Pass Type. The change made may lead to changes in the non Expired Visitor’s pass validity. Please Submit if you wish to proceed and save the changes.");
+				Base.FullPageScreenShot("EditVisitorPass_Conformation");
+				Base.takeScreenShot("ManageVisitorPassTypes");
+				btnCancelEditVisitorPass().click();
+				Thread.sleep(5000);
+				btnCancel().click();
+				Base.waitFor30Seconds(btnCreateVisitorPassType());
+				System.out.println("editVisitorPassType() Pass");
+
+			} else {
+
+				Base.waitFor30Seconds(btnCreateVisitorPassType());
+				System.out.println("editVisitorPassType() Pass");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void clickButtonCreateVisitorPassType() throws Exception {
+
+		if (btnCreateVisitorPassType() != null
+				&& btnCreateVisitorPassType().isDisplayed()) {
+
+			btnCreateVisitorPassType().click();
+			System.out
+					.println("CreateVisitorPassType Button Found and Clicked");
+			Thread.sleep(5000);
+		}
+	}
+
+	public void fillCreateVisitorPassType() throws Exception {
+
+		Assert.assertEquals("Create Visitor Pass Type", driver.getTitle());
+		System.out.println("Page Title is : " + driver.getTitle());
+
+		if (txtVisitorPassTypeTiltle() != null
+				&& txtVisitorPassTypeTiltle().isDisplayed()) {
+			txtVisitorPassTypeTiltle().sendKeys("VP: " + Base.SystemDateTime());
+			Thread.sleep(2000);
+			txtDiscriptionVisitorPassType().click();
+			txtDiscriptionVisitorPassType().sendKeys(
+					"VPDescription: " + Base.SystemTime());
+			ddTimeZone().click();
+			Thread.sleep(2000);
+			txtSearchTimeZone().sendKeys("Asia/Kolkata");
+			timeZoneAsiaKolkata().click();
+			txtNumberOfDays().sendKeys("1");
+			Thread.sleep(2000);
+			txtEmailSubject().sendKeys("Email Invite");
+			Base.takeScreenShot("ManageVisitorPassTypes");
+			Thread.sleep(2000);
+			btnMonitorEverywhere().click();
+			Thread.sleep(3000);
+			Base.FullPageScreenShot("CreateVisitorPassType");
+			Base.scrollEndofthePage(driver);
+			Base.highLightElement(driver, btnSubmit());
+			btnSubmit().click();
+			Thread.sleep(8000);
 
 		}
 

@@ -240,13 +240,16 @@ public class SK_VisitorPassesBL extends SK_VisitorsPO {
 			Base.highLightElement(driver, btnSubmitCreateVisitor());
 			btnSubmitCreateVisitor().click();
 			Thread.sleep(8000);
-
+try{
 			if (ErrorMessage().isDisplayed()) {
 				System.out.println("Create Visitor Pass Fail");
 				Base.FullPageScreenShot("Create Visitor Pass Fail");
 			}
 
-		}
+		} catch(Exception e){
+			
+			e.printStackTrace();
+		}}
 
 	}
 
@@ -320,15 +323,18 @@ public class SK_VisitorPassesBL extends SK_VisitorsPO {
 			Base.highLightElement(driver, btnSubmitCreateVisitor());
 			btnSubmitCreateVisitor().click();
 			Thread.sleep(8000);
-
+try{
 			if (ErrorMessage().isDisplayed()) {
 				System.out
 						.println("Create Visitor Pass Notification Only Fail");
 				Base.FullPageScreenShot("Create Visitor Pass Fail");
 			}
 
+		} catch(Exception e){
+			
+			e.printStackTrace();
 		}
 
 	}
-
+	}
 }

@@ -42,7 +42,7 @@
 
 				<configuration>
 
-					<suiteXmlFiles>C:\Users\Chandan\git\SeleniumWebScripts\testng.xml</suiteXmlFiles>
+					<suiteXmlFiles>C:\Users\Chandan\Git\ArtifactMaven\testng.xml</suiteXmlFiles>
 				</configuration>
 
 			</plugin>
