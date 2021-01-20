@@ -130,6 +130,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 			String parentWindowId = driver.getWindowHandle();
 			System.out.println("Parent Window ID is: " + parentWindowId);
 			btnMAP().click();
+			System.out.println("Map button found adn Clicked: " + parentWindowId);
 			Thread.sleep(10000);
 
 			// To iterate over all open windows
@@ -139,7 +140,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 			// To get the count of all open window
 
 			int windowCount = allWindows.size();
-			System.out.println("Total Window count is :" + windowCount);
+			System.out.println("Total Map Window count is :" + windowCount);
 
 			// Apply enhanced For loop to get the window id of all open window.
 			// Window id will help to uniquely identified the all open window.
@@ -147,7 +148,7 @@ public class SK_HomePageBL extends SK_HomePagePO {
 			for (String childWindowId : allWindows) {
 				if (!parentWindowId.equalsIgnoreCase(childWindowId)) {
 					driver.switchTo().window(childWindowId);
-					System.out.println("Child Window ID is: " + childWindowId);
+					System.out.println("Child Map Window ID is: " + childWindowId);
 					Thread.sleep(5000);
 					driver.manage().window().maximize();
 					Base.FullPageScreenShot("MapScreen");
@@ -186,45 +187,65 @@ public class SK_HomePageBL extends SK_HomePagePO {
 	public void ViewERP() throws Exception {
 
 		if (btnERP().isDisplayed() == true) {
+			
 			Base.highLightElement(driver, btnERP());
+			
 			String parentWindowId = driver.getWindowHandle();
-			System.out.println("Parent Window ID is: " + parentWindowId);
+			
+			System.out.println("Parent ERP Window ID is: " + parentWindowId);
+			
 			btnERP().click();
+			
+			System.out.println("ERP found and Clicked");
+			
 			Thread.sleep(5000);
+			
 			Set<String> allWindows = driver.getWindowHandles();
+			
 			int windowCount = allWindows.size();
-			System.out.println("Total Window count is :" + windowCount);
+			
+			System.out.println("Total ERP Window count is :" + windowCount);
 			
 				for (String childWindowId : allWindows) {
+					
 				if (!parentWindowId.equalsIgnoreCase(childWindowId)) {
+					
+					System.out.println("Child ERP Window ID is: " + childWindowId);
+					
 					driver.switchTo().window(childWindowId);
+					
 					Thread.sleep(5000);
 
-					if (ERPL.dropdownERP() != null
-							&& ERPL.dropdownERP().isDisplayed()) {
-						Base.highLightElement(driver, ERPL.dropdownERP());
-						ERPL.dropdownERP().click();
-						// Thread.sleep(3000);
-						Base.FullPageScreenShot("ERP");
+		if (ERPL.dropdownERP() != null && ERPL.dropdownERP().isDisplayed()) {
+			
+					Base.highLightElement(driver, ERPL.dropdownERP());
+						
+					ERPL.dropdownERP().click();
+					
+					Base.takeScreenShot("Home Page");
 
-						int TotalERPList = ERPL.listERP().size();
-						System.out.println("TotalERPList are:" + TotalERPList);
-
-						int i = 1;
-
-						while (i <= TotalERPList) {
+					int TotalERPList = ERPL.listERP().size();
+					
+					System.out.println("Total ERP List are:" + TotalERPList);
+		
+					for(int i=1; i<= TotalERPList; i++) {
 							
-	String xpathVariable = "//ul[@class='dd-options dd-click-off-close']//li["+ i + "]//a//label[@class='dd-option-text']";
+					
+							
+	String xpathVariable = "//ul[@class='dd-options dd-click-off-close']//li["+i+"]//a//label[@class='dd-option-text']";
 
-							String ERPName = driver.findElement(
-									By.xpath(xpathVariable)).getText();
-							System.out.println("ERPName are :" + ERPName);
+	String ERPName = driver.findElement(By.xpath(xpathVariable)).getText();
+	
+	System.out.println("ERPName are :" + ERPName);
 
-   driver.findElement(By.xpath("//ul[@class='dd-options dd-click-off-close']//li["+ i + "]//a")).click();
+  // driver.findElement(By.xpath("//ul[@class='dd-options dd-click-off-close']//li["+i+"]//a")).click();
+	
+	driver.findElement(By.xpath(xpathVariable)).click();
 							
 							Base.takeScreenShot("Home Page");
+						
 							ERPL.dropdownERP().click();
-							i++;
+							Thread.sleep(3000);
 						}
 					    	driver.close();
 							driver.switchTo().window(parentWindowId);

@@ -4,61 +4,6 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_LA_SendNotification(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_SendNotification">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSKApp"/>
-          <include name="SendNotification"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_SendNotification -->
-    </classes>
-  </test> <!-- SK_LA_SendNotification(failed) -->
-  <test thread-count="5" name="SK_LA_EventResponsePlans(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_EventResponsePlans">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="EventResponsePlans"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_EventResponsePlans -->
-    </classes>
-  </test> <!-- SK_LA_EventResponsePlans(failed) -->
-  <test thread-count="5" name="SK_LA_ScheduleNotification(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_ScheduleNotification">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSKApp"/>
-          <include name="ScheduleNotification"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_ScheduleNotification -->
-    </classes>
-  </test> <!-- SK_LA_ScheduleNotification(failed) -->
-  <test thread-count="5" name="SK_LA_TipNotifications(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_TipNotifications">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchSKApp"/>
-          <include name="TipNotifications"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_TipNotifications -->
-    </classes>
-  </test> <!-- SK_LA_TipNotifications(failed) -->
-  <test thread-count="5" name="SK_LA_NotificationTemplates(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_NotificationTemplates">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="NotificationTemplates"/>
-          <include name="launchSKApp"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_NotificationTemplates -->
-    </classes>
-  </test> <!-- SK_LA_NotificationTemplates(failed) -->
   <test thread-count="5" name="SK_LA_HomePage(failed)">
     <classes>
       <class name="com.TestNGScript.file.SK_LA_HomePage">
@@ -70,15 +15,4 @@
       </class> <!-- com.TestNGScript.file.SK_LA_HomePage -->
     </classes>
   </test> <!-- SK_LA_HomePage(failed) -->
-  <test thread-count="5" name="SK_LA_VisitorPasses(failed)">
-    <classes>
-      <class name="com.TestNGScript.file.SK_LA_VisitorPasses">
-        <methods>
-          <include name="launchSKApp"/>
-          <include name="VisitorPasses"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_VisitorPasses -->
-    </classes>
-  </test> <!-- SK_LA_VisitorPasses(failed) -->
 </suite> <!-- Failed suite [Suite] -->

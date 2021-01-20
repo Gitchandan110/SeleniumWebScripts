@@ -43,9 +43,9 @@ public class SK_LA_HomePage extends Base {
 		
 		
 		loginSKbl.loginLA();
-		homePageMenuBL.ViewMap();
 		homePageMenuBL.ViewERP();
-    	homePageMenuBL.clickReports();
+		homePageMenuBL.clickReports();
+		homePageMenuBL.ViewMap();
         homePageMenuBL.ViewAVAlerts();
     	
 	}
@@ -54,7 +54,7 @@ public class SK_LA_HomePage extends Base {
 
 	public void closeBrowser() {
 
-     driver.quit();
+   //  driver.quit();
 	
 	}
 
