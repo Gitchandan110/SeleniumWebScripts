@@ -4,15 +4,48 @@
   <listeners>
     <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SK_LA_HomePage(failed)">
+  <test thread-count="5" name="SK_LA_CloseActiveEvents(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_LA_HomePage">
+      <class name="com.TestNGScript.file.SK_LA_CloseActiveEvents">
         <methods>
-          <include name="HomePage"/>
+          <include name="launchSKApp"/>
           <include name="closeBrowser"/>
+          <include name="CloseActiveEvents"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_CloseActiveEvents -->
+    </classes>
+  </test> <!-- SK_LA_CloseActiveEvents(failed) -->
+  <test thread-count="5" name="SK_LA_ClosedIncident(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_ClosedIncident">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="ClosedIncident"/>
           <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_LA_HomePage -->
+      </class> <!-- com.TestNGScript.file.SK_LA_ClosedIncident -->
     </classes>
-  </test> <!-- SK_LA_HomePage(failed) -->
+  </test> <!-- SK_LA_ClosedIncident(failed) -->
+  <test thread-count="5" name="SK_LA_ScheduleNotification(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_ScheduleNotification">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+          <include name="ScheduleNotification"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_ScheduleNotification -->
+    </classes>
+  </test> <!-- SK_LA_ScheduleNotification(failed) -->
+  <test thread-count="5" name="SK_LA_NotificationHistory(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_NotificationHistory">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+          <include name="NotificationHistory"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationHistory -->
+    </classes>
+  </test> <!-- SK_LA_NotificationHistory(failed) -->
 </suite> <!-- Failed suite [Suite] -->
