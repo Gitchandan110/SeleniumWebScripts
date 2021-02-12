@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5640" started-at="2021-02-12T05:46:09Z" finished-at="2021-02-12T05:46:15Z">
+  <suite name="Default suite" duration-ms="5546" started-at="2021-02-12T06:48:16Z" finished-at="2021-02-12T06:48:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5640" started-at="2021-02-12T05:46:09Z" finished-at="2021-02-12T05:46:15Z">
-      <class name="com.TestNGScript.file.SK_ThermalCameraAPI">
-        <test-method status="PASS" signature="ThermalRequest()[pri:0, instance:com.TestNGScript.file.SK_ThermalCameraAPI@11e21d0e]" name="ThermalRequest" duration-ms="5585" started-at="2021-02-12T05:46:09Z" finished-at="2021-02-12T05:46:15Z">
+    <test name="Default test" duration-ms="5546" started-at="2021-02-12T06:48:16Z" finished-at="2021-02-12T06:48:22Z">
+      <class name="com.TestNGScript.file.SK_ThermalCameraStatusCode">
+        <test-method status="PASS" signature="ThermalRequest()[pri:0, instance:com.TestNGScript.file.SK_ThermalCameraStatusCode@11e21d0e]" name="ThermalRequest" duration-ms="5508" started-at="2021-02-12T06:48:16Z" finished-at="2021-02-12T06:48:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ThermalRequest -->
-      </class> <!-- com.TestNGScript.file.SK_ThermalCameraAPI -->
+      </class> <!-- com.TestNGScript.file.SK_ThermalCameraStatusCode -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
