@@ -24,6 +24,14 @@ public class SK_ClosedIncidentBL extends SK_ClosedIncidentPO {
 			Thread.sleep(3000);
 			closedSOS().click();
 			System.out.println("Closed SOS Incident found and selected");
+			System.out.println("Thread Count is :" + Thread.activeCount());
+			System.out.println("currentThread().getName() :" + Thread.currentThread().getName());
+			System.out.println("currentThread().getId() :" + Thread.currentThread().getId());
+			System.out.println("currentThread().toString() :" + Thread.currentThread().toString());
+		
+			
+			
+			
 			Thread.sleep(5000);
 			Base.manageChildWindow();
 			Base.scrolltoElement(driver, videoContainer());
@@ -53,6 +61,11 @@ public class SK_ClosedIncidentBL extends SK_ClosedIncidentPO {
 			Thread.sleep(5000);
 			Base.manageChildWindow();
 			Base.scrolltoElement(driver, videoContainer());
+			System.out.println("Thread Count is :" + Thread.activeCount());
+			System.out.println("currentThread().getName() :" + Thread.currentThread().getName());
+			System.out.println("currentThread().getId() :" + Thread.currentThread().getId());
+			System.out.println("currentThread().toString() :" + Thread.currentThread().toString());
+		
 			System.out.println("Please wait for 10 seconds");
 			Thread.sleep(10000);
 			Base.FullPageScreenShot("closedSafeWalk");

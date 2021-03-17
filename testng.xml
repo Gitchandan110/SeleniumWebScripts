@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite" parallel="false" verbose="1">
+<suite name="Suite" parallel="false" verbose="10">
 
 <listeners>
 <listener class-name="com.ExtentReportListner.ExtentReporterNG" />
@@ -9,7 +9,7 @@
 
 
 
-<!--  <test name="SK_LA_OpenIncident" >
+ <test name="SK_LA_OpenIncident" >
 <classes>
 <class name="com.TestNGScript.file.SK_LA_OpenIncident" />
 </classes>
@@ -42,7 +42,7 @@
 </classes>
 </test>  
 
- -->
+
 
 <test name="SK_LA_CloseActiveEvents" >
 <classes>

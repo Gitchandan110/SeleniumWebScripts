@@ -1,13 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.ExtentReportListner.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="SK_SA_OpenIncident(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_ThermalCameraStatusCode">
+      <class name="com.TestNGScript.file.SK_SA_OpenIncident">
         <methods>
-          <include name="ThermalRequest"/>
+          <include name="closeBrowser"/>
+          <include name="SAOpenIncident"/>
+          <include name="launchSKApp"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_ThermalCameraStatusCode -->
+      </class> <!-- com.TestNGScript.file.SK_SA_OpenIncident -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- SK_SA_OpenIncident(failed) -->
+  <test thread-count="5" name="SK_LA_ClosedIncident(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_ClosedIncident">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="ClosedIncident"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_ClosedIncident -->
+    </classes>
+  </test> <!-- SK_LA_ClosedIncident(failed) -->
+  <test thread-count="5" name="SK_LA_ScheduleNotification(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_ScheduleNotification">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+          <include name="ScheduleNotification"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_ScheduleNotification -->
+    </classes>
+  </test> <!-- SK_LA_ScheduleNotification(failed) -->
+  <test thread-count="5" name="SK_LA_NotificationHistory(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_NotificationHistory">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+          <include name="NotificationHistory"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_NotificationHistory -->
+    </classes>
+  </test> <!-- SK_LA_NotificationHistory(failed) -->
+  <test thread-count="5" name="SK_LA_CommunicationReports(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_CommunicationReports">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="CommunicationReports"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_CommunicationReports -->
+    </classes>
+  </test> <!-- SK_LA_CommunicationReports(failed) -->
+  <test thread-count="5" name="SK_LA_EventReports(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_EventReports">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="EventReports"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_EventReports -->
+    </classes>
+  </test> <!-- SK_LA_EventReports(failed) -->
+  <test thread-count="5" name="SK_LA_SurveyReports(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_SurveyReports">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="SurveyReports"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_SurveyReports -->
+    </classes>
+  </test> <!-- SK_LA_SurveyReports(failed) -->
+  <test thread-count="5" name="SK_LA_ThermalReports(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_SurveyReports">
+        <methods>
+          <include name="launchSKApp"/>
+          <include name="SurveyReports"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_SurveyReports -->
+    </classes>
+  </test> <!-- SK_LA_ThermalReports(failed) -->
+  <test thread-count="5" name="SK_LA_TipReports(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_TipReports">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="TipReports"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_TipReports -->
+    </classes>
+  </test> <!-- SK_LA_TipReports(failed) -->
+  <test thread-count="5" name="SK_LA_HomePage(failed)">
+    <classes>
+      <class name="com.TestNGScript.file.SK_LA_HomePage">
+        <methods>
+          <include name="HomePage"/>
+          <include name="closeBrowser"/>
+          <include name="launchSKApp"/>
+        </methods>
+      </class> <!-- com.TestNGScript.file.SK_LA_HomePage -->
+    </classes>
+  </test> <!-- SK_LA_HomePage(failed) -->
+</suite> <!-- Failed suite [Suite] -->

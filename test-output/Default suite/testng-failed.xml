@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGScript.file.SK_ThermalCameraAPI">
+      <class name="com.TestNGScript.file.SK_ThermalCameraStatusCode">
         <methods>
           <include name="ThermalRequest"/>
         </methods>
-      </class> <!-- com.TestNGScript.file.SK_ThermalCameraAPI -->
+      </class> <!-- com.TestNGScript.file.SK_ThermalCameraStatusCode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
